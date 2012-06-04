@@ -1,0 +1,13 @@
+include CHANGES.txt
+include README.txt
+recursive-include fa *.pt
+recursive-include fa *.css
+recursive-include fa *.js
+recursive-include fa *.gif
+recursive-include fa *.png
+recursive-include fa *.jpg
+recursive-include fa *.txt
+recursive-include fa *.mo
+recursive-include fa *.po
+recursive-include fa *.zcml
+recursive-include fa *.xml
