@@ -6,5 +6,35 @@
   <!-- configure your content components here -->
   
   <!-- -*- extra stuff goes here -*- -->
+  <class class=".order.Order">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IOrder"
+        />
+  </class>
+  <class class=".product.Product">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IProduct"
+        />
+  </class>
+  <class class=".companies.Companies">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICompanies"
+        />
+  </class>
+  <class class=".products.Products">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IProducts"
+        />
+  </class>
+  <class class=".company.Company">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICompany"
+        />
+  </class>
 
 </configure>
