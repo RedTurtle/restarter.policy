@@ -1,7 +1,7 @@
 
 
 def setupInitialStructure(portal):
-    if u'aziende' not in portal.objectIds() or u'Aziende' not in portal.objectIds():
+    if 'aziende' not in portal.objectIds() and 'Aziende' not in portal.objectIds():
         companies = portal[portal.invokeFactory('Companies','aziende')]
         companies.setTitle(u'Aziende')
         portal.portal_workflow.doActionFor(companies, "publish", comment="Published on portal creation")

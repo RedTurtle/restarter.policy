@@ -3,8 +3,7 @@
   <utilities>
     <utility
       interface="plone.app.users.userdataschema.IUserDataSchemaProvider"
-      factory="collective.examples.userdata.userdataschema.UserDataSchemaProvider"
+      factory="restarter.policy.userdataschema.UserDataSchemaProvider"
     />
   </utilities>
 </componentregistry>
-
