@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
 <metadata>
   <version>0001</version>
+  <dependencies>
+    <dependency>profile-collective.contentleadimage:default</dependency>
+    <dependency>profile-eea.facetednavigation:default</dependency>
+    <dependency>profile-PloneKeywordManager:default</dependency>
+    <dependency>profile-plonesocial.auth.rpx:default</dependency>
+    <dependency>profile-sc.social.like:default</dependency>
+    <dependency>profile-collective.disqus:default</dependency>
+  </dependencies>
 </metadata>

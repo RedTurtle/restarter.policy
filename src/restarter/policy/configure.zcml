@@ -6,6 +6,8 @@
     i18n_domain="restarter.policy">
 
   <five:registerPackage package="." initialize=".initialize" />
+  <include package="z3c.jbot"/>
+  <include package="eea.facetednavigation"/>
 
   <genericsetup:registerProfile
       name="default"

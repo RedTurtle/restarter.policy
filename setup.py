@@ -32,6 +32,14 @@ setup(name='restarter.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'z3c.jbot',
+          'eea.facetednavigation',
+          'collective.disqus',
+          'sc.social.like',
+          'collective.contentleadimage',
+          'Products.PloneKeywordManager',
+          'plonesocial.auth.rpx >= 0.9',
+
           # -*- Extra requirements: -*-
       ],
       extras_require={'test': ['plone.app.testing']},
