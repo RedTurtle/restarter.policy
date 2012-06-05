@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-06-05 10:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./profiles/default/types/Companies.xml
+msgid "Companies"
+msgstr ""
+
+#: ./profiles/default/types/Company.xml
+msgid "Company"
+msgstr ""
+
+#: ./profiles/default/types/Companies.xml
+msgid "Folder that contains companies"
+msgstr ""
+
+#: ./profiles/default/types/Products.xml
+msgid "Folder that contains products"
+msgstr ""
+
+#: ./profiles/default/types/Order.xml
+msgid "Order"
+msgstr ""
+
+#: ./profiles/default/types/Product.xml
+msgid "Product"
+msgstr ""
+
+#: ./profiles/default/types/Product.xml
+msgid "Product that can be bought"
+msgstr ""
+
+#: ./profiles/default/types/Order.xml
+msgid "Product's order"
+msgstr ""
+
+#: ./profiles/default/types/Products.xml
+msgid "Products"
+msgstr ""
+
+#: ./profiles/default/types/Company.xml
+msgid "restartER company"
+msgstr ""
+
