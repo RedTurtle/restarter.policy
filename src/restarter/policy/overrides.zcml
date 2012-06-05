@@ -3,5 +3,10 @@
     i18n_domain="restarter.policy">
 
   <include package="eea.facetednavigation" file="overrides.zcml"/>
-  
+  <adapter 
+      provides=".userdataschema.IEnhancedUserDataSchema"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      factory=".userdataschema.EnhancedUserDataPanelAdapter"
+   />
+
 </configure>

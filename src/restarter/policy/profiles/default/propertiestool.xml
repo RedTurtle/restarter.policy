@@ -13,6 +13,8 @@
     <element value="mail_me"/>
     <element value="location"/>
     <element value="home_page"/>
+    <element value="country" />
+    <element value="accept" />
   </property>
  </object>
 </object>
