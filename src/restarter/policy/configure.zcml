@@ -22,7 +22,26 @@
       description="Installs the restarter.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
-  <!-- -*- extra stuff goes here -*- -->
+
+  <genericsetup:importStep
+      name="restartER-various"
+      title="Additional restartER site policy setup"
+      description="restartER site policy configuration"
+      handler="restarter.policy.setuphandlers.importVarious">
+      <depends name="contenttyperegistryp"/>
+  </genericsetup:importStep>
+
+
+  <subscriber
+      for=".interfaces.IOrder
+           Products.Archetypes.interfaces.IObjectInitializedEvent"
+      handler=".events.order_added"
+   />
+
+  <subscriber
+      for=".interfaces.ICompany
+           Products.Archetypes.interfaces.IObjectInitializedEvent"
+      handler=".events.company_added"
+   />
 
 </configure>
