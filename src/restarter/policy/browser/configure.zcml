@@ -5,6 +5,13 @@
 
   <include package="plone.app.contentmenu" />
 
+    <browser:page
+      for="restarter.policy.interfaces.ICompany"
+      name="rate-if-you-dare"
+      permission="zope2.View"
+      class=".like.LikeWidgetView"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

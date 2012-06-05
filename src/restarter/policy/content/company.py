@@ -6,6 +6,7 @@ from zope.interface import implements
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
+from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 
 # -*- Message Factory Imported Here -*-
 
@@ -28,7 +29,7 @@ schemata.finalizeATCTSchema(
 
 class Company(folder.ATFolder):
     """restartER company"""
-    implements(ICompany)
+    implements(ICompany, ILoveThumbsDontYou)
 
     meta_type = "Company"
     schema = CompanySchema
