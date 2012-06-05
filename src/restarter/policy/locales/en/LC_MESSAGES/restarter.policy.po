@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-05 10:31+0000\n"
+"POT-Creation-Date: 2012-06-05 20:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,10 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: ./profiles/default/workflows/order_workflow/definition.xml
+msgid "Accept"
+msgstr ""
+
 #: ./profiles/default/types/Companies.xml
 msgid "Companies"
 msgstr ""
@@ -22,12 +26,20 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
+#: ./userdataschema.py:47
+msgid "Female"
+msgstr ""
+
 #: ./profiles/default/types/Companies.xml
 msgid "Folder that contains companies"
 msgstr ""
 
 #: ./profiles/default/types/Products.xml
 msgid "Folder that contains products"
+msgstr ""
+
+#: ./userdataschema.py:46
+msgid "Male"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
@@ -48,6 +60,98 @@ msgstr ""
 
 #: ./profiles/default/types/Products.xml
 msgid "Products"
+msgstr ""
+
+#: ./profiles/default/workflows/order_workflow/definition.xml
+msgid "Request"
+msgstr ""
+
+#: ./profiles/default/workflows/order_workflow/definition.xml
+msgid "Retract"
+msgstr ""
+
+#: ./profiles/default/workflows/order_workflow/definition.xml
+msgid "Send back"
+msgstr ""
+
+#. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
+#: ./userdataschema.py:77
+msgid "help_accept"
+msgstr ""
+
+#. Default: "Your date of birth, in the format dd-mm-yyyy"
+#: ./userdataschema.py:53
+msgid "help_birthdate"
+msgstr ""
+
+#. Default: "Fill in the city you live in."
+#: ./userdataschema.py:59
+msgid "help_city"
+msgstr ""
+
+#. Default: "Fill in the country you live in."
+#: ./userdataschema.py:65
+msgid "help_country"
+msgstr ""
+
+#. Default: "Fill in your given name."
+#: ./userdataschema.py:31
+msgid "help_firstname"
+msgstr ""
+
+#. Default: "Are you a girl or a boy?"
+#: ./userdataschema.py:43
+msgid "help_gender"
+msgstr ""
+
+#. Default: "Fill in your surname or your family name."
+#: ./userdataschema.py:37
+msgid "help_lastname"
+msgstr ""
+
+#. Default: "Leave your phone number so we can reach you."
+#: ./userdataschema.py:71
+msgid "help_phone"
+msgstr ""
+
+#. Default: "Accept terms of use"
+#: ./userdataschema.py:76
+msgid "label_accept"
+msgstr ""
+
+#. Default: "birthdate"
+#: ./userdataschema.py:52
+msgid "label_birthdate"
+msgstr ""
+
+#. Default: "City"
+#: ./userdataschema.py:58
+msgid "label_city"
+msgstr ""
+
+#. Default: "Country"
+#: ./userdataschema.py:64
+msgid "label_country"
+msgstr ""
+
+#. Default: "First name"
+#: ./userdataschema.py:30
+msgid "label_firstname"
+msgstr ""
+
+#. Default: "Gender"
+#: ./userdataschema.py:42
+msgid "label_gender"
+msgstr ""
+
+#. Default: "Last name"
+#: ./userdataschema.py:36
+msgid "label_lastname"
+msgstr ""
+
+#. Default: "Telephone number"
+#: ./userdataschema.py:70
+msgid "label_phone"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
