@@ -34,7 +34,7 @@
 
   <subscriber
       for=".interfaces.IOrder
-           Products.Archetypes.interfaces.IObjectInitializedEvent"
+           Products.CMFCore.interfaces.IActionSucceededEvent"
       handler=".events.order_added"
    />
 

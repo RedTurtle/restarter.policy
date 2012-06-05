@@ -9,7 +9,7 @@ from Products.ATContentTypes.content import schemata
 
 # -*- Message Factory Imported Here -*-
 
-from restarter.policy.interfaces import IOrder
+from restarter.policy.interfaces import IOrder, ICompany
 from restarter.policy.config import PROJECTNAME
 
 OrderSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
@@ -29,5 +29,9 @@ class Order(base.ATCTContent):
     meta_type = "Order"
     schema = OrderSchema
 
+    def getCompany(self):
+        company = self.aq_parent.aq_parent.aq_parent
+        if ICompany.providedBy(company):
+            return company
 
 atapi.registerType(Order, PROJECTNAME)
