@@ -38,7 +38,7 @@ setup(name='restarter.policy',
           'sc.social.like',
           'collective.contentleadimage',
           'Products.PloneKeywordManager',
-          'plonesocial.auth.rpx >= 0.9',
+          'plonesocial.auth.rpx',
           'cioppino.twothumbs',
           # -*- Extra requirements: -*-
       ],
