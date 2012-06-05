@@ -39,7 +39,7 @@ setup(name='restarter.policy',
           'collective.contentleadimage',
           'Products.PloneKeywordManager',
           'plonesocial.auth.rpx >= 0.9',
-
+          'cioppino.twothumbs',
           # -*- Extra requirements: -*-
       ],
       extras_require={'test': ['plone.app.testing']},
