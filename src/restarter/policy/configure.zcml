@@ -44,4 +44,10 @@
       handler=".events.company_added"
    />
 
+  <subscriber
+      for=".interfaces.ICompany
+           .interfaces.IDisqusNotify"
+      handler=".events.company_commented"
+   />
+
 </configure>

@@ -1,0 +1,31 @@
+<div class="discusion"
+     tal:condition="python: view.is_discussion_allowed and view.settings.forum_id"
+     i18n:domain="collective.disqus">
+
+     <div id="disqus_thread"></div>
+
+    <script type="text/javascript" tal:content="structure python:'''
+        function disqus_config() {
+          this.callbacks.onNewComment = [function(comment) {
+          $.post('%(document_url)s/disqus_notify', {comment: comment});
+            }
+          ];
+        }
+        var disqus_identifier = '%(disqus_identifier)s';
+        var disqus_developer = %(disqus_developer)s;
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://%(disqus_id)s.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();''' % dict(
+            document_url = view.context.absolute_url(),
+            disqus_identifier = view.context.UID(),
+            disqus_id = view.settings.forum_id,
+            disqus_developer = view.settings.dev_mode and 1 or 0)" />
+    <noscript i18n:translate="">Please enable JavaScript to view the comments powered by
+        <a i18n:name="disqus" href="http://disqus.com/?ref_noscript=forum_id"
+           tal:attributes="href string: http://disqus.com/?ref_noscript=${view/settings/forum_id}"
+               >Disqus</a>.</noscript>
+    <a href="http://disqus.com" class="dsq-brlink" i18n:translate="">comments powered by <span i18n:name="disqus" class="logo-disqus">Disqus</span></a>
+
+</div>

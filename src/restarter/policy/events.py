@@ -1,6 +1,9 @@
 import requests
 import logging
-#from Products.CMFCore.utils import getToolByName
+
+from zope.interface import implements
+from zope.component.interfaces import ObjectEvent
+from restarter.policy.interfaces import IDisqusNotify
 
 
 NOTIFY = 'http://localhost:6543'
@@ -24,6 +27,7 @@ def order_added(order, event):
     except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
         logger.exception('Encountered an error while handling %s notification' % order.absolute_url())
 
+
 def company_added(company, event):
     """Every time a company is added - create substructure."""
     products = company[company.invokeFactory('Products','prodotti')]
@@ -31,3 +35,16 @@ def company_added(company, event):
     media = company[company.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
     company.portal_workflow.doActionFor(media,"publish",comment="Published on company creation")
+
+
+def company_commented(company, event):
+    print 'Notify %s for comment: %s' % (company.absolute_url, event.comment_text)
+
+
+class DisqusNotify(ObjectEvent):
+    implements(IDisqusNotify)
+
+    def __init__(self, object, comment_id, comment_text):
+        self.object = object
+        self.comment_id = comment_id
+        self.comment_text = comment_text

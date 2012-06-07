@@ -3,14 +3,39 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="restarter.policy">
 
-  <include package="plone.app.contentmenu" />
+    <include package="plone.app.contentmenu" />
+    <include package="plone.browserlayer" />
 
     <browser:page
-      for="restarter.policy.interfaces.ICompany"
+      for="*"
       name="rate-if-you-dare"
       permission="zope2.View"
       class=".like.LikeWidgetView"
+      layer="..interfaces.layer.ISkin"
       />
+
+    <browser:page
+      for="Products.CMFCore.interfaces.IContentish"
+      name="disqus_notify"
+      class=".disqus.Notify"
+      layer="..interfaces.layer.ISkin"
+      permission="zope2.View"
+      />
+
+   <browser:viewlet
+       name="collective.disqus"
+       for="Products.CMFCore.interfaces.IContentish"
+       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+       view="plone.app.layout.globals.interfaces.IViewView"
+       class=".disqus.DisqusViewlet"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+     />
+
+    <browser:resourceDirectory
+       name="restarter.js"
+       directory="js"
+    />
 
   <!-- -*- extra stuff goes here -*- -->
 
