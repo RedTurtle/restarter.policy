@@ -6,7 +6,7 @@ from zope.component.interfaces import ObjectEvent
 from restarter.policy.interfaces import IDisqusNotify
 
 
-NOTIFY = 'http://localhost:6543'
+NOTIFY = 'http://localhost:9441'
 TIMEOUT = 2
 MESSAGE = 'You have a new order in your company products %s.'
 logger = logging.getLogger('restarter.policy')
