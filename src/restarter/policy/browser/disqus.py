@@ -14,6 +14,22 @@ class DisqusViewlet(ViewletBase):
     """
     index = ViewPageTemplateFile("disqus_panel.pt")
 
+    @property
+    def authenticated_email(self):
+        user = self.context.portal_membership.getAuthenticatedMember()
+        if user:
+            return user.getProperty('email')
+        else:
+            return ''
+
+    @property
+    def authenticated_fullname(self):
+        user = self.context.portal_membership.getAuthenticatedMember()
+        if user:
+            return user.getProperty('fullname')
+        else:
+            return ''
+
 
 class Notify(BrowserView):
     def __call__(self):

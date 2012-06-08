@@ -38,7 +38,7 @@ def company_added(company, event):
 
 
 def company_commented(company, event):
-    print 'Notify %s for comment: %s' % (company.absolute_url, event.comment_text)
+    print 'Notify %s for comment: %s' % (company.absolute_url(), event.comment_text)
 
 
 class DisqusNotify(ObjectEvent):
