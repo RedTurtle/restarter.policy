@@ -1,5 +1,6 @@
 import requests
 import logging
+import re
 
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
@@ -39,6 +40,19 @@ def company_added(company, event):
 
 def company_commented(company, event):
     print 'Notify %s for comment: %s' % (company.absolute_url(), event.comment_text)
+
+
+def user_created(member, event):
+    rpxs = member.getProperty('rpx_identifier')
+    pattern = re.compile('.*facebook.com/profile.php\?id=(?P<id>.*)')
+    facebook_id = None
+    for rpx in rpxs:
+        match = pattern.match(rpx)
+        if match:
+            facebook_id = match.group('id')
+            break
+    if facebook_id:
+        print 'Notify new user created: %s with facebook_id: %s' % (member.getProperty('email'),facebook_id)
 
 
 class DisqusNotify(ObjectEvent):
