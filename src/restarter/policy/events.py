@@ -5,11 +5,13 @@ import re
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
 from restarter.policy.interfaces import IDisqusNotify
+from restarter.policy import policyMessageFactory as _
 
 
 NOTIFY = 'http://localhost:9441'
 TIMEOUT = 2
-MESSAGE = 'You have a new order in your company products %s.'
+NEW_ORDER = _('You have a new order in your company products:')
+NEW_USER = _('has just registered on FacciamoAdesso. Join us!')
 logger = logging.getLogger('restarter.policy')
 
 
@@ -20,11 +22,13 @@ def order_added(order, event):
     company = order.getCompany()
     if not company:
         return
-    params = {'message': MESSAGE % company.absolute_url(),
+
+    #BBB: finish notification
+    params = {'message': '%s %s' % (NEW_ORDER, company.absolute_url()),
               'phone': '+3933475345434',
               'email': u'andrew@mleczko.net'}
     try:
-        requests.get('%s/notify' % NOTIFY, params=params, timeout=TIMEOUT)
+        requests.post('%s/notify' % NOTIFY, params=params, timeout=TIMEOUT)
     except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
         logger.exception('Encountered an error while handling %s notification' % order.absolute_url())
 
@@ -35,24 +39,31 @@ def company_added(company, event):
     products.setTitle(u'Prodotti')
     media = company[company.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
-    company.portal_workflow.doActionFor(media,"publish",comment="Published on company creation")
+    company.portal_workflow.doActionFor(media,"publish",comment=_("Published on company creation"))
 
 
 def company_commented(company, event):
+    #BBB: finish notification
     print 'Notify %s for comment: %s' % (company.absolute_url(), event.comment_text)
 
 
-def user_created(member, event):
+def get_facebook_from_member(member):
     rpxs = member.getProperty('rpx_identifier')
     pattern = re.compile('.*facebook.com/profile.php\?id=(?P<id>.*)')
-    facebook_id = None
     for rpx in rpxs:
         match = pattern.match(rpx)
         if match:
-            facebook_id = match.group('id')
-            break
+            return match.group('id')
+
+
+def user_created(member, event):
+    facebook_id = get_facebook_from_member(member)
     if facebook_id:
-        print 'Notify new user created: %s with facebook_id: %s' % (member.getProperty('email'),facebook_id)
+        params = {'facebook_id': facebook_id}
+        try:
+            requests.post('%s/notify/fb/register' % NOTIFY, params=params, timeout=TIMEOUT)
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
+            logger.exception('Encountered an error while handling facebook notification, %s' % params)
 
 
 class DisqusNotify(ObjectEvent):
