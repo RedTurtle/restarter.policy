@@ -3,6 +3,9 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_actions" />
  <object name="user" meta_type="CMF Action Category">
+  <object name="dashboard" meta_type="CMF Action" i18n:domain="plone">
+    <property name="visible">False</property>
+   </object>
 
   <object name="preferences" meta_type="CMF Action" i18n:domain="plone">
     <property name="title" i18n:translate="">Preferences</property>
