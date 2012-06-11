@@ -38,11 +38,6 @@
        layer="..interfaces.layer.ISkin"
      />
 
-    <browser:resourceDirectory
-       name="restarter.js"
-       directory="js"
-    />
-
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>
