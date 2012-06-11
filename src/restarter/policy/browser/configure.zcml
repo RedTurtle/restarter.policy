@@ -9,7 +9,7 @@
     <include package="z3c.jbot" file="meta.zcml" />
 
     <browser:jbot
-      directory="viewlets"
+      directory="jbot"
       layer="..interfaces.layer.ISkin" />
 
     <browser:page

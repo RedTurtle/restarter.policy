@@ -4,11 +4,13 @@
    <property name="exposeDCMetaTags" type="boolean">True</property>
    <property name="enable_sitemap" type="boolean">True</property>
    <property name="webstats_js" type="text"><!-- Analytics --></property>
-   <property name="use_email_as_login" type="boolean">True</property>
+   <property name="use_email_as_login" type="boolean">False</property>
    <property name="user_registration_fields" type="lines">
     <element value="fullname"/>
     <element value="email"/>
     <element value="cellphone" />
+    <element value="description" />
+    <element value="portrait" />
     <element value="password"/>
     <element value="mail_me"/>
     <element value="accept" />

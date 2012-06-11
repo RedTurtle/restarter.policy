@@ -10,7 +10,7 @@ from restarter.policy import policyMessageFactory as _
 
 
 def validateCellphone(value):
-    pattern = re.compile('^\+39\d{10}$')
+    pattern = re.compile('^\+39\d*$')
     if pattern.match(value):
         return True
     return False
@@ -50,6 +50,10 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         constraint=validateAccept,
         )
 
+    rpx_identifier = schema.Tuple(
+        title=u'rpx identifier',
+    )
+
 
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """ """
@@ -65,4 +69,9 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return self.context.setMemberProperties({'accept': value})
     accept = property(get_accept, set_accept)
 
+    def get_rpx(self):
+        return self.context.getProperty('rpx_identifier', '')
+    def set_rpx(self, value):
+        return self.context.setMemberProperties({'rpx_identifier': value})
+    rpx_identifier = property(get_rpx, set_rpx)
 
