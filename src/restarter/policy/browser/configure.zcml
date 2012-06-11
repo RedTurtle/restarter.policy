@@ -6,6 +6,12 @@
     <include package="plone.app.contentmenu" />
     <include package="plone.browserlayer" />
 
+    <include package="z3c.jbot" file="meta.zcml" />
+
+    <browser:jbot
+      directory="viewlets"
+      layer="..interfaces.layer.ISkin" />
+
     <browser:page
       for="*"
       name="rate-if-you-dare"
