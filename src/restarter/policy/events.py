@@ -11,6 +11,7 @@ from restarter.policy import policyMessageFactory as _
 NOTIFY = 'http://localhost:9441'
 TIMEOUT = 2
 NEW_ORDER = _('You have a new order in your company products:')
+NEW_COMPANY = _('You have just registered new company.')
 NEW_USER_MAIL = _('has just registered on FacciamoAdesso. Join us!')
 NEW_USER_SMS = _('has just registered on FacciamoAdesso. Join us!')
 logger = logging.getLogger('restarter.policy')
@@ -59,8 +60,12 @@ def company_added(company, event):
     products.setTitle(u'Prodotti')
     media = company[company.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
-    company.portal_workflow.doActionFor(media,"publish",comment=_("Published on company creation"))
+    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
 
+    member = company.portal_membership.getAuthenticatedMember()
+    params = {'message': NEW_COMPANY,
+              'email': member.getProperty('email')}
+    notify('notify', params)
 
 def company_commented(company, event):
     """Event fired when company has been commented."""

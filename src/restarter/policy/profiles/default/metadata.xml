@@ -5,6 +5,8 @@
     <dependency>profile-collective.contentleadimage:default</dependency>
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-Products.PloneKeywordManager:default</dependency>
+    <dependency>profile-Products.PloneFormGen:default</dependency>
+    <dependency>profile-Products.ATVocabularyManager:default</dependency>
     <dependency>profile-plonesocial.auth.rpx:default</dependency>
     <dependency>profile-sc.social.like:default</dependency>
     <dependency>profile-collective.disqus:default</dependency>
