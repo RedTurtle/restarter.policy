@@ -1,0 +1,21 @@
+<tal:metas i18n:domain="sc.social.like" tal:condition="view/enabled">
+  <tal:fb tal:condition="view/fb_enabled">
+
+    <meta property="fb:app_id" content="243138589129142" />
+    <meta property="og:url" tal:attributes="content context/absolute_url" />
+    <meta property="og:type" tal:attributes="content view/fb_type" />
+    <meta property="og:title" tal:attributes="content view/title" />
+    <meta property="og:description" tal:attributes="content view/description" />
+    <meta property="og:site_name" tal:attributes="content view/portaltitle" />
+    <meta property="og:image" tal:attributes="content view/getImage" />
+    <meta tal:condition="view/fbadmins" property="fb:admins" tal:attributes="content view/fbadmins" />
+    <script
+        tal:attributes="src string:http://connect.facebook.net/${view/language}/all.js#xfbml=1"
+        src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+  </tal:fb>
+  <tal:gp  tal:condition="view/gp_enabled">
+      <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
+        {"parsetags": "explicit"}
+      </script>
+  </tal:gp>
+</tal:metas>
