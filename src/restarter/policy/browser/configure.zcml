@@ -56,6 +56,31 @@
        layer="..interfaces.layer.ISkin"
      />
 
+  <!-- The logo -->
+    <browser:viewlet
+       name="plone.logo"
+       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+       class="plone.app.layout.viewlets.common.LogoViewlet"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
+
+  <!-- Resource directory for images
+    See ioconto/plonetheme/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="restarter.images"
+      directory="images"
+       layer="..interfaces.layer.ISkin"
+      />
+  <browser:resourceDirectory
+      name="restarter.fonts"
+      directory="fonts"
+      layer="..interfaces.layer.ISkin"
+      />
 
 </configure>
