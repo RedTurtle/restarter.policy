@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="restarter_theme">
+
+ <object name="restarter_images"
+    meta_type="Filesystem Directory View"
+    directory="restarter.policy:skins/restarter_images"/>
+ <object name="restarter_templates"
+    meta_type="Filesystem Directory View"
+    directory="restarter.policy:skins/restarter_templates"/>
+ <object name="restarter_styles"
+    meta_type="Filesystem Directory View"
+    directory="restarter.policy:skins/restarter_styles"/>
+
+ <skin-path name="restarter_theme" based-on="Sunburst Theme">
+  <layer name="restarter_images"
+     insert-after="custom"/>
+  <layer name="restarter_templates"
+     insert-after="restarter_images"/>
+  <layer name="restarter_styles"
+     insert-after="restarter_templates"/>
+ </skin-path>
+
+</object>
