@@ -30,7 +30,7 @@ PROVINCE = atapi.DisplayList((
 
 NOTIFICATION = atapi.DisplayList((
              ("",_("-- not selected --")),
-             ("sms", "SMS"),
+             ("phone", "SMS"),
              ("email", "email"),
              ("both", _(u"both"))))
 

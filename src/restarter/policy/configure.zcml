@@ -42,6 +42,12 @@
 
   <subscriber
       for=".interfaces.ICompany
+           Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.company_published"
+   />
+
+  <subscriber
+      for=".interfaces.ICompany
            Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.company_added"
    />
@@ -50,6 +56,12 @@
       for=".interfaces.ICompany
            .interfaces.IDisqusNotify"
       handler=".events.company_commented"
+   />
+
+  <subscriber
+      for=".interfaces.IProduct
+           .interfaces.IDisqusNotify"
+      handler=".events.product_commented"
    />
 
   <subscriber

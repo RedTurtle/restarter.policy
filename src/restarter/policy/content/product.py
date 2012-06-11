@@ -9,7 +9,7 @@ from Products.ATContentTypes.content import schemata
 
 # -*- Message Factory Imported Here -*-
 
-from restarter.policy.interfaces import IProduct
+from restarter.policy.interfaces import IProduct, ICompany
 from restarter.policy.config import PROJECTNAME
 
 ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
@@ -32,6 +32,11 @@ class Product(folder.ATFolder):
 
     meta_type = "Product"
     schema = ProductSchema
+
+    def getCompany(self):
+        company = self.aq_parent.aq_parent
+        if ICompany.providedBy(company):
+            return company
 
 
 atapi.registerType(Product, PROJECTNAME)

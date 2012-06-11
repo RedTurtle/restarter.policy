@@ -1,7 +1,7 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from sc.social.like.browser.viewlets import SocialMetadataViewlet
 from collective.contentleadimage.config import IMAGE_FIELD_NAME
-from restarter.policy.interfaces import IProduct
+from restarter.policy.interfaces import IProduct, ICompany
 
 
 class RestarterMetadataViewlet(SocialMetadataViewlet):
@@ -15,6 +15,8 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
     def fb_type(self):
         if IProduct.providedBy(self.context):
             return 'facciamoadesso:product'
+        elif ICompany.providedBy(self.context):
+            return 'facciamoadesso:company'
         else:
             return 'website'
 
