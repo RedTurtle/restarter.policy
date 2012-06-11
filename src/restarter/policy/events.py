@@ -69,6 +69,17 @@ def order_added(order, event):
     company_notify(company, params)
 
 
+def company_published(company, event):
+    if event.action != 'publish':
+        return
+    member = company.portal_membership.getAuthenticatedMember()
+    facebook_id = get_facebook_from_member(member)
+    if facebook_id:
+        params = {'facebook_id': facebook_id,
+                  'company_url': company.absolute_url()}
+        notify('notify/fb/newcompany', params)
+
+
 def company_added(company, event):
     """Every time a company is added - create substructure."""
     products = company[company.invokeFactory('Products','prodotti')]
@@ -85,6 +96,14 @@ def company_commented(company, event):
     params = {'message': NEW_COMMENT % company.absolute_url(),}
     company_notify(company, params)
 
+
+def product_added(product, event):
+    """Event fired when product has been added."""
+    media = product[product.invokeFactory('Folder','media')]
+    media.setTitle(u'Media')
+    product.portal_workflow.doActionFor(media, "publish",comment=_("Published on product creation"))
+
+
 def product_commented(product, event):
     """Event fired when product has been commented."""
     company = product.getCompany()
@@ -97,17 +116,6 @@ def product_commented(product, event):
         params = {'message': NEW_COMMENT,
                   'email': email}
         notify('notify/email', params)
-
-
-def company_published(company, event):
-    if event.action != 'publish':
-        return
-    member = company.portal_membership.getAuthenticatedMember()
-    facebook_id = get_facebook_from_member(member)
-    if facebook_id:
-        params = {'facebook_id': facebook_id,
-                  'company_url': company.absolute_url()}
-        notify('notify/fb/newcompany', params)
 
 
 def get_facebook_from_member(member):

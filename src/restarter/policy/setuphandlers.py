@@ -11,6 +11,9 @@ def setupInitialStructure(portal):
         if 'company_sectore' not in portal.portal_vocabularies.objectIds():
             company_sectore = portal.portal_vocabularies[portal.portal_vocabularies.invokeFactory('SortedSimpleVocabulary','company_sectore')]
             company_sectore.setTitle(u'Company sectore')
+        if 'product_category' not in portal.portal_vocabularies.objectIds():
+            product_category = portal.portal_vocabularies[portal.portal_vocabularies.invokeFactory('SortedSimpleVocabulary','product_category')]
+            product_category.setTitle(u'Product category')
 
 def importVarious(context):
     """Miscellanous steps import handle"""

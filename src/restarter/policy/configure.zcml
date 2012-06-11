@@ -41,6 +41,12 @@
    />
 
   <subscriber
+      for=".interfaces.IProduct
+           Products.Archetypes.interfaces.IObjectInitializedEvent"
+      handler=".events.product_added"
+   />
+
+  <subscriber
       for=".interfaces.ICompany
            Products.CMFCore.interfaces.IActionSucceededEvent"
       handler=".events.company_published"
