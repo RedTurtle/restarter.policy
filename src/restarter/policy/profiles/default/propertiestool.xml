@@ -16,5 +16,11 @@
     <element value="country" />
     <element value="accept" />
   </property>
+  <property name="icon_visibility" type="string">authenticated</property>
+  <property name="disable_folder_sections" type="boolean">True</property>
  </object>
+ <object name="navtree_properties" meta_type="Plone Property Sheet">
+      <property name="currentFolderOnlyInNavtree" type="boolean">False</property>
+      <property name="showAllParents" type="boolean">False</property>
+    </object>
 </object>
