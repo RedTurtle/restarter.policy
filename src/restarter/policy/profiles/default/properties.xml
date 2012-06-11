@@ -3,5 +3,5 @@
  <property name="title">restartER</property>
  <property name="email_from_address" type="string">info@restarter.it</property>
  <property name="email_from_name" type="string">restartER Team</property>
- <property name="validate_email" type="boolean">False</property>
+ <property name="validate_email" type="boolean">True</property>
 </site>
