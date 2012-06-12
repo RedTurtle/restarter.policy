@@ -3,6 +3,9 @@ from Products.CMFPlone.browser.ploneview import Plone as PloneBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentActionsViewletBase
 from plone.app.contentmenu.menu import FactoriesMenu
+from plone.app.workflow.browser.sharing import SharingView as SharingBaseView
+from plone.memoize.instance import memoize
+from restarter.policy import policyMessageFactory as _
 
 
 class ContentActionsViewlet(ContentActionsViewletBase):
@@ -28,3 +31,17 @@ class Plone(PloneBase):
             return super(Plone, self).showEditableBorder()
         else:
             return False
+
+
+class CompanySharingView(SharingBaseView):
+
+    template = ViewPageTemplateFile('templates/sharing.pt')
+
+    @memoize
+    def roles(self):
+        return [{'id': 'Employee', 'title':_('Employee')}]
+
+    @memoize
+    def existing_role_settings(self):
+        old = super(CompanySharingView, self).existing_role_settings()
+        return [a for a in old if a['id']!='AuthenticatedUsers']

@@ -31,12 +31,17 @@
            .interfaces.IDisqusNotify"
       handler=".events.company_commented"
    />
-
   <subscriber
       for=".interfaces.IProduct
            .interfaces.IDisqusNotify"
       handler=".events.product_commented"
    />
+  <subscriber
+      for=".interfaces.ICompany
+           .interfaces.ICompanyShareNotify"
+      handler=".events.company_employee_modified"
+   />
+
 
   <subscriber
          for="Products.PluggableAuthService.interfaces.authservice.IBasicUser

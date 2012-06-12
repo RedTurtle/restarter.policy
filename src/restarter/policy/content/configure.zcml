@@ -43,4 +43,6 @@
         />
   </class>
 
+ <adapter factory=".company.company_employees" name="company_employees" />
+
 </configure>
