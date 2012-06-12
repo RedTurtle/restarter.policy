@@ -20,11 +20,12 @@
     media="screen" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression="" conditionalcomment="lte IE 7" insert-after="restarter.css" />
+-->
  <stylesheet title=""
     id="ie8.css"
     media="screen" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="" conditionalcomment="IE 8" insert-after="ie7.css" />
--->
+    enabled="1" expression="" conditionalcomment="IE 8" insert-after="restarter.css" />
+
 
 </object>

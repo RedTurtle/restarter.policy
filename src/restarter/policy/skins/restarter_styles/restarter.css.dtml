@@ -411,13 +411,34 @@ body#content.mceContentBody {
 }
 #plone-document-byline {
     padding: 0.5em 0 2em;
-    border-top: 2px solid #EEE;
+    border-top: 3px solid #EEE;
 }
 #content h1.documentFirstHeading {
     line-height: 1.3em;
     padding-bottom: 0.3em;
     margin-bottom: 0.5em;
     background: transparent url(++resource++restarter.images/border_title.png) no-repeat left bottom;
+}
+.pullquote,
+#content .pullquote {
+    color: black;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    letter-spacing: -0.06em !important;
+    font-family: <dtml-var headingFontFamily>;
+}
+.callout,
+#content .callout {
+    background-color: #666;
+    border:0;
+    color: #FFF;
+    font-size: 1.1em;
+}
+
+/** social **/
+#viewlet-social-like {
+    border-top: 3px solid #F0F0F0;
+    padding-top: 10px
 }
 
 /** Portlets **/
@@ -463,6 +484,10 @@ dl.portletCalendar dt {
 .twtr-ft div a {
     color: #999 !important;    
 }
+/** facebook **/
+.fb_iframe_widget {
+    border: 1px solid #F0F0F0;
+}
 
 /** navigazione **/
 dl.portletERPortletNavigation dd.portletItem {
@@ -486,8 +511,9 @@ dl.portletERPortletNavigation ul.navTree li.navTreeItem {
     padding-left: 12px;
 }
 dl.portletERPortletNavigation ul.navTree li.navTreeItem a {
-    padding: 0 0;
+    padding: 0.4em 0;
     color: #000;
+    line-height: 1.3em;
 }
 dl.portletERPortletNavigation ul.navTreeLevel1 li.navTreeItem {
     background-image: url(++resource++restarter.images/indent.gif);
@@ -508,6 +534,10 @@ dl.portletERPortletNavigation ul.navTree li.navTreeItem a.navTreeCurrentItem {
 }
 dl.portlet p {
     margin-bottom: 0.4em;
+}
+#content dl.portlet, dl.portlet,
+div.rerPortletAdvancedStatic {
+    margin-bottom: 20px;
 }
 
 /** portlet utlime notizie **/
@@ -543,8 +573,68 @@ h3.faCollectionTitle {
     color: #000;
     font-style: italic;
 }
-.faCollectionDesc {
+p.faCollectionDesc {
     font-size: 0.95em;
     font-style: italic;
+    margin-bottom:0;
 }
+.newsPortlet .portletItem {
+    background-color: #FAFAFA;
+    padding: 0.8em;
+    margin: 10px 0;
+    border-left: 1px dotted #CCC;
+}
+
+/** ultimi prodotti **/
+dl.productsPortlet dd.portletItem,
+#portletPageColumns dl.productsPortlet dd.portletItem {
+    float: left;
+    width: 30%;
+    margin: 0 1.5%;
+    padding:0;
+    max-width: 200px;
+}
+#content dl.portlet dt.portletHeader {
+    margin: 0 0 0.5em 0.6em;
+}
+.productsPortlet .faCollectionImg {
+    float: none;
+    margin: 0 auto 0.5em;
+    width: 100%;
+}
+#content dl.productsPortlet p.itemData {
+    margin: 0 0 0.3em;
+}
+#content dl.productsPortlet p.faCollectionDesc, 
+dl.productsPortlet p.faCollectionDesc {
+    margin-bottom: 0.5em;
+}
+#content dl.productsPortlet p.productPrice, 
+dl.productsPortlet p.productPrice {
+    font-size: 0.9em;
+    color: #000;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+dl.productsPortlet p.productPrice .euro {
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+}
+dl.productsPortlet p.btnLink {
+    margin:0;
+}
+dl.productsPortlet p.btnLink a.btn,
+#content dl.productsPortlet p.btnLink a.btn {
+    background-color: #CCC;
+    color: #FFF;
+    font-size: 1.2em;
+}
+dl.productsPortlet p.btnLink a.btn:hover,
+#content dl.productsPortlet p.btnLink a.btn:hover {
+    background-color: &dtml-linkColor;;
+    color: #FFF !important;
+}
+
 /* </dtml-with> */
