@@ -88,13 +88,14 @@ p {
 dl.actionMenu#portal-personaltools {
     margin-left: 0;
     padding-left: 10px;
+    background-color: &dtml-contentViewBackgroundColor;;
 }
 #portal-personaltools dt.actionMenuHeader a, #portal-personaltools dt.actionMenuHeader a,
 #portal-personaltools dt.actionMenuHeader a:hover, #portal-personaltools dt.actionMenuHeader a:hover {
     color: #FFF;
 }
 #portal-personaltools dd {
-    background-color: #576262;
+    background-color: &dtml-contentViewBackgroundColor;;
     left: 10px;
     right: auto;
     top: 42px;
@@ -160,7 +161,10 @@ dl.actionMenu#portal-personaltools {
     position: relative;
     top:0;
     left:0;
+display: block;
+line-height: 1;
 }
+
 
 /** big nav red **/
 #navRedBtn.bigBtn {
@@ -241,7 +245,7 @@ p.btnLink {
 }
 p.btnLink a.btn {
     display: inline-block;
-    background-color: #CDCDCD;
+    background-color: &dtml-linkColor;;
      -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -253,7 +257,7 @@ p.btnLink a.btn {
     padding: 0.4em 1em;
 }
 p.btnLink a.btn:hover {
-    background-color: &dtml-linkColor;;
+    background-color: #CDCDCD;
     cursor: pointer;
 }
 

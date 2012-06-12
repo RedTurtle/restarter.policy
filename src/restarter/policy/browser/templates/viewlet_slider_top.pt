@@ -1,4 +1,5 @@
-<div id="slider-wrapper">
+<tal:restarter define="restarter context/@@config_restarter">
+<div id="slider-wrapper" tal:condition="restarter/isHomePage">
     <div id="slider">
         <div id="sliderContent">
             <div id="sliderTxt">
@@ -11,3 +12,4 @@
         </div>
     </div>
 </div>
+</tal:restarter>

@@ -153,16 +153,17 @@
             metal:define-slot="column_one_slot"
             tal:condition="sl"
             tal:attributes="class python:isRTL and 'cell width-1:4 position-3:4' or 'cell width-1:4 position-0'">
-
-             <div id="portal-logo">
-                <a metal:define-macro="portal_logo"
-                   title="Facciamo Adesso - Home"
-                   accesskey="1"
-                   tal:attributes="href string:${context/portal_url}"
-                   i18n:domain="plone">
-                    <img src="" alt="Facciamo Adesso, sostegno alle imprese colpite dal terremoto"
-                         tal:attributes="src string:${context/portal_url}/logo_facciamo_column.png" width="250" height="96" /></a>
-            </div>
+            <tal:restarter define="restarter context/@@config_restarter">
+                 <div id="portal-logo" tal:condition="not: restarter/isHomePage">
+                    <a metal:define-macro="portal_logo"
+                       title="Facciamo Adesso - Home"
+                       accesskey="1"
+                       tal:attributes="href string:${context/portal_url}"
+                       i18n:domain="plone">
+                        <img src="" alt="Facciamo Adesso, sostegno alle imprese colpite dal terremoto"
+                             tal:attributes="src string:${context/portal_url}/logo_facciamo_column.png" width="250" height="96" /></a>
+                </div>
+            </tal:restarter>
 
             <metal:portlets define-slot="portlets_one_slot">
                 <tal:block replace="structure provider:plone.leftcolumn" />
