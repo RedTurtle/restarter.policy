@@ -16,6 +16,8 @@
     meta_type="Factory-based Type Information with dynamic views" />
   <object name="Products"
     meta_type="Factory-based Type Information with dynamic views" />
+  <object name="CompanyStory"
+    meta_type="Factory-based Type Information with dynamic views" />
   <object name="Company"
     meta_type="Factory-based Type Information with dynamic views" />
 </object>

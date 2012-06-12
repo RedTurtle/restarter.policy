@@ -30,6 +30,12 @@
         interface="..interfaces.IProducts"
         />
   </class>
+  <class class=".products.CompanyStory">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICompanyStory"
+        />
+  </class>
   <class class=".company.Company">
     <require
         permission="zope2.View"

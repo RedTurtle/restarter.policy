@@ -10,4 +10,5 @@ ADD_PERMISSIONS = {
     'Companies': 'restarter.policy: Add Companies',
     'Products': 'restarter.policy: Add Products',
     'Company': 'restarter.policy: Add Company',
+    'CompanyStory': 'restarter.policy: Add Company Story',
 }
