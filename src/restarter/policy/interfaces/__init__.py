@@ -8,3 +8,4 @@ from company import ICompany
 from layer import ISkin, ISimpleAddButtons
 from events import IDisqusNotify
 from configurations import IRestarterConfiguration
+from stats import IStatsSettings, IStatsTool

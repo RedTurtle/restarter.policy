@@ -13,6 +13,14 @@
 
     <browser:page
       for="*"
+      name="statistics"
+      class=".statistics.StatisticsView"
+      layer="..interfaces.layer.ISkin"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
       name="rate-if-you-dare"
       class=".like.LikeWidgetView"
       layer="..interfaces.layer.ISkin"

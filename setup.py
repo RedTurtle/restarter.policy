@@ -47,6 +47,9 @@ setup(name='restarter.policy',
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
       target = plone
+
+      [zopectl.command]
+      update = restarter.policy:processor
       """,
       setup_requires=["PasteScript"],
       paster_plugins=["templer.localcommands"],
