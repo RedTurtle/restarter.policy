@@ -3,6 +3,18 @@ def setupInitialStructure(portal):
     if 'aziende' not in portal.objectIds() and 'Aziende' not in portal.objectIds():
         companies = portal[portal.invokeFactory('Companies','aziende')]
         companies.setTitle(u'Aziende')
+    if 'notizie' not in portal.objectIds() and 'Notizie' not in portal.objectIds():
+        companies = portal[portal.invokeFactory('Folder','notizie')]
+        companies.setTitle(u'Notizie')
+    if 'il-progetto' not in portal.objectIds():
+        companies = portal[portal.invokeFactory('Folder','il-progetto')]
+        companies.setTitle(u'Il progetto')
+    if 'storie' not in portal.objectIds():
+        companies = portal[portal.invokeFactory('Folder','storie')]
+        companies.setTitle(u'Storie')
+    if 'contatti' not in portal.objectIds():
+        companies = portal[portal.invokeFactory('Folder','contatti')]
+        companies.setTitle(u'Contatti')
 
     if 'portal_vocabularies' in portal.objectIds():
         if 'company_type' not in portal.portal_vocabularies.objectIds():
