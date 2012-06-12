@@ -30,7 +30,7 @@
         interface="..interfaces.IProducts"
         />
   </class>
-  <class class=".products.CompanyStory">
+  <class class=".companystory.CompanyStory">
     <require
         permission="zope2.View"
         interface="..interfaces.ICompanyStory"

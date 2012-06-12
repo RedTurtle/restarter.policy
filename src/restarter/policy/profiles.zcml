@@ -29,5 +29,13 @@
       handler="restarter.policy.upgrades.add_assc_roles"
       sortkey="1"
       profile="restarter.policy:default"/>
+  <genericsetup:upgradeStep
+      title="Add story ct"
+      description="Add story ct"
+      source="0002"
+      destination="0003"
+      handler="restarter.policy.upgrades.add_story_ct"
+      sortkey="1"
+      profile="restarter.policy:default"/>
 
 </configure>
