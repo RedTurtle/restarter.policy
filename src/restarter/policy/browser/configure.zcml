@@ -9,7 +9,7 @@
     <include package="z3c.jbot" file="meta.zcml" />
 
     <browser:jbot
-      directory="viewlets"
+      directory="jbot"
       layer="..interfaces.layer.ISkin" />
 
     <browser:page
@@ -64,6 +64,33 @@
        permission="zope2.View"
        layer="..interfaces.layer.ISkin"
       />
+
+  <!-- The slider "dummy" -->
+    <browser:viewlet
+       name="restarter.slider"
+       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+       permission="zope2.View"
+       template="templates/viewlet_slider_top.pt"
+       layer="..interfaces.layer.ISkin"
+      />
+
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
+        permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+        />
+
+    <!-- social like -->
+    <browser:viewlet
+        name="sc.social.likes"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class="sc.social.like.browser.viewlets.SocialLikesViewlet"
+       layer="..interfaces.layer.ISkin"
+        permission="zope.Public"
+        />
 
   <!-- -*- extra stuff goes here -*- -->
 

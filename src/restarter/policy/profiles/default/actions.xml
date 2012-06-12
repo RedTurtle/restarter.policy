@@ -16,4 +16,149 @@
      <property name="visible">True</property>
   </object>
  </object>
+<!--
+ <object name="site_actions" meta_type="CMF Action Category">
+  <property name="title"></property>
+  <object name="sitemap" meta_type="CMF Action" i18n:domain="plone" insert-after="privacy">
+   <property name="title" i18n:translate="">Site Map</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/sitemap</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Accessibility</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/accessibility-info</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">False</property>
+  </object>
+  <object name="contact" meta_type="CMF Action" i18n:domain="plone" insert-after="sitemap">
+   <property name="title" i18n:translate="">Contact</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:$portal_url/contatti</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="plone_setup" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Site Setup</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${portal_url}/@@overview-controlpanel</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Plone Site Setup: Overview"/>
+   </property>
+   <property name="visible">False</property>
+  </object>
+  <object name="credits" meta_type="CMF Action" insert-after="contact">
+   <property name="title">Credits</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/credits</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="privacy" meta_type="CMF Action" insert-before="*">
+   <property name="title">Privacy</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/privacy</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+ </object>
+-->
+<object name="portal_tabs" meta_type="CMF Action Category">
+  <property name="title"></property>
+  <object name="index_html" meta_type="CMF Action" i18n:domain="plone" insert-before="*">
+   <property name="title" i18n:translate="">Home</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="progetto" meta_type="CMF Action" insert-after="index_html">
+   <property name="title">Il Progetto</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/il-progetto</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="notizie" meta_type="CMF Action" insert-after="progetto">
+   <property name="title">Notizie</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/notizie</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="storie" meta_type="CMF Action" insert-after="notizie">
+   <property name="title">Storie</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/storie</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="circolo" meta_type="CMF Action" insert-after="storie">
+   <property name="title">Il circolo virtuoso</property>
+   <property name="description"></property>
+   <property name="url_expr">string:$portal_url/il-circolo-virtuoso</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="contact" meta_type="CMF Action" i18n:domain="plone" insert-after="foto">
+   <property name="title" i18n:translate="">Contact</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:$portal_url/contatti</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
 </object>

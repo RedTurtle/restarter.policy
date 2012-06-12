@@ -2,4 +2,5 @@
     <div id="inner-portal-header">
         <div tal:replace="structure provider:plone.portalheader" />
     </div>
+    <div class="visualClear"></div>
 </div>
