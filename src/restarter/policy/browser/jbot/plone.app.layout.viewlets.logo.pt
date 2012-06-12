@@ -1,4 +1,4 @@
- 
+<!-- 
 <div id="logo-nav-wrapper">
     <div id="portal-logo">
         <a metal:define-macro="portal_logo"
@@ -21,10 +21,10 @@
     </div>
     <div class="visualClear"></div>
 </div>
-
+-->
 
 <!-- manca classe current -->
-<!--
+
 <div id="nav-wrapper">
   <div id="navRedBtn" class="barBtn">
       <ul id="navRed">
@@ -34,4 +34,3 @@
       </ul>
   </div>
 </div>
--->
