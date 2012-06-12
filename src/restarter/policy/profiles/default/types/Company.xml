@@ -15,13 +15,6 @@
  <property name="global_allow">False</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
-  <element value="Collection"/>
-  <element value="Document"/>
-  <element value="Folder"/>
-  <element value="Image"/>
-  <element value="Link"/>
-  <element value="Products"/>
-  <element value="Topic"/>
  </property>
  <property name="allow_discussion">True</property>
  <property name="default_view">base_view</property>
