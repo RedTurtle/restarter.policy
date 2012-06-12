@@ -21,6 +21,14 @@
       <depends name="contenttyperegistryp"/>
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="upgrade_0004_to_0005"
+      title="Upgrade restarter.policy 0004 to 0005"
+      directory="profiles/upgrade_0004_to_0005"
+      description="Upgrades the restarter.policy 0004 to 0005."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
       title="Add assoc roles"
       description="Add assoc. roles"
@@ -43,6 +51,14 @@
       source="0003"
       destination="0004"
       handler="restarter.policy.upgrades.add_employee_role"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:upgradeStep
+      title="Add portal registry for stats"
+      description="Add portal registry for stats"
+      source="0004"
+      destination="0005"
+      handler="restarter.policy.upgrades.upgrade_0004_to_0005"
       sortkey="1"
       profile="restarter.policy:default"/>
 
