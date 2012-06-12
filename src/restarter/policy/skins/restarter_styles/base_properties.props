@@ -15,7 +15,7 @@ backgroundColor:string=White
 
 descriptionColor:string=#000
 descriptionWeight:string=Bold
-descriptionFont:string="DIN-RegularRegular", Helvetica, Arial, sans-serif
+descriptionFont:string=DIN-RegularRegular, Helvetica, Arial, sans-serif
 
 linkColor:string=#EB1B24
 linkActiveColor:string=Red
@@ -34,7 +34,7 @@ globalBackgroundColor:string=#F0F0F0
 globalFontColor:string=#444C4C
 globalHoverBackgroundColor:string=#CCC
 
-headingFontFamily:string="DIN-RegularRegular", Helvetica, Arial, sans-serif
+headingFontFamily:string=DIN-RegularRegular, Helvetica, Arial, sans-serif
 headingColor:string=#444C4C
 headingH1Color:string=#000
 
