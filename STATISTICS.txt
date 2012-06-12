@@ -1,0 +1,38 @@
+Statistics
+==========
+
+Set up an instance to run the statistics update processor. This can
+be an existing instance, or a separate one::
+
+    $ bin/instance statistics
+
+This process should always be running, but may be stopped and started
+at any time without data loss.
+
+Keeping a separate database for updates
+---------------------------------------
+
+Using the ``plone.recipe.zope2instance`` recipe for buildout, this is
+how you would configure a mount point for a Plone site located at
+``/site``::
+
+          zope-conf-additional =
+              <zodb_db statistics>
+                 mount-point /site/portal_stats
+                 container-class restarter.policy.tool.StatsTool
+                 <zeoclient>
+                   server ${zeo:zeo-address}
+                   storage statistics
+                 </zeoclient>
+              </zodb_db>
+
+This should match a ``plone.recipe.zeoserver`` part::
+
+          zeo-conf-additional =
+              <filestorage statistics>
+                path ${buildout:directory}/var/filestorage/statistics.fs
+              </filestorage>
+
+Note that you must add the mount point using the ZMI before installing
+the add-on for it to work.
+

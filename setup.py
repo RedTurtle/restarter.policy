@@ -49,7 +49,7 @@ setup(name='restarter.policy',
       target = plone
 
       [zopectl.command]
-      update = restarter.policy:processor
+      statistics = restarter.policy:processor
       """,
       setup_requires=["PasteScript"],
       paster_plugins=["templer.localcommands"],
