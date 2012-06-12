@@ -1,0 +1,13 @@
+<div id="slider-wrapper">
+    <div id="slider">
+        <div id="sliderContent">
+            <div id="sliderTxt">
+                <h2>LOREM IPSUM DOLOR SIT AMET</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa.</p>
+                <p class="btnLink">
+                    <a class="btn" href="#">Partecipa</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

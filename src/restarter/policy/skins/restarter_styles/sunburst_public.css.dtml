@@ -1,0 +1,606 @@
+/* Questo css svrascrive le classi che in Sunburst non usano le base_properties  */
+
+
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+body { 
+	font-size: &dtml-fontBaseSize;;
+	font-family: <dtml-var fontFamily>;
+	background: &dtml-backgroundColor;;
+	color: &dtml-fontColor;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: <dtml-var headingFontFamily>; 
+	color: &dtml-headingColor;;
+	letter-spacing:normal;
+}
+/*
+h1 {font-size: 2em;}
+h2 {font-size: 1.75em;}
+h3 {font-size: 1.25em;}
+h4 {font-size: 1.25em;}
+h5 {font-size: 1em;}
+h6 {font-size: 0.8em;}
+*/
+h1 {
+	color: &dtml-headingH1Color;;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: &dtml-linkColor;;
+}
+
+a:link {
+	color: &dtml-linkColor;;
+}
+a:visited {
+	color: &dtml-linkVisitedColor;;
+}
+a:hover {
+	color: &dtml-linkHoverColor;;
+}
+input {
+	font-family:  <dtml-var fontFamily>;
+    font-size:1em;
+}
+
+/*** font size ***/
+#content,
+#content .documentDescription, #content #description,
+#portal-globalnav,
+dl.portlet,
+div.managePortletsLink, a.managePortletsFallback,
+#edit-bar,
+#portal-breadcrumbs,
+#portal-personaltools,
+#portal-languageselector,
+#portal-siteactions,
+div.listingBar,
+dl.portalMessage,
+#content dl.portalMessage,
+#setup-link,
+.comment,
+#portal-footer,
+#portal-sitemap,
+div.overlay,
+#portal-searchbox,
+div.portletAssignments,
+#archetypes-fieldname-description textarea#description {
+	font-size: 1em;
+}
+body.smallText {
+    font-size: &dtml-fontSmallSize;;
+}
+#portal-globalnav {
+	background: &dtml-globalBackgroundColor;;
+}
+#portal-globalnav li a {
+	background: &dtml-globalBackgroundColor;;
+}
+
+#portal-globalnav .selected a,
+#portal-globalnav a:focus,
+#portal-globalnav a:hover {
+	background: &dtml-globalFontColor;;
+	color: White;
+}
+#portal-globalnav .selected a:focus,
+#portal-globalnav .selected a:hover {
+	background: &dtml-globalBackgroundColor;;
+	color: &dtml-globalFontColor;;
+}
+
+#portal-personaltools {
+	background:&dtml-globalBackgroundColor;;
+}
+#portal-personaltools a {
+	color: &dtml-linkColor;;
+}
+#portal-languageselector {
+	background: &dtml-globalBackgroundColor;;
+}
+
+
+/* @group Path indicator (breadcrumbs) */
+
+#portal-breadcrumbs {
+	margin-bottom: 1em;
+
+}
+#portal-breadcrumbs a {
+	border-bottom: none;
+	padding: 0.25em 0;
+	display: inline-block;
+}
+
+/* @end */
+
+/* @group Site actions */
+
+#portal-siteactions li a:focus,
+#portal-siteactions li a:hover {
+    color: &dtml-linkHoverColor;;
+}
+
+/* @end */
+
+/* @group Listings */
+
+dl.portlet dt,
+div.portletAssignments div.portletHeader {
+	background: &dtml-globalBackgroundColor;;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:focus,
+dl.portlet dt a:hover {
+	color: &dtml-linkColor;;
+}
+
+div.managePortletsLink {
+	background: &dtml-globalBackgroundColor;;
+}
+
+/* @end */
+
+/* @group Navigation portlet */
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+	border-color: &dtml-globalBackgroundColor;;
+	border-width: &dtml-borderWidthNavTreeItem;;
+}
+dl.portlet ul.navTree .navTreeCurrentItem {
+	background-color: &dtml-globalBackgroundColor;;
+	border-left: 1em solid &dtml-globalBackgroundColor;;
+}
+
+/* @end */
+
+/* @group Content Area */
+#content a:link,
+dl.portlet a:link {
+	color: &dtml-linkColor;;
+	border-color: &dtml-borderLinkColor;;
+	border-bottom-width: &dtml-borderLinkWidth;;
+	border-bottom-style: &dtml-borderStyle;;
+}
+
+#content a:visited, 
+dl.portlet a:visited {
+	color: &dtml-linkVisitedColor;;
+	border-color: &dtml-borderLinkColor;;
+	border-bottom-width: &dtml-borderLinkWidth;;
+}
+#content a:focus,
+#content a:hover,
+dl.portlet a:focus,
+dl.portlet a:hover {
+	color: &dtml-linkHoverColor; !important; 
+}
+
+#category {
+	color: #666;
+}
+
+#category a.link-category {
+	background: &dtml-globalBackgroundColor;;
+}
+#category a.link-category:hover {
+	background: &dtml-globalFontColor;;
+	color: White;
+	border-color: &dtml-globalFontColor;;
+}
+
+
+#content pre {
+	background-color: #222;
+	color: White;
+}
+#content div.documentByLine,
+dl dt .documentByLine {
+	color: #666;
+}
+
+#content .discreet,
+#sidebar .discreet {
+	color: &dtml-discreetColor;;
+}
+
+#content .visualHighlight {
+    background-color: #ffb;
+}
+
+#content .pullquote {
+	color: #444;
+}
+#content .callout {
+    background: #eee;
+	border-color: #ccc;
+}
+
+#content .documentDescription,
+#content #description
+{
+	color: &dtml-descriptionColor;;
+	font-weight: &dtml-descriptionWeight;;
+	font-family: &dtml-descriptionFont;;
+}
+
+#content div.newsImageContainer p.discreet {
+	background-color: #666;
+	background-color: rgba(40,40,40,0.7);
+	color: White;
+}
+/* @end */
+
+
+/* @group Data tables */
+
+table.plain th,
+table.plain td {
+    border-color: &dtml-globalBorderColor;;
+}
+table.listing th {
+	color: &dtml-globalFontColor;;
+	border-color: #e7e7e7;
+}
+table.listing tr.odd th {
+	border-color: #fff;
+}
+table.listing tbody tr.odd {
+	background: &dtml-oddRowBackgroundColor;;
+}
+table.listing tbody tr.odd td { 
+	background: &dtml-oddRowBackgroundColor;;
+}
+table.listing td.draggable {
+	background: &dtml-globalBackgroundColor;!important;
+	border-bottom-color: white;
+}
+
+div.listingBar a {
+	border-color: &dtml-globalBorderColor;;
+}
+
+div.listingBar a:focus,
+div.listingBar a:hover {
+	color: White;
+	background-color: #329fd7;
+	border-color: #329fd7;
+}
+
+/* @end */
+
+/* @group Status messages */
+
+dl.portalMessage {
+	border-color: #996;
+	background-color: #ffffe3;
+}
+dl.portalMessage a,
+#content dl.portalMessage a {
+    color: black;
+	border-bottom-color: black;
+}
+dl.portalMessage dt {
+    background-color: #996; 
+    color: White;
+}
+dl.warning {
+    border-color: #d80;
+}
+dl.warning dt {
+    background-color: #d80;
+}
+dl.error {
+    border-color: #d00;    
+}
+dl.error dt {
+    background-color: #d00; 
+}
+dl.warning {
+    border-color: #d80;    
+}
+dl.warning dd {
+    background-color: #fd7; 
+}
+dl.error {
+    border-color: red;    
+}
+dl.error dd {
+    background-color: #fdc; 
+}
+
+/* @end */
+
+/* @group Editing */
+
+/* @group Tabs */
+
+/* Color differences between the two tab types */
+#edit-bar {
+	background-color: &dtml-contentViewBackgroundColor;;
+	border-color: &dtml-contentViewBackgroundColor;;
+}
+
+#content ul.formTabs {
+	background-color: &dtml-globalBackgroundColor;;
+	border-color: &dtml-globalBackgroundColor;;
+}
+#content-views {
+	background-color: &dtml-contentViewBackgroundColor;;
+}
+
+/* Shared CSS between the two tab types */
+#content-views li.selected a, 
+#content-views li a:focus, 
+#content-views li a:hover {
+    background-color: &dtml-contentViewHoverBackgroundColor;;
+    color: Black;
+}
+#content li.formTab a.selected,
+#content li.formTab a:focus,
+#content li.formTab a:hover {
+    background-color: &dtml-globalHoverBackgroundColor;;
+    color: Black;
+}
+#content-views li.selected a, 
+#content li.formTab a.selected {
+	background-color: #FFF;
+}
+
+#content li.formTab a.notify {
+    background-color: red;
+    color: White;
+}
+
+/* @end */
+
+/* @group Pulldown menus */
+
+/* @group Personal tools pulldown */
+#portal-personaltools dt.actionMenuHeader a:focus,
+#portal-personaltools dt.actionMenuHeader a:hover {
+    color: &dtml-fontColor;;
+}
+#portal-personaltools dd {
+	background: #eee;
+}
+#portal-personaltools dd a:focus,
+#portal-personaltools dd a:hover {
+	background: #FFF;
+	color: #000 !important;
+	color: White;
+}
+
+/* @end */
+
+/* @group Content pulldowns */
+
+#contentActionMenus dl.actionMenu a {
+	background-color: &dtml-contentViewBackgroundColor;;
+	color: White;
+}
+#contentActionMenus dl.actionMenu .actionMenuContent a,
+#contentActionMenus dl.actionMenu.activated dd {
+	background-color: &dtml-contentViewBackgroundColor;;
+	color: #FFF;
+}
+#contentActionMenus dl.actionMenu a:focus,
+#contentActionMenus dl.actionMenu a:hover {
+    color: #000000;
+	background-color: &dtml-contentViewBackgroundColor;;
+}
+#contentActionMenus dl.actionMenu dt a {
+	margin:0 0;
+	padding:0 0.5em;
+	-moz-border-radius: 0.5em 0.5em 0 0;
+}
+dl.actionMenu.deactivated dt {
+	margin:0 0;
+}
+#contentActionMenus dl.actionMenu.activated dd {
+	border-bottom: &dtml-contentViewBorderColor;;
+}
+#contentActionMenus dl.actionMenu.activated dd a:focus,
+#contentActionMenus dl.actionMenu.activated dd a:hover,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+	background-color: White !important;
+	color: #666;
+}
+#contentActionMenus dl.actionMenu.activated dd ul {
+	padding-bottom: 0.4em;
+}
+#folderHeader, #contextHeader {
+    border-bottom-color: white;
+}
+
+/* @end */
+
+#contentActionMenus {
+	background: &dtml-contentViewBackgroundColor;;
+}
+
+/* @end */
+
+/* @group Control panel */
+
+#content ul.configlets li a:visited {
+    color: #436976;
+    background-color: transparent;
+}
+#content ul.configlets li a:active {
+    color: #436976;
+}
+#content ul.configletDetails li.configletDescription {
+    color: #76797c;
+}
+.rule-element {
+    background-color:#EEF3F5;
+}
+
+/* @end */
+
+/* @group Collapsible */
+dl.collapsible {
+    border-color: #8cacbb;
+}
+
+/* @end */
+
+/* @group Comments */
+
+.comment {
+	border-color: #eee;
+	background-color: #f6f6f6;
+}
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4, 
+.comment h5,
+.comment h6 {
+    border-bottom-color: #76797c;
+}
+
+/* @end */
+
+.optionsToggle {
+    border-color: #8cacbb;
+    color: Black;
+    background-color: #dee7ec;
+} 
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+   background-color: #ffa;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+    color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-color: #ffa500;
+}
+
+/* @end */
+
+/* @group Image alignment classes */
+
+img.image-left,
+img.image-right,
+.captioned img {
+    border-color: #ddd;
+}
+dd.image-caption {
+    color: #666;
+}
+
+/* @end */
+
+/* @group Forms */
+
+/* Emulates the styling from the h1 tag */
+#archetypes-fieldname-title input {
+	font-family: <dtml-var headingFontFamily>; 
+	color: Black;
+	font-size: 1.4em;
+}
+
+/* Emulates styling from the description's view */
+#archetypes-fieldname-description textarea#description {
+    font-family: <dtml-var fontFamily>;
+    color: #000;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	background-color: #ffffe0;
+}
+
+
+#content fieldset {
+    border-color: &dtml-globalBorderColor;;
+}
+
+#content optgroup {
+    color: #999;
+}
+#content option {
+    color: black;
+}
+.searchSection {
+    color: #76797c;
+}
+.searchSection label:hover {
+    color: Black;
+}
+.formHelp {
+	color: #555;
+}
+div.error {
+    background-color: #fdc;
+}
+.error .fieldRequired {
+    color: #d00;
+}
+
+input.inputLabelActive {
+    color: #76797c;
+}
+table.listing tbody tr.odd.selected td,
+tr.selected {
+    background-color: #ffa;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#portal-footer {
+	color: &dtml-globalBackgroundColor;;
+	background-color: &dtml-globalFontColor;;
+}
+#portal-footer a:hover {
+	color: &dtml-globalBackgroundColor;;
+}
+#portal-colophon a {
+	color: &dtml-linkColor;;
+}
+#portal-colophon a:hover {
+	color: &dtml-linkHoverColor;;
+}
+
+/* @end */
+
+/* @group Sitemap */
+
+#portal-sitemap > li {   
+    border-bottom-color: #ddd;
+}
+
+/* @end */
+
+/*** Tiny ***/
+.ploneSkin table.mceLayout td.mceToolbar {
+	background-color: #EFEFEF !important;
+}
+.ploneSkin .mceText,
+.ploneSkin .mceOpen {
+	border-bottom-width: 1px !important;
+}
+
+
+
+
+/* </dtml-with> */

@@ -1,0 +1,389 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+p {
+    line-height: 1.5em;
+}
+
+#portal-header {
+    background-color: #444C4C;
+    color: #848C8B;
+}
+#inner-portal-header,
+#logo-nav-wrapper,
+#nav-wrapper ul,
+#slider,
+#portal-columns,
+#inner-portal-footer,
+#colophonWrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+#inner-portal-header a {
+    color: #848C8B;
+}
+#inner-portal-header a:hover {
+    color: #FFF;
+}
+
+/** search **/
+#portal-searchbox {
+    float: left;
+    background-color: #576262;
+    margin:0;
+    padding: 14px 10px 0;
+    min-height: 42px;
+}
+.LSBox .searchSection {
+    display: none;
+}
+#portal-searchbox #searchGadget {
+    background: #F0F0F0 none;
+    border:0;
+     -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+    border-radius: 6px 0 0 6px; 
+    padding: 6px 10px;
+    width: 9em;
+    color: #FFF;
+}
+ #portal-searchbox .LSBox input.searchButton {
+    background: #F0F0F0 url(++resource++restarter.images/ico_lente.png) no-repeat center center;
+    border:0;
+     -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    border-radius: 0 6px 6px 0; 
+    padding: 6px 20px;
+    margin-left: -4px;
+    text-indent: -9999em;
+}
+
+/** personal bar **/
+#portal-personaltools {
+    background-color: #576262;
+    float: left;
+    padding: 20px 10px 0 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0; 
+    min-height: 36px;
+    font-size: 0.9em;
+}
+#personaltools-login,
+#personaltools-join {
+    font-style: italic;
+}
+#portal-personaltools #anon-personalbar a {
+    margin:0;
+}
+#portal-personaltools li a {
+    border-left: 1px dotted #848C8B;
+    padding: 0.2em 1em;
+    margin: 0 0 0 0;
+}
+#portal-personaltools #personaltools-login {
+    border:0;
+}
+dl.actionMenu#portal-personaltools {
+    margin-left: 0;
+    padding-left: 10px;
+}
+#portal-personaltools dt.actionMenuHeader a, #portal-personaltools dt.actionMenuHeader a,
+#portal-personaltools dt.actionMenuHeader a:hover, #portal-personaltools dt.actionMenuHeader a:hover {
+    color: #FFF;
+}
+#portal-personaltools dd {
+    background-color: #576262;
+    left: 10px;
+    right: auto;
+    top: 42px;
+    border-top: 3px solid #CCC;
+}
+#portal-personaltools dd li a {
+    border:0;
+    color: #FFF;
+}
+
+/** globalnav **/
+#portal-globalnav {
+    background-color: transparent;
+    margin:0;
+    position: absolute;
+    right:0;
+    top:18px;
+    font-size: 1.25em;
+    font-family: <dtml-var headingFontFamily>;
+}
+#portal-globalnav li {
+    display: inline-block;
+    height: 39px;
+}
+#portal-globalnav li a {
+    background-color: transparent;
+    padding: 0 0.7em;
+    border-right: 1px dotted #848C8B;
+    min-width: 1px;
+}
+#portal-globalnav li.selected {
+    border-bottom: 3px solid #FFF;
+}
+#portal-globalnav li#portaltab-index_html.selected {
+    border-bottom-color: #ED1C24;
+}
+#portal-globalnav .selected a,
+#portal-globalnav a:focus,
+#portal-globalnav a:hover {
+    background-color: transparent;
+}
+#portal-globalnav .selected a:focus,
+#portal-globalnav .selected a:hover {
+    background-color: transparent;
+    color: #FFF;
+}
+#portal-globalnav li#portaltab-contact a {
+    border-right: 0;
+    background-image: url(++resource++restarter.images/ico_mail.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
+}
+
+/** logo **/
+#portal-logo {
+    margin: 25px 0 0;
+    float: left;
+}
+
+/** big nav red **/
+#navRedBtn.bigBtn {
+    float: right;
+}
+#logo-nav-wrapper {
+    padding: 40px 0;
+}
+#navRedBtn.bigBtn ul#navRed li {
+    display: block;
+    float: left;
+    width: 181px;
+    height: 181px;
+    background: #EC1B24 url(++resource++restarter.images/bg_gradient_red.png) repeat-x left top;
+    border-bottom: 3px solid #444C4C;
+    margin: 0 5px;
+}
+#navRedBtn.bigBtn ul#navRed li a {
+    display: block;
+    height: 161px;
+    background: transparent url(++resource++restarter.images/sign_down.png) no-repeat center 90%;
+    color: #FFF;
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 2.6em;
+    padding: 10px;
+}
+#navRedBtn.bigBtn ul#navRed li a:hover {
+    background-color: #900;
+}
+#nav-wrapper {
+    background-color: &dtml-colorRed;;
+    text-align: right;
+    padding: 8px 0;
+}
+#nav-wrapper li {
+    display: inline-block;
+    margin: 0 0.3em 0 0.1em;
+    padding: 0.2em 0 0.2em;
+}
+#nav-wrapper li a {
+    color: #FFF;
+    font-family: <dtml-var headingFontFamily>;
+    display: inline-block;
+    font-size: 2.3em;
+    line-height: 1.1em;
+    border-left: 1px dotted #FFF;
+    padding: 0 0.6em;
+}
+#nav-wrapper li a:hover {
+    color: #FF9;
+}
+/** slider **/
+#slider-wrapper {
+    background-color: #F0F0F0;
+}
+#slider {
+    border-bottom: 3px solid &dtml-colorRed;;
+}
+#sliderContent {
+    background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
+    padding: 0 0 0 77%;
+    min-height: 300px;
+}
+#sliderTxt {
+    background-color: #F0F0F0;
+    padding: 10px;
+}
+#sliderTxt h2 {
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-bottom: 0.4em;
+}
+#sliderTxt p {
+    font-style: italic;
+}
+p.btnLink {
+    margin-top: 2em;
+}
+p.btnLink a.btn {
+    display: inline-block;
+    background-color: #CDCDCD;
+     -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    color: #FFF;
+    font-style: normal; 
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    padding: 0.4em 1em;
+}
+p.btnLink a.btn:hover {
+    background-color: &dtml-linkColor;;
+    cursor: pointer;
+}
+
+/** footer **/
+#portal-footer-wrapper {
+    clear: both;
+    background-color: #444C4C;   
+    color: #FFF;
+}
+#portal-footer-wrapper a {
+    color: #FFF;
+}
+#portal-footer-wrapper a:hover,
+#portal-siteactions li a:focus, #portal-siteactions li a:hover {
+    color: #FF9;
+}
+#portal-footer {
+    background-color: #576262;
+    color: #2A2F2F;
+    font-family: <dtml-var headingFontFamily>;
+}
+#portal-colophon {
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+}
+.logoFooter {
+    display: block;
+    margin: 5px 0;
+}
+#logo-rer {
+    margin-bottom: 10px;
+}
+p.seguici,
+p.sostegno {
+    font-size: 1.4em;  
+    line-height: 1.2em; 
+}
+p.seguici {
+    margin-bottom: 0.4em;
+}
+li.socialLink {
+    display: block;
+    font-size: 1.2em;
+    padding-left: 35px;
+    background-position: left 100px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url(++resource++restarter.images/ico_socials_small.png);
+    margin: 5px 0;
+}
+li#linkFB {
+    background-position: left 3px;
+}
+li#linkTW {
+    background-position: left -57px;
+}
+.footerColumn p.btnLink {
+    margin-top: 1em;
+}
+.footerColumn p.btnLink a.btn {
+    font-size: 1.4em;
+    background-color: #444C4C;
+}
+.footerColumn p.btnLink a.btn:hover {
+   background-color: #999;
+   color: #444c4c !important; 
+}
+.footerColumn {
+    width: 32%;
+    margin: 0;
+    float: left;
+}
+#footer-column-2,
+#colophon-column-2 {
+    margin: 0 2%;
+}
+#colophon-column-1,
+#colophon-column-2 {
+    padding-top: 1em;
+}
+a.faq {
+    display: block;
+    background: transparent url(++resource++restarter.images/ico_question.png) no-repeat left center;
+    padding: 0.3em 0 0.3em 40px;
+    line-height: 1.4em;
+}
+#portal-siteactions {
+    margin-left: -4em;
+}
+#portal-siteactions li {
+    border-left: 1px dotted #EEE;
+    margin-right: 0;
+}
+#portal-siteactions li#siteaction-privacy {
+    border-left:0;
+}
+
+/** breadcrumbs **/
+#breadcrumbs-you-are-here {
+    display: none;
+}
+.section-homepage #portal-breadcrumbs {
+    display: none;
+}
+#portal-breadcrumbs {
+    font-size: 0.9em;
+    margin-left:0;
+    color: #000;
+}
+#portal-breadcrumbs a,
+#portal-breadcrumbs #breadcrumbs-current {
+    font-style: italic;
+}
+.breadcrumbSeparator {
+    padding: 0 0.2em;
+}
+/** contenuto **/
+#portal-columns {
+    clear: both;
+    padding: 30px 0 20px;
+}
+#content-core {
+}
+body#content.mceContentBody {
+    font-size: 84%;
+}
+.link-parent {
+    margin: 0.5em 0;
+    padding: 0.1em 0.5em;
+    background-color: #F0F0F0;
+    display: block;
+}
+#viewlet-social-like iframe {
+   width: 100px !important;
+}
+
+
+/* </dtml-with> */

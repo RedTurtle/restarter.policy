@@ -1,0 +1,29 @@
+<div metal:define-macro="portal_footer"
+     i18n:domain="plone"
+     id="portal-footer">
+     <div id="inner-portal-footer">
+          <div id="footer-column-1" class="footerColumn">
+               <a id="logo-rer" class="logoFooter" href="http://www.regione.emilia-romagna.it">
+                    <img src="" tal:attributes="src string:${context/portal_url}/logo_rer_white.png" width="176" height="26" alt="Regione Emilia-Romagna"/>
+               </a>
+               <a id="logo-al" class="logoFooter" href="http://www.assemblea.emr.it">
+                    <img src="" tal:attributes="src string:${context/portal_url}/logo_al_white.png" width="176" height="47" alt="Regione Emilia-Romagna"/>
+               </a>
+          </div>
+          <div id="footer-column-2" class="footerColumn">
+               <p class="seguici">Seguici anche su:</p>
+               <ul>
+                    <li id="linkFB" class="socialLink"><a href="http://www.facebook.com/facciamoadesso">www.facebook.com/facciamoadesso</a></li>
+                    <li id="linkTW" class="socialLink"><a href="http://www.twitter.com/facciamoadesso">www.twitter.com/facciamoadesso</a></li>
+               </ul>
+          </div>
+          <div id="footer-column-3" class="footerColumn">
+               <p class="sostegno">Sostegno alle imprese colpite dal terremoto</p>
+               <p class="btnLink">
+                    <a class="btn" href="#">Partecipa</a>
+                </p>
+          </div>
+          <div class="visualClear"> </div>
+     </div>
+
+</div>

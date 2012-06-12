@@ -1,0 +1,22 @@
+<div id="portal-colophon"
+     metal:define-macro="colophon"
+     i18n:domain="plone">
+<metal:slot define-slot="colophon" />
+<div id="colophonWrapper">
+    <div id="colophon-column-1" class="footerColumn">
+        <p id="colophon-copyright">FacciamoAdesso &copy; 2012</p>
+    </div>
+    <div id="colophon-column-2" class="footerColumn">
+        <ul id="portal-siteactions">
+            <li id="siteaction-privacy"><a tal:attributes="href string:${context/portal_url}/privacy" accesskey="">Privacy</a></li>
+            <li id="siteaction-sitemap"><a tal:attributes="href string:${context/portal_url}/sitemap" accesskey="3">Mappa del sito</a></li>
+            <li id="siteaction-contatti"><a tal:attributes="href string:${context/portal_url}/contatti" accesskey="9">Contatti</a></li>
+            <li id="siteaction-credits"><a tal:attributes="href string:${context/portal_url}/credits" accesskey="">Credits</a></li>
+        </ul>
+    </div>
+    <div id="colophon-column-3" class="footerColumn">
+        <a class="faq" href="#">Aiuto/FAQ <br/>Consulta le istruzioni</a>
+    </div>
+    <div class="visualClear"> </div>
+</div>
+</div>
