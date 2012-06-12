@@ -11,7 +11,6 @@
             <img src="logo.jpg" alt=""
                  tal:replace="structure view/logo_tag" /></a>
     </div>
-    
     <div id="navRedBtn" class="bigBtn">
         <ul id="navRed">
             <li id="navBtnProdotti"><a href="#">Prodotti</a></li>
@@ -21,8 +20,6 @@
     </div>
     <div class="visualClear"></div>
 </div>
-
-
 <!-- manca classe current -->
 <div id="nav-wrapper" tal:condition="not: restarter/isHomePage">
   <div id="navRedBtn" class="barBtn">

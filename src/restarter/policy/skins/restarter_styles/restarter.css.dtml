@@ -154,6 +154,13 @@ dl.actionMenu#portal-personaltools {
     margin: 25px 0 0;
     float: left;
 }
+#portal-column-one #portal-logo {
+    margin:0 0 20px;
+    float: none;
+    position: relative;
+    top:0;
+    left:0;
+}
 
 /** big nav red **/
 #navRedBtn.bigBtn {
@@ -369,8 +376,6 @@ a.faq {
 #portal-columns {
     clear: both;
     padding: 30px 0 20px;
-}
-#content-core {
 }
 body#content.mceContentBody {
     font-size: 84%;
