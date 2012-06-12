@@ -21,6 +21,14 @@
       />
 
     <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="personal-information"
+      class=".personalpreferences.UserDataPanel"
+      permission="cmf.SetOwnProperties"
+      layer="..interfaces.layer.ISkin"
+    />
+
+    <browser:page
       for="Products.CMFCore.interfaces.IContentish"
       name="disqus_notify"
       class=".disqus.Notify"
