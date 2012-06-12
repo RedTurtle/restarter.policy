@@ -3,6 +3,7 @@
   <permissions>
     <permission name="Add portal member" acquire="False">
         <role name="Anonymous"/>
+        <role name="Association"/> 
         <role name="Manager" />
         <role name="Site Administrator"/>
         <role name="Owner" />

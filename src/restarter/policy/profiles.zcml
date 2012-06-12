@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="restarter.policy">
+    
+
+  <!-- Register the installation GenericSetup extension profile -->
+  <genericsetup:registerProfile
+      name="default"
+      title="restartER"
+      directory="profiles/default"
+      description="Installs the restarter.policy package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="restartER-various"
+      title="Additional restartER site policy setup"
+      description="restartER site policy configuration"
+      handler="restarter.policy.setuphandlers.importVarious">
+      <depends name="contenttyperegistryp"/>
+  </genericsetup:importStep>
+
+  <genericsetup:upgradeStep
+      title="Add assoc roles"
+      description="Add assoc. roles"
+      source="0001"
+      destination="0002"
+      handler="restarter.policy.upgrades.add_assc_roles"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+
+</configure>
