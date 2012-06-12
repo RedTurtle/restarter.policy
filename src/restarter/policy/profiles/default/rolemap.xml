@@ -1,9 +1,21 @@
 <?xml version="1.0"?>
 <rolemap>
   <permissions>
+  <roles>
+        <role name="Anonymous"/>
+        <role name="Association"/>
+        <role name="Authenticated"/>
+        <role name="Contributor"/>
+        <role name="Editor"/>
+        <role name="Manager"/>
+        <role name="Member"/>
+        <role name="Owner"/>
+        <role name="Reader"/>
+        <role name="Reviewer"/>
+        <role name="Site Administrator"/>
+    </roles>
     <permission name="Add portal member" acquire="False">
         <role name="Anonymous"/>
-        <role name="Association"/> 
         <role name="Manager" />
         <role name="Site Administrator"/>
         <role name="Owner" />
