@@ -6,3 +6,4 @@ from products import IProducts
 from company import ICompany
 from layer import ISkin
 from events import IDisqusNotify
+from configurations import IRestarterConfiguration

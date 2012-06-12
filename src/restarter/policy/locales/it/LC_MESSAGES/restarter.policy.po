@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-05 20:56+0000\n"
+"POT-Creation-Date: 2012-06-12 07:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,8 +14,37 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: ./content/company.py:19
+#: ./content/product.py:19
+msgid "-- not selected --"
+msgstr ""
+
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Accept"
+msgstr ""
+
+#: ./content/company.py:158
+msgid "Accept terms of use"
+msgstr ""
+
+#: ./content/company.py:52
+msgid "Address"
+msgstr ""
+
+#: ./content/product.py:83
+msgid "Availability"
+msgstr ""
+
+#: ./content/company.py:124
+msgid "CF/P.IVA"
+msgstr ""
+
+#: ./content/company.py:103
+msgid "Cell phone"
+msgstr ""
+
+#: ./content/company.py:71
+msgid "City"
 msgstr ""
 
 #: ./profiles/default/types/Companies.xml
@@ -26,8 +55,24 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: ./userdataschema.py:47
-msgid "Female"
+#: ./content/company.py:207
+msgid "Company name"
+msgstr ""
+
+#: ./content/company.py:146
+msgid "Company sectore"
+msgstr ""
+
+#: ./content/company.py:135
+msgid "Company type"
+msgstr ""
+
+#: ./content/company.py:114
+msgid "Company website"
+msgstr ""
+
+#: ./content/company.py:93
+msgid "Email address"
 msgstr ""
 
 #: ./profiles/default/types/Companies.xml
@@ -38,16 +83,108 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
-#: ./userdataschema.py:46
-msgid "Male"
+#: ./content/company.py:169
+msgid "Notification type"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
 msgid "Order"
 msgstr ""
 
+#: ./content/product.py:22
+msgid "Other"
+msgstr ""
+
+#: ./content/company.py:159
+msgid "Please accept terms of use."
+msgstr ""
+
+#: ./content/company.py:125
+msgid "Please give us your company CF or P.IVA."
+msgstr ""
+
+#: ./content/company.py:53
+msgid "Please give us your company address"
+msgstr ""
+
+#: ./content/company.py:104
+msgid "Please give us your company cell phone."
+msgstr ""
+
+#: ./content/company.py:72
+msgid "Please give us your company city location."
+msgstr ""
+
+#: ./content/company.py:94
+msgid "Please give us your company email address."
+msgstr ""
+
+#: ./content/company.py:83
+msgid "Please give us your company province location."
+msgstr ""
+
+#: ./content/company.py:115
+msgid "Please give us your company website url."
+msgstr ""
+
+#: ./content/product.py:84
+msgid "Please provide product availability."
+msgstr ""
+
+#: ./content/product.py:74
+msgid "Please provide product condition state."
+msgstr ""
+
+#: ./content/product.py:53
+msgid "Please provide product quantity unit."
+msgstr ""
+
+#: ./content/product.py:43
+msgid "Please provide product quantity."
+msgstr ""
+
+#: ./content/product.py:94
+msgid "Please provide product shipment conditions."
+msgstr ""
+
+#: ./content/product.py:103
+msgid "Please provide product waranty conditions."
+msgstr ""
+
+#: ./content/company.py:170
+msgid "Please select how we should notify your company."
+msgstr ""
+
+#: ./content/company.py:147
+msgid "Please select your company sectore."
+msgstr ""
+
+#: ./content/company.py:136
+msgid "Please select your company type."
+msgstr ""
+
+#: ./content/product.py:33
+msgid "Please select your product category."
+msgstr ""
+
+#: ./content/product.py:62
+msgid "Price"
+msgstr ""
+
 #: ./profiles/default/types/Product.xml
 msgid "Product"
+msgstr ""
+
+#: ./content/product.py:32
+msgid "Product category"
+msgstr ""
+
+#: ./content/product.py:73
+msgid "Product condition"
+msgstr ""
+
+#: ./content/product.py:131
+msgid "Product name"
 msgstr ""
 
 #: ./profiles/default/types/Product.xml
@@ -62,6 +199,26 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
+#: ./content/company.py:82
+msgid "Province"
+msgstr ""
+
+#: ./events.py:89
+msgid "Published on company creation"
+msgstr ""
+
+#: ./events.py:104
+msgid "Published on product creation"
+msgstr ""
+
+#: ./content/product.py:42
+msgid "Quantity"
+msgstr ""
+
+#: ./content/product.py:52
+msgid "Quantity unit"
+msgstr ""
+
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Request"
 msgstr ""
@@ -74,84 +231,66 @@ msgstr ""
 msgid "Send back"
 msgstr ""
 
+#: ./content/product.py:93
+msgid "Shipment"
+msgstr ""
+
+#: ./content/product.py:102
+msgid "Waranty"
+msgstr ""
+
+#: ./events.py:13
+msgid "You have a new order in your company products: %s"
+msgstr ""
+
+#: ./events.py:14
+msgid "You have just registered new company at %s."
+msgstr ""
+
+#: ./events.py:17
+msgid "You have received new comment to %s."
+msgstr ""
+
+#: ./content/company.py:156
+msgid "You must accept the Terms of Use."
+msgstr ""
+
+#: ./content/company.py:35
+msgid "both"
+msgstr ""
+
+#: ./events.py:15
+msgid "has just registered on FacciamoAdesso. Join us!"
+msgstr ""
+
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./userdataschema.py:77
+#: ./userdataschema.py:46
 msgid "help_accept"
 msgstr ""
 
-#. Default: "Your date of birth, in the format dd-mm-yyyy"
-#: ./userdataschema.py:53
-msgid "help_birthdate"
+#. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
+#: ./userdataschema.py:39
+msgid "help_cellphone"
 msgstr ""
 
-#. Default: "Fill in the city you live in."
-#: ./userdataschema.py:59
-msgid "help_city"
-msgstr ""
-
-#. Default: "Fill in the country you live in."
-#: ./userdataschema.py:65
-msgid "help_country"
-msgstr ""
-
-#. Default: "Fill in your given name."
-#: ./userdataschema.py:31
-msgid "help_firstname"
-msgstr ""
-
-#. Default: "Are you a girl or a boy?"
-#: ./userdataschema.py:43
-msgid "help_gender"
-msgstr ""
-
-#. Default: "Fill in your surname or your family name."
-#: ./userdataschema.py:37
-msgid "help_lastname"
-msgstr ""
-
-#. Default: "Leave your phone number so we can reach you."
-#: ./userdataschema.py:71
-msgid "help_phone"
+#. Default: "Ragione sociale help."
+#: ./content/company.py:44
+msgid "help_ragione_sociale"
 msgstr ""
 
 #. Default: "Accept terms of use"
-#: ./userdataschema.py:76
+#: ./userdataschema.py:45
 msgid "label_accept"
 msgstr ""
 
-#. Default: "birthdate"
-#: ./userdataschema.py:52
-msgid "label_birthdate"
+#. Default: "Cellphone number"
+#: ./userdataschema.py:38
+msgid "label_cellphone"
 msgstr ""
 
-#. Default: "City"
-#: ./userdataschema.py:58
-msgid "label_city"
-msgstr ""
-
-#. Default: "Country"
-#: ./userdataschema.py:64
-msgid "label_country"
-msgstr ""
-
-#. Default: "First name"
-#: ./userdataschema.py:30
-msgid "label_firstname"
-msgstr ""
-
-#. Default: "Gender"
-#: ./userdataschema.py:42
-msgid "label_gender"
-msgstr ""
-
-#. Default: "Last name"
-#: ./userdataschema.py:36
-msgid "label_lastname"
-msgstr ""
-
-#. Default: "Telephone number"
-#: ./userdataschema.py:70
-msgid "label_phone"
+#. Default: "Ragione sociale"
+#: ./content/company.py:43
+msgid "label_ragione_sociale"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
