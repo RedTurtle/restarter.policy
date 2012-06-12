@@ -35,7 +35,7 @@ globalFontColor:string=#444C4C
 globalHoverBackgroundColor:string=#CCC
 
 headingFontFamily:string=DIN-RegularRegular, Helvetica, Arial, sans-serif
-headingColor:string=#444C4C
+headingColor:string=#000
 headingH1Color:string=#000
 
 contentViewBorderColor:string=#74ae0b

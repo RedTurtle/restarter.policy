@@ -12,18 +12,30 @@
       
       <dd class="portletItem">
         <div class="faCollectionImg">
-          <img src="http://placehold.it/128x128" alt="" />
+          <img src="http://lorempixel.com/128/128/" alt="" />
         </div>
         <p class="itemData">02 Giugno 2012</p>
         <h3 class="faCollectionTitle">
           <a href="#">Cum sociis natoque penatibus et magnis dis parturient</a>
         </h3>
-    
         <p class="faCollectionDesc">
           Fonte: Resto del Carlino
         </p>
         <div class="visualClear"><!-- --></div>
-  
+      </dd>
+
+      <dd class="portletItem">
+        <div class="faCollectionImg">
+          <img src="http://lorempixel.com/128/128/" alt="" />
+        </div>
+        <p class="itemData">02 Giugno 2012</p>
+        <h3 class="faCollectionTitle">
+          <a href="#">Cum sociis natoque penatibus et magnis dis parturient</a>
+        </h3>
+        <p class="faCollectionDesc">
+          Fonte: Resto del Carlino
+        </p>
+        <div class="visualClear"><!-- --></div>
       </dd>
     </dl>
   </body>
