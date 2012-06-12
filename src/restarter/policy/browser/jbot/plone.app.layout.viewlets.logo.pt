@@ -1,5 +1,5 @@
- 
-<div id="logo-nav-wrapper">
+<tal:restarter define="restarter context/@@config_restarter">
+<div id="logo-nav-wrapper" tal:condition="restarter/isHomePage">
     <div id="portal-logo">
         <a metal:define-macro="portal_logo"
            title="Home"
@@ -24,8 +24,7 @@
 
 
 <!-- manca classe current -->
-<!--
-<div id="nav-wrapper">
+<div id="nav-wrapper" tal:condition="not: restarter/isHomePage">
   <div id="navRedBtn" class="barBtn">
       <ul id="navRed">
           <li id="navBtnProdotti"><a href="#">Prodotti</a></li>
@@ -34,4 +33,4 @@
       </ul>
   </div>
 </div>
--->
+</tal:restarter>
