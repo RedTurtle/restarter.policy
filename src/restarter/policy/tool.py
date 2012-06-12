@@ -42,13 +42,14 @@ class StatsTool(SimpleItem):
         counter = getToolByName(self, 'portal_catalog').getCounter()
         now = datetime.datetime.now()
         timestamp = int(time.mktime(now.timetuple()))
-        if counter > getattr(self, 'last_update', -1):
-        
+        if counter > getattr(self, 'last_update', -1):        
             self.last_update = counter
             self.stats = self._getStats()
             logger.info("update %s" % timestamp)
+            return True
         else:
             logger.debug("no changes %s" % timestamp)
+            return False
 
     security.declarePublic("getStats")
     def getStats(self):
