@@ -5,14 +5,14 @@ from zope.interface import implements
 
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import base
-from Products.ATContentTypes.content import schemata
+from Products.ATContentTypes.content import schemata, document
 
 # -*- Message Factory Imported Here -*-
 
-from restarter.policy.interfaces import ICompanyStory, ICompany
+from restarter.policy.interfaces import ICompanyStory
 from restarter.policy.config import PROJECTNAME
 
-CompanyStorySchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
+CompanyStorySchema = document.ATDocumentSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
@@ -28,10 +28,5 @@ class CompanyStory(base.ATCTContent):
 
     meta_type = "CompanyStory"
     schema = CompanyStorySchema
-
-    def getCompany(self):
-        company = self.aq_parent.aq_parent.aq_parent
-        if ICompany.providedBy(company):
-            return company
 
 atapi.registerType(CompanyStory, PROJECTNAME)

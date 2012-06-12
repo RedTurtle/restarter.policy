@@ -2,9 +2,10 @@ import requests
 import logging
 import re
 
+from zope.interface import directlyProvides
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
-from restarter.policy.interfaces import IDisqusNotify
+from restarter.policy.interfaces import IDisqusNotify, ISimpleAddButtons
 from restarter.policy import policyMessageFactory as _
 
 
@@ -82,26 +83,31 @@ def company_published(company, event):
 
 def company_added(company, event):
     """Every time a company is added - create substructure."""
-    if not 'prodotti' in company.objectIds():
-        products = company[company.invokeFactory('Products','prodotti')]
-        products.setTitle(u'Prodotti')
-        products.reindexObject()
 
-    if not 'media' in company.objectIds():
-        media = company[company.invokeFactory('Folder','media')]
-        media.setTitle(u'Media')
-        company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
-        media.setConstrainTypesMode(1)
-        media.setLocallyAllowedTypes(['Image','File'])
-        media.reindexObject()
+    if 'prodotti' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
 
-    if not 'docs' in company.objectIds():
-        docs = company[company.invokeFactory('Folder','docs')]
-        docs.setTitle(u'Documentti')
-        company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
-        docs.setConstrainTypesMode(1)
-        docs.setLocallyAllowedTypes(['Document','CompanyStory','Link'])
-        docs.reindexObject()
+    products = company[company.invokeFactory('Products','prodotti')]
+    products.setTitle(u'Prodotti')
+    directlyProvides(products, (ISimpleAddButtons,))
+    products.reindexObject()
+
+    media = company[company.invokeFactory('Folder','media')]
+    media.setTitle(u'Media')
+    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
+    media.setConstrainTypesMode(1)
+    media.setLocallyAllowedTypes(['Image','File'])
+    directlyProvides(media, (ISimpleAddButtons,))
+    media.reindexObject()
+
+    docs = company[company.invokeFactory('Folder','docs')]
+    docs.setTitle(u'Documentti')
+    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+    docs.setConstrainTypesMode(1)
+    docs.setLocallyAllowedTypes(['Document','CompanyStory','Link'])
+    directlyProvides(docs, (ISimpleAddButtons,))
+    docs.reindexObject()
 
     params = {'message': NEW_COMPANY % company.absolute_url(),}
     company_notify(company, params)

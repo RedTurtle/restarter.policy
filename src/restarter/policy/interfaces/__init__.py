@@ -5,6 +5,6 @@ from companies import ICompanies
 from products import IProducts
 from companystory import ICompanyStory
 from company import ICompany
-from layer import ISkin
+from layer import ISkin, ISimpleAddButtons
 from events import IDisqusNotify
 from configurations import IRestarterConfiguration

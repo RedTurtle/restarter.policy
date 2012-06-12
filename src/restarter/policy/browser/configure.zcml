@@ -108,6 +108,25 @@
         permission="zope.Public"
         />
 
+    <browser:viewlet
+        for="..interfaces.layer.ISimpleAddButtons"
+        name="restarter.simplebuttons"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        class=".common.ContentActionsViewlet"
+        permission="zope2.View"
+        layer="..interfaces.layer.ISkin"
+        />
+
+   <browser:page
+       for="..interfaces.layer.ISimpleAddButtons"
+       name="plone"
+       class=".common.Plone"
+       permission="zope.Public"
+       allowed_interface="Products.CMFPlone.browser.interfaces.IPlone"
+       layer="..interfaces.layer.ISkin"
+    />
+
+
   <browser:resourceDirectory
       name="restarter.images"
       directory="images"

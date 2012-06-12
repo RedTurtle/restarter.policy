@@ -5,3 +5,6 @@ class ISkin(Interface):
     this layer is registered using browserlayer.xml in the package 
     default GenericSetup profile
     """
+
+class ISimpleAddButtons(Interface):
+    """Marker interface that tells when to use simple add buttons"""
