@@ -87,6 +87,9 @@ def company_added(company, event):
     media = company[company.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
     company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
+    docs = company[company.invokeFactory('Folder','docs')]
+    docs.setTitle(u'Documentti')
+    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
 
     params = {'message': NEW_COMPANY % company.absolute_url(),}
     company_notify(company, params)
