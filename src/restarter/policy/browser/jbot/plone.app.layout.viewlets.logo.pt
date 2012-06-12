@@ -13,9 +13,9 @@
     </div>
     <div id="navRedBtn" class="bigBtn">
         <ul id="navRed">
-            <li id="navBtnProdotti"><a href="#">Prodotti</a></li>
+            <li id="navBtnProdotti"><a href="" tal:attributes="href string:${here/portal_url}/prodotti">Prodotti</a></li>
             <li id="navBtnAziende"><a href="" tal:attributes="href string:${here/portal_url}/aziende">Aziende</a></li>
-            <li id="navBtnCerco"><a href="#">Cerco / Offro</a></li>
+            <li id="navBtnCerco"><a href="" tal:attributes="href string:${here/portal_url}/cerco-offro">Cerco / Offro</a></li>
         </ul>
     </div>
     <div class="visualClear"></div>
@@ -24,9 +24,9 @@
 <div id="nav-wrapper" tal:condition="not: restarter/isHomePage">
   <div id="navRedBtn" class="barBtn">
       <ul id="navRed">
-          <li id="navBtnProdotti"><a href="#">Prodotti</a></li>
+          <li id="navBtnProdotti"><a href="" tal:attributes="href string:${here/portal_url}/prodotti">Prodotti</a></li>
           <li id="navBtnAziende"><a href="" tal:attributes="href string:${here/portal_url}/aziende">Aziende</a></li>
-          <li id="navBtnCerco"><a href="#">Cerco / Offro</a></li>
+          <li id="navBtnCerco"><a href="" tal:attributes="href string:${here/portal_url}/cerco-offro">Cerco / Offro</a></li>
       </ul>
   </div>
 </div>
