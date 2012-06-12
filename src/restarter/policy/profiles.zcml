@@ -37,5 +37,13 @@
       handler="restarter.policy.upgrades.add_story_ct"
       sortkey="1"
       profile="restarter.policy:default"/>
+  <genericsetup:upgradeStep
+      title="Add employee role"
+      description="Add employee role"
+      source="0003"
+      destination="0004"
+      handler="restarter.policy.upgrades.add_employee_role"
+      sortkey="1"
+      profile="restarter.policy:default"/>
 
 </configure>

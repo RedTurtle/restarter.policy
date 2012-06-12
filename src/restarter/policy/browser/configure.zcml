@@ -134,6 +134,13 @@
        layer="..interfaces.layer.ISkin"
     />
 
+    <browser:page
+        name="sharing"
+        for="..interfaces.ICompany"
+        class=".common.CompanySharingView"
+        permission="plone.DelegateRoles"
+      />
+
 
   <browser:resourceDirectory
       name="restarter.images"

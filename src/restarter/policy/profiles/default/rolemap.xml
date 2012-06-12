@@ -3,6 +3,7 @@
   <roles>
         <role name="Anonymous"/>
         <role name="Association"/>
+        <role name="Employee"/>
         <role name="Authenticated"/>
         <role name="Contributor"/>
         <role name="Editor"/>

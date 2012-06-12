@@ -2,17 +2,20 @@
 """
 
 from zope.interface import implements
-
+from zope.annotation.interfaces import IAnnotations, IAnnotatable
 from Products.Archetypes import atapi
 from Products.validation.validators.ExpressionValidator import ExpressionValidator
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
+from plone.indexer.decorator import indexer
 from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
 
 from restarter.policy import policyMessageFactory as _
 from restarter.policy.interfaces import ICompany
 from restarter.policy.config import PROJECTNAME
+from zope.component.event import objectEventNotify
+from restarter.policy.events import CompanyShareNotify
 
 
 PROVINCE = atapi.DisplayList((
@@ -208,12 +211,42 @@ CompanySchema['title'].widget.label = _('Company name')
 CompanySchema['description'].widget.maxlength = 200
 
 
+EMPLOYEES_KEY = 'company_employees'
+
+
+
+@indexer(ICompany)
+def company_employees(object):
+    return object.company_employees
+
+
 class Company(folder.ATFolder):
     """restartER company"""
-    implements(ICompany, ILoveThumbsDontYou)
+    implements(ICompany, ILoveThumbsDontYou, IAnnotatable)
 
     meta_type = "Company"
     schema = CompanySchema
 
+    @property
+    def company_employees(self):
+        anotations = IAnnotations(self)
+        if not EMPLOYEES_KEY in anotations:
+            anotations[EMPLOYEES_KEY] = []
+        return anotations[EMPLOYEES_KEY]
+
+    def manage_setLocalRoles(self, user_id, roles):
+        super(Company, self).manage_setLocalRoles(user_id, roles)
+        if 'Employee' in roles:
+            self.company_employees.append(user_id)
+            objectEventNotify(CompanyShareNotify(self, user_id))
+
+    def manage_delLocalRoles(self, userids=[]):
+        for user_id in userids:
+            try:
+                self.company_employees.remove(user_id)
+            except ValueError:
+                pass
+            objectEventNotify(CompanyShareNotify(self, user_id, add_user=False))
+        super(Company, self).manage_delLocalRoles(userids=userids)
 
 atapi.registerType(Company, PROJECTNAME)

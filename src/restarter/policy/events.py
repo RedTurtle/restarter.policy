@@ -5,7 +5,7 @@ import re
 from zope.interface import directlyProvides
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
-from restarter.policy.interfaces import IDisqusNotify, ISimpleAddButtons
+from restarter.policy.interfaces import IDisqusNotify, ISimpleAddButtons, ICompanyShareNotify
 from restarter.policy import policyMessageFactory as _
 
 
@@ -14,6 +14,7 @@ TIMEOUT = 2
 NEW_ORDER = _('You have a new order in your company products: %s')
 NEW_COMPANY = _('You have just registered new company at %s.')
 NEW_USER_MAIL = _('has just registered on FacciamoAdesso. Join us!')
+NEW_EMPLOYEE = _('You have been added as an employee of %s')
 NEW_USER_SMS = _('has just registered on FacciamoAdesso. Join us!')
 NEW_COMMENT = _('You have received new comment to %s.')
 logger = logging.getLogger('restarter.policy')
@@ -27,6 +28,15 @@ class DisqusNotify(ObjectEvent):
         self.object = object
         self.comment_id = comment_id
         self.comment_text = comment_text
+
+
+class CompanyShareNotify(ObjectEvent):
+    implements(ICompanyShareNotify)
+
+    def __init__(self, object, userid, add_user=True):
+        self.object = object
+        self.userid = userid
+        self.add_user = True
 
 
 def notify(endpoint, params):
@@ -81,6 +91,16 @@ def company_published(company, event):
         notify('notify/fb/newcompany', params)
 
 
+def company_employee_modified(company, event):
+    if event.add_user:
+        member = company.portal_membership.getMemberById(event.userid)
+        email = member.getProperty('email', '')
+        if email:
+            params = {'message': NEW_EMPLOYEE % company.absolute_url(),
+                      'email': email}
+            notify('notify/email', params)
+    company.reindexObject(idxs=['company_employees'])
+
 def company_added(company, event):
     """Every time a company is added - create substructure."""
 
@@ -111,6 +131,7 @@ def company_added(company, event):
 
     params = {'message': NEW_COMPANY % company.absolute_url(),}
     company_notify(company, params)
+
 
 def company_commented(company, event):
     """Event fired when company has been commented."""
