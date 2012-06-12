@@ -82,14 +82,26 @@ def company_published(company, event):
 
 def company_added(company, event):
     """Every time a company is added - create substructure."""
-    products = company[company.invokeFactory('Products','prodotti')]
-    products.setTitle(u'Prodotti')
-    media = company[company.invokeFactory('Folder','media')]
-    media.setTitle(u'Media')
-    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
-    docs = company[company.invokeFactory('Folder','docs')]
-    docs.setTitle(u'Documentti')
-    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+    if not 'prodotti' in company.objectIds():
+        products = company[company.invokeFactory('Products','prodotti')]
+        products.setTitle(u'Prodotti')
+        products.reindexObject()
+
+    if not 'media' in company.objectIds():
+        media = company[company.invokeFactory('Folder','media')]
+        media.setTitle(u'Media')
+        company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
+        media.setConstrainTypesMode(1)
+        media.setLocallyAllowedTypes(['Image','File'])
+        media.reindexObject()
+
+    if not 'docs' in company.objectIds():
+        docs = company[company.invokeFactory('Folder','docs')]
+        docs.setTitle(u'Documentti')
+        company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+        docs.setConstrainTypesMode(1)
+        docs.setLocallyAllowedTypes(['Document','CompanyStory','Link'])
+        docs.reindexObject()
 
     params = {'message': NEW_COMPANY % company.absolute_url(),}
     company_notify(company, params)
