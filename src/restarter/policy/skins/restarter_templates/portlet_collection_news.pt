@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title tal:content="template/title">The title</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <dl metal:define-macro="portlet" class="portlet faCollectionPortlet newsPortlet">
+      <dt class="portletHeader">
+        <a class="tile">Ultime Notizie</a>
+        <a class="linkMore" href="#">Vedi Tutte</a>
+      </dt>
+      
+      <dd class="portletItem">
+        <div class="faCollectionImg">
+          <img src="http://placehold.it/128x128" alt="" />
+        </div>
+        <p class="itemData">02 Giugno 2012</p>
+        <h3 class="faCollectionTitle">
+          <a href="#">Cum sociis natoque penatibus et magnis dis parturient</a>
+        </h3>
+    
+        <p class="faCollectionDesc">
+          Fonte: Resto del Carlino
+        </p>
+        <div class="visualClear"><!-- --></div>
+  
+      </dd>
+    </dl>
+  </body>
+</html>

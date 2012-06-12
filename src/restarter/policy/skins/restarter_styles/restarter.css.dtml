@@ -4,6 +4,15 @@
 p {
     line-height: 1.5em;
 }
+h3, h4, h5, h6 {
+    font-family: <dtml-var fontFamily>;
+}
+h1, h2 {
+    letter-spacing: -0.05em;
+}
+textarea {
+    font-family: <dtml-var fontFamily>;
+}
 
 #portal-header {
     background-color: #444C4C;
@@ -46,7 +55,7 @@ p {
     border-radius: 6px 0 0 6px; 
     padding: 6px 10px;
     width: 9em;
-    color: #FFF;
+    color: #444C4C;
 }
  #portal-searchbox .LSBox input.searchButton {
     background: #F0F0F0 url(++resource++restarter.images/ico_lente.png) no-repeat center center;
@@ -161,8 +170,6 @@ dl.actionMenu#portal-personaltools {
     position: relative;
     top:0;
     left:0;
-display: block;
-line-height: 1;
 }
 
 
@@ -212,6 +219,9 @@ line-height: 1;
     line-height: 1.1em;
     border-left: 1px dotted #FFF;
     padding: 0 0.6em;
+}
+#nav-wrapper li#navBtnProdotti a {
+    border-left:0;
 }
 #nav-wrapper li a:hover {
     color: #FF9;
@@ -368,6 +378,7 @@ a.faq {
     font-size: 0.9em;
     margin-left:0;
     color: #000;
+    margin-bottom: 0.4em;
 }
 #portal-breadcrumbs a,
 #portal-breadcrumbs #breadcrumbs-current {
@@ -393,6 +404,147 @@ body#content.mceContentBody {
 #viewlet-social-like iframe {
    width: 100px !important;
 }
+#content .documentDescription, #content #description {
+    font-family: <dtml-var fontFamily>;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+#plone-document-byline {
+    padding: 0.5em 0 2em;
+    border-top: 2px solid #EEE;
+}
+#content h1.documentFirstHeading {
+    line-height: 1.3em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    background: transparent url(++resource++restarter.images/border_title.png) no-repeat left bottom;
+}
 
+/** Portlets **/
+dl.portlet dt {
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.8em;
+    padding: 0 0 0.3em;
+    margin: 0 0 0.5em 0.6em;
+    letter-spacing: -0.05em;
+    background: transparent url(++resource++restarter.images/border_title.png) no-repeat left bottom;
+}
+dl.portlet dt .tile,
+dl.portlet dt a.tile {
+    color: #000;
+}
+dl.portlet dd.portletItem {
+    padding: 0.5em;
+}
+dl.rtCollectionPortlet dd.portletItem {
+    background-color: #fafafa;
+    border-left: 1px dotted #CCC;
+}
+dl.portletCalendar dt {
+    font-size: 1.3em;
+    background-image: none;
+}
 
+/*** twitter **/
+.twtr-widget {
+    border: 1px solid #F0F0F0;
+    padding: 10px;
+}
+.portlet .twtr-hd {
+    background: transparent url(++resource++restarter.images/ico_socials_big.png) no-repeat left -150px;
+    padding-left: 60px;
+    border-bottom: 1px solid #F0F0F0;
+}
+.twtr-ft div {
+    background-color: #F0F0F0;    
+    font-size: 0.95em;
+    font-style: italic;
+}
+.twtr-ft div a {
+    color: #999 !important;    
+}
+
+/** navigazione **/
+dl.portletERPortletNavigation dd.portletItem {
+    background-color: #FAFAFA;
+    padding:0.5em 0.3em 0;
+}
+dl.portletERPortletNavigation {
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 0;
+    font-size: 1.05em;
+}
+dl.portletERPortletNavigation ul.navTreeLevel0 {
+    margin-left: 0.5em;
+}
+dl.portletERPortletNavigation ul.navTree li.navTreeItem {
+    padding: 0 0.7em;
+    background-image: url(++resource++restarter.images/nav-dot.png);
+    background-repeat. no-repeat;
+    background-position: left 0.7em;
+    background-repeat: no-repeat;
+    padding-left: 12px;
+}
+dl.portletERPortletNavigation ul.navTree li.navTreeItem a {
+    padding: 0 0;
+    color: #000;
+}
+dl.portletERPortletNavigation ul.navTreeLevel1 li.navTreeItem {
+    background-image: url(++resource++restarter.images/indent.gif);
+    background-repeat. no-repeat;
+    background-position: left 0.2em;
+    background-repeat: no-repeat;
+    padding-left: 18px;
+}
+dl.portlet ul.navTree .navTreeCurrentItem {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: transparent;
+    border-left: 0;
+    font-style: italic;
+}
+dl.portletERPortletNavigation ul.navTree li.navTreeItem a.navTreeCurrentItem {
+    color: &dtml-linkColor;;
+}
+dl.portlet p {
+    margin-bottom: 0.4em;
+}
+
+/** portlet utlime notizie **/
+.faCollectionPortlet .portletHeader a.linkMore {
+    font-size: 0.5em;
+    letter-spacing: normal;
+    font-family: <dtml-var fontFamily>;
+    color: &dtml-linkColor;;
+    border-left: 1px dotted &dtml-linkColor;;
+    padding: 0  0 0 0.5em;
+    font-weight: normal;
+    font-style: italic;
+    float: right;
+    margin-top: 0.8em;
+}
+.faCollectionImg {
+    float: left;
+    margin: 0 0.8em 0.1em 0;
+    width: 100px;
+    height: 100px;
+    border-bottom: 3px solid &dtml-linkColor;;
+    overflow: hidden;
+}
+h3.faCollectionTitle {
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 0.3em;
+}
+.faCollectionPortlet .itemData {
+    margin: 0 0 0.3em;
+    font-size: 0.9em;
+    color: #000;
+    font-style: italic;
+}
+.faCollectionDesc {
+    font-size: 0.95em;
+    font-style: italic;
+}
 /* </dtml-with> */
