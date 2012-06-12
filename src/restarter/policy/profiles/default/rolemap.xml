@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <rolemap>
-  <permissions>
   <roles>
         <role name="Anonymous"/>
         <role name="Association"/>
@@ -13,7 +12,8 @@
         <role name="Reader"/>
         <role name="Reviewer"/>
         <role name="Site Administrator"/>
-    </roles>
+  </roles>
+  <permissions>
     <permission name="Add portal member" acquire="False">
         <role name="Anonymous"/>
         <role name="Manager" />
