@@ -149,6 +149,9 @@ def company_commented(company, event):
 
 def product_added(product, event):
     """Event fired when product has been added."""
+    if 'media' in product.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
     media = product[product.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
     product.portal_workflow.doActionFor(media, "publish",comment=_("Published on product creation"))
