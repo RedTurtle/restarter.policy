@@ -125,7 +125,7 @@ def company_added(company, event):
     docs.setTitle(u'Documentti')
     company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
     docs.setConstrainTypesMode(1)
-    docs.setLocallyAllowedTypes(['Document','CompanyStory','Link'])
+    docs.setLocallyAllowedTypes(['Document','CompanyStory','File'])
     directlyProvides(docs, (ISimpleAddButtons,))
     docs.reindexObject()
 
