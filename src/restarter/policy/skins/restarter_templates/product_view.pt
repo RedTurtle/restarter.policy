@@ -8,16 +8,69 @@
 <metal:content-core fill-slot="content-core">
 
   <metal:body_macro metal:define-macro="body">
+      <div id="productBody">
+            <div class="prodField prodCategoria">
+                  <span class="lab">Categoria: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('category', mode='view')"></metal:field>
+                  </span>
+            </div>
+            <div class="prodField prodCondition">
+                  <span class="lab">Condizione del prodotto: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('product_condition', mode='view')"></metal:field>
+                  </span>
+            </div>
 
-      <metal:field use-macro="python:context.widget('category', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('quantity', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('price', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('product_condition', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('availability', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('shipment', mode='view')"></metal:field>
-      <metal:field use-macro="python:context.widget('waranty', mode='view')"></metal:field>
+            <div class="prodPriceGroup">
+                  <div class="prodField prodQty">
+                        <span class="lab">Quantità: </span>
+                        <span class="val">
+                              <metal:field use-macro="python:context.widget('quantity', mode='view')"></metal:field>
+                        </span>
+                  </div>
+                  
+                  <div class="prodField prodPrice">
+                        <span class="lab">Prezzo: </span>
+                        <span class="val">
+                              <span class="numberPrice">
+                                    <metal:field use-macro="python:context.widget('price', mode='view')"></metal:field> &euro;
+                              </span>
+                              <span class="unitSep">/</span>
+                              <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field>            
+                        </span>
+                  </div>
 
+                  <div class="prodBuy">
+                        <p class="btnLink">
+                          <a class="btn" href="#">Acquista</a>
+                        </p>
+                  </div>
+                  <div class="visualClear"></div>
+            </div>
+
+             <div class="prodField prodAvail">
+                  <span class="lab">Disponibilità: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('availability', mode='view')"></metal:field>
+                  </span>
+            </div>
+
+            <div class="prodField prodShip">
+                  <span class="lab">Consegna/spedizione: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('shipment', mode='view')"></metal:field>
+                  </span>
+            </div>
+
+            <div class="prodField prodWaranty">
+                  <span class="lab">Garanzia: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('waranty', mode='view')"></metal:field>
+                  </span>
+            </div>
+            
+      </div>
       </metal:body_macro>
       <metal:folderlisting_macro metal:define-macro="folderlisting"/>
 

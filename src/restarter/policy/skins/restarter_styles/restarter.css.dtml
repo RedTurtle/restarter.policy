@@ -738,6 +738,70 @@ a.noFoto span {
     top: 40%;
     left:0;
 }
+.portaltype-product #content img.tileImage {
+    padding: 5px;
+    border: 1px solid #F0f0f0;
+    background-color: #FFF;
+    margin-left: 20px;
+}
+.lab {
+    font-weight: bold;
+    color: #000;
+}
+.prodField {
+    margin: 0.5em 0;
+}
+.prodCategoria .val {
+    text-transform: uppercase;
+}
+.prodQty,
+.prodPrice,
+.prodBuy {
+    float: left;
+}
+.prodBuy {
+    margin-left: 2em;
+}
+#content .prodBuy p.btnLink {
+    margin:0;
+}
+#content .prodBuy p.btnLink a {
+    background-color: #419435;
+    color: #FFF;
+}
+#content .prodBuy p.btnLink a:hover {
+    background-color: #F90;
+    color: #FFF !important;
+}
+.prodQty {
+    padding-right: 2em;
+    margin-right: 2em;
+    margin-top: 0.7em;
+    border-right: 1px dotted #CCC;
+}
+.numberPrice {
+    font-size: 1.3em;
+    font-family: <dtml-var headingFontFamily>;
+    color: #000;
+    font-weight: bold;
+}
+.prodPriceGroup {
+    background-color: #F0F0F0;
+    padding: 10px 20px;
+    float: left;
+    margin: 20px 0;
+}
+.prodAvail {
+    clear: left;
+}
+.portaltype-product #content .documentDescription, .portaltype-product #content #description {
+    font-weight: normal;
+}
+
+/** ordine **/
+.portaltype-order {
+    
+}
 
 /** buttons **/
 .button {
