@@ -29,6 +29,7 @@
       handler="restarter.policy.upgrades.add_assc_roles"
       sortkey="1"
       profile="restarter.policy:default"/>
+
   <genericsetup:upgradeStep
       title="Add story ct"
       description="Add story ct"
@@ -37,6 +38,7 @@
       handler="restarter.policy.upgrades.add_story_ct"
       sortkey="1"
       profile="restarter.policy:default"/>
+
   <genericsetup:upgradeStep
       title="Add employee role"
       description="Add employee role"
@@ -45,15 +47,15 @@
       handler="restarter.policy.upgrades.add_employee_role"
       sortkey="1"
       profile="restarter.policy:default"/>
+
   <genericsetup:upgradeStep
-      title="Add faceted indexes"
+      title="Add portal registry for stats"
       description=""
-      source="0006"
-      destination="0007"
-      handler="restarter.policy.upgrades.add_faceted_indexes"
+      source="0004"
+      destination="0005"
+      handler="restarter.policy.upgrades.upgrade_0004_to_0005"
       sortkey="1"
       profile="restarter.policy:default"/>
-
   <genericsetup:registerProfile
       name="upgrade_0004_to_0005"
       title="Upgrade restarter.policy 0004 to 0005"
@@ -62,12 +64,29 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0005 to 006"
+      description=""
+      source="0005"
+      destination="0006"
+      handler="restarter.policy.upgrades.upgrade_0005_to_0006"
+      sortkey="1"
+      profile="restarter.policy:default"/>
   <genericsetup:registerProfile
       name="upgrade_0005_to_0006"
       title="Upgrade restarter.policy 0005 to 0006"
       directory="profiles/upgrade_0005_to_0006"
-      description="Upgrades the restarter.policy 0005 to 0006."
+      description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <genericsetup:upgradeStep
+      title="Add faceted indexes"
+      description=""
+      source="0006"
+      destination="0007"
+      handler="restarter.policy.upgrades.upgrade_0006_to_0007"
+      sortkey="1"
+      profile="restarter.policy:default"/>
 
 </configure>
