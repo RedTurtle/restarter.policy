@@ -30,9 +30,11 @@
         <q tal:content="context/Title" i18n:name="folder">title</q>
     </h1>
 
-    <div class="documentDescription"
-       i18n:translate="description_sharing_control">
-        You can control who can view and edit your item using the list below.
+    <div class="documentDescription">
+        Cerca i tuoi collaboratori indicando il loro nome nel campo sottostante.<br />
+        Puoi affidare loro la completa gestione spuntando il riquadro che apparirà a fianco al nome.<br /><br />
+        Ad esempio, scrivendo "Anton" e premendo "Cerca", il sistema troverà tutti gli "Antonio".
+
     </div>
 
     <div tal:replace="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
