@@ -1,26 +1,32 @@
-<div class="photoAlbumEntry">
-  <a tal:define="
+<div class="facetedResult companyResult"
+     tal:define="
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
-      url context/absolute_url|string:#;
-      image_thumb exists:context/image_thumb;
-      image_tag python:getattr(context, 'tag', None)"
-    tal:attributes="href url; title description">
+      eff_date context/effective|string:;
+      toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+      url context/absolute_url|string:#;">
 
-    <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
-      <img style="border: none" tal:attributes="
-        title desc_or_title;
-        alt title;
-        src string:$url/image_thumb"/>
-    </span>
+<!-- ######## MANCANO LE CONDITION su img  -->
+  <div class="faCompanyImg">
+    <a tal:attributes="href url; title description">
+      <img tal:attributes="
+            title desc_or_title;
+            alt title;
+            src string:$url/leadImage_thumb"/>
+    </a>
+<!-- ######## se la foto non c'e' stampare questo -->
+    <!--
+    <a tal:attributes="href url" class="noFoto">
+      <span>Logo non disponibile</span>
+    </a>
+  -->
 
-    <span class="photoAlbumEntryWrapper" tal:condition="python:not image_thumb and image_tag">
-      <img tal:replace="structure python:image_tag(scale='thumb', title=description)" />
-    </span>
+  </div>
+  <h3 class="faCollectionTitle">
+<!-- ####### troncarlo a 50 caratteri -->
+    <a tal:attributes="href url; title description" tal:content="context/pretty_title_or_id|string:">Titolo dell'azienda</a>
+  </h3>
+  <div class="visualClear"><!-- --></div>
 
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
-
-  </a>
 </div>

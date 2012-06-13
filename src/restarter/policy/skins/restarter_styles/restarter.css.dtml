@@ -10,9 +10,11 @@ h3, h4, h5, h6 {
 h1, h2 {
     letter-spacing: -0.05em;
 }
-textarea {
+textarea,
+#content textarea {
     font-family: <dtml-var fontFamily>;
 }
+
 
 #portal-header {
     background-color: #444C4C;
@@ -47,7 +49,9 @@ textarea {
 .LSBox .searchSection {
     display: none;
 }
-#portal-searchbox #searchGadget {
+#portal-searchbox #searchGadget,
+#portal-searchbox #nolivesearchGadget,
+#faceted-form div.faceted-text-widget input[type="text"] {
     background: #F0F0F0 none;
     border:0;
      -moz-border-radius: 6px 0 0 6px;
@@ -57,7 +61,8 @@ textarea {
     width: 9em;
     color: #444C4C;
 }
- #portal-searchbox .LSBox input.searchButton {
+ #portal-searchbox .LSBox input.searchButton,
+ #faceted-form div.faceted-text-widget input[type="submit"] {
     background: #F0F0F0 url(++resource++restarter.images/ico_lente.png) no-repeat center center;
     border:0;
      -moz-border-radius: 0 6px 6px 0;
@@ -66,6 +71,13 @@ textarea {
     padding: 6px 20px;
     margin-left: -4px;
     text-indent: -9999em;
+}
+#faceted-form div.faceted-text-widget input[type="text"],
+#faceted-form div.faceted-text-widget input[type="submit"] {
+    float: left;
+}
+#faceted-form div.faceted-text-widget div {
+    clear: left;
 }
 
 /** personal bar **/
@@ -112,6 +124,9 @@ dl.actionMenu#portal-personaltools {
 }
 #portal-personaltools dd li a {
     border:0;
+    color: #FFF;
+}
+span.noMenuAction {
     color: #FFF;
 }
 
@@ -510,6 +525,9 @@ dl.portletERPortletNavigation ul.navTree li.navTreeItem {
     background-repeat: no-repeat;
     padding-left: 12px;
 }
+dl.portletERPortletNavigation ul.navTree li.navTreeTopNode {
+    font-weight: bold;
+}
 dl.portletERPortletNavigation ul.navTree li.navTreeItem a {
     padding: 0.4em 0;
     color: #000;
@@ -587,54 +605,280 @@ p.faCollectionDesc {
 
 /** ultimi prodotti **/
 dl.productsPortlet dd.portletItem,
-#portletPageColumns dl.productsPortlet dd.portletItem {
+#portletPageColumns dl.productsPortlet dd.portletItem,
+#content .facetedResult {
     float: left;
     width: 30%;
-    margin: 0 1.5%;
+    margin: 0 1.5% 20px;
     padding:0;
     max-width: 200px;
+    min-height: 320px;
 }
 #content dl.portlet dt.portletHeader {
     margin: 0 0 0.5em 0.6em;
 }
-.productsPortlet .faCollectionImg {
+.productsPortlet .faCollectionImg,
+.productResult .faCollectionImg {
     float: none;
     margin: 0 auto 0.5em;
     width: 100%;
 }
-#content dl.productsPortlet p.itemData {
+#content dl.productsPortlet p.itemData,
+#content .productResult p.itemData {
     margin: 0 0 0.3em;
 }
 #content dl.productsPortlet p.faCollectionDesc, 
-dl.productsPortlet p.faCollectionDesc {
+dl.productsPortlet p.faCollectionDesc,
+#content .facetedResult p.faCollectionDesc {
     margin-bottom: 0.5em;
 }
 #content dl.productsPortlet p.productPrice, 
-dl.productsPortlet p.productPrice {
+dl.productsPortlet p.productPrice,
+#content .productResult p.productPrice {
     font-size: 0.9em;
     color: #000;
     font-style: italic;
     margin-bottom: 1em;
 }
-dl.productsPortlet p.productPrice .euro {
+dl.productsPortlet p.productPrice .euro,
+#content .productResult p.productPrice .euro {
     font-family: <dtml-var headingFontFamily>;
     font-size: 1.5em;
     font-style: normal;
     font-weight: bold;
 }
-dl.productsPortlet p.btnLink {
+dl.productsPortlet p.btnLink,
+#content .facetedResult p.btnLink {
     margin:0;
 }
 dl.productsPortlet p.btnLink a.btn,
-#content dl.productsPortlet p.btnLink a.btn {
+#content dl.productsPortlet p.btnLink a.btn,
+#content .facetedResult p.btnLink a.btn {
     background-color: #CCC;
     color: #FFF;
     font-size: 1.2em;
 }
+#content .productResult p.btnLink a.btn {
+    font-size: 1em;
+    padding: 0.35em 0.6em;
+}
 dl.productsPortlet p.btnLink a.btn:hover,
-#content dl.productsPortlet p.btnLink a.btn:hover {
+#content dl.productsPortlet p.btnLink a.btn:hover,
+#content .facetedResult  p.btnLink a.btn:hover {
     background-color: &dtml-linkColor;;
     color: #FFF !important;
+}
+/** company **/
+.companyResult,
+#content .companyResult {
+    text-align: center;
+    float: left;
+    width: 20%;
+    margin: 0 1.5% 20px;
+    max-width: 150px;
+    min-height: 165px;
+    padding: 5px;
+    border: 1px solid #F0F0F0;
+}
+.companyResult .faCompanyImg a {
+    display: block;
+    text-align: center;
+    width: 128px;
+    height: 128px;
+}
+.companyResult .faCompanyImg a img {
+    vertical-align: middle;
+}
+
+/** prodotto **/
+.portaltype-product #category {
+    font-size: 1em;
+    text-align: left;
+}
+label.formQuestion,
+div.formQuestion.label {
+    color: #000;
+}
+#archetypes-fieldname-quantity,
+#archetypes-fieldname-unit,
+#archetypes-fieldname-price,
+#archetypes-fieldname-product_condition,
+#archetypes-fieldname-availability {
+    float: left;
+    clear: none;
+}
+#archetypes-fieldname-quantity,
+#archetypes-fieldname-product_condition,
+#archetypes-fieldname-shipment {
+    clear: both;
+}
+#archetypes-fieldname-quantity,
+#archetypes-fieldname-unit,
+#archetypes-fieldname-price,
+#archetypes-fieldname-product_condition {
+    margin-right: 2em;
+}
+.portaltype-product form .field {
+    margin-bottom: 2em;
+}
+a.noFoto,
+#content a.noFoto,
+dl.portlet a.noFoto {
+    display: block;
+    background-color: #E0E0E0;
+    color: #FFF;
+    font-size: 1.2em; 
+    height: 100%;
+    position: relative;
+}
+a.noFoto span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    left:0;
+}
+
+/** buttons **/
+.button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+}
+.button:hover {
+    text-decoration: none;
+    color: #FFC;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+a.button,
+#content a.button,
+dl.portlet a.button,
+.button a,
+#content .button a,
+dl.portlet .button a {
+    color: #FFF;
+}
+a.button:hover,
+#content a.button:hover,
+dl.portlet a.button:hover,
+.button a:hover,
+#content .button a:hover,
+dl.portlet .button a:hover {
+    color: #FFC !important;
+    cursor: pointer;
+}
+/* green */
+.green {
+    color: #e8f0de;
+    border: solid 1px #538312;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.green:hover {
+    background: #538018;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.green:active {
+    color: #a9c08c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+.btnActions li.button a {
+    display: block;
+}
+.btnActions li.green a {
+    background-color: transparent;
+    background-image: url(++resource++restarter.images/plus.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 19px;
+}
+.btnActions li.button,
+#content .btnActions li, 
+dl.portlet .btnActions li {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0 0.3em;
+}
+.btnActions ul {
+    margin: 0 0 1em;
+    text-align: right;
+}
+
+/** faceted **/
+.left-area-js {
+    margin-left: 28%;
+}
+#center-area {
+    margin-left: -26%;
+}
+#left-area {
+    width: 26%;
+}
+#faceted-left-column {
+    margin-top: -20px;
+}
+.faceted-form {
+    padding:0;
+}
+#faceted-form .faceted-widget {
+    border-bottom: 3px solid #F0F0F0;
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+#faceted-form .faceted-widget fieldset {
+    border:0;
+    padding: 0.5em 1em;
+    margin: 2em 0 2px;
+    background-color: #fafafa;
+}
+#faceted-form .faceted-widget fieldset legend {
+    position: relative;
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.6em;
+    padding: 0 0 0.3em;
+    margin: 0 0 0 0.6em;
+    left:0;
+    top: -1em;
+    letter-spacing: -0.06em;
+    background: transparent url(++resource++restarter.images/border_title.png) no-repeat left bottom;
+    color: #000;
+}
+#faceted-form div.faceted-text-widget input[type="text"] {
+    width: 70%;
+}
+#faceted-form div.faceted-text-widget div {
+    padding: 0.4em 0.5em 0;
+}
+.widget-fieldset ul li input[type="checkbox"] {
+    float: none;
+}
+.faceted-checkbox-more {
+    font-style: italic;
+}
+.faceted-criteria a {
+  color: &dtml-linkVisitedColor; !important;
+}
+.faceted-criteria a:visited {
+  color: &dtml-linkVisitedColor; !important;
 }
 
 /* </dtml-with> */
