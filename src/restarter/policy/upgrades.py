@@ -34,6 +34,15 @@ def add_employee_role(context, logger=None):
     catalog = getToolByName(context, 'portal_catalog')
     catalog.addIndex('company_employees', 'KeywordIndex')
 
-def upgrade_0004_to_0005(setuptool, logger=None):
-    setuptool.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0004_to_0005')
+def add_faceted_indexes(context, logger=None):
+    if logger is None:
+        # Called as upgrade step: define our own logger.
+        logger = logging.getLogger('restarter.policy')
+
+    catalog = getToolByName(context, 'portal_catalog')
+    catalog.addIndex('city', 'FieldIndex')
+    catalog.addIndex('province', 'KeywordIndex')
+    catalog.addIndex('product_category', 'KeywordIndex')
+    catalog.addIndex('company_type', 'KeywordIndex')
+    catalog.addIndex('company_sectore', 'KeywordIndex')
 

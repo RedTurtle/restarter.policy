@@ -46,11 +46,11 @@
       sortkey="1"
       profile="restarter.policy:default"/>
   <genericsetup:upgradeStep
-      title="Add portal registry for stats"
-      description="Add portal registry for stats"
-      source="0004"
-      destination="0005"
-      handler="restarter.policy.upgrades.upgrade_0004_to_0005"
+      title="Add faceted indexes"
+      description=""
+      source="0006"
+      destination="0007"
+      handler="restarter.policy.upgrades.add_faceted_indexes"
       sortkey="1"
       profile="restarter.policy:default"/>
 
@@ -61,6 +61,7 @@
       description="Upgrades the restarter.policy 0004 to 0005."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
   <genericsetup:registerProfile
       name="upgrade_0005_to_0006"
       title="Upgrade restarter.policy 0005 to 0006"

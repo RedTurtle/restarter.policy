@@ -2,6 +2,7 @@
 """
 
 from zope.interface import implements
+from plone.indexer.decorator import indexer
 
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import folder
@@ -137,6 +138,32 @@ schemata.finalizeATCTSchema(
     moveDiscussion=False
 )
 ProductSchema.changeSchemataForField('subject', 'default')
+
+
+@indexer(IProduct)
+def product_category(object):
+    return object.getCategory()
+
+
+@indexer(IProduct)
+def city(object):
+    company = object.getCompany()
+    if company:
+        return company.getCity()
+
+
+@indexer(IProduct)
+def province(object):
+    company = object.getCompany()
+    if company:
+        return company.getProvince()
+
+
+@indexer(IProduct)
+def company_sectore(object):
+    company = object.getCompany()
+    if company:
+        return company.getCompany_sectore()
 
 
 class Product(folder.ATFolder):

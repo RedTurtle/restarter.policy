@@ -220,6 +220,26 @@ def company_employees(object):
     return object.company_employees
 
 
+@indexer(ICompany)
+def city(object):
+    return object.getCity()
+
+
+@indexer(ICompany)
+def province(object):
+    return object.getProvince()
+
+
+@indexer(ICompany)
+def company_type(object):
+    return object.getCompany_type()
+
+
+@indexer(ICompany)
+def company_sectore(object):
+    return object.getCompany_sectore()
+
+
 class Company(folder.ATFolder):
     """restartER company"""
     implements(ICompany, ILoveThumbsDontYou, IAnnotatable)

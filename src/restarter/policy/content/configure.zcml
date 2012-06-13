@@ -44,5 +44,14 @@
   </class>
 
  <adapter factory=".company.company_employees" name="company_employees" />
+ <adapter factory=".company.city" name="city" />
+ <adapter factory=".company.province" name="province" />
+ <adapter factory=".company.company_type" name="company_type" />
+ <adapter factory=".company.company_sectore" name="company_sectore" />
+
+ <adapter factory=".product.product_category" name="product_category" />
+ <adapter factory=".product.company_sectore" name="company_sectore" />
+ <adapter factory=".product.city" name="city" />
+ <adapter factory=".product.province" name="province" />
 
 </configure>

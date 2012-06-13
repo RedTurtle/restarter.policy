@@ -11,12 +11,12 @@ from restarter.policy import policyMessageFactory as _
 
 NOTIFY = 'http://localhost:9441'
 TIMEOUT = 2
-NEW_ORDER = _('You have a new order in your company products: %s')
-NEW_COMPANY = _('You have just registered new company at %s.')
-NEW_USER_MAIL = _('has just registered on FacciamoAdesso. Join us!')
-NEW_EMPLOYEE = _('You have been added as an employee of %s')
-NEW_USER_SMS = _('has just registered on FacciamoAdesso. Join us!')
-NEW_COMMENT = _('You have received new comment to %s.')
+NEW_ORDER = 'You have a new order in your company products: %s'
+NEW_COMPANY = 'You have just registered new company at %s.'
+NEW_USER_MAIL = 'has just registered on FacciamoAdesso. Join us!'
+NEW_EMPLOYEE = 'You have been added as an employee of %s'
+NEW_USER_SMS = 'has just registered on FacciamoAdesso. Join us!'
+NEW_COMMENT = 'You have received new comment to %s.'
 logger = logging.getLogger('restarter.policy')
 
 
@@ -130,7 +130,7 @@ def company_added(company, event):
         return
 
     docs = company[company.invokeFactory('Folder','docs')]
-    docs.setTitle(u'Documentti')
+    docs.setTitle(u'Documenti')
     company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
     docs.setConstrainTypesMode(1)
     docs.setLocallyAllowedTypes(['Document','CompanyStory','File'])
