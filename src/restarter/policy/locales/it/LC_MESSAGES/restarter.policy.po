@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-12 07:54+0000\n"
+"POT-Creation-Date: 2012-06-13 10:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./content/company.py:19
+#: ./content/company.py:22
 #: ./content/product.py:19
 msgid "-- not selected --"
 msgstr "-- non selezionato --"
@@ -23,11 +23,11 @@ msgstr "-- non selezionato --"
 msgid "Accept"
 msgstr "Accetto"
 
-#: ./content/company.py:158
+#: ./content/company.py:161
 msgid "Accept terms of use"
 msgstr "Approvazione termini d'uso"
 
-#: ./content/company.py:52
+#: ./content/company.py:55
 msgid "Address"
 msgstr "Indirizzo"
 
@@ -35,15 +35,15 @@ msgstr "Indirizzo"
 msgid "Availability"
 msgstr "Disponibilità"
 
-#: ./content/company.py:124
+#: ./content/company.py:127
 msgid "CF/P.IVA"
 msgstr "CF/P.IVA"
 
-#: ./content/company.py:103
+#: ./content/company.py:106
 msgid "Cell phone"
 msgstr "Telefono cellulare"
 
-#: ./content/company.py:71
+#: ./content/company.py:74
 msgid "City"
 msgstr "Città"
 
@@ -55,25 +55,37 @@ msgstr "Aziende"
 msgid "Company"
 msgstr "Azienda"
 
-#: ./content/company.py:207
+#: ./content/company.py:210
 msgid "Company name"
 msgstr "Nome dell'azienda"
 
-#: ./content/company.py:146
+#: ./content/company.py:149
 msgid "Company sectore"
 msgstr "Settore merceologico"
 
-#: ./content/company.py:135
+#: ./content/company.py:138
 msgid "Company type"
 msgstr "Tipo di azienda"
 
-#: ./content/company.py:114
+#: ./content/company.py:117
 msgid "Company website"
 msgstr "Sito web aziendale"
 
-#: ./content/company.py:93
+#: ./profiles/default/types/CompanyStory.xml
+msgid "Company's story"
+msgstr ""
+
+#: ./profiles/default/types/CompanyStory.xml
+msgid "CompanyStory"
+msgstr ""
+
+#: ./content/company.py:96
 msgid "Email address"
 msgstr "Indirizzo di email"
+
+#: ./browser/common.py:42
+msgid "Employee"
+msgstr ""
 
 #: ./profiles/default/types/Companies.xml
 msgid "Folder that contains companies"
@@ -83,7 +95,7 @@ msgstr "Cartella che contiene aziende"
 msgid "Folder that contains products"
 msgstr "Cartella che contiene prodotti"
 
-#: ./content/company.py:169
+#: ./content/company.py:172
 msgid "Notification type"
 msgstr "Tipo di notifica"
 
@@ -95,35 +107,35 @@ msgstr "Prenotazione"
 msgid "Other"
 msgstr "Altro"
 
-#: ./content/company.py:159
+#: ./content/company.py:162
 msgid "Please accept terms of use."
 msgstr "Accetta i termini di utilizzo"
 
-#: ./content/company.py:125
+#: ./content/company.py:128
 msgid "Please give us your company CF or P.IVA."
 msgstr "Indica il codice fiscale o partita iva dell'azienda"
 
-#: ./content/company.py:53
+#: ./content/company.py:56
 msgid "Please give us your company address"
 msgstr "Indica l'indirizzo aziendale"
 
-#: ./content/company.py:104
+#: ./content/company.py:107
 msgid "Please give us your company cell phone."
 msgstr "Indica un numero cellulare aziendale di riferimento"
 
-#: ./content/company.py:72
+#: ./content/company.py:75
 msgid "Please give us your company city location."
 msgstr "Indica la località dell'azienda"
 
-#: ./content/company.py:94
+#: ./content/company.py:97
 msgid "Please give us your company email address."
 msgstr "Indica l'email aziendale di riferimento"
 
-#: ./content/company.py:83
+#: ./content/company.py:86
 msgid "Please give us your company province location."
 msgstr "Indica la provincia"
 
-#: ./content/company.py:115
+#: ./content/company.py:118
 msgid "Please give us your company website url."
 msgstr "Indica il sito web aziendale"
 
@@ -151,15 +163,15 @@ msgstr "Indica le condizioni di spedizione del prodotto"
 msgid "Please provide product waranty conditions."
 msgstr "Indica le condizioni di garanzia del prodotto"
 
-#: ./content/company.py:170
+#: ./content/company.py:173
 msgid "Please select how we should notify your company."
 msgstr "Indica come vuoi che sia avvertita la tua azienda"
 
-#: ./content/company.py:147
+#: ./content/company.py:150
 msgid "Please select your company sectore."
 msgstr "Indica il settore di attività dell'azienda"
 
-#: ./content/company.py:136
+#: ./content/company.py:139
 msgid "Please select your company type."
 msgstr "Indica il tipo di azienda"
 
@@ -199,15 +211,15 @@ msgstr "Prenotazione del prodotto"
 msgid "Products"
 msgstr "Prodotti"
 
-#: ./content/company.py:82
+#: ./content/company.py:85
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:89
+#: ./events.py:122
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:104
+#: ./events.py:157
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -239,29 +251,13 @@ msgstr "Spedizione"
 msgid "Waranty"
 msgstr "Garanzia"
 
-#: ./events.py:13
-msgid "You have a new order in your company products: %s"
-msgstr ""
-
-#: ./events.py:14
-msgid "You have just registered new company at %s."
-msgstr ""
-
-#: ./events.py:17
-msgid "You have received new comment to %s."
-msgstr ""
-
-#: ./content/company.py:156
+#: ./content/company.py:159
 msgid "You must accept the Terms of Use."
 msgstr "Devi accettare i termini d'uso"
 
-#: ./content/company.py:35
+#: ./content/company.py:38
 msgid "both"
 msgstr "entrambi"
-
-#: ./events.py:15
-msgid "has just registered on FacciamoAdesso. Join us!"
-msgstr "Ti sei registrato su FacciamoAdeso. Accedi!"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./userdataschema.py:46
@@ -274,7 +270,7 @@ msgid "help_cellphone"
 msgstr "Lasciaci il tuo numero di cellulare così che ti si possa raggiungere. Il formato giusto è +391234567890"
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:44
+#: ./content/company.py:47
 msgid "help_ragione_sociale"
 msgstr "Indica la Ragione sociale esatta della tua azienda"
 
@@ -289,7 +285,7 @@ msgid "label_cellphone"
 msgstr "Numero di cellulare"
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:43
+#: ./content/company.py:46
 msgid "label_ragione_sociale"
 msgstr "Ragione sociale"
 

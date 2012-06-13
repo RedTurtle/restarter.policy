@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-12 07:54+0000\n"
+"POT-Creation-Date: 2012-06-13 10:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./content/company.py:19
+#: ./content/company.py:22
 #: ./content/product.py:19
 msgid "-- not selected --"
 msgstr ""
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: ./content/company.py:158
+#: ./content/company.py:161
 msgid "Accept terms of use"
 msgstr ""
 
-#: ./content/company.py:52
+#: ./content/company.py:55
 msgid "Address"
 msgstr ""
 
@@ -35,15 +35,15 @@ msgstr ""
 msgid "Availability"
 msgstr ""
 
-#: ./content/company.py:124
+#: ./content/company.py:127
 msgid "CF/P.IVA"
 msgstr ""
 
-#: ./content/company.py:103
+#: ./content/company.py:106
 msgid "Cell phone"
 msgstr ""
 
-#: ./content/company.py:71
+#: ./content/company.py:74
 msgid "City"
 msgstr ""
 
@@ -55,24 +55,36 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: ./content/company.py:207
+#: ./content/company.py:210
 msgid "Company name"
 msgstr ""
 
-#: ./content/company.py:146
+#: ./content/company.py:149
 msgid "Company sectore"
 msgstr ""
 
-#: ./content/company.py:135
+#: ./content/company.py:138
 msgid "Company type"
 msgstr ""
 
-#: ./content/company.py:114
+#: ./content/company.py:117
 msgid "Company website"
 msgstr ""
 
-#: ./content/company.py:93
+#: ./profiles/default/types/CompanyStory.xml
+msgid "Company's story"
+msgstr ""
+
+#: ./profiles/default/types/CompanyStory.xml
+msgid "CompanyStory"
+msgstr ""
+
+#: ./content/company.py:96
 msgid "Email address"
+msgstr ""
+
+#: ./browser/common.py:42
+msgid "Employee"
 msgstr ""
 
 #: ./profiles/default/types/Companies.xml
@@ -83,7 +95,7 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
-#: ./content/company.py:169
+#: ./content/company.py:172
 msgid "Notification type"
 msgstr ""
 
@@ -95,35 +107,35 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: ./content/company.py:159
+#: ./content/company.py:162
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/company.py:125
+#: ./content/company.py:128
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
 
-#: ./content/company.py:53
+#: ./content/company.py:56
 msgid "Please give us your company address"
 msgstr ""
 
-#: ./content/company.py:104
+#: ./content/company.py:107
 msgid "Please give us your company cell phone."
 msgstr ""
 
-#: ./content/company.py:72
+#: ./content/company.py:75
 msgid "Please give us your company city location."
 msgstr ""
 
-#: ./content/company.py:94
+#: ./content/company.py:97
 msgid "Please give us your company email address."
 msgstr ""
 
-#: ./content/company.py:83
+#: ./content/company.py:86
 msgid "Please give us your company province location."
 msgstr ""
 
-#: ./content/company.py:115
+#: ./content/company.py:118
 msgid "Please give us your company website url."
 msgstr ""
 
@@ -151,15 +163,15 @@ msgstr ""
 msgid "Please provide product waranty conditions."
 msgstr ""
 
-#: ./content/company.py:170
+#: ./content/company.py:173
 msgid "Please select how we should notify your company."
 msgstr ""
 
-#: ./content/company.py:147
+#: ./content/company.py:150
 msgid "Please select your company sectore."
 msgstr ""
 
-#: ./content/company.py:136
+#: ./content/company.py:139
 msgid "Please select your company type."
 msgstr ""
 
@@ -199,15 +211,15 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ./content/company.py:82
+#: ./content/company.py:85
 msgid "Province"
 msgstr ""
 
-#: ./events.py:89
+#: ./events.py:122
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:104
+#: ./events.py:157
 msgid "Published on product creation"
 msgstr ""
 
@@ -239,28 +251,12 @@ msgstr ""
 msgid "Waranty"
 msgstr ""
 
-#: ./events.py:13
-msgid "You have a new order in your company products: %s"
-msgstr ""
-
-#: ./events.py:14
-msgid "You have just registered new company at %s."
-msgstr ""
-
-#: ./events.py:17
-msgid "You have received new comment to %s."
-msgstr ""
-
-#: ./content/company.py:156
+#: ./content/company.py:159
 msgid "You must accept the Terms of Use."
 msgstr ""
 
-#: ./content/company.py:35
+#: ./content/company.py:38
 msgid "both"
-msgstr ""
-
-#: ./events.py:15
-msgid "has just registered on FacciamoAdesso. Join us!"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
@@ -274,7 +270,7 @@ msgid "help_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:44
+#: ./content/company.py:47
 msgid "help_ragione_sociale"
 msgstr ""
 
@@ -289,7 +285,7 @@ msgid "label_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:43
+#: ./content/company.py:46
 msgid "label_ragione_sociale"
 msgstr ""
 
