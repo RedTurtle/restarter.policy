@@ -141,6 +141,20 @@
         permission="plone.DelegateRoles"
       />
 
+  <browser:page
+      name="faceted-preview-item"
+      for="..interfaces.IProduct"
+      template="templates/faceted-product.pt"
+      permission="zope2.View"
+    />
+
+  <browser:page
+      name="faceted-preview-item"
+      for="..interfaces.ICompany"
+      template="templates/faceted-company.pt"
+      permission="zope2.View"
+    />
+
 
   <browser:resourceDirectory
       name="restarter.images"
