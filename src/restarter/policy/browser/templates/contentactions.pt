@@ -1,13 +1,13 @@
-<div i18n:domain="plone"  class="contentActions">
+<div i18n:domain="plone"  class="contentActions btnActions">
           <ul>
               <tal:block repeat="subMenuItem view/actions">
-                <li tal:attributes="class subMenuItem/extra/separator">
+                <li class="button green">
                   <a href="#"
                       tal:condition="subMenuItem/action"
                       tal:attributes="href subMenuItem/action;
                                       title subMenuItem/description;
                                       id subMenuItem/extra/id | nothing;
-                                      class subMenuItem/extra/class | nothing"
+                                      class subMenuItem/extra/class|nothing"
                       i18n:attributes="title">
                       <img width="16"
                             height="16"

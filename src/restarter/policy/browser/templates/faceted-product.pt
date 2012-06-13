@@ -1,26 +1,40 @@
-<div class="photoAlbumEntry">
-  <a tal:define="
+<div class="facetedResult productResult"
+     tal:define="
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
-      url context/absolute_url|string:#;
-      image_thumb exists:context/image_thumb;
-      image_tag python:getattr(context, 'tag', None)"
-    tal:attributes="href url; title description">
+      eff_date context/effective|string:;
+      toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+      url context/absolute_url|string:#;">
 
-    <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
-      <img style="border: none" tal:attributes="
-        title desc_or_title;
-        alt title;
-        src string:$url/image_thumb"/>
-    </span>
+<!-- ######## MANCANO LE CONDITION su img, data pubblicazione (possibilmente cambiarle formato)  -->
+  <div class="faCollectionImg">
+    <a tal:attributes="href url; title description">
+      <img tal:attributes="
+            title desc_or_title;
+            alt title;
+            src string:$url/leadImage_mini"/>
+    </a>
+<!-- ######## se la foto non c'e' stampare questo -->
+    <!--
+    <a tal:attributes="href url" class="noFoto">
+      <span>Foto non disponibile</span>
+    </a>
+  -->
 
-    <span class="photoAlbumEntryWrapper" tal:condition="python:not image_thumb and image_tag">
-      <img tal:replace="structure python:image_tag(scale='thumb', title=description)" />
-    </span>
+  </div>
+  <p class="itemData" tal:content="python:toLocalizedTime(eff_date)">02 Giugno 2012</p>
+  <h3 class="faCollectionTitle">
+<!-- ####### troncarlo a 50 caratteri -->
+    <a tal:attributes="href url; title description" tal:content="context/pretty_title_or_id|string:">Titolo del prodotto</a>
+  </h3>
+  <p class="faCollectionDesc" tal:content="description">
 
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+<!-- ####### troncarla a 100 caratteri -->
+    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
+  </p>
+  <p class="productPrice"><span class="euro">87.50</span> euro / cad</p>
+  <p class="btnLink"><a class="btn" href="" tal:attributes="href url;">Dettagli</a></p>
+  <div class="visualClear"><!-- --></div>
 
-  </a>
 </div>

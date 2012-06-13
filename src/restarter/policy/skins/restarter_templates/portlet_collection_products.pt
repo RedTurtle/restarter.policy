@@ -1,62 +1,104 @@
-<html>
-  <head>
-    <title tal:content="template/title">The title</title>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  </head>
-  <body>
-    <dl metal:define-macro="portlet" class="portlet faCollectionPortlet productsPortlet">
-      <dt class="portletHeader">
-        <a class="tile">Ultimi Prodotti inseriti</a>
-        <a class="linkMore" href="#">Vedi Tutti</a>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+
+<metal:listingmacro define-macro="listing">
+
+<!-- ######## la portlet dovrebbe mostrare solo prodotti che hanno la foto -->      
+  <dl class=""
+     tal:attributes="id view/data/div_id;
+                    class string:portlet faCollectionPortlet productsPortlet ${class}"
+      tal:define="collection_url view/collection_url;
+                  getIcon nocall:plone_view/getIcon;
+                  class view/data/css_class|nothing;">
+
+    <dt class="portletHeader"
+        tal:define="show_more view/data/show_more">
+          <a class="rss_feed"
+          tal:condition="view/data/check_rss"
+          tal:attributes="href view/rss_url">
+               <img tal:attributes="src string:${context/portal_url}/rss.gif" alt="RSS icon"/>
+         RSS feed
+               </a>
+          <tal:more condition="show_more">
+            <a class="linkMore" 
+               tal:condition="not:view/data/link_text"
+                tal:attributes="href collection_url" i18n:translate="more_url">
+               Vedi Tutte
+            </a>
+            <a tal:condition="view/data/link_text"
+               tal:attributes="href collection_url"
+              tal:content="view/data/link_text"
+              class="linkMore" >
+                     Custom text
+            </a>
+          </tal:more>
+
+          <a class="tile" tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
+              <span tal:content="view/data/header" />
+          </a>
       </dt>
       
-      <dd class="portletItem">
+      <tal:events tal:repeat="obj query_results">
+      <dd class="portletItem faCollectionPortletItem"
+          tal:define="oddrow repeat/obj/odd;
+                      item_path obj/getPath;"
+          tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
+
         <div class="faCollectionImg">
-          <img src="http://lorempixel.com/200/200/food/1" alt="" />
+<!-- #### mettere la condizione -->
+          <a tal:attributes="href obj/getURL">
+          <img src="" alt=""               
+               tal:attributes="src string:${obj/getURL}/leadImage_mini;
+                               alt obj/Description;"/>
+          </a>
+<!-- ######## se la foto non c'e' stampare questo 
+          <a tal:attributes="href obj/getURL" class="noFoto">
+            <span>Foto non disponibile</span>
+          </a>
+-->
         </div>
-        <p class="itemData">02 Giugno 2012</p>
+        <p class="itemData" 
+           tal:condition="view/data/show_dates"
+           tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
+<!-- ####### troncare il titolo a 50 caratteri -->
         <h3 class="faCollectionTitle">
-          <a href="#">Croste di formaggio</a>
+          <a href="#" 
+             tal:content="obj/Title"
+             tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
         </h3>
-        <p class="faCollectionDesc">
-          Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+        <p class="faCollectionDesc" tal:content="obj/Description">
+<!-- ####### troncarla a 100 caratteri -->
+          Descrizione prodotto
         </p>
+<!-- ######## manca price e unita' di misura ####### -->
         <p class="productPrice"><span class="euro">110.00</span> euro / Kg</p>
-        <p class="btnLink"><a class="btn" href="#">Dettagli</a></p>
+        <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
+
         <div class="visualClear"><!-- --></div>
+      </dd>
+      </tal:events>
+
+      <dd class="portletItem faCollectionPortletItem"
+        tal:define="no_elements_text view/data/no_elements_text"
+      tal:condition="python:no_elements_text and len(query_results)==0">
+          <p i18n:translate="" tal:content="no_elements_text" />
       </dd>
 
-      <dd class="portletItem">
-        <div class="faCollectionImg">
-          <img src="http://lorempixel.com/200/200/food/2" alt="" />
-        </div>
-        <p class="itemData">02 Giugno 2012</p>
-        <h3 class="faCollectionTitle">
-          <a href="#">Conserva e passata di pomodoro</a>
-        </h3>
-        <p class="faCollectionDesc">
-          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
-        </p>
-        <p class="productPrice"><span class="euro">87.50</span> euro / cad</p>
-        <p class="btnLink"><a class="btn" href="#">Dettagli</a></p>
-        <div class="visualClear"><!-- --></div>
-      </dd>
+  </dl>
+</metal:listingmacro>
+</metal:main-macro>
+</div>
 
-      <dd class="portletItem">
-        <div class="faCollectionImg">
-          <img src="http://lorempixel.com/200/200/food/3" alt="" />
-        </div>
-        <p class="itemData">02 Giugno 2012</p>
-        <h3 class="faCollectionTitle">
-          <a href="#">Latte a (quasi) lunga conservazione</a>
-        </h3>
-        <p class="faCollectionDesc">
-          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
-        </p>
-        <p class="productPrice"><span class="euro">45.00</span> euro</p>
-        <p class="btnLink"><a class="btn" href="#">Dettagli</a></p>
-        <div class="visualClear"><!-- --></div>
-      </dd>
-    </dl>
-  </body>
+</body>
 </html>

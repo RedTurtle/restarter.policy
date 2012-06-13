@@ -15,7 +15,7 @@
     <element value="mail_me"/>
     <element value="accept" />
   </property>
-  <property name="icon_visibility" type="string">authenticated</property>
+  <property name="icon_visibility" type="string">disabled</property>
   <property name="disable_folder_sections" type="boolean">True</property>
  </object>
  <object name="navtree_properties" meta_type="Plone Property Sheet">
