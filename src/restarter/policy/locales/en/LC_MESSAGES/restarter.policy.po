@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-13 10:35+0000\n"
+"POT-Creation-Date: 2012-06-13 13:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #: ./content/company.py:22
-#: ./content/product.py:19
+#: ./content/product.py:20
 msgid "-- not selected --"
 msgstr ""
 
@@ -31,7 +31,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: ./content/product.py:83
+#: ./content/product.py:84
 msgid "Availability"
 msgstr ""
 
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
-#: ./content/product.py:22
+#: ./content/product.py:23
 msgid "Other"
 msgstr ""
 
@@ -139,27 +139,31 @@ msgstr ""
 msgid "Please give us your company website url."
 msgstr ""
 
-#: ./content/product.py:84
+#: ./content/product.py:85
 msgid "Please provide product availability."
 msgstr ""
 
-#: ./content/product.py:74
+#: ./content/product.py:75
 msgid "Please provide product condition state."
 msgstr ""
 
-#: ./content/product.py:53
+#: ./content/product.py:64
+msgid "Please provide product price."
+msgstr ""
+
+#: ./content/product.py:54
 msgid "Please provide product quantity unit."
 msgstr ""
 
-#: ./content/product.py:43
+#: ./content/product.py:44
 msgid "Please provide product quantity."
 msgstr ""
 
-#: ./content/product.py:94
+#: ./content/product.py:95
 msgid "Please provide product shipment conditions."
 msgstr ""
 
-#: ./content/product.py:103
+#: ./content/product.py:104
 msgid "Please provide product waranty conditions."
 msgstr ""
 
@@ -175,11 +179,11 @@ msgstr ""
 msgid "Please select your company type."
 msgstr ""
 
-#: ./content/product.py:33
+#: ./content/product.py:34
 msgid "Please select your product category."
 msgstr ""
 
-#: ./content/product.py:62
+#: ./content/product.py:63
 msgid "Price"
 msgstr ""
 
@@ -187,15 +191,15 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: ./content/product.py:32
+#: ./content/product.py:33
 msgid "Product category"
 msgstr ""
 
-#: ./content/product.py:73
+#: ./content/product.py:74
 msgid "Product condition"
 msgstr ""
 
-#: ./content/product.py:131
+#: ./content/product.py:132
 msgid "Product name"
 msgstr ""
 
@@ -223,11 +227,11 @@ msgstr ""
 msgid "Published on product creation"
 msgstr ""
 
-#: ./content/product.py:42
+#: ./content/product.py:43
 msgid "Quantity"
 msgstr ""
 
-#: ./content/product.py:52
+#: ./content/product.py:53
 msgid "Quantity unit"
 msgstr ""
 
@@ -243,11 +247,11 @@ msgstr ""
 msgid "Send back"
 msgstr ""
 
-#: ./content/product.py:93
+#: ./content/product.py:94
 msgid "Shipment"
 msgstr ""
 
-#: ./content/product.py:102
+#: ./content/product.py:103
 msgid "Waranty"
 msgstr ""
 
