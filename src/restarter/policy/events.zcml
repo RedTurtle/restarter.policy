@@ -5,6 +5,12 @@
   <subscriber
       for=".interfaces.IOrder
            Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.order_requested"
+   />
+
+  <subscriber
+      for=".interfaces.IOrder
+           Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.order_added"
    />
 

@@ -69,6 +69,13 @@ def company_notify(company, params):
 
 
 def order_added(order, event):
+    """Every time a order is added - change title."""
+    product = order.getProduct()
+    order.setTitle(u'%s %s di %s' % (order.getQuantity(), product.getUnit(), product.title_or_id()))
+    order.reindexObject()
+
+
+def order_requested(order, event):
     """Every time an order is created - notify company."""
     if event.action != 'request':
         return
