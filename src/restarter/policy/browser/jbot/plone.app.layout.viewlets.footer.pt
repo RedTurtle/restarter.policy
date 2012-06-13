@@ -20,7 +20,7 @@
           <div id="footer-column-3" class="footerColumn">
                <p class="sostegno">Sostegno alle imprese colpite dal terremoto</p>
                <p class="btnLink">
-                    <a class="btn" href="#">Partecipa</a>
+                    <a class="btn" href="" tal:attributes="href string:${context/portal_url}/il-progetto/partecipa">Partecipa</a>
                 </p>
           </div>
           <div class="visualClear"> </div>

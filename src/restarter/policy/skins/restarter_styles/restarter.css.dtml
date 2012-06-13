@@ -881,4 +881,17 @@ dl.portlet .btnActions li {
   color: &dtml-linkVisitedColor; !important;
 }
 
+/** cioppino **/
+.thumb-rating {
+    background-color: #FFF;
+}
+.thumb-rating input.like-button:hover {
+    background-color: #FFE
+}
+
+/** disqus **/
+#disqus_thread {
+    border-top: 3px solid #F0F0F0;
+}
+
 /* </dtml-with> */

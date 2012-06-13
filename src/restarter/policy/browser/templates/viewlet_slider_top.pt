@@ -3,10 +3,11 @@
     <div id="slider">
         <div id="sliderContent">
             <div id="sliderTxt">
-                <h2>LOREM IPSUM DOLOR SIT AMET</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa.</p>
+                <h2>NON VORRAI SOLO GUARDARE??</h2>
+                <p>Sei un'azienda e vuoi vendere i tuoi prodotti?<br />Sei interessato a fare acquisti solidali?<br />
+                Vuoi aiutarci a segnalare le opportunità presenti sul portale?</p>
                 <p class="btnLink">
-                    <a class="btn" href="#">Partecipa</a>
+                    <a class="btn" href="" tal:attributes="href string:${context/portal_url}/il-progetto/partecipa">Partecipa</a>
                 </p>
             </div>
         </div>
