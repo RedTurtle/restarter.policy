@@ -7,24 +7,19 @@
 
 <metal:content-core fill-slot="content-core">
 
-        <metal:body_macro metal:define-macro="body">
+  <metal:body_macro metal:define-macro="body">
 
-          Here it goes:
+      <metal:field use-macro="python:context.widget('category', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('quantity', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('price', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('product_condition', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('availability', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('shipment', mode='view')"></metal:field>
+      <metal:field use-macro="python:context.widget('waranty', mode='view')"></metal:field>
 
-          <tal:fields tal:define="field_macro field_macro | context/widgets/field/macros/view"
-                      tal:repeat="field python:context.Schema().filterFields(isMetadata=0)">
-
-            <tal:if_visible define="purl nocall:context/portal_url;
-                                    portal purl/getPortalObject;
-                                    mode string:view;
-                                    visState python:field.widget.isVisible(here, mode);
-                                    visCondition python:field.widget.testCondition(None, portal, context);"
-                            condition="python:visState == 'visible' and visCondition">
-              <metal:use_field use-macro="field_macro" />
-            </tal:if_visible>
-          </tal:fields>
-        </metal:body_macro>
-        <metal:folderlisting_macro metal:define-macro="folderlisting"/>
+      </metal:body_macro>
+      <metal:folderlisting_macro metal:define-macro="folderlisting"/>
 
 
 </metal:content-core>
