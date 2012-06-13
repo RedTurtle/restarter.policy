@@ -61,7 +61,7 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         required=True,
         widget=atapi.DecimalWidget(
             label=_("Price"),
-            description=_("Please provide product quantity."),
+            description=_("Please provide product price."),
             size=15
             ),
         ),
