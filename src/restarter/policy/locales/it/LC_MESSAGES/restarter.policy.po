@@ -73,11 +73,11 @@ msgstr "Sito web aziendale"
 
 #: ./profiles/default/types/CompanyStory.xml
 msgid "Company's story"
-msgstr ""
+msgstr "Racconto dell'azienda"
 
 #: ./profiles/default/types/CompanyStory.xml
 msgid "CompanyStory"
-msgstr ""
+msgstr "Racconto"
 
 #: ./content/company.py:96
 msgid "Email address"
@@ -85,7 +85,7 @@ msgstr "Indirizzo di email"
 
 #: ./browser/common.py:42
 msgid "Employee"
-msgstr ""
+msgstr "Dipendente"
 
 #: ./profiles/default/types/Companies.xml
 msgid "Folder that contains companies"
