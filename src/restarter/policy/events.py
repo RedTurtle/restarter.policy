@@ -113,6 +113,10 @@ def company_added(company, event):
     directlyProvides(products, (ISimpleAddButtons,))
     products.reindexObject()
 
+    if 'media' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
+
     media = company[company.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
     company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
@@ -120,6 +124,10 @@ def company_added(company, event):
     media.setLocallyAllowedTypes(['Image','File'])
     directlyProvides(media, (ISimpleAddButtons,))
     media.reindexObject()
+
+    if 'docs' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
 
     docs = company[company.invokeFactory('Folder','docs')]
     docs.setTitle(u'Documentti')
