@@ -17,227 +17,227 @@ msgstr ""
 #: ./content/company.py:19
 #: ./content/product.py:19
 msgid "-- not selected --"
-msgstr ""
+msgstr "-- non selezionato --"
 
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Accept"
-msgstr ""
+msgstr "Accetto"
 
 #: ./content/company.py:158
 msgid "Accept terms of use"
-msgstr ""
+msgstr "Approvazione termini d'uso"
 
 #: ./content/company.py:52
 msgid "Address"
-msgstr ""
+msgstr "Indirizzo"
 
 #: ./content/product.py:83
 msgid "Availability"
-msgstr ""
+msgstr "Disponibilità"
 
 #: ./content/company.py:124
 msgid "CF/P.IVA"
-msgstr ""
+msgstr "CF/P.IVA"
 
 #: ./content/company.py:103
 msgid "Cell phone"
-msgstr ""
+msgstr "Telefono cellulare"
 
 #: ./content/company.py:71
 msgid "City"
-msgstr ""
+msgstr "Città"
 
 #: ./profiles/default/types/Companies.xml
 msgid "Companies"
-msgstr ""
+msgstr "Aziende"
 
 #: ./profiles/default/types/Company.xml
 msgid "Company"
-msgstr ""
+msgstr "Azienda"
 
 #: ./content/company.py:207
 msgid "Company name"
-msgstr ""
+msgstr "Nome dell'azienda"
 
 #: ./content/company.py:146
 msgid "Company sectore"
-msgstr ""
+msgstr "Settore merceologico"
 
 #: ./content/company.py:135
 msgid "Company type"
-msgstr ""
+msgstr "Tipo di azienda"
 
 #: ./content/company.py:114
 msgid "Company website"
-msgstr ""
+msgstr "Sito web aziendale"
 
 #: ./content/company.py:93
 msgid "Email address"
-msgstr ""
+msgstr "Indirizzo di email"
 
 #: ./profiles/default/types/Companies.xml
 msgid "Folder that contains companies"
-msgstr ""
+msgstr "Cartella che contiene aziende"
 
 #: ./profiles/default/types/Products.xml
 msgid "Folder that contains products"
-msgstr ""
+msgstr "Cartella che contiene prodotti"
 
 #: ./content/company.py:169
 msgid "Notification type"
-msgstr ""
+msgstr "Tipo di notifica"
 
 #: ./profiles/default/types/Order.xml
 msgid "Order"
-msgstr ""
+msgstr "Prenotazione"
 
 #: ./content/product.py:22
 msgid "Other"
-msgstr ""
+msgstr "Altro"
 
 #: ./content/company.py:159
 msgid "Please accept terms of use."
-msgstr ""
+msgstr "Accetta i termini di utilizzo"
 
 #: ./content/company.py:125
 msgid "Please give us your company CF or P.IVA."
-msgstr ""
+msgstr "Indica il codice fiscale o partita iva dell'azienda"
 
 #: ./content/company.py:53
 msgid "Please give us your company address"
-msgstr ""
+msgstr "Indica l'indirizzo aziendale"
 
 #: ./content/company.py:104
 msgid "Please give us your company cell phone."
-msgstr ""
+msgstr "Indica un numero cellulare aziendale di riferimento"
 
 #: ./content/company.py:72
 msgid "Please give us your company city location."
-msgstr ""
+msgstr "Indica la località dell'azienda"
 
 #: ./content/company.py:94
 msgid "Please give us your company email address."
-msgstr ""
+msgstr "Indica l'email aziendale di riferimento"
 
 #: ./content/company.py:83
 msgid "Please give us your company province location."
-msgstr ""
+msgstr "Indica la provincia"
 
 #: ./content/company.py:115
 msgid "Please give us your company website url."
-msgstr ""
+msgstr "Indica il sito web aziendale"
 
 #: ./content/product.py:84
 msgid "Please provide product availability."
-msgstr ""
+msgstr "Indica la disponibilità del prodotto"
 
 #: ./content/product.py:74
 msgid "Please provide product condition state."
-msgstr ""
+msgstr "Indica le condizioni del prodotto (es. danneggiato, integro, ecc.)"
 
 #: ./content/product.py:53
 msgid "Please provide product quantity unit."
-msgstr ""
+msgstr "Indica l'unità di misura del prodotto"
 
 #: ./content/product.py:43
 msgid "Please provide product quantity."
-msgstr ""
+msgstr "Indica la quantità"
 
 #: ./content/product.py:94
 msgid "Please provide product shipment conditions."
-msgstr ""
+msgstr "Indica le condizioni di spedizione del prodotto"
 
 #: ./content/product.py:103
 msgid "Please provide product waranty conditions."
-msgstr ""
+msgstr "Indica le condizioni di garanzia del prodotto"
 
 #: ./content/company.py:170
 msgid "Please select how we should notify your company."
-msgstr ""
+msgstr "Indica come vuoi che sia avvertita la tua azienda"
 
 #: ./content/company.py:147
 msgid "Please select your company sectore."
-msgstr ""
+msgstr "Indica il settore di attività dell'azienda"
 
 #: ./content/company.py:136
 msgid "Please select your company type."
-msgstr ""
+msgstr "Indica il tipo di azienda"
 
 #: ./content/product.py:33
 msgid "Please select your product category."
-msgstr ""
+msgstr "Incida la categoria merceologica del prodotto"
 
 #: ./content/product.py:62
 msgid "Price"
-msgstr ""
+msgstr "Prezzo"
 
 #: ./profiles/default/types/Product.xml
 msgid "Product"
-msgstr ""
+msgstr "Prodotto"
 
 #: ./content/product.py:32
 msgid "Product category"
-msgstr ""
+msgstr "Categoria del prodotto"
 
 #: ./content/product.py:73
 msgid "Product condition"
-msgstr ""
+msgstr "Condizioni del prodotto"
 
 #: ./content/product.py:131
 msgid "Product name"
-msgstr ""
+msgstr "Denominazione del prodotto"
 
 #: ./profiles/default/types/Product.xml
 msgid "Product that can be bought"
-msgstr ""
+msgstr "Prodotto che può essere acquistato"
 
 #: ./profiles/default/types/Order.xml
 msgid "Product's order"
-msgstr ""
+msgstr "Prenotazione del prodotto"
 
 #: ./profiles/default/types/Products.xml
 msgid "Products"
-msgstr ""
+msgstr "Prodotti"
 
 #: ./content/company.py:82
 msgid "Province"
-msgstr ""
+msgstr "Provincia"
 
 #: ./events.py:89
 msgid "Published on company creation"
-msgstr ""
+msgstr "Pubblicato alla creazione dell'azienda"
 
 #: ./events.py:104
 msgid "Published on product creation"
-msgstr ""
+msgstr "Pubblicato alla creazione del prodotto"
 
 #: ./content/product.py:42
 msgid "Quantity"
-msgstr ""
+msgstr "Quantià"
 
 #: ./content/product.py:52
 msgid "Quantity unit"
-msgstr ""
+msgstr "Unità di misura"
 
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Request"
-msgstr ""
+msgstr "Richiedi"
 
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Retract"
-msgstr ""
+msgstr "Ritira"
 
 #: ./profiles/default/workflows/order_workflow/definition.xml
 msgid "Send back"
-msgstr ""
+msgstr "Torna indietro"
 
 #: ./content/product.py:93
 msgid "Shipment"
-msgstr ""
+msgstr "Spedizione"
 
 #: ./content/product.py:102
 msgid "Waranty"
-msgstr ""
+msgstr "Garanzia"
 
 #: ./events.py:13
 msgid "You have a new order in your company products: %s"
@@ -253,47 +253,47 @@ msgstr ""
 
 #: ./content/company.py:156
 msgid "You must accept the Terms of Use."
-msgstr ""
+msgstr "Devi accettare i termini d'uso"
 
 #: ./content/company.py:35
 msgid "both"
-msgstr ""
+msgstr "entrambi"
 
 #: ./events.py:15
 msgid "has just registered on FacciamoAdesso. Join us!"
-msgstr ""
+msgstr "Ti sei registrato su FacciamoAdeso. Accedi!"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./userdataschema.py:46
 msgid "help_accept"
-msgstr ""
+msgstr "Spunta questo riquadro per indicare che hai trovato, letto e accettato i termini di utilizzo di questo servizio. "
 
 #. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
 #: ./userdataschema.py:39
 msgid "help_cellphone"
-msgstr ""
+msgstr "Lasciaci il tuo numero di cellulare così che ti si possa raggiungere. Il formato giusto è +391234567890"
 
 #. Default: "Ragione sociale help."
 #: ./content/company.py:44
 msgid "help_ragione_sociale"
-msgstr ""
+msgstr "Indica la Ragione sociale esatta della tua azienda"
 
 #. Default: "Accept terms of use"
 #: ./userdataschema.py:45
 msgid "label_accept"
-msgstr ""
+msgstr "Accetta i termini d'utilizzo"
 
 #. Default: "Cellphone number"
 #: ./userdataschema.py:38
 msgid "label_cellphone"
-msgstr ""
+msgstr "Numero di cellulare"
 
 #. Default: "Ragione sociale"
 #: ./content/company.py:43
 msgid "label_ragione_sociale"
-msgstr ""
+msgstr "Ragione sociale"
 
 #: ./profiles/default/types/Company.xml
 msgid "restartER company"
-msgstr ""
+msgstr "Azienda"
 
