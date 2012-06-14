@@ -97,7 +97,7 @@ msgstr "Cartella che contiene prodotti"
 
 #: ./content/order.py:56
 msgid "Leave your comment for this order."
-msgstr ""
+msgstr "Lascia un commmento per questa prenotazione"
 
 #: ./content/company.py:172
 msgid "Notification type"
@@ -109,7 +109,7 @@ msgstr "Prenotazione"
 
 #: ./content/order.py:55
 msgid "Order comment"
-msgstr ""
+msgstr "Commento alla prenotazione"
 
 #: ./content/product.py:23
 msgid "Other"
@@ -149,7 +149,7 @@ msgstr "Indica il sito web aziendale"
 
 #: ./content/order.py:21
 msgid "Please provide order quantity."
-msgstr ""
+msgstr "Indica la quantità di prodotti"
 
 #: ./content/product.py:85
 msgid "Please provide product availability."
@@ -161,7 +161,7 @@ msgstr "Indica le condizioni del prodotto (es. danneggiato, integro, ecc.)"
 
 #: ./content/product.py:64
 msgid "Please provide product price."
-msgstr ""
+msgstr "Indica il prezzo per prodotto"
 
 #: ./content/product.py:54
 msgid "Please provide product quantity unit."
