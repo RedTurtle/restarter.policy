@@ -9,6 +9,13 @@
    />
 
   <subscriber
+      for=".interfaces.IOrder
+           Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.order_state_changed"
+   />
+
+
+  <subscriber
       for=".interfaces.IProduct
            Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.product_added"

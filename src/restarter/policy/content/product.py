@@ -183,5 +183,9 @@ class Product(folder.ATFolder):
         if ICompany.providedBy(company):
             return company
 
+    def showNewOrderButton(self):
+        wtool = self.portal_workflow
+        return wtool.getInfoFor(self, 'review_state', '') == 'published'
+
 
 atapi.registerType(Product, PROJECTNAME)

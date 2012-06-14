@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <dc-workflow workflow_id="company_workflow" title="Company Workflow" description="" state_variable="review_state" initial_state="in_creation" manager_bypass="False">
- <permission>Access contents information</permission>
- <permission>Change portal events</permission>
- <permission>Modify portal content</permission>
- <permission>View</permission>
- <permission>ATContentTypes: Add Large Plone Folder</permission>
- <permission>ATContentTypes: Add Folder</permission>
  <permission>ATContentTypes: Add Document</permission>
  <permission>ATContentTypes: Add File</permission>
+ <permission>ATContentTypes: Add Folder</permission>
  <permission>ATContentTypes: Add Image</permission>
+ <permission>ATContentTypes: Add Large Plone Folder</permission>
  <permission>ATContentTypes: Add Link</permission>
- <permission>restarter.policy: Add Products</permission>
- <permission>restarter.policy: Add Company Story</permission>
- <permission>Review portal content</permission>
+ <permission>Access contents information</permission>
  <permission>Add portal content</permission>
+ <permission>Change portal events</permission>
+ <permission>Modify portal content</permission>
+ <permission>Review portal content</permission>
+ <permission>View</permission>
+ <permission>restarter.policy: Add Company Story</permission>
+ <permission>restarter.policy: Add Products</permission>
  <state state_id="disabled" title="Disabled">
   <exit-transition transition_id="reactivate"/>
  </state>

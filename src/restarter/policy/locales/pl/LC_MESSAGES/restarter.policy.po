@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-14 07:27+0000\n"
+"POT-Creation-Date: 2012-06-14 14:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,6 +104,7 @@ msgid "Notification type"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
+#: ./profiles/upgrade_0008_to_0009/types/Order.xml
 msgid "Order"
 msgstr ""
 
@@ -220,6 +221,7 @@ msgid "Product that can be bought"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
+#: ./profiles/upgrade_0008_to_0009/types/Order.xml
 msgid "Product's order"
 msgstr ""
 
@@ -231,11 +233,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:129
+#: ./events.py:150
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:164
+#: ./events.py:187
 msgid "Published on product creation"
 msgstr ""
 

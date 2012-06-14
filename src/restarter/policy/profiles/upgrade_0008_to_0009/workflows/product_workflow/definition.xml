@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <dc-workflow workflow_id="product_workflow" title="Product Workflow" description="" state_variable="review_state" initial_state="in_creation" manager_bypass="False">
+ <permission>ATContentTypes: Add File</permission>
+ <permission>ATContentTypes: Add Folder</permission>
+ <permission>ATContentTypes: Add Image</permission>
+ <permission>ATContentTypes: Add Large Plone Folder</permission>
  <permission>Access contents information</permission>
+ <permission>Add portal content</permission>
  <permission>Change portal events</permission>
  <permission>Modify portal content</permission>
- <permission>View</permission>
- <permission>ATContentTypes: Add Large Plone Folder</permission>
- <permission>ATContentTypes: Add Folder</permission>
- <permission>Add portal content</permission>
- <permission>ATContentTypes: Add Image</permission>
- <permission>ATContentTypes: Add File</permission>
  <permission>Review portal content</permission>
  <permission>Sharing page: Delegate roles</permission>
+ <permission>View</permission>
  <permission>restarter.policy: Add Order</permission>
  <state state_id="draft" title="Draft">
   <exit-transition transition_id="publish"/>
@@ -160,8 +160,7 @@
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="Access contents information" acquired="False">
-   <permission-role>Employee</permission-role>
-   <permission-role>Owner</permission-role>
+   <permission-role>Anonymous</permission-role>
   </permission-map>
   <permission-map name="Add portal content" acquired="False">
    <permission-role>Employee</permission-role>
@@ -180,12 +179,10 @@
    <permission-role>Owner</permission-role>
   </permission-map>
   <permission-map name="Sharing page: Delegate roles" acquired="False">
-   <permission-role>Employee</permission-role>
-   <permission-role>Owner</permission-role>
+   <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="View" acquired="False">
-   <permission-role>Employee</permission-role>
-   <permission-role>Owner</permission-role>
+   <permission-role>Anonymous</permission-role>
   </permission-map>
   <permission-map name="restarter.policy: Add Order" acquired="False">
   </permission-map>

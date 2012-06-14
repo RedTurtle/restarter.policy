@@ -4,6 +4,7 @@
  <permission>Change portal events</permission>
  <permission>Modify portal content</permission>
  <permission>View</permission>
+ <permission>Review portal content</permission>
  <state state_id="accepted" title="Order has been accepted">
   <permission-map name="Access contents information" acquired="False">
    <permission-role>Anonymous</permission-role>
@@ -12,6 +13,10 @@
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="False">
+   <permission-role>Employee</permission-role>
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="View" acquired="False">
@@ -26,6 +31,10 @@
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="False">
+   <permission-role>Employee</permission-role>
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="View" acquired="False">
@@ -47,6 +56,10 @@
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
   </permission-map>
+  <permission-map name="Review portal content" acquired="False">
+   <permission-role>Employee</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
   <permission-map name="View" acquired="False">
    <permission-role>Anonymous</permission-role>
   </permission-map>
@@ -60,6 +73,10 @@
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="False">
+   <permission-role>Employee</permission-role>
    <permission-role>Manager</permission-role>
   </permission-map>
   <permission-map name="View" acquired="False">

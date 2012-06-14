@@ -12,6 +12,8 @@ from restarter.policy import policyMessageFactory as _
 NOTIFY = 'http://localhost:9441'
 TIMEOUT = 2
 NEW_ORDER = 'You have a new order in your company products: %s'
+ORDER_ACCEPTED = 'Your order %s has been accepted.'
+ORDER_REJECTED = 'Your order %s has been rejected.'
 NEW_COMPANY = 'You have just registered new company at %s.'
 NEW_USER_MAIL = 'has just registered on FacciamoAdesso. Join us!'
 NEW_EMPLOYEE = 'You have been added as an employee of %s'
@@ -68,8 +70,33 @@ def company_notify(company, params):
         notify('notify/sms', params)
 
 
+def order_state_changed(order, event):
+    owner = order.getOwner()
+    email = owner.getProperty('email', '')
+    phone = owner.getProperty('cellphone', '')
+
+    if event.action == 'accept':
+        if email:
+            params = {'message': ORDER_ACCEPTED % order.absolute_url(), 'email': email}
+            notify('notify/email', params)
+        if phone:
+            params = {'message': ORDER_ACCEPTED % order.absolute_url(), 'phone': phone}
+            notify('notify/sms', params)
+
+    elif event.action == 'reject':
+        if email:
+            params = {'message': ORDER_REJECTED % order.absolute_url(), 'email': email}
+            notify('notify/email', params)
+        if phone:
+            params = {'message': ORDER_REJECTED % order.absolute_url(), 'phone': phone}
+            notify('notify/sms', params)
+    else:
+        return
+
 def order_added(order, event):
     """Every time a order is added - change title."""
+    if order.Title():
+        return
     product = order.getProduct()
     order.setTitle(u'%s %s di %s' % (order.getQuantity(), product.getUnit(), product.title_or_id()))
     order.reindexObject()
@@ -100,6 +127,7 @@ def company_employee_modified(company, event):
                       'email': email}
             notify('notify/email', params)
     company.reindexObject(idxs=['company_employees'])
+
 
 def company_added(company, event):
     """Every time a company is added - create substructure."""
@@ -141,6 +169,8 @@ def company_added(company, event):
     company_notify(company, params)
     company.portal_workflow.doActionFor(company, "create")
 
+    owner = company.getOwner()
+    company.manage_setLocalRoles(owner.getId(), ('Owner', 'Employee',))
 
 def company_commented(company, event):
     """Event fired when company has been commented."""

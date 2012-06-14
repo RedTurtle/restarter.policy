@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <dc-workflow workflow_id="products_workflow" title="Workflow for products folder" description="" state_variable="review_state" initial_state="published" manager_bypass="False">
- <permission>Modify portal content</permission>
  <permission>Add portal content</permission>
+ <permission>Modify portal content</permission>
  <permission>restarter.policy: Add Product</permission>
  <state state_id="published" title="Published">
   <description>Visible to everyone, editable by the owner.</description>
