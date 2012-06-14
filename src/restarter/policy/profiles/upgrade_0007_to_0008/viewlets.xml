@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<object>
+ <hidden manager="plone.belowcontenttitle" skinname="restarter_theme">
+  <viewlet name="collective.contentleadimage.thumbnail"/>
+  <viewlet name="sc.social.likes"/>
+  <viewlet name="plone.belowcontenttitle.documentbyline"/>
+ </hidden>
+</object>

@@ -90,6 +90,8 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.TextField('shipment',
         searchable=0,
         required=False,
+        default_content_type='text/plain',
+        allowable_content_types=('text/plain',),
         widget=atapi.TextAreaWidget(
             label=_("Shipment"),
             description=_("Please provide product shipment conditions."),
@@ -98,6 +100,8 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
     atapi.TextField('waranty',
         searchable=0,
+        default_content_type='text/plain',
+        allowable_content_types=('text/plain',),
         required=False,
         widget=atapi.TextAreaWidget(
             label=_("Waranty"),
@@ -138,6 +142,7 @@ schemata.finalizeATCTSchema(
     moveDiscussion=False
 )
 ProductSchema.changeSchemataForField('subject', 'default')
+ProductSchema.moveField('subject', after='category')
 
 
 @indexer(IProduct)

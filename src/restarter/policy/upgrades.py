@@ -50,3 +50,8 @@ def upgrade_0006_to_0007(context, logger=None):
     catalog.addIndex('product_category', 'KeywordIndex')
     catalog.addIndex('company_type', 'KeywordIndex')
     catalog.addIndex('company_sectore', 'KeywordIndex')
+
+
+def upgrade_0007_to_0008(context, logger=None):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0007_to_0008')
+

@@ -89,4 +89,20 @@
       sortkey="1"
       profile="restarter.policy:default"/>
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0007 to 008"
+      description=""
+      source="0007"
+      destination="0008"
+      handler="restarter.policy.upgrades.upgrade_0007_to_0008"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0007_to_0008"
+      title="Upgrade restarter.policy 0007 to 0008"
+      directory="profiles/upgrade_0007_to_0008"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
 </configure>
