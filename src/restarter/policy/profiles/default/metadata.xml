@@ -11,5 +11,6 @@
     <dependency>profile-sc.social.like:default</dependency>
     <dependency>profile-collective.disqus:default</dependency>
     <dependency>profile-cioppino.twothumbs:default</dependency>
+    <dependency>profile-quintagroup.pfg.captcha:default</dependency>
   </dependencies>
 </metadata>

@@ -98,6 +98,7 @@
  <hidden manager="plone.belowcontenttitle" skinname="restarter_theme">
   <viewlet name="collective.contentleadimage.thumbnail"/>
   <viewlet name="sc.social.likes"/>
+  <viewlet name="plone.belowcontenttitle.documentbyline"/>
  </hidden>
  <hidden manager="plone.belowcontent" skinname="Plone Default">
   <viewlet name="plone.comments"/>
