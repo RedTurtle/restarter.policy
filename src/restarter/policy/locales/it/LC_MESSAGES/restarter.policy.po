@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-13 13:23+0000\n"
+"POT-Creation-Date: 2012-06-14 07:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,10 @@ msgstr "Cartella che contiene aziende"
 msgid "Folder that contains products"
 msgstr "Cartella che contiene prodotti"
 
+#: ./content/order.py:56
+msgid "Leave your comment for this order."
+msgstr ""
+
 #: ./content/company.py:172
 msgid "Notification type"
 msgstr "Tipo di notifica"
@@ -102,6 +106,10 @@ msgstr "Tipo di notifica"
 #: ./profiles/default/types/Order.xml
 msgid "Order"
 msgstr "Prenotazione"
+
+#: ./content/order.py:55
+msgid "Order comment"
+msgstr ""
 
 #: ./content/product.py:23
 msgid "Other"
@@ -139,6 +147,10 @@ msgstr "Indica la provincia"
 msgid "Please give us your company website url."
 msgstr "Indica il sito web aziendale"
 
+#: ./content/order.py:21
+msgid "Please provide order quantity."
+msgstr ""
+
 #: ./content/product.py:85
 msgid "Please provide product availability."
 msgstr "Indica la disponibilità del prodotto"
@@ -159,11 +171,11 @@ msgstr "Indica l'unità di misura del prodotto"
 msgid "Please provide product quantity."
 msgstr "Indica la quantità"
 
-#: ./content/product.py:95
+#: ./content/product.py:97
 msgid "Please provide product shipment conditions."
 msgstr "Indica le condizioni di spedizione del prodotto"
 
-#: ./content/product.py:104
+#: ./content/product.py:108
 msgid "Please provide product waranty conditions."
 msgstr "Indica le condizioni di garanzia del prodotto"
 
@@ -199,7 +211,7 @@ msgstr "Categoria del prodotto"
 msgid "Product condition"
 msgstr "Condizioni del prodotto"
 
-#: ./content/product.py:132
+#: ./content/product.py:136
 msgid "Product name"
 msgstr "Denominazione del prodotto"
 
@@ -219,14 +231,15 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:122
+#: ./events.py:129
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:157
+#: ./events.py:164
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
+#: ./content/order.py:20
 #: ./content/product.py:43
 msgid "Quantity"
 msgstr "Quantià"
@@ -247,11 +260,11 @@ msgstr "Ritira"
 msgid "Send back"
 msgstr "Torna indietro"
 
-#: ./content/product.py:94
+#: ./content/product.py:96
 msgid "Shipment"
 msgstr "Spedizione"
 
-#: ./content/product.py:103
+#: ./content/product.py:107
 msgid "Waranty"
 msgstr "Garanzia"
 

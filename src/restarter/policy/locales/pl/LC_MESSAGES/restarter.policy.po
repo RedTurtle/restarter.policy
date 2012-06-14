@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-13 13:23+0000\n"
+"POT-Creation-Date: 2012-06-14 07:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,12 +95,20 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
+#: ./content/order.py:56
+msgid "Leave your comment for this order."
+msgstr ""
+
 #: ./content/company.py:172
 msgid "Notification type"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
 msgid "Order"
+msgstr ""
+
+#: ./content/order.py:55
+msgid "Order comment"
 msgstr ""
 
 #: ./content/product.py:23
@@ -139,6 +147,10 @@ msgstr ""
 msgid "Please give us your company website url."
 msgstr ""
 
+#: ./content/order.py:21
+msgid "Please provide order quantity."
+msgstr ""
+
 #: ./content/product.py:85
 msgid "Please provide product availability."
 msgstr ""
@@ -159,11 +171,11 @@ msgstr ""
 msgid "Please provide product quantity."
 msgstr ""
 
-#: ./content/product.py:95
+#: ./content/product.py:97
 msgid "Please provide product shipment conditions."
 msgstr ""
 
-#: ./content/product.py:104
+#: ./content/product.py:108
 msgid "Please provide product waranty conditions."
 msgstr ""
 
@@ -199,7 +211,7 @@ msgstr ""
 msgid "Product condition"
 msgstr ""
 
-#: ./content/product.py:132
+#: ./content/product.py:136
 msgid "Product name"
 msgstr ""
 
@@ -219,14 +231,15 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:122
+#: ./events.py:129
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:157
+#: ./events.py:164
 msgid "Published on product creation"
 msgstr ""
 
+#: ./content/order.py:20
 #: ./content/product.py:43
 msgid "Quantity"
 msgstr ""
@@ -247,11 +260,11 @@ msgstr ""
 msgid "Send back"
 msgstr ""
 
-#: ./content/product.py:94
+#: ./content/product.py:96
 msgid "Shipment"
 msgstr ""
 
-#: ./content/product.py:103
+#: ./content/product.py:107
 msgid "Waranty"
 msgstr ""
 
