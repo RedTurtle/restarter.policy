@@ -17,6 +17,7 @@
    </property>
    <property name="visible">True</property>
   </object>
+ </object>
  <object name="object_buttons" meta_type="CMF Action Category">
   <property name="title"></property>
   <object name="cut" meta_type="CMF Action" i18n:domain="plone">
@@ -127,5 +128,4 @@
    <property name="visible">False</property>
   </object>
  </object>
-</object>
 </object>

@@ -73,17 +73,10 @@ def order_added(order, event):
     product = order.getProduct()
     order.setTitle(u'%s %s di %s' % (order.getQuantity(), product.getUnit(), product.title_or_id()))
     order.reindexObject()
-
-
-def order_requested(order, event):
-    """Every time an order is created - notify company."""
-    if event.action != 'request':
-        return
     company = order.getCompany()
     if not company:
         return
-
-    params = {'message': NEW_ORDER % company.absolute_url()}
+    params = {'message': NEW_ORDER % order.absolute_url()}
     company_notify(company, params)
 
 
