@@ -72,7 +72,9 @@
             
       </div>
       </metal:body_macro>
-      <metal:folderlisting_macro metal:define-macro="folderlisting"/>
+      <metal:folderlisting_macro metal:define-macro="folderlisting">
+
+      </metal:folderlisting>:w
 
 
 </metal:content-core>

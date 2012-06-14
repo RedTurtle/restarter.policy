@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<metal:content-core fill-slot="content-core">
+
+      <metal:body_macro metal:define-macro="body">
+
+          <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('address', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('cellphone', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('website', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('piva', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('company_type', mode='view')"></metal:field>
+          <metal:field use-macro="python:context.widget('company_sectore', mode='view')"></metal:field>
+
+      </metal:body_macro>
+
+      <metal:folderlisting_macro metal:define-macro="folderlisting"/>
+
+
+</metal:content-core>
+
+</body>
+</html>
+
