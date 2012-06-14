@@ -2,7 +2,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.ploneview import Plone as PloneBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentActionsViewletBase
-from plone.app.contentmenu.menu import FactoriesMenu
+from plone.app.contentmenu.menu import FactoriesMenu, FactoriesSubMenuItem as BrowserSubMenuItem
 from plone.app.workflow.browser.sharing import SharingView as SharingBaseView
 from plone.memoize.instance import memoize
 from restarter.policy import policyMessageFactory as _
@@ -63,3 +63,8 @@ class CompanySharingView(SharingBaseView):
         return self._principal_search_results(search_for_principal,
             get_principal_by_id, get_principal_title, 'group', 'groupid')
 
+
+class FactoriesSubMenuItem(BrowserSubMenuItem):
+
+    def available(self):
+        return False

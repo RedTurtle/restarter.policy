@@ -21,4 +21,22 @@
       sortkey="1"
       profile="restarter.policy:default"/>
 
+
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0008 to 0009"
+      description=""
+      source="0008"
+      destination="0009"
+      handler="restarter.policy.upgrades.upgrade_0008_to_0009"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0008_to_0009"
+      title="Upgrade restarter.policy 0008 to 0009"
+      directory="profiles/0008_to_0009"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
+
+
 </configure>

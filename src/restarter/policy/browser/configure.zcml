@@ -155,6 +155,12 @@
       permission="zope2.View"
     />
 
+  <adapter for="..interfaces.IProduct
+                *"
+           name="plone.contentmenu.factories"
+           factory=".common.FactoriesSubMenuItem"
+           provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
+
 
   <browser:resourceDirectory
       name="restarter.images"

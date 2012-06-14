@@ -51,3 +51,7 @@ def upgrade_0000_to_0008(context):
     setupInitialStructure(portal)
     add_employee_idx(portal)
     add_company_idx(portal)
+
+
+def upgrade_0008_to_0009(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:0008_to_0009')

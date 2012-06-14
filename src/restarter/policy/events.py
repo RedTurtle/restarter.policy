@@ -162,7 +162,9 @@ def product_added(product, event):
         return
     media = product[product.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
+    directlyProvides(media, (ISimpleAddButtons,))
     product.portal_workflow.doActionFor(media, "publish",comment=_("Published on product creation"))
+    product.portal_workflow.doActionFor(product, "create")
 
 
 def product_commented(product, event):
