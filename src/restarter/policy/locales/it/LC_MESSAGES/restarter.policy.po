@@ -130,7 +130,7 @@ msgstr "Indica l'indirizzo aziendale"
 
 #: ./content/company.py:107
 msgid "Please give us your company cell phone."
-msgstr "Indica un numero cellulare aziendale di riferimento"
+msgstr "Indica un numero cellulare aziendale di riferimento. Il formato giusto è +391234567890."
 
 #: ./content/company.py:75
 msgid "Please give us your company city location."
