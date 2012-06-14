@@ -33,7 +33,7 @@
   <genericsetup:registerProfile
       name="upgrade_0008_to_0009"
       title="Upgrade restarter.policy 0008 to 0009"
-      directory="profiles/0008_to_0009"
+      directory="profiles/upgrade_0008_to_0009"
       description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
   />

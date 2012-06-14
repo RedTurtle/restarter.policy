@@ -54,4 +54,4 @@ def upgrade_0000_to_0008(context):
 
 
 def upgrade_0008_to_0009(context):
-    context.runAllImportStepsFromProfile('profile-restarter.policy:0008_to_0009')
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0008_to_0009')
