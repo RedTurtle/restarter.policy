@@ -47,7 +47,7 @@ def setupInitialStructure(portal):
 
 
 def upgrade_0000_to_0008(context):
-    portal = context.getSite()
+    portal = context.portal_url.getPortalObject()
     setupInitialStructure(portal)
     add_employee_idx(portal)
     add_company_idx(portal)
