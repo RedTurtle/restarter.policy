@@ -45,3 +45,21 @@ class CompanySharingView(SharingBaseView):
     def existing_role_settings(self):
         old = super(CompanySharingView, self).existing_role_settings()
         return [a for a in old if a['id']!='AuthenticatedUsers']
+
+    def group_search_results(self):
+        """Return search results for a query to add new groups.
+        Returns an empty list. We don't want to search groups.
+        """
+        def search_for_principal(hunter, search_term):
+            return []
+
+        def get_principal_by_id(group_id):
+            portal_groups = getToolByName(self.context, 'portal_groups')
+            return portal_groups.getGroupById(group_id)
+
+        def get_principal_title(group, _):
+            return group.getGroupTitleOrName()
+
+        return self._principal_search_results(search_for_principal,
+            get_principal_by_id, get_principal_title, 'group', 'groupid')
+

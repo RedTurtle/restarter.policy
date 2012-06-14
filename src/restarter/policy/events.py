@@ -146,6 +146,7 @@ def company_added(company, event):
 
     params = {'message': NEW_COMPANY % company.absolute_url(),}
     company_notify(company, params)
+    company.portal_workflow.doActionFor(company, "create")
 
 
 def company_commented(company, event):
