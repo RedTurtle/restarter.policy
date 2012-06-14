@@ -244,7 +244,7 @@ msgstr "Pubblicato alla creazione del prodotto"
 #: ./content/order.py:20
 #: ./content/product.py:43
 msgid "Quantity"
-msgstr "Quantià"
+msgstr "Quantità"
 
 #: ./content/product.py:53
 msgid "Quantity unit"
