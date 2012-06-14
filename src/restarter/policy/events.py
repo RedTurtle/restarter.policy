@@ -145,8 +145,8 @@ def company_added(company, event):
         #stupid check - plone is calling it twice, why?
         return
 
-    media = company[company.invokeFactory('Folder','media')]
-    media.setTitle(u'Media')
+    media = company[company.invokeFactory('Folder','foto')]
+    media.setTitle(u'Foto')
     company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image','File'])
