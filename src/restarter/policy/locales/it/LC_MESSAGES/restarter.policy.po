@@ -118,7 +118,7 @@ msgstr "Altro"
 
 #: ./content/company.py:162
 msgid "Please accept terms of use."
-msgstr "Accetta i <a href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo</a>."
+msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo</a>."
 
 #: ./content/company.py:128
 msgid "Please give us your company CF or P.IVA."
@@ -281,7 +281,7 @@ msgstr "entrambi"
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./userdataschema.py:46
 msgid "help_accept"
-msgstr "Spunta questo riquadro per indicare che hai trovato, letto e accettato i <a href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-gli-iscritti'>termini di utilizzo</a> di questo servizio. "
+msgstr "Spunta questo riquadro per indicare che hai trovato, letto e accettato i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-gli-iscritti'>termini di utilizzo</a> di questo servizio. "
 
 #. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
 #: ./userdataschema.py:39
