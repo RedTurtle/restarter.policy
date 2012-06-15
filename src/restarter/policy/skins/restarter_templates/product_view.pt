@@ -72,8 +72,15 @@
             
       </div>
       <div id="product-counter" tal:define="stats context/portal_stats/getStats">
-          <div><label>nr unita prenotate:</label><tal:stats replace="python: stats['products'][context.UID()].get('new',0)"/> &euro;</div>
-          <div><label>nr unita vendute:</label><tal:stats replace="python: stats['products'][context.UID()].get('accepted',0)"/> &euro;</div>
+          <div class="counterPrenot">
+            <span class="labelTxt">Valore delle unità prenotate:</span>
+            <span class="val"><tal:stats replace="python: stats['products'][context.UID()].get('new',0)"/> &euro;</span>
+          </div>
+          <div class="counterSell">
+            <span class="labelTxt">Valore delle unità vendute:</span>
+            <span class="val"><tal:stats replace="python: stats['products'][context.UID()].get('accepted',0)"/> &euro;</span>
+          </div>
+          <div class="visualClear"></div>
       </div>
       </metal:body_macro>
 

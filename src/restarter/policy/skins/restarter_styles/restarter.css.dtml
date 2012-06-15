@@ -29,6 +29,18 @@ img.image-left, img.image-right, .captioned img {
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
 }
+.state-draft {
+    color: #999 !important;
+}
+#plone-contentmenu-workflow .state-draft {
+    padding: 0 0.5em;
+    background-color: #999;
+    border: 0.1em solid #999;
+    color: white !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
 
 
 #portal-header {
@@ -493,7 +505,8 @@ dl.portlet dt {
     background: transparent url(++resource++restarter.images/border_title.png) no-repeat left bottom;
 }
 dl.portlet dt .tile,
-dl.portlet dt a.tile {
+dl.portlet dt a.tile,
+#content dl.portlet dt.portletHeader a.tile {
     color: #000;
 }
 dl.portlet dd.portletItem {
@@ -803,7 +816,8 @@ div.comMap a {
 
 /** prodotto **/
 .portaltype-product #category,
-.portaltype-offer #category {
+.portaltype-offer #category,
+.portaltype-demand #category {
     font-size: 1em;
     text-align: left;
 }
@@ -908,6 +922,29 @@ a.noFoto span {
 }
 .portaltype-product #content .documentDescription, .portaltype-product #content #description {
     font-weight: normal;
+}
+#product-counter {
+    clear: both;
+    color: #000;
+    padding: 10px 0;
+}
+#product-counter .val {
+    font-size: 1.1em;
+    font-family: <dtml-var headingFontFamily>;
+    font-weight: bold;
+}
+#product-counter .counterPrenot {
+    background: transparent  url(++resource++restarter.images/euro_grey.png) no-repeat left center;
+    padding: 5px 20px 5px 30px;
+    float: left;
+    margin-right: 20px;
+    border-right: 1px dotted #999;
+}
+#product-counter .counterSell {
+    background: transparent  url(++resource++restarter.images/euro_green.png) no-repeat left center;
+    padding-left: 30px;
+    padding: 5px 0 5px 30px;
+    float: left;
 }
 
 /** ordine **/
