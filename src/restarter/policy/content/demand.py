@@ -109,5 +109,12 @@ class Demand(folder.ATFolder):
         if ICompany.providedBy(company):
             return company
 
+    def isDiscussable(self, encoding=None):
+        allowed = super(Demand, self).isDiscussable(encoding=encoding)
+        if allowed:
+            wtool = self.portal_workflow
+            return wtool.getInfoFor(self, 'review_state', '') == 'published'
+        return allowed
+            
 
 atapi.registerType(Demand, PROJECTNAME)
