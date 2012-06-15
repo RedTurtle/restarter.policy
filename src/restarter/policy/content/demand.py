@@ -2,24 +2,16 @@
 """
 
 from zope.interface import implements
+from plone.indexer.decorator import indexer
 
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
 
-# -*- Message Factory Imported Here -*-
-
-from restarter.policy.interfaces import IDemand
+from restarter.policy.interfaces import IDemand, ICompany
 from restarter.policy.config import PROJECTNAME
 from restarter.policy import policyMessageFactory as _
-
-
-PRODUCT_CONDITION = atapi.DisplayList((
-             ("",_("-- not selected --")),
-             ("new", "New"),
-             ("used", "Used"),
-             ("other", _(u"Other"))))
 
 
 DemandSchema = folder.ATFolderSchema.copy() + atapi.Schema((
@@ -27,88 +19,23 @@ DemandSchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField('category',
         searchable=0,
         required=True,
-        vocabulary=NamedVocabulary('product_category'),
+        vocabulary=NamedVocabulary('demand_category'),
         widget=atapi.SelectionWidget(
             label=_("Demand category"),
-            description=_("Please select your product category."),
+            description=_("Please select your demand category."),
             size=30
             ),
         ),
 
-    atapi.FixedPointField('quantity',
-        searchable=0,
-        required=True,
-        widget=atapi.DecimalWidget(
-            label=_("Quantity"),
-            description=_("Please provide product quantity."),
-            size=5
-            ),
-        ),
-
-    atapi.StringField('unit',
-        searchable=0,
-        required=True,
-        widget=atapi.StringWidget(
-            label=_("Quantity unit"),
-            description=_("Please provide product quantity unit."),
-            size=10
-            ),
-        ),
-
-    atapi.FixedPointField('price',
-        searchable=0,
-        required=True,
-        widget=atapi.DecimalWidget(
-            label=_("Price"),
-            description=_("Please provide product price."),
-            size=15
-            ),
-        ),
-
-    atapi.StringField('product_condition',
-        searchable=0,
-        required=False,
-        vocabulary=PRODUCT_CONDITION,
-        widget=atapi.SelectionWidget(
-            label=_("Demand condition"),
-            description=_("Please provide product condition state."),
-            size=10
-            ),
-        ),
-
-    atapi.StringField('availability',
+    atapi.StringField('period',
         searchable=0,
         required=False,
         widget=atapi.StringWidget(
-            label=_("Availability"),
-            description=_("Please provide product availability."),
+            label=_("Period"),
+            description=_("Please provide demand period."),
             size=20
             ),
         ),
-
-    atapi.TextField('shipment',
-        searchable=0,
-        required=False,
-        default_content_type='text/plain',
-        allowable_content_types=('text/plain',),
-        widget=atapi.TextAreaWidget(
-            label=_("Shipment"),
-            description=_("Please provide product shipment conditions."),
-            ),
-        ),
-
-    atapi.TextField('waranty',
-        searchable=0,
-        default_content_type='text/plain',
-        allowable_content_types=('text/plain',),
-        required=False,
-        widget=atapi.TextAreaWidget(
-            label=_("Waranty"),
-            description=_("Please provide product waranty conditions."),
-            ),
-        ),
-
-
 
 ))
 
@@ -144,11 +71,43 @@ DemandSchema.changeSchemataForField('subject', 'default')
 DemandSchema.moveField('subject', after='category')
 
 
+@indexer(IDemand)
+def product_category(object):
+    return object.getCategory()
+
+
+@indexer(IDemand)
+def city(object):
+    company = object.getCompany()
+    if company:
+        return company.getCity()
+
+
+@indexer(IDemand)
+def province(object):
+    company = object.getCompany()
+    if company:
+        return company.getProvince()
+
+
+@indexer(IDemand)
+def company_sectore(object):
+    company = object.getCompany()
+    if company:
+        return company.getCompany_sectore()
+
+
 class Demand(folder.ATFolder):
     """Demand that can be bought"""
     implements(IDemand)
 
     meta_type = "Demand"
     schema = DemandSchema
+
+    def getCompany(self):
+        company = self.aq_parent.aq_parent
+        if ICompany.providedBy(company):
+            return company
+
 
 atapi.registerType(Demand, PROJECTNAME)
