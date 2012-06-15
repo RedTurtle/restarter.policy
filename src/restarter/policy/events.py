@@ -215,6 +215,13 @@ def product_commented(product, event):
         notify('notify/email', params)
 
 
+def demand_commented(product, event):
+    """Event fired when demand has been commented."""
+    company = product.getCompany()
+    params = {'message': NEW_COMMENT % product.absolute_url(),}
+    company_notify(company, params)
+
+
 def get_facebook_from_member(member):
     rpxs = member.getProperty('rpx_identifier', '')
     pattern = re.compile('.*facebook.com/profile.php\?id=(?P<id>.*)')
