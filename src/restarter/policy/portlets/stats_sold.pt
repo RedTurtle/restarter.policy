@@ -1,0 +1,1 @@
+<div>The total amount sold: <tal:total replace="view/stats"/></div>

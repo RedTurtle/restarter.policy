@@ -3,10 +3,14 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="restarter.policy">
 
-  <!-- Ensure Plone's portlets ZCML has already been processed;
-       without this, we may get a permission lookup error -->
   <include package="plone.app.portlets" />
 
-	<!-- -*- extra stuff goes here -*- -->
+  <plone:portlet
+    name="portlets.StatsSold"
+    interface=".stats_sold.IStatsSoldPortlet"
+    assignment=".stats_sold.Assignment"
+    renderer=".stats_sold.Renderer"
+    addview=".stats_sold.AddForm"
+  />
 
 </configure>
