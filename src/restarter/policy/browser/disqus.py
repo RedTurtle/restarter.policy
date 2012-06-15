@@ -31,6 +31,22 @@ class DisqusViewlet(ViewletBase):
             return ''
 
 
+class DisqusOfferViewlet(DisqusViewlet):
+
+    def update(self):
+        super(DisqusOfferViewlet, self).update()
+        wtool = self.context.portal_workflow
+        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') == 'published'
+
+
+class DisqusDemandViewlet(DisqusViewlet):
+
+    def update(self):
+        super(DisqusOfferViewlet, self).update()
+        wtool = self.context.portal_workflow
+        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') == 'published'
+
+
 class Notify(BrowserView):
     def __call__(self):
         if not self.request.method == 'POST':

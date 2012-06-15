@@ -82,11 +82,5 @@ class Offer(base.ATCTContent):
     meta_type = "Offer"
     schema = OfferSchema
 
-    def isDiscussable(self, encoding=None):
-        allowed = super(Offer, self).isDiscussable(encoding=encoding)
-        if allowed:
-            wtool = self.portal_workflow
-            return wtool.getInfoFor(self, 'review_state', '') == 'published'
-        return allowed
 
 atapi.registerType(Offer, PROJECTNAME)

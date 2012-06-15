@@ -64,3 +64,7 @@ def upgrade_0009_to_0010(context):
         offerte = portal[portal.invokeFactory('Offers','offerte')]
         offerte.setTitle(u'Offerte')
 
+    if 'portal_vocabularies' in portal.objectIds():
+        if 'demand_category' not in portal.portal_vocabularies.objectIds():
+            voc = portal.portal_vocabularies[portal.portal_vocabularies.invokeFactory('SortedSimpleVocabulary','demand_category')]
+            voc.setTitle(u'Demand category')

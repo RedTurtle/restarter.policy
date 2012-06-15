@@ -79,6 +79,24 @@
        permission="zope2.View"
        layer="..interfaces.layer.ISkin"
      />
+   <browser:viewlet
+       name="collective.disqus"
+       for="..interfaces.IDemand"
+       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+       view="plone.app.layout.globals.interfaces.IViewView"
+       class=".disqus.DisqusDemandViewlet"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+     />
+   <browser:viewlet
+       name="collective.disqus"
+       for="..interfaces.IOffer"
+       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+       view="plone.app.layout.globals.interfaces.IViewView"
+       class=".disqus.DisqusOfferViewlet"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+     />
 
   <!-- The logo -->
     <browser:viewlet
