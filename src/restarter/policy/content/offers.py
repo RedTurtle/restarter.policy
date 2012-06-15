@@ -9,7 +9,7 @@ from Products.ATContentTypes.content import schemata
 
 # -*- Message Factory Imported Here -*-
 
-from restarter.policy.interfaces import IOffers
+from restarter.policy.interfaces import IOffers, ISimpleAddButtons
 from restarter.policy.config import PROJECTNAME
 
 OffersSchema = folder.ATFolderSchema.copy() + atapi.Schema((
@@ -28,7 +28,7 @@ schemata.finalizeATCTSchema(
 
 class Offers(folder.ATFolder):
     """Folder that contains companies"""
-    implements(IOffers)
+    implements(IOffers, ISimpleAddButtons)
 
     meta_type = "Offers"
     schema = OffersSchema
