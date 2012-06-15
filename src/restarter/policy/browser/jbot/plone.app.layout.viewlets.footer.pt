@@ -3,9 +3,6 @@
      id="portal-footer">
      <div id="inner-portal-footer">
           <div id="footer-column-1" class="footerColumn">
-               <a id="logo-rer" class="logoFooter" href="http://www.regione.emilia-romagna.it">
-                    <img src="" tal:attributes="src string:${context/portal_url}/logo_rer_white.png" width="176" height="26" alt="Regione Emilia-Romagna"/>
-               </a>
                <a id="logo-al" class="logoFooter" href="http://www.assemblea.emr.it">
                     <img src="" tal:attributes="src string:${context/portal_url}/logo_al_white.png" width="176" height="47" alt="Regione Emilia-Romagna"/>
                </a>

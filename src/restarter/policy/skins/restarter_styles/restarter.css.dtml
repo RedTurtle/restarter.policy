@@ -81,7 +81,8 @@ textarea,
 }
 
 /** personal bar **/
-#portal-personaltools {
+#portal-personaltools,
+#anon-portal-personaltools {
     background-color: #576262;
     float: left;
     padding: 20px 10px 0 0;
@@ -95,15 +96,19 @@ textarea,
 #personaltools-join {
     font-style: italic;
 }
-#portal-personaltools #anon-personalbar a {
+#personaltools-join {
+    display: none;
+}
+#anon-portal-personaltools #anon-personalbar a {
     margin:0;
 }
-#portal-personaltools li a {
+#portal-personaltools li a,
+#anon-portal-personaltools li a {
     border-left: 1px dotted #848C8B;
     padding: 0.2em 1em;
     margin: 0 0 0 0;
 }
-#portal-personaltools #personaltools-login {
+#anon-portal-personaltools #personaltools-login {
     border:0;
 }
 dl.actionMenu#portal-personaltools {
@@ -115,14 +120,16 @@ dl.actionMenu#portal-personaltools {
 #portal-personaltools dt.actionMenuHeader a:hover, #portal-personaltools dt.actionMenuHeader a:hover {
     color: #FFF;
 }
-#portal-personaltools dd {
+#portal-personaltools dd,
+#anon-portal-personaltools dd {
     background-color: &dtml-contentViewBackgroundColor;;
     left: 10px;
     right: auto;
     top: 42px;
     border-top: 3px solid #CCC;
 }
-#portal-personaltools dd li a {
+#portal-personaltools dd li a,
+#anon-portal-personaltools dd li a {
     border:0;
     color: #FFF;
 }
@@ -554,7 +561,9 @@ dl.portlet p {
     margin-bottom: 0.4em;
 }
 #content dl.portlet, dl.portlet,
-div.rerPortletAdvancedStatic {
+div.rerPortletAdvancedStatic,
+div.portletStaticText,
+dl.portletStaticText {
     margin-bottom: 20px;
 }
 
@@ -956,6 +965,60 @@ dl.portlet .btnActions li {
 /** disqus **/
 #disqus_thread {
     border-top: 3px solid #F0F0F0;
+}
+
+/** login form **/
+#login-container {
+    width: auto;
+}
+#rpx-register-container {
+    float: left;
+}
+#rpx-register-container h2 {
+    display: none;
+}
+#rpx-register-container fieldset,
+#rpx-login-container fieldset {
+    border:0;
+    padding:0;
+}
+#plonelogin-wrapper {
+    float: left;
+    max-width: 50%;
+}
+.plonelogin-txt {
+    text-align: left;
+}
+#rpx-login-container fieldset#login-form {
+    padding:0;
+}
+#rpx-login-container fieldset#login-form h2 {
+    padding-bottom: 0.4em;
+}
+#fieldset-openid-login label, #login-form label {
+    display: inline;
+}
+#rpx-login-container fieldset#login-form div.field {
+    float: left;
+    clear: none;
+    margin-right: 1em;
+}
+#rpx-login-container fieldset#login-form div.formControls {
+    clear: left;
+    margin: 0.3em 0 2em;
+}
+#rpx-login-container fieldset#login-form div.formControls input.context {
+    color: #e8f0de;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    border: solid 1px #538312;
+     -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; 
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
 }
 
 /* </dtml-with> */
