@@ -5,6 +5,7 @@ from zope.interface import implements
 from zope.annotation.interfaces import IAnnotations, IAnnotatable
 from Products.Archetypes import atapi
 from Products.validation.validators.ExpressionValidator import ExpressionValidator
+from Products.validation.validators.RegexValidator import RegexValidator
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
@@ -102,6 +103,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField('cellphone',
         searchable=0,
         required=True,
+        validators = (RegexValidator('isItalianCellPhone', r'^\+39\d*$',title='',description='', errormsg=_('Cell phone has a wrong format. The proper is +391234567890')),),
         widget=atapi.StringWidget(
             label=_("Cell phone"),
             description=_("Please give us your company cell phone."),
