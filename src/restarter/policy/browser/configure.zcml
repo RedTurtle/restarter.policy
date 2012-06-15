@@ -168,6 +168,20 @@
 
   <browser:page
       name="faceted-preview-item"
+      for="..interfaces.IOffer"
+      template="templates/faceted-offer.pt"
+      permission="zope2.View"
+    />
+
+  <browser:page
+    name="faceted-preview-item"
+    for="..interfaces.IDemand"
+    template="templates/faceted-offer.pt"
+    permission="zope2.View"
+  />
+
+  <browser:page
+      name="faceted-preview-item"
       for="..interfaces.ICompany"
       template="templates/faceted-company.pt"
       permission="zope2.View"
