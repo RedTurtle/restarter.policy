@@ -456,6 +456,11 @@ body#content.mceContentBody {
     color: #FFF;
     font-size: 1.1em;
 }
+#content .field textarea[name$=".description"], #archetypes-fieldname-description textarea#description {
+    color: #000;
+    font-size: 1em;
+    font-weight: normal;
+}
 
 /** social **/
 #viewlet-social-like {
@@ -697,6 +702,57 @@ dl.productsPortlet p.btnLink a.btn:hover,
 }
 .companyResult .faCompanyImg a img {
     vertical-align: middle;
+}
+/** Company **/
+.portaltype-company #content .tileImage {
+    float: left;
+    padding: 0.3em 1.5em 0.2em 0;
+}
+.portaltype-company #content .documentDescription {
+    font-weight: normal;
+    color: &dtml-fontColor;
+}
+#companyBody {
+    clear: left;
+    padding-top: 2em;
+}
+.companyMap {
+    float: left;
+    margin: 0 2em 0.2em 0;
+}
+#content .companyRec {
+    margin: 0 0 0;
+    float: left;
+    color: #000;
+}
+.companyRec .labelTxt {
+    font-weight: bold;
+}
+.companyRec h2 {
+    padding-bottom: 0.2em;
+}
+.comAddressWrapper div {
+    display: inline;
+}
+.comAddressWrapper {
+    font-size: 1.1em;
+}
+.companySector {
+    font-size: 0.9em;
+    font-weight: bold;   
+    color: #000; 
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+.companySector .labelTxt {
+    font-weight: normal;
+    text-transform: none;
+}
+.comNumbers {
+    padding: 0.5em 0;
+}
+#content .comNumbers p {
+    margin-bottom: 0.2em;
 }
 
 /** prodotto **/
@@ -1007,7 +1063,8 @@ dl.portlet .btnActions li {
     clear: left;
     margin: 0.3em 0 2em;
 }
-#rpx-login-container fieldset#login-form div.formControls input.context {
+#rpx-login-container fieldset#login-form div.formControls input.context,
+body.template-register #actionsView .actionButtons input.context {
     color: #e8f0de;
     padding: 0.4em 1em;
     cursor: pointer;
@@ -1019,6 +1076,9 @@ dl.portlet .btnActions li {
     background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
     background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+body.template-register #content input, body.template-new-user #content input {
+    font-size: 1em;
 }
 
 /* </dtml-with> */

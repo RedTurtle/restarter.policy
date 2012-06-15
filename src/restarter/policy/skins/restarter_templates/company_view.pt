@@ -11,18 +11,32 @@
 
       <metal:body_macro metal:define-macro="body">
 
-          <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('address', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('cellphone', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('website', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('piva', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('company_type', mode='view')"></metal:field>
-          <metal:field use-macro="python:context.widget('company_sectore', mode='view')"></metal:field>
-
+        <div id="companyBody">
+          <div class="companyMap">
+            <img src="http://placehold.it/200x150&text=mappa" alt="Localizzazione dell'azienda in mappa"/>
+          </div>
+          <div class="companyRec">
+            <h2>
+              <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field> 
+            </h2>
+            
+            <div class="comAddressWrapper">
+              <metal:field use-macro="python:context.widget('address', mode='view')"></metal:field> - 
+              <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>
+              <strong><metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
+              (<metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>)</strong>
+            </div>
+            <div class="comNumbers">
+              <p class="comEmail"><span class="labelTxt">E-mail:</span> <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field></p>
+              <p class="comCell"><span class="labelTxt">Mobile:</span> <metal:field use-macro="python:context.widget('cellphone', mode='view')"></metal:field></p>
+              <p class="comWeb"><span class="labelTxt">Web:</span> <metal:field use-macro="python:context.widget('website', mode='view')"></metal:field></p>
+            </div>
+            <p class="comPI"><span class="labelTxt">P.Iva/C.F.:</span> <metal:field use-macro="python:context.widget('piva', mode='view')"></metal:field></p>
+            <p class="companySector"><span class="labelTxt">Settore merceologico:</span> <metal:field use-macro="python:context.widget('company_sectore', mode='view')"></metal:field></p>
+          </div>
+          <div class="visualClear"></div>
+          
+        </div>
       </metal:body_macro>
 
       <metal:folderlisting_macro metal:define-macro="folderlisting"/>
