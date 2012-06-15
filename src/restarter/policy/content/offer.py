@@ -6,6 +6,7 @@ from zope.interface import implements
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
+from Products.ATVocabularyManager import NamedVocabulary
 
 from restarter.policy import policyMessageFactory as _
 from restarter.policy.interfaces import IOffer
@@ -13,12 +14,33 @@ from restarter.policy.config import PROJECTNAME
 
 OfferSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
-    atapi.FixedPointField('quantity',
+    atapi.StringField('category',
+        searchable=0,
+        required=True,
+        vocabulary=NamedVocabulary('demand_category'),
+        widget=atapi.SelectionWidget(
+            label=_("Offer category"),
+            description=_("Please select your offer category."),
+            size=30
+            ),
+        ),
+
+    atapi.StringField('period',
+        searchable=0,
+        required=False,
+        widget=atapi.StringWidget(
+            label=_("Period"),
+            description=_("Please provide offer period."),
+            size=20
+            ),
+        ),
+
+    atapi.FixedPointField('offer_value',
         searchable=0,
         required=True,
         widget=atapi.DecimalWidget(
-            label=_("Quantity"),
-            description=_("Please provide offer quantity."),
+            label=_("Offer value"),
+            description=_("Please provide offer value."),
             size=10
             ),
         ),
@@ -46,16 +68,12 @@ OfferSchema['rights'].widget.visible['view'] = 'invisible'
 OfferSchema['rights'].widget.visible['edit'] = 'invisible'
 OfferSchema['excludeFromNav'].widget.visible['view'] = 'invisible'
 OfferSchema['excludeFromNav'].widget.visible['edit'] = 'invisible'
-OfferSchema['title'].widget.visible['view'] = 'visible'
-OfferSchema['title'].widget.visible['edit'] = 'invisible'
 OfferSchema['subject'].widget.visible['view'] = 'invisible'
 OfferSchema['subject'].widget.visible['edit'] = 'invisible'
 OfferSchema['relatedItems'].widget.visible['view'] = 'invisible'
 OfferSchema['relatedItems'].widget.visible['edit'] = 'invisible'
-OfferSchema['description'].widget.label = _('Offer comment')
-OfferSchema['description'].widget.description = _('Leave your comment for this order.')
+OfferSchema['title'].widget.label = _('Offer name')
 
-OfferSchema.moveField('quantity', before='description')
 
 class Offer(base.ATCTContent):
     """An offer"""

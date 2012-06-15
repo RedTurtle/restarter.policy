@@ -215,6 +215,16 @@ def product_commented(product, event):
         notify('notify/email', params)
 
 
+def offer_commented(product, event):
+    """Event fired when offer has been commented."""
+    member = product.getOwner()
+    email = member.getProperty('email', '')
+    if email:
+        params = {'message': NEW_COMMENT,
+                  'email': email}
+        notify('notify/email', params)
+
+
 def demand_commented(product, event):
     """Event fired when demand has been commented."""
     company = product.getCompany()

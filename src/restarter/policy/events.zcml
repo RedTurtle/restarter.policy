@@ -49,6 +49,11 @@
       handler=".events.demand_commented"
    />
   <subscriber
+      for=".interfaces.IOffer
+           .interfaces.IDisqusNotify"
+      handler=".events.offer_commented"
+   />
+  <subscriber
       for=".interfaces.ICompany
            .interfaces.ICompanyShareNotify"
       handler=".events.company_employee_modified"
