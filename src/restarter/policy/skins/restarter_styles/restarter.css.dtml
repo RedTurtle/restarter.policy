@@ -14,6 +14,21 @@ textarea,
 #content textarea {
     font-family: <dtml-var fontFamily>;
 }
+img.image-left, img.image-right, .captioned img {
+    border:0;
+}
+.state-soldout {
+    color: #FF7000 !important;
+}
+#plone-contentmenu-workflow .state-soldout {
+    padding: 0 0.5em;
+    background-color: #FF7000;
+    border: 0.1em solid #FF7000;
+    color: white !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
 
 
 #portal-header {
@@ -682,6 +697,23 @@ dl.productsPortlet p.btnLink a.btn:hover,
     background-color: &dtml-linkColor;;
     color: #FFF !important;
 }
+#content dl.productsPortlet {
+    border-bottom: 3px solid #F0F0F0;
+    margin-bottom: 0.7em;
+}
+#content dl.productsPortlet dd.portletItem {
+    margin-bottom: 10px;
+}
+#content dl.offersPortlet dd.portletItem {
+    min-height: 150px;
+}
+#content dl.offersPortlet p.faCollectionDesc {
+    margin-bottom: 0.8em;
+}
+#content dl.productsPortlet dt.portletHeader {
+    margin-bottom: 0.8em;
+}
+
 /** company **/
 .companyResult,
 #content .companyResult {
@@ -756,9 +788,22 @@ div.comMap a {
 #content .comNumbers p {
     margin-bottom: 0.2em;
 }
+#content .comNumbers .comWeb {
+    margin-top: 0.4em;
+}
+#content .comNumbers .comEmail,
+#content .comNumbers .comCell {
+    display: inline;
+}
+#content .comNumbers .comEmail {
+    padding-right: 0.5em;
+    margin-right: 0.7em;
+    border-right: 1px dotted #999;
+}
 
 /** prodotto **/
-.portaltype-product #category {
+.portaltype-product #category,
+.portaltype-offer #category {
     font-size: 1em;
     text-align: left;
 }
@@ -1185,5 +1230,26 @@ body.template-register #actionsView .actionButtons input.context:active,
     background: -moz-linear-gradient(top,  #ededed,  #fff);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
 }
+
+/** menu stato **/
+#contentActionMenus dl#plone-contentmenu-workflow {
+    background-color: #000;
+    outline: 3px solid #FFF;
+}
+#contentActionMenus dl#plone-contentmenu-workflow dt a {
+    background-color: transparent;
+}
+#contentActionMenus dl#plone-contentmenu-workflow a:focus, #contentActionMenus dl#plone-contentmenu-workflow a:hover {
+    color: #FF9;
+}
+#contentActionMenus dl#plone-contentmenu-workflow dd,
+#contentActionMenus dl#plone-contentmenu-workflow dd ul a {
+    background-color: #000 !important;
+    color: #FFF !important;
+}
+#contentActionMenus dl#plone-contentmenu-workflow dd ul a:hover {
+    background-color: #900 !important;
+    color: #FF9 !important;
+}    
 
 /* </dtml-with> */
