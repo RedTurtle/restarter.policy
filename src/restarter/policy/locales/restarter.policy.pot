@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-14 14:32+0000\n"
+"POT-Creation-Date: 2012-06-15 17:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: restarter.policy\n"
 
-#: ./content/company.py:22
+#: ./content/company.py:23
 #: ./content/product.py:20
 msgid "-- not selected --"
 msgstr ""
@@ -26,11 +26,11 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: ./content/company.py:161
+#: ./content/company.py:163
 msgid "Accept terms of use"
 msgstr ""
 
-#: ./content/company.py:55
+#: ./content/company.py:56
 msgid "Address"
 msgstr ""
 
@@ -38,15 +38,19 @@ msgstr ""
 msgid "Availability"
 msgstr ""
 
-#: ./content/company.py:127
+#: ./content/company.py:129
 msgid "CF/P.IVA"
 msgstr ""
 
-#: ./content/company.py:106
+#: ./content/company.py:108
 msgid "Cell phone"
 msgstr ""
 
-#: ./content/company.py:74
+#: ./content/company.py:106
+msgid "Cell phone has a wrong format. The proper is +391234567890"
+msgstr ""
+
+#: ./content/company.py:75
 msgid "City"
 msgstr ""
 
@@ -55,22 +59,23 @@ msgid "Companies"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
+#: ./profiles/upgrade_0009_to_0010/types/Company.xml
 msgid "Company"
 msgstr ""
 
-#: ./content/company.py:210
+#: ./content/company.py:212
 msgid "Company name"
 msgstr ""
 
-#: ./content/company.py:149
+#: ./content/company.py:151
 msgid "Company sectore"
 msgstr ""
 
-#: ./content/company.py:138
+#: ./content/company.py:140
 msgid "Company type"
 msgstr ""
 
-#: ./content/company.py:117
+#: ./content/company.py:119
 msgid "Company website"
 msgstr ""
 
@@ -82,7 +87,23 @@ msgstr ""
 msgid "CompanyStory"
 msgstr ""
 
-#: ./content/company.py:96
+#: ./profiles/upgrade_0009_to_0010/types/Demand.xml
+msgid "Demand"
+msgstr ""
+
+#: ./content/demand.py:24
+msgid "Demand category"
+msgstr ""
+
+#: ./content/demand.py:62
+msgid "Demand name"
+msgstr ""
+
+#: ./profiles/upgrade_0009_to_0010/types/Demands.xml
+msgid "Demands"
+msgstr ""
+
+#: ./content/company.py:97
 msgid "Email address"
 msgstr ""
 
@@ -94,16 +115,44 @@ msgstr ""
 msgid "Folder that contains companies"
 msgstr ""
 
+#: ./profiles/upgrade_0009_to_0010/types/Demands.xml
+msgid "Folder that contains demandss"
+msgstr ""
+
+#: ./profiles/upgrade_0009_to_0010/types/Offers.xml
+msgid "Folder that contains offers"
+msgstr ""
+
 #: ./profiles/default/types/Products.xml
 msgid "Folder that contains products"
 msgstr ""
 
-#: ./content/order.py:56
+#: ./content/order.py:57
 msgid "Leave your comment for this order."
 msgstr ""
 
-#: ./content/company.py:172
+#: ./content/company.py:174
 msgid "Notification type"
+msgstr ""
+
+#: ./profiles/upgrade_0009_to_0010/types/Offer.xml
+msgid "Offer"
+msgstr ""
+
+#: ./content/offer.py:22
+msgid "Offer category"
+msgstr ""
+
+#: ./content/offer.py:75
+msgid "Offer name"
+msgstr ""
+
+#: ./content/offer.py:42
+msgid "Offer value"
+msgstr ""
+
+#: ./profiles/upgrade_0009_to_0010/types/Offers.xml
+msgid "Offers"
 msgstr ""
 
 #: ./profiles/default/types/Order.xml
@@ -111,7 +160,7 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
-#: ./content/order.py:55
+#: ./content/order.py:56
 msgid "Order comment"
 msgstr ""
 
@@ -119,39 +168,56 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: ./content/company.py:162
+#: ./content/demand.py:34
+#: ./content/offer.py:32
+msgid "Period"
+msgstr ""
+
+#: ./content/company.py:164
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/company.py:128
+#: ./content/company.py:130
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
 
-#: ./content/company.py:56
+#: ./content/company.py:57
 msgid "Please give us your company address"
 msgstr ""
 
-#: ./content/company.py:107
+#: ./content/company.py:109
 msgid "Please give us your company cell phone."
 msgstr ""
 
-#: ./content/company.py:75
+#: ./content/company.py:76
 msgid "Please give us your company city location."
 msgstr ""
 
-#: ./content/company.py:97
+#: ./content/company.py:98
 msgid "Please give us your company email address."
 msgstr ""
 
-#: ./content/company.py:86
+#: ./content/company.py:87
 msgid "Please give us your company province location."
 msgstr ""
 
-#: ./content/company.py:118
+#: ./content/company.py:120
 msgid "Please give us your company website url."
 msgstr ""
 
-#: ./content/order.py:21
+#: ./content/demand.py:35
+msgid "Please provide demand period."
+msgstr ""
+
+#: ./content/offer.py:33
+msgid "Please provide offer period."
+msgstr ""
+
+#: ./content/offer.py:43
+msgid "Please provide offer value."
+msgstr ""
+
+#: ./content/order.py:22
 msgid "Please provide order quantity."
 msgstr ""
 
@@ -183,16 +249,24 @@ msgstr ""
 msgid "Please provide product waranty conditions."
 msgstr ""
 
-#: ./content/company.py:173
+#: ./content/company.py:175
 msgid "Please select how we should notify your company."
 msgstr ""
 
-#: ./content/company.py:150
+#: ./content/company.py:152
 msgid "Please select your company sectore."
 msgstr ""
 
-#: ./content/company.py:139
+#: ./content/company.py:141
 msgid "Please select your company type."
+msgstr ""
+
+#: ./content/demand.py:25
+msgid "Please select your demand category."
+msgstr ""
+
+#: ./content/offer.py:23
+msgid "Please select your offer category."
 msgstr ""
 
 #: ./content/product.py:34
@@ -232,19 +306,19 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ./content/company.py:85
+#: ./content/company.py:86
 msgid "Province"
 msgstr ""
 
-#: ./events.py:150
+#: ./events.py:159
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:187
+#: ./events.py:200
 msgid "Published on product creation"
 msgstr ""
 
-#: ./content/order.py:20
+#: ./content/order.py:21
 #: ./content/product.py:43
 msgid "Quantity"
 msgstr ""
@@ -273,11 +347,11 @@ msgstr ""
 msgid "Waranty"
 msgstr ""
 
-#: ./content/company.py:159
+#: ./content/company.py:161
 msgid "You must accept the Terms of Use."
 msgstr ""
 
-#: ./content/company.py:38
+#: ./content/company.py:39
 msgid "both"
 msgstr ""
 
@@ -292,7 +366,7 @@ msgid "help_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:47
+#: ./content/company.py:48
 msgid "help_ragione_sociale"
 msgstr ""
 
@@ -307,11 +381,12 @@ msgid "label_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:46
+#: ./content/company.py:47
 msgid "label_ragione_sociale"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
+#: ./profiles/upgrade_0009_to_0010/types/Company.xml
 msgid "restartER company"
 msgstr ""
 
