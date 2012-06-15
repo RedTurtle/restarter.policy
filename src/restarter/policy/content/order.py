@@ -1,6 +1,7 @@
 """Definition of the Order content type
 """
 
+from plone.indexer.decorator import indexer
 from zope.interface import implements
 
 from Products.Archetypes import atapi
@@ -74,5 +75,18 @@ class Order(base.ATCTContent):
         if ICompany.providedBy(company):
             return company
 
+
+@indexer(IOrder)
+def order_value(object):
+    product = object.getProduct()
+    if product:
+        price = product.getPrice()
+        if price:
+            quantity = object.getQuantity()
+            if quantity:
+                try:
+                    return float(quantity) * float(price)
+                except ValueError:
+                    return 0
 
 atapi.registerType(Order, PROJECTNAME)

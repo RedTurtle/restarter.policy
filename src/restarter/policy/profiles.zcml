@@ -54,4 +54,22 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
   />
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0010 to 0011"
+      description=""
+      source="0010"
+      destination="0011"
+      handler="restarter.policy.upgrades.upgrade_0010_to_0011"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0010_to_0011"
+      title="Upgrade restarter.policy 0010 to 0011"
+      directory="profiles/upgrade_0010_to_0011"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
+
+
+
 </configure>

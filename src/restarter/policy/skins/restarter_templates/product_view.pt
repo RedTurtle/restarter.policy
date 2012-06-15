@@ -71,7 +71,13 @@
             </div>
             
       </div>
+      <div id="product-counter" tal:define="stats context/portal_stats/getStats">
+          <div><label>nr unita prenotate:</label><tal:stats replace="python: stats['products'][context.UID()].get('new',0)"/> &euro;</div>
+          <div><label>nr unita vendute:</label><tal:stats replace="python: stats['products'][context.UID()].get('accepted',0)"/> &euro;</div>
+      </div>
       </metal:body_macro>
+
+
       <metal:folderlisting_macro metal:define-macro="folderlisting">
 
       </metal:folderlisting_macro>

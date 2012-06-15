@@ -68,3 +68,9 @@ def upgrade_0009_to_0010(context):
         if 'demand_category' not in portal.portal_vocabularies.objectIds():
             voc = portal.portal_vocabularies[portal.portal_vocabularies.invokeFactory('SortedSimpleVocabulary','demand_category')]
             voc.setTitle(u'Demand category')
+
+
+def upgrade_0010_to_0011(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0010_to_0011')
+
+

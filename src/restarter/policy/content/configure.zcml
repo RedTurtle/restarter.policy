@@ -78,6 +78,8 @@
  <adapter factory=".product.city" name="city" />
  <adapter factory=".product.province" name="province" />
 
+ <adapter factory=".order.order_value" name="order_value" />
+
  <adapter factory=".demand.product_category" name="product_category" />
  <adapter factory=".demand.company_sectore" name="company_sectore" />
  <adapter factory=".demand.city" name="city" />

@@ -42,7 +42,7 @@ class DisqusOfferViewlet(DisqusViewlet):
 class DisqusDemandViewlet(DisqusViewlet):
 
     def update(self):
-        super(DisqusOfferViewlet, self).update()
+        super(DisqusDemandViewlet, self).update()
         wtool = self.context.portal_workflow
         self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') == 'published'
 
