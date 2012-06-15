@@ -12,16 +12,40 @@
         interface="..interfaces.IOrder"
         />
   </class>
-  <class class=".product.Product">
+  <class class=".offers.Offers">
     <require
         permission="zope2.View"
-        interface="..interfaces.IProduct"
+        interface="..interfaces.IOffers"
+        />
+  </class>
+  <class class=".offer.Offer">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IOffer"
         />
   </class>
   <class class=".companies.Companies">
     <require
         permission="zope2.View"
         interface="..interfaces.ICompanies"
+        />
+  </class>
+  <class class=".demand.Demand">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IDemand"
+        />
+  </class>
+  <class class=".demands.Demands">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IDemands"
+        />
+  </class>
+  <class class=".product.Product">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IProduct"
         />
   </class>
   <class class=".products.Products">

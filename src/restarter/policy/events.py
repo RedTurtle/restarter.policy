@@ -141,6 +141,15 @@ def company_added(company, event):
     directlyProvides(products, (ISimpleAddButtons,))
     products.reindexObject()
 
+    if 'richieste' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
+
+    demands = company[company.invokeFactory('Demands','richieste')]
+    demands.setTitle(u'Richieste')
+    directlyProvides(products, (ISimpleAddButtons,))
+    demands.reindexObject()
+
     if 'media' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
@@ -186,6 +195,8 @@ def product_added(product, event):
     media = product[product.invokeFactory('Folder','media')]
     media.setTitle(u'Media')
     directlyProvides(media, (ISimpleAddButtons,))
+    media.setConstrainTypesMode(1)
+    media.setLocallyAllowedTypes(['Image',])
     product.portal_workflow.doActionFor(media, "publish",comment=_("Published on product creation"))
     product.portal_workflow.doActionFor(product, "create")
 

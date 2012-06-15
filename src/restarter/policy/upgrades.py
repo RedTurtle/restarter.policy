@@ -55,3 +55,12 @@ def upgrade_0000_to_0008(context):
 
 def upgrade_0008_to_0009(context):
     context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0008_to_0009')
+
+
+def upgrade_0009_to_0010(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0009_to_0010')
+    portal = context.portal_url.getPortalObject()
+    if 'offerte' not in portal.objectIds():
+        offerte = portal[portal.invokeFactory('Offers','offerte')]
+        offerte.setTitle(u'Offerte')
+

@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<dc-workflow workflow_id="company_workflow" title="Company Workflow" description="" state_variable="review_state" initial_state="in_creation" manager_bypass="False">
+ <permission>ATContentTypes: Add Document</permission>
+ <permission>ATContentTypes: Add File</permission>
+ <permission>ATContentTypes: Add Folder</permission>
+ <permission>ATContentTypes: Add Image</permission>
+ <permission>ATContentTypes: Add Large Plone Folder</permission>
+ <permission>ATContentTypes: Add Link</permission>
+ <permission>Access contents information</permission>
+ <permission>Add portal content</permission>
+ <permission>Change portal events</permission>
+ <permission>Modify portal content</permission>
+ <permission>Review portal content</permission>
+ <permission>View</permission>
+ <permission>restarter.policy: Add Company Story</permission>
+ <permission>restarter.policy: Add Products</permission>
+ <permission>restarter.policy: Add Demands</permission>
+ <state state_id="disabled" title="Disabled">
+  <exit-transition transition_id="reactivate"/>
+ </state>
+ <state state_id="draft" title="Draft">
+  <exit-transition transition_id="publish"/>
+  <permission-map name="ATContentTypes: Add Document" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Event" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add File" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Folder" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Image" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Large Plone Folder" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Link" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add News Item" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Access contents information" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Add portal content" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="True">
+  </permission-map>
+  <permission-map name="View" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Company Story" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Products" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="in_creation" title="">
+  <exit-transition transition_id="create"/>
+  <permission-map name="ATContentTypes: Add Document" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add File" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Folder" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Image" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Large Plone Folder" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Link" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Access contents information" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Add portal content" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Company Story" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Demands" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Products" acquired="True">
+   <permission-role>Owner</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="published" title="Published">
+  <description>Visible to everyone, not editable by the owner.</description>
+  <exit-transition transition_id="disable"/>
+  <exit-transition transition_id="retract"/>
+  <permission-map name="ATContentTypes: Add Document" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add File" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Folder" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Image" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Large Plone Folder" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="ATContentTypes: Add Link" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Access contents information" acquired="True">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Add portal content" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Review portal content" acquired="True">
+  </permission-map>
+  <permission-map name="View" acquired="True">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Company Story" acquired="True">
+   <permission-role>Employee</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="restarter.policy: Add Products" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <transition transition_id="create" title="" new_state="draft" trigger="USER" before_script="" after_script="">
+  
+  <guard>
+   <guard-permission>Modify portal content</guard-permission>
+  </guard>
+ </transition>
+ <transition transition_id="disable" title="Disable the company" new_state="disabled" trigger="USER" before_script="" after_script="">
+  <action url="" category="workflow" icon="">Disable the company</action>
+  <guard>
+   <guard-permission>Manage portal</guard-permission>
+  </guard>
+ </transition>
+ <transition transition_id="publish" title="Publish company" new_state="published" trigger="USER" before_script="" after_script="">
+  <action url="" category="workflow" icon="">Publish company</action>
+  <guard>
+   <guard-permission>Modify portal content</guard-permission>
+  </guard>
+ </transition>
+ <transition transition_id="reactivate" title="Reactivate company" new_state="published" trigger="USER" before_script="" after_script="">
+  <action url="" category="workflow" icon="">Reactivate company</action>
+  <guard>
+   <guard-permission>Manage portal</guard-permission>
+  </guard>
+ </transition>
+ <transition transition_id="retract" title="Make company draft" new_state="draft" trigger="USER" before_script="" after_script="">
+  <action url="" category="workflow" icon="">Make company draft</action>
+  <guard>
+   <guard-permission>Modify portal content</guard-permission>
+  </guard>
+ </transition>
+ <worklist worklist_id="reviewer_queue" title="">
+  <description>Reviewer tasks</description>
+  <action url="%(portal_url)s/search?review_state=pending" category="global" icon="">Pending (%(count)d)</action>
+  <guard>
+   <guard-permission>Review portal content</guard-permission>
+  </guard>
+  <match name="review_state" values="pending"/>
+ </worklist>
+ <variable variable_id="action" for_catalog="False" for_status="True" update_always="True">
+  <description>Previous transition</description>
+  <default>
+   
+   <expression>transition/getId|nothing</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="actor" for_catalog="False" for_status="True" update_always="True">
+  <description>The ID of the user who performed the previous transition</description>
+  <default>
+   
+   <expression>user/getId</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="comments" for_catalog="False" for_status="True" update_always="True">
+  <description>Comment about the last transition</description>
+  <default>
+   
+   <expression>python:state_change.kwargs.get('comment', '')</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="review_history" for_catalog="False" for_status="False" update_always="False">
+  <description>Provides access to workflow history</description>
+  <default>
+   
+   <expression>state_change/getHistory</expression>
+  </default>
+  <guard>
+   <guard-permission>Request review</guard-permission>
+   <guard-permission>Review portal content</guard-permission>
+  </guard>
+ </variable>
+ <variable variable_id="time" for_catalog="False" for_status="True" update_always="True">
+  <description>When the previous transition was performed</description>
+  <default>
+   
+   <expression>state_change/getDateTime</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+</dc-workflow>
