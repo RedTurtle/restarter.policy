@@ -11,20 +11,26 @@
 
         <metal:body_macro metal:define-macro="body">
 
-          <div tal:replace="structure python:here.getProduct().folder_full_view_item()" />
 
-          <tal:fields tal:define="field_macro field_macro | context/widgets/field/macros/view"
-                      tal:repeat="field python:context.Schema().filterFields(isMetadata=0)">
 
-            <tal:if_visible define="purl nocall:context/portal_url;
-                                    portal purl/getPortalObject;
-                                    mode string:view;
-                                    visState python:field.widget.isVisible(here, mode);
-                                    visCondition python:field.widget.testCondition(None, portal, context);"
-                            condition="python:visState == 'visible' and visCondition">
-              <metal:use_field use-macro="field_macro" />
-            </tal:if_visible>
-          </tal:fields>
+            <div id="productExtract">
+              <div tal:replace="structure python:here.getProduct().folder_full_view_item()" />
+            </div>
+            
+          <div id="order-view" class="order-view">
+            <tal:fields tal:define="field_macro field_macro | context/widgets/field/macros/view"
+                        tal:repeat="field python:context.Schema().filterFields(isMetadata=0)">
+            
+              <tal:if_visible define="purl nocall:context/portal_url;
+                                      portal purl/getPortalObject;
+                                      mode string:view;
+                                      visState python:field.widget.isVisible(here, mode);
+                                      visCondition python:field.widget.testCondition(None, portal, context);"
+                              condition="python:visState == 'visible' and visCondition">
+                <metal:use_field use-macro="field_macro" />
+              </tal:if_visible>
+            </tal:fields>
+          </div>
         </metal:body_macro>
         <metal:folderlisting_macro metal:define-macro="folderlisting"/>
 

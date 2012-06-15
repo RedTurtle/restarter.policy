@@ -12,9 +12,6 @@
       <metal:body_macro metal:define-macro="body">
 
         <div id="companyBody">
-          <div class="companyMap">
-            <img src="http://placehold.it/200x150&text=mappa" alt="Localizzazione dell'azienda in mappa"/>
-          </div>
           <div class="companyRec">
             <h2>
               <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field> 
@@ -25,6 +22,9 @@
               <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>
               <strong><metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
               (<metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>)</strong>
+            </div>
+            <div class="comMap">
+              <a href="#" target="_blank">Guarda la mappa</a>
             </div>
             <div class="comNumbers">
               <p class="comEmail"><span class="labelTxt">E-mail:</span> <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field></p>
@@ -37,6 +37,8 @@
           <div class="visualClear"></div>
           
         </div>
+        <div class="visualClear"></div>
+
       </metal:body_macro>
 
       <metal:folderlisting_macro metal:define-macro="folderlisting"/>

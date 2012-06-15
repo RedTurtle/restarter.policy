@@ -713,12 +713,14 @@ dl.productsPortlet p.btnLink a.btn:hover,
     color: &dtml-fontColor;
 }
 #companyBody {
-    clear: left;
-    padding-top: 2em;
+    float: left; 
+    padding-top: 0;
 }
-.companyMap {
-    float: left;
-    margin: 0 2em 0.2em 0;
+div.comMap a {
+    margin: 0.3em 0 0;
+    font-size: 0.9em;
+    padding-left: 15px;
+    background: transparent url(++resource++restarter.images/map_pin.png) no-repeat left center;
 }
 #content .companyRec {
     margin: 0 0 0;
@@ -864,71 +866,74 @@ a.noFoto span {
 }
 
 /** ordine **/
-.portaltype-order {
-    
+.order-view {
+    float: left;
+    max-width: 55%;
+}
+#productExtract {
+    background-color: #F0F0F0;
+    border: 1px solid #CCC;
+    padding: 10px 20px;    
+    max-width: 40%;
+    float: right;
+}
+#productExtract #portal-breadcrumbs,
+#productExtract #plone-document-byline {
+    display: none;
+}
+#productExtract h2.headline {
+    padding-bottom: 0.3em;
+    background: transparent  url(++resource++restarter.images/tag.png) no-repeat left center;
+    padding-left: 22px;
+}
+#productExtract .prodPriceGroup {
+    margin:0;
+    padding:0;
+}
+#productExtract .prodQty {
+    float: none;
+    padding-right: 0;
+    margin-right: 0;
+    margin-top: 0.5em;
+    border-right: 0;
+    color: #000;
+}
+#productExtract .prodPrice {
+    float: none;
+    color: #000;
+}
+#productExtract .prodCategoria {
+    color: #000;
+}
+#productExtract .prodPriceGroup .prodBuy,
+#productExtract .prodCondition,
+#productExtract .prodAvail,
+#productExtract .prodShip,
+#productExtract .prodWaranty {
+    display: none;
+}
+.order-view input#quantity ,
+.order-view textarea#description {
+    display: block;
+    margin-top: 0.5em;
+    border:1px solid #555;
+    background: #FFF none;
+    padding: 0.3em 0.4em;
+}
+#order-edit-view .formControls {
+    margin-left: 0;
+}
+.portaltype-order #parent-fieldname-description.documentDescription {
+    float: left;
+    max-width: 50%;
+}
+.portaltype-order h1#parent-fieldname-title {
+    background: transparent  url(++resource++restarter.images/bag.png) no-repeat right center;
+    padding: 0.3em 40px 0.3em 0;
 }
 
-/** buttons **/
-.button {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    color: #FFF;
-    font: 14px/100% Arial, Helvetica, sans-serif;
-    padding: .5em 2em .55em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    -webkit-border-radius: .5em; 
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-}
-.button:hover {
-    text-decoration: none;
-    color: #FFC;
-}
-.button:active {
-    position: relative;
-    top: 1px;
-}
-a.button,
-#content a.button,
-dl.portlet a.button,
-.button a,
-#content .button a,
-dl.portlet .button a {
-    color: #FFF;
-}
-a.button:hover,
-#content a.button:hover,
-dl.portlet a.button:hover,
-.button a:hover,
-#content .button a:hover,
-dl.portlet .button a:hover {
-    color: #FFC !important;
-    cursor: pointer;
-}
-/* green */
-.green {
-    color: #e8f0de;
-    border: solid 1px #538312;
-    background: #64991e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
-    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
-}
-.green:hover {
-    background: #538018;
-    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
-    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
-}
-.green:active {
-    color: #a9c08c;
-    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
-    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
-}
+/**/
+
 .btnActions li.button a {
     display: block;
 }
@@ -1064,21 +1069,121 @@ dl.portlet .btnActions li {
     margin: 0.3em 0 2em;
 }
 #rpx-login-container fieldset#login-form div.formControls input.context,
-body.template-register #actionsView .actionButtons input.context {
-    color: #e8f0de;
+body.template-register #actionsView .actionButtons input.context,
+#order-edit-view .formControls input.context[type="submit"],
+#order-edit-view .formControls input.standalone[type="submit"] {
     padding: 0.4em 1em;
     cursor: pointer;
+}
+#order-edit-view .formControls input.standalone[type="submit"] {
+    margin-left: 0.5em;
+}
+body.template-register #content input, body.template-new-user #content input {
+    font-size: 1em;
+}
+
+
+
+/** buttons **/
+.button,
+#rpx-login-container fieldset#login-form div.formControls input.context,
+body.template-register #actionsView .actionButtons input.context,
+#order-edit-view .formControls input.context[type="submit"],
+#order-edit-view .formControls input.standalone[type="submit"] {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+}
+.button:hover {
+    text-decoration: none;
+    color: #FFC;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+a.button,
+#content a.button,
+dl.portlet a.button,
+.button a,
+#content .button a,
+dl.portlet .button a {
+    color: #FFF;
+}
+a.button:hover,
+#content a.button:hover,
+dl.portlet a.button:hover,
+.button a:hover,
+#content .button a:hover,
+dl.portlet .button a:hover {
+    color: #FFC !important;
+    cursor: pointer;
+}
+/* green */
+.green,
+#rpx-login-container fieldset#login-form div.formControls input.context,
+body.template-register #actionsView .actionButtons input.context,
+#order-edit-view .formControls input.context[type="submit"],
+#order-edit-view .formControls input.standalone[type="submit"] {
+    color: #e8f0de;
     border: solid 1px #538312;
-     -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px; 
     background: #64991e;
     background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
     background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
 }
-body.template-register #content input, body.template-new-user #content input {
-    font-size: 1em;
+.green:hover,
+#rpx-login-container fieldset#login-form div.formControls input.context:hover,
+body.template-register #actionsView .actionButtons input.context:hover,
+#order-edit-view .formControls input.context[type="submit"]:hover,
+#order-edit-view .formControls input.standalone[type="submit"]:hover {
+    background: #538018;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.green:active,
+#rpx-login-container fieldset#login-form div.formControls input.context:active,
+body.template-register #actionsView .actionButtons input.context:active,
+#order-edit-view .formControls input.context[type="submit"]:active,
+#order-edit-view .formControls input.standalone[type="submit"]:active {
+    color: #a9c08c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+/* white */
+.white,
+#order-edit-view .formControls input.standalone[type="submit"] {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white:hover,
+#order-edit-view .formControls input.standalone[type="submit"]:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.white:active,
+#order-edit-view .formControls input.standalone[type="submit"]:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
 }
 
 /* </dtml-with> */
