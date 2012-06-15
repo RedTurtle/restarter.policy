@@ -71,7 +71,7 @@
             </div>
             
       </div>
-      <div id="product-counter" tal:define="stats context/portal_stats/getStats">
+      <div id="product-counter" tal:define="stats context/portal_stats/getStats" tal:on-error="string:">
           <div class="counterPrenot">
             <span class="labelTxt">Valore delle unità prenotate:</span>
             <span class="val"><tal:stats replace="python: stats['products'][context.UID()].get('new',0)"/> &euro;</span>
