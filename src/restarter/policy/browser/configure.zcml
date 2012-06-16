@@ -206,4 +206,11 @@
       layer="..interfaces.layer.ISkin"
     />
 
+
+  <browser:resourceDirectory
+    name="faceted_images"
+    layer="..interfaces.layer.ISkin"
+    directory="faceted_images" />
+
+
 </configure>
