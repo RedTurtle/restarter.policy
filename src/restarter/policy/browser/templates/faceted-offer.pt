@@ -1,0 +1,24 @@
+<div class="facetedResult productResult offerResult"
+     tal:define="
+      description context/Description|string:;
+      title context/pretty_title_or_id|string:;
+      desc_or_title python:description or title;
+      eff_date context/effective|string:;
+      toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+      url context/absolute_url|string:#;">
+
+<!-- ######### mettere la condizione sulla effective date (e magari anche il formato giusto) -->
+  <p class="itemData" tal:content="python:toLocalizedTime(eff_date)">02 Giugno 2012</p>
+  <h3 class="faCollectionTitle">
+<!-- ####### troncarlo a 50 caratteri -->
+    <a tal:attributes="href url; title description" tal:content="context/pretty_title_or_id|string:">Titolo del prodotto</a>
+  </h3>
+  <p class="faCollectionDesc" tal:content="description">
+
+<!-- ####### troncarla a 150 caratteri -->
+    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
+  </p>
+  <p class="btnLink"><a class="btn" href="" tal:attributes="href url;">Dettagli</a></p>
+  <div class="visualClear"><!-- --></div>
+
+</div>

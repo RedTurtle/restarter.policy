@@ -656,6 +656,9 @@ dl.productsPortlet dd.portletItem,
     max-width: 200px;
     min-height: 320px;
 }
+#content .offerResult {
+    min-height: 150px;
+}
 #content dl.portlet dt.portletHeader {
     margin: 0 0 0.5em 0.6em;
 }
