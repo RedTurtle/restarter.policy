@@ -19,3 +19,5 @@ class RestarterConfig(BrowserView):
         url_check = not ISiteRoot.providedBy(self.context)
         return path_check and url_check
 
+    def safe_truncate(self, text, size):
+        return '%s(...)' % text[:size]

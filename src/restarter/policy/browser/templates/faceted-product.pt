@@ -1,5 +1,6 @@
 <div class="facetedResult productResult"
      tal:define="
+      restarter context/@@config_restarter; 
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
@@ -7,33 +8,25 @@
       toLocalizedTime nocall:context/@@plone/toLocalizedTime;
       url context/absolute_url|string:#;">
 
-<!-- ######## MANCANO LE CONDITION su img, data pubblicazione (possibilmente cambiarle formato)  -->
   <div class="faCollectionImg">
-    <a tal:attributes="href url; title description">
+    <a tal:attributes="href url; title description" tal:condition="context/hasContentLeadImage">
       <img tal:attributes="
             title desc_or_title;
             alt title;
             src string:$url/leadImage_mini"/>
     </a>
-<!-- ######## se la foto non c'e' stampare questo -->
-    <!--
-    <a tal:attributes="href url" class="noFoto">
+    <a tal:attributes="href url" class="noFoto" tal:condition="not: context/hasContentLeadImage">
       <span>Foto non disponibile</span>
     </a>
-  -->
 
   </div>
   <p class="itemData" tal:content="python:toLocalizedTime(eff_date)">02 Giugno 2012</p>
   <h3 class="faCollectionTitle">
-<!-- ####### troncarlo a 50 caratteri -->
-    <a tal:attributes="href url; title description" tal:content="context/pretty_title_or_id|string:">Titolo del prodotto</a>
+    <a tal:attributes="href url; title description"
+       tal:content="python: restarter.safe_truncate(context.pretty_title_or_id(), 50)">Titolo dell prodotto</a>
   </h3>
-  <p class="faCollectionDesc" tal:content="description">
-
-<!-- ####### troncarla a 100 caratteri -->
-    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.
-  </p>
-  <p class="productPrice"><span class="euro">87.50</span> euro / cad</p>
+  <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(description, 100)"></p>
+  <p class="productPrice"><span class="euro" tal:content="context/getPrice">87.50</span> euro / cad</p>
   <p class="btnLink"><a class="btn" href="" tal:attributes="href url;">Dettagli</a></p>
   <div class="visualClear"><!-- --></div>
 

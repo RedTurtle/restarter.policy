@@ -1,5 +1,6 @@
 <div class="facetedResult companyResult"
-     tal:define="
+  tal:define="
+      restarter context/@@config_restarter; 
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
@@ -7,25 +8,21 @@
       toLocalizedTime nocall:context/@@plone/toLocalizedTime;
       url context/absolute_url|string:#;">
 
-<!-- ######## MANCANO LE CONDITION su img  -->
   <div class="faCompanyImg">
-    <a tal:attributes="href url; title description">
+    <a tal:attributes="href url; title description" tal:condition="context/hasContentLeadImage">
       <img tal:attributes="
             title desc_or_title;
             alt title;
             src string:$url/leadImage_thumb"/>
     </a>
-<!-- ######## se la foto non c'e' stampare questo -->
-    <!--
-    <a tal:attributes="href url" class="noFoto">
+    <a tal:attributes="href url" class="noFoto" tal:condition="not: context/hasContentLeadImage">
       <span>Logo non disponibile</span>
     </a>
-  -->
 
   </div>
   <h3 class="faCollectionTitle">
-<!-- ####### troncarlo a 50 caratteri -->
-    <a tal:attributes="href url; title description" tal:content="context/pretty_title_or_id|string:">Titolo dell'azienda</a>
+    <a tal:attributes="href url; title description"
+       tal:content="python: restarter.safe_truncate(context.pretty_title_or_id(), 50)">Titolo dell'azienda</a>
   </h3>
   <div class="visualClear"><!-- --></div>
 
