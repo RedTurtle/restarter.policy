@@ -107,6 +107,17 @@ def order_added(order, event):
     company_notify(company, params)
 
 
+def product_published(product, event):
+    if event.action != 'publish':
+        return
+    member = product.portal_membership.getAuthenticatedMember()
+    facebook_id = get_facebook_from_member(member)
+    if facebook_id:
+        params = {'facebook_id': facebook_id,
+                  'product_url': product.absolute_url()}
+        notify('notify/fb/sell', params)
+
+
 def company_published(company, event):
     if event.action != 'publish':
         return

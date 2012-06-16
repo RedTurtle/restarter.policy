@@ -22,6 +22,12 @@
    />
 
   <subscriber
+      for=".interfaces.IProduct
+           Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.product_published"
+   />
+
+  <subscriber
       for=".interfaces.ICompany
            Products.CMFCore.interfaces.IActionSucceededEvent"
       handler=".events.company_published"
