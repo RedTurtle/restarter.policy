@@ -11,6 +11,8 @@ from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
 from plone.indexer.decorator import indexer
 from cioppino.twothumbs.interfaces import ILoveThumbsDontYou
+from collective.contentleadimage.config import IMAGE_FIELD_NAME
+from collective.contentleadimage.interfaces import ILeadImageable
 
 from restarter.policy import policyMessageFactory as _
 from restarter.policy.interfaces import ICompany
@@ -244,7 +246,7 @@ def company_sectore(object):
 
 class Company(folder.ATFolder):
     """restartER company"""
-    implements(ICompany, ILoveThumbsDontYou, IAnnotatable)
+    implements(ICompany, ILoveThumbsDontYou, IAnnotatable, ILeadImageable)
 
     meta_type = "Company"
     schema = CompanySchema
@@ -276,5 +278,12 @@ class Company(folder.ATFolder):
                 pass
             objectEventNotify(CompanyShareNotify(self, user_id, add_user=False))
         super(Company, self).manage_delLocalRoles(userids=userids)
+
+    def hasContentLeadImage(self):
+        field = self.getField(IMAGE_FIELD_NAME)
+        if field is not None:
+            value = field.get(self)
+            return not not value
+
 
 atapi.registerType(Company, PROJECTNAME)

@@ -8,8 +8,8 @@ from Products.Archetypes import atapi
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
-
-# -*- Message Factory Imported Here -*-
+from collective.contentleadimage.config import IMAGE_FIELD_NAME
+from collective.contentleadimage.interfaces import ILeadImageable
 
 from restarter.policy.interfaces import IProduct, ICompany
 from restarter.policy.config import PROJECTNAME
@@ -173,7 +173,7 @@ def company_sectore(object):
 
 class Product(folder.ATFolder):
     """Product that can be bought"""
-    implements(IProduct)
+    implements(IProduct, ILeadImageable)
 
     meta_type = "Product"
     schema = ProductSchema
@@ -186,6 +186,12 @@ class Product(folder.ATFolder):
     def showNewOrderButton(self):
         wtool = self.portal_workflow
         return wtool.getInfoFor(self, 'review_state', '') == 'published'
+
+    def hasContentLeadImage(self):
+        field = self.getField(IMAGE_FIELD_NAME)
+        if field is not None:
+            value = field.get(self)
+            return not not value
 
 
 atapi.registerType(Product, PROJECTNAME)
