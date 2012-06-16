@@ -250,6 +250,13 @@ class Company(folder.ATFolder):
     schema = CompanySchema
 
     @property
+    def gmap_address(self):
+        """Return google map address"""
+        return '%s, %s, %s, Italy' % (self.getAddress(),
+                                      self.getCity(),
+                                      self.getProvince())
+
+    @property
     def company_employees(self):
         anotations = IAnnotations(self)
         if not EMPLOYEES_KEY in anotations:
