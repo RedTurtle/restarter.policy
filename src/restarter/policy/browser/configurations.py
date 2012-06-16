@@ -20,4 +20,8 @@ class RestarterConfig(BrowserView):
         return path_check and url_check
 
     def safe_truncate(self, text, size):
-        return '%s(...)' % text[:size]
+        if len(text) > size:
+            elips = '(...)'
+        else:
+            elips = ''
+        return '%s%s' % (text[:size], elips)
