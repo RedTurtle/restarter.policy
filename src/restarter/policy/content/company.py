@@ -249,7 +249,6 @@ class Company(folder.ATFolder):
     meta_type = "Company"
     schema = CompanySchema
 
-    @property
     def gmap_address(self):
         """Return google map address"""
         return '%s, %s, %s, Italy' % (self.getAddress(),
