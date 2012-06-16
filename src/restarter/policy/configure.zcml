@@ -4,7 +4,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="restarter.policy">
-    
+
   <five:registerPackage package="." initialize=".initialize" />
   <i18n:registerTranslations directory="locales" />
   <include package="z3c.jbot"/>
@@ -18,48 +18,5 @@
   <include file="events.zcml" />
 
   <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
-
-  <subscriber
-      for=".interfaces.IOrder
-           Products.CMFCore.interfaces.IActionSucceededEvent"
-      handler=".events.order_added"
-   />
-
-  <subscriber
-      for=".interfaces.IProduct
-           Products.Archetypes.interfaces.IObjectInitializedEvent"
-      handler=".events.product_added"
-   />
-
-  <subscriber
-      for=".interfaces.ICompany
-           Products.CMFCore.interfaces.IActionSucceededEvent"
-      handler=".events.company_published"
-   />
-
-  <subscriber
-      for=".interfaces.ICompany
-           Products.Archetypes.interfaces.IObjectInitializedEvent"
-      handler=".events.company_added"
-   />
-
-  <subscriber
-      for=".interfaces.ICompany
-           .interfaces.IDisqusNotify"
-      handler=".events.company_commented"
-   />
-
-  <subscriber
-      for=".interfaces.IProduct
-           .interfaces.IDisqusNotify"
-      handler=".events.product_commented"
-   />
-
-  <subscriber
-         for="Products.PluggableAuthService.interfaces.authservice.IBasicUser
-              Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
-         handler=".events.user_created"
-   />
-
 
 </configure>
