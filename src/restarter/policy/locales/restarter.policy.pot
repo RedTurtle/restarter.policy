@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-15 17:55+0000\n"
+"POT-Creation-Date: 2012-06-17 12:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: restarter.policy\n"
 
-#: ./content/company.py:23
+#: ./content/company.py:25
 #: ./content/product.py:20
 msgid "-- not selected --"
 msgstr ""
@@ -26,31 +26,39 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: ./content/company.py:163
+#: ./content/company.py:165
 msgid "Accept terms of use"
 msgstr ""
 
-#: ./content/company.py:56
+#: ./content/company.py:58
 msgid "Address"
+msgstr ""
+
+#: ./browser/facebook_login.py:19
+msgid "App ID/API Key"
+msgstr ""
+
+#: ./browser/facebook_login.py:21
+msgid "App Secret"
 msgstr ""
 
 #: ./content/product.py:84
 msgid "Availability"
 msgstr ""
 
-#: ./content/company.py:129
+#: ./content/company.py:131
 msgid "CF/P.IVA"
 msgstr ""
 
-#: ./content/company.py:108
+#: ./content/company.py:110
 msgid "Cell phone"
 msgstr ""
 
-#: ./content/company.py:106
+#: ./content/company.py:108
 msgid "Cell phone has a wrong format. The proper is +391234567890"
 msgstr ""
 
-#: ./content/company.py:75
+#: ./content/company.py:77
 msgid "City"
 msgstr ""
 
@@ -63,19 +71,19 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: ./content/company.py:212
+#: ./content/company.py:214
 msgid "Company name"
 msgstr ""
 
-#: ./content/company.py:151
+#: ./content/company.py:153
 msgid "Company sectore"
 msgstr ""
 
-#: ./content/company.py:140
+#: ./content/company.py:142
 msgid "Company type"
 msgstr ""
 
-#: ./content/company.py:119
+#: ./content/company.py:121
 msgid "Company website"
 msgstr ""
 
@@ -103,12 +111,24 @@ msgstr ""
 msgid "Demands"
 msgstr ""
 
-#: ./content/company.py:97
+#: ./content/company.py:99
 msgid "Email address"
 msgstr ""
 
 #: ./browser/common.py:42
 msgid "Employee"
+msgstr ""
+
+#: ./browser/facebook_login.py:58
+msgid "Facebook authentication denied"
+msgstr ""
+
+#: ./browser/facebook_register.py:57
+msgid "Facebook data incomplete. Please retry."
+msgstr ""
+
+#: ./browser/facebook_login.py:43
+msgid "Facebook not configurated."
 msgstr ""
 
 #: ./profiles/default/types/Companies.xml
@@ -131,7 +151,11 @@ msgstr ""
 msgid "Leave your comment for this order."
 msgstr ""
 
-#: ./content/company.py:174
+#: ./skins/restarter_templates/rpx_macros.pt:18
+msgid "Login with Facebook and profit of full integration with your profile"
+msgstr ""
+
+#: ./content/company.py:176
 msgid "Notification type"
 msgstr ""
 
@@ -173,35 +197,35 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
-#: ./content/company.py:164
+#: ./content/company.py:166
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/company.py:130
+#: ./content/company.py:132
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
 
-#: ./content/company.py:57
+#: ./content/company.py:59
 msgid "Please give us your company address"
 msgstr ""
 
-#: ./content/company.py:109
+#: ./content/company.py:111
 msgid "Please give us your company cell phone."
 msgstr ""
 
-#: ./content/company.py:76
+#: ./content/company.py:78
 msgid "Please give us your company city location."
 msgstr ""
 
-#: ./content/company.py:98
+#: ./content/company.py:100
 msgid "Please give us your company email address."
 msgstr ""
 
-#: ./content/company.py:87
+#: ./content/company.py:89
 msgid "Please give us your company province location."
 msgstr ""
 
-#: ./content/company.py:120
+#: ./content/company.py:122
 msgid "Please give us your company website url."
 msgstr ""
 
@@ -249,15 +273,15 @@ msgstr ""
 msgid "Please provide product waranty conditions."
 msgstr ""
 
-#: ./content/company.py:175
+#: ./content/company.py:177
 msgid "Please select how we should notify your company."
 msgstr ""
 
-#: ./content/company.py:152
+#: ./content/company.py:154
 msgid "Please select your company sectore."
 msgstr ""
 
-#: ./content/company.py:141
+#: ./content/company.py:143
 msgid "Please select your company type."
 msgstr ""
 
@@ -306,15 +330,15 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ./content/company.py:86
+#: ./content/company.py:88
 msgid "Province"
 msgstr ""
 
-#: ./events.py:159
+#: ./events.py:170
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:200
+#: ./events.py:211
 msgid "Published on product creation"
 msgstr ""
 
@@ -343,50 +367,142 @@ msgstr ""
 msgid "Shipment"
 msgstr ""
 
+#: ./browser/facebook_login.py:20
+msgid "The App ID/API Key you got when creating the app at https://developers.facebook.com/apps"
+msgstr ""
+
+#: ./browser/facebook_login.py:22
+msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
+msgstr ""
+
 #: ./content/product.py:107
 msgid "Waranty"
 msgstr ""
 
-#: ./content/company.py:161
+#: ./skins/restarter_templates/rpx_macros.pt:6
+msgid "Warning"
+msgstr ""
+
+#: ./content/company.py:163
 msgid "You must accept the Terms of Use."
 msgstr ""
 
-#: ./content/company.py:39
+#: ./content/company.py:41
 msgid "both"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./userdataschema.py:46
+#: ./userdataschema.py:45
 msgid "help_accept"
 msgstr ""
 
 #. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
-#: ./userdataschema.py:39
+#: ./userdataschema.py:38
 msgid "help_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:48
+#: ./content/company.py:50
 msgid "help_ragione_sociale"
 msgstr ""
 
+#. Default: "Check this to have your user name filled in automatically when you log in later."
+#: ./skins/restarter_templates/rpx_macros.pt:142
+msgid "help_remember_my_name"
+msgstr ""
+
 #. Default: "Accept terms of use"
-#: ./userdataschema.py:45
+#: ./userdataschema.py:44
 msgid "label_accept"
 msgstr ""
 
 #. Default: "Cellphone number"
-#: ./userdataschema.py:38
+#: ./userdataschema.py:37
 msgid "label_cellphone"
 msgstr ""
 
+#. Default: "Log in"
+#: ./skins/restarter_templates/rpx_macros.pt:151
+msgid "label_log_in"
+msgstr ""
+
+#. Default: "Login Name"
+#: ./skins/restarter_templates/rpx_macros.pt:99
+msgid "label_login_name"
+msgstr ""
+
+#. Default: "Password"
+#: ./skins/restarter_templates/rpx_macros.pt:117
+msgid "label_password"
+msgstr ""
+
 #. Default: "Ragione sociale"
-#: ./content/company.py:47
+#: ./content/company.py:49
 msgid "label_ragione_sociale"
+msgstr ""
+
+#. Default: "Register"
+#: ./browser/facebook_register.py:45
+#: ./browser/register.py:49
+msgid "label_register"
+msgstr ""
+
+#. Default: "Remember my name."
+#: ./skins/restarter_templates/rpx_macros.pt:140
+msgid "label_remember_my_name"
+msgstr ""
+
+#: ./skins/restarter_templates/rpx_macros.pt:25
+msgid "or use other social networks just for login"
+msgstr ""
+
+#. Default: "Register"
+#: ./skins/restarter_templates/rpx_macros.pt:52
+msgid "register_button"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
 #: ./profiles/upgrade_0009_to_0010/types/Company.xml
 msgid "restartER company"
+msgstr ""
+
+#. Default: "Login"
+#: ./skins/restarter_templates/rpx_macros.pt:76
+msgid "rpx_assign_legend"
+msgstr ""
+
+#. Default: "You have already registered to ${rpx_portal_title} and now want to assign your ${rpx_provider} account to your profile."
+#: ./skins/restarter_templates/rpx_macros.pt:79
+msgid "rpx_login_descr"
+msgstr ""
+
+#. Default: "Log in with online id"
+#: ./skins/restarter_templates/rpx_macros.pt:30
+msgid "rpx_login_header"
+msgstr ""
+
+#. Default: "RPX log in"
+#: ./skins/restarter_templates/rpx_macros.pt:74
+msgid "rpx_login_legend"
+msgstr ""
+
+#. Default: "RPX is not configured. Please go to \"RPX Settings\" in \"Site Setup\" to fix this."
+#: ./skins/restarter_templates/rpx_macros.pt:9
+msgid "rpx_not_configured_warning"
+msgstr ""
+
+#. Default: "The prefilled data was returned by your online id provider and is just a suggestion."
+#: ./skins/restarter_templates/rpx_macros.pt:49
+msgid "rpx_register_descr"
+msgstr ""
+
+#. Default: "Register your ${rpx_provider} account"
+#: ./skins/restarter_templates/rpx_macros.pt:47
+msgid "rpx_register_heading"
+msgstr ""
+
+#. Default: "RPX register"
+#: ./skins/restarter_templates/rpx_macros.pt:46
+msgid "rpx_register_legend"
 msgstr ""
 

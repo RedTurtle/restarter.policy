@@ -3,6 +3,7 @@ from zope.formlib import form
 
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
+from Products.statusmessages.interfaces import IStatusMessage
 
 
 def get_email(self):
@@ -49,8 +50,12 @@ class RegistrationForm(BaseForm):
     def handle_join_success(self, data):
         registration = getToolByName(self.context, 'portal_registration')
         session = self.context.session_data_manager.getSessionData()
-        data['facebook_id'] = session['facebook_profile'].get('id')
-        data['facebook_token'] = session['facebook_token']
+        if 'facebook_profile' in session.keys():
+            data['facebook_id'] = session['facebook_profile'].get('id')
+            data['facebook_token'] = session['facebook_token']
+        else:
+            IStatusMessage(self.request).addStatusMessage(_(u'Facebook data incomplete. Please retry.'), type="error")
+            return
         data['password'] = registration.generatePassword()
         return super(RegistrationForm, self).handle_join_success(data)
 

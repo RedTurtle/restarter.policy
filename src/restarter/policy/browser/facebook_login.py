@@ -38,7 +38,11 @@ class FacebookLogin(BrowserView):
     
     def __call__(self):
         registry = getUtility(IRegistry)
-        FB_APP_ID = registry.get('restarter.policy.browser.facebook_login.IFacebookloginSettings.fb_app_id').encode()
+        FB_APP_ID = registry.get('restarter.policy.browser.facebook_login.IFacebookloginSettings.fb_app_id','').encode()
+        if not FB_APP_ID:
+            IStatusMessage(self.request).add(_(u"Facebook not configurated."), type="error")
+            self.request.response.redirect(self.context.absolute_url())
+            return u""
 
         verificationCode = self.request.form.get("code", None)
         errorReason      = self.request.form.get("error_reason", None)
