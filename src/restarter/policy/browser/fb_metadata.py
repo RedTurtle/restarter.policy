@@ -9,7 +9,6 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
     render = ViewPageTemplateFile("templates/facebook_metadata.pt")
 
     def getImage(self):
-        import pdb; pdb.set_trace()
         if not ILeadImageable.providedBy(self.context):
             return '%s/logo_facciamo_column.png' % self.context.portal_url()
         clfield = self.context.getField(IMAGE_FIELD_NAME)
