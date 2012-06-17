@@ -244,12 +244,7 @@ def demand_commented(product, event):
 
 
 def get_facebook_from_member(member):
-    rpxs = member.getProperty('rpx_identifier', '')
-    pattern = re.compile('.*facebook.com/profile.php\?id=(?P<id>.*)')
-    for rpx in rpxs:
-        match = pattern.match(rpx)
-        if match:
-            return match.group('id')
+    return member.getProperty('facebook_id', '')
 
 
 def user_created(member, event):
