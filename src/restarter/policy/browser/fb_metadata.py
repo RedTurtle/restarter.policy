@@ -15,13 +15,13 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
         if clfield is not None:
             value = clfield.get(self.context)
             if value:
-                return '%s/leadImage_tile' % self.context.absolute_url()
+                return '%s/leadImage_preview' % self.context.absolute_url()
 
         dfield = self.context.getField('image')
         if dfield is not None:
             value = dfield.get(self.context)
             if value:
-                return '%s/image_tile' % self.context.absolute_url()
+                return '%s/image_mini' % self.context.absolute_url()
 
         return '%s/logo_facciamo_column.png' % self.context.portal_url()
 
