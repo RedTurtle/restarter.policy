@@ -34,6 +34,12 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
         else:
             return 'website'
 
+    def getOthers(self):
+        if ICompany.providedBy(self.context):
+            return [{'property':'facciamoadesso:address',
+                     'content':'%s, %s' % (self.context.getAddress(), self.context.getCity())}]
+        return []
+
     @property
     def title(self):
         return self.context.title_or_id()

@@ -8,6 +8,9 @@
     <meta property="og:description" tal:attributes="content view/description" />
     <meta property="og:site_name" tal:attributes="content view/portaltitle" />
     <meta property="og:image" tal:attributes="content view/getImage" />
+    <tal:other repeat="item view/getOthers">
+      <meta property="" tal:attributes="property item/property; content item/content"/>
+    </tal:other>
     <meta tal:condition="view/fbadmins" property="fb:admins" tal:attributes="content view/fbadmins" />
     <script
         tal:attributes="src string:http://connect.facebook.net/${view/language}/all.js#xfbml=1"
