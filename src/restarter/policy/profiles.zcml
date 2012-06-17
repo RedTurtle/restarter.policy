@@ -70,6 +70,21 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
   />
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0011 to 0012"
+      description=""
+      source="0011"
+      destination="0012"
+      handler="restarter.policy.upgrades.upgrade_0011_to_0012"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0011_to_0012"
+      title="Upgrade restarter.policy 0011 to 0012"
+      directory="profiles/upgrade_0011_to_0012"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
 
 
 </configure>

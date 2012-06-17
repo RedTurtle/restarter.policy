@@ -7,7 +7,7 @@ from restarter.policy import config
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
 
-from .processor import run as processor
+from .processor import run as processor ; processor
 
 
 # Define a message factory for when this product is internationalised.

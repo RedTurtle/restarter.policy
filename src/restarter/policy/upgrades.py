@@ -1,4 +1,8 @@
 from Products.CMFCore.utils import getToolByName
+from Products.PlonePAS.Extensions.Install import activatePluginInterfaces
+from StringIO import StringIO
+from plugin import FacebookUsers
+
 
 PROFILE_ID='profile-restarter.policy:default'
 
@@ -74,3 +78,31 @@ def upgrade_0010_to_0011(context):
     context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0010_to_0011')
 
 
+def upgrade_0011_to_0012(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0011_to_0012')
+    portal = context.portal_url.getPortalObject()
+
+    name = 'facebook-users'
+    out = StringIO()
+    userFolder = portal['acl_users']
+
+    if name not in userFolder:
+
+        plugin = FacebookUsers(name, 'Facebook Users')
+        userFolder[name] = plugin
+
+        # Activate all interfaces
+        activatePluginInterfaces(portal, name, out)
+
+        # Move plugin to the top of the list for each active interface
+        plugins = userFolder['plugins']
+        for info in plugins.listPluginTypeInfo():
+            interface = info['interface']
+            if plugin.testImplements(interface):
+                active = list(plugins.listPluginIds(interface))
+                if name in active:
+                    active.remove(name)
+                    active.insert(0, name)
+                    plugins._plugins[interface] = tuple(active)
+
+        return out.getvalue()

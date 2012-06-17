@@ -1,0 +1,3 @@
+<registry>    
+    <records interface="restarter.policy.browser.facebook_login.IFacebookloginSettings" />
+</registry>

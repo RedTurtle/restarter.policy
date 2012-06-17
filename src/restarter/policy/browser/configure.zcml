@@ -187,6 +187,32 @@
       permission="zope2.View"
     />
 
+    <!-- RPX View -->
+  <browser:page
+      name="rpx_register"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      class=".register.RegistrationForm"
+      permission="cmf.AddPortalMember"
+      layer="..interfaces.layer.ISkin"
+   />
+
+  <browser:page
+      name="facebook_register"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      class=".facebook_register.RegistrationForm"
+      permission="cmf.AddPortalMember"
+      layer="..interfaces.layer.ISkin"
+   />
+
+
+   <browser:page
+       name="facebook-login"
+       for="Products.CMFCore.interfaces.ISiteRoot"
+       class=".facebook_login.FacebookLogin"
+       permission="zope2.View"
+   />
+
+
   <adapter for="..interfaces.IProduct
                 *"
            name="plone.contentmenu.factories"

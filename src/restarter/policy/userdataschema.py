@@ -21,7 +21,6 @@ def validateAccept(value):
     return True
 
 
-
 class UserDataSchemaProvider(object):
     implements(IUserDataSchemaProvider)
 
@@ -54,6 +53,14 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         title=u'rpx identifier',
     )
 
+    facebook_id = schema.TextLine(
+        title=u'facebook profile id',
+    )
+
+    facebook_token = schema.TextLine(
+        title=u'facebook token',
+    )
+
 
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """ """
@@ -74,4 +81,16 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     def set_rpx(self, value):
         return self.context.setMemberProperties({'rpx_identifier': value})
     rpx_identifier = property(get_rpx, set_rpx)
+
+    def get_facebook_id(self):
+        return self.context.getProperty('facebook_id', '')
+    def set_facebook_id(self, value):
+        return self.context.setMemberProperties({'facebook_id': value})
+    facebook_id = property(get_facebook_id, set_facebook_id)
+
+    def get_facebook_token(self):
+        return self.context.getProperty('facebook_token', '')
+    def set_facebook_token(self, value):
+        return self.context.setMemberProperties({'facebook_token': value})
+    facebook_token = property(get_facebook_token, set_facebook_token)
 
