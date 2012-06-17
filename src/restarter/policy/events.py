@@ -1,6 +1,5 @@
 import requests
 import logging
-import re
 
 from zope.interface import directlyProvides
 from zope.interface import implements
