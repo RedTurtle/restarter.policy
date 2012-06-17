@@ -61,15 +61,6 @@
         permission="zope.Public"
     />
 
-    <browser:viewlet
-        name="sc.social.likes_metadata"
-        for="collective.contentleadimage.interfaces.ILeadImageable"
-        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
-        class=".fb_metadata.LeadImageMetadataViewlet"
-        layer="sc.social.like.interfaces.ISocialLikeLayer"
-        permission="zope.Public"
-    />
-
    <browser:viewlet
        name="collective.disqus"
        for="Products.CMFCore.interfaces.IContentish"

@@ -1,7 +1,9 @@
+import urllib
+import time
+
+from zope import schema
 from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
-import urllib
-from zope import schema
 from zope.interface import Interface
 
 from Products.CMFCore.utils import getToolByName
@@ -75,7 +77,7 @@ class FacebookLogin(BrowserView):
             if url is not None:
                 self.request.RESPONSE.redirect(url[0])
             else:
-                self.request.RESPONSE.redirect(self.portal.absolute_url())
+                self.request.RESPONSE.redirect('%s?ts=%s' % (self.portal.absolute_url(),time.time()))
 
     @property
     def portal_membership(self):

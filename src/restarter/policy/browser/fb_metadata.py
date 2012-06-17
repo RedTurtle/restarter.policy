@@ -2,14 +2,29 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from sc.social.like.browser.viewlets import SocialMetadataViewlet
 from collective.contentleadimage.config import IMAGE_FIELD_NAME
 from restarter.policy.interfaces import IProduct, ICompany
-
+from collective.contentleadimage.interfaces import ILeadImageable
 
 class RestarterMetadataViewlet(SocialMetadataViewlet):
 
     render = ViewPageTemplateFile("templates/facebook_metadata.pt")
 
     def getImage(self):
-        return '%s/logo.png' % self.context.portal_url()
+        import pdb; pdb.set_trace()
+        if not ILeadImageable.providedBy(self.context):
+            return '%s/logo_facciamo_column.png' % self.context.portal_url()
+        clfield = self.context.getField(IMAGE_FIELD_NAME)
+        if clfield is not None:
+            value = clfield.get(self.context)
+            if value:
+                return '%s/leadImage_tile' % self.context.absolute_url()
+
+        dfield = self.context.getField('image')
+        if dfield is not None:
+            value = dfield.get(self.context)
+            if value:
+                return '%s/image_tile' % self.context.absolute_url()
+
+        return '%s/logo_facciamo_column.png' % self.context.portal_url()
 
     @property
     def fb_type(self):
@@ -28,21 +43,3 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
     def description(self):
         return getattr(self.context, 'Description', '')
 
-
-class LeadImageMetadataViewlet(RestarterMetadataViewlet):
-    """Viewlet used to insert metadata into page header """
-
-    def getImage(self):
-        clfield = self.context.getField(IMAGE_FIELD_NAME)
-        if clfield is not None:
-            value = clfield.get(self.context)
-            if value:
-                return '%s/leadImage_tile' % self.context.absolute_url()
-
-        dfield = self.context.getField('image')
-        if dfield is not None:
-            value = dfield.get(self.context)
-            if value:
-                return '%s/image_tile' % self.context.absolute_url()
-
-        return '%s/logo.png' % self.context.portal_url()
