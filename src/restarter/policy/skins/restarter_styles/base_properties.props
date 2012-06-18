@@ -2,6 +2,14 @@ title:string=restarter_theme's color, font, logo and border defaults
 
 plone_skin:string=restarter_theme
 
+statusPublished:string=#5D920E
+statusAccepted:string=#5D920E
+statusNew:string=red
+statusDeleted:string=red
+statusRejected:string=red
+statusDraft:string=red
+statusSoldout:string=#FF7000
+
 logoName:string=logo_facciamo.png
 
 fontFamily:string=Helvetica, Arial, sans-serif
