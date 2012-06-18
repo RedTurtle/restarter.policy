@@ -35,16 +35,6 @@ OfferSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
             ),
         ),
 
-    atapi.FixedPointField('offer_value',
-        searchable=0,
-        required=False,
-        widget=atapi.DecimalWidget(
-            label=_("Offer value"),
-            description=_("Please provide offer value."),
-            size=10
-            ),
-        ),
-
 ))
 
 
@@ -73,8 +63,6 @@ OfferSchema['subject'].widget.visible['edit'] = 'invisible'
 OfferSchema['relatedItems'].widget.visible['view'] = 'invisible'
 OfferSchema['relatedItems'].widget.visible['edit'] = 'invisible'
 OfferSchema['title'].widget.label = _('Offer name')
-OfferSchema['offer_value'].widget.visible['view'] = 'invisible'
-OfferSchema['offer_value'].widget.visible['edit'] = 'invisible'
 
 
 class Offer(base.ATCTContent):
