@@ -77,16 +77,6 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
             ),
         ),
 
-    atapi.StringField('availability',
-        searchable=0,
-        required=False,
-        widget=atapi.StringWidget(
-            label=_("Availability"),
-            description=_("Please provide product availability."),
-            size=20
-            ),
-        ),
-
     atapi.TextField('shipment',
         searchable=0,
         required=False,
