@@ -49,7 +49,7 @@ class Renderer(base.Renderer):
 
         for n, result in enumerate(results):
             k, count = result
-            if n == 5:
+            if n == 10:
                 break
             if count == 0:
                 break

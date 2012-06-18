@@ -543,7 +543,8 @@ dl.portletCalendar dt {
     border: 1px solid #F0F0F0;
     padding: 10px;
 }
-.portlet .twtr-hd {
+.portlet .twtr-hd,
+.portletStaticText .twtr-hd {
     background: transparent url(++resource++restarter.images/ico_socials_big.png) no-repeat left -150px;
     padding-left: 60px;
     border-bottom: 1px solid #F0F0F0;
@@ -1461,6 +1462,32 @@ body.template-register #actionsView .actionButtons input.context:active,
 .portaltype-offer #content .documentDescription,
 .portaltype-demand #content .documentDescription {
     font-weight: normal;
+}
+
+/** portlet categorie ***/
+.faCategoriesPortlet .portletItem {
+    background-color: #FAFAFA;
+    padding:0.5em 0.3em 0;
+}
+dl.faCategoriesPortlet dd.portletFooter {
+    margin-top: 2px;
+    border-top: 3px solid #F0F0F0;
+    background: transparent url(++resource++restarter.images/arrow_down.png) no-repeat left 0.6em;
+    padding: 0.5em  0 0 43px;
+}
+dl.faCategoriesPortlet dd.portletFooter p {
+    margin:0;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.faCategoriesPortlet .portletItem ul li a {
+    text-transform: uppercase;
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.2em;
+}
+.faCategoriesPortlet .portletItem ul li span {
+    font-style: italic;
+    font-size: 0.9em;
 }
 
 
