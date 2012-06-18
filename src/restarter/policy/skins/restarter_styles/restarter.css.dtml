@@ -1057,6 +1057,9 @@ a.noFoto span {
     max-width: 40%;
     float: right;
 }
+#productExtract .description {
+    padding-top: 0.5em;
+}
 #productExtract #portal-breadcrumbs,
 #productExtract #plone-document-byline {
     display: none;
@@ -1103,9 +1106,11 @@ a.noFoto span {
     padding: 5px;
     margin: 0.5em auto;
 }
-#productExtract #viewlet-social-like {
+#productExtract #viewlet-social-like,
+#productExtract #product-offers {
     display: none;
 }
+
 .order-view input#quantity ,
 .order-view textarea#description {
     display: block;

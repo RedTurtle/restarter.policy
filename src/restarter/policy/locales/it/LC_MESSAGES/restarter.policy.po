@@ -236,7 +236,7 @@ msgstr "Indica il prezzo per prodotto"
 
 #: ./content/product.py:54
 msgid "Please provide product quantity unit."
-msgstr "Indica l'unità di misura del prodotto"
+msgstr "Indica l'unità di misura del prodotto. Ad esempio, se il prodotto è una borsa indica 'pezzo', se si tratta di mele indica 'kg'."
 
 #: ./content/product.py:44
 msgid "Please provide product quantity."
