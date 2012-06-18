@@ -9,8 +9,18 @@
 
   <metal:body_macro metal:define-macro="body">
       <div id="offerBody">
-              <metal:field use-macro="python:context.widget('category', mode='view')"></metal:field>
-              <metal:field use-macro="python:context.widget('period', mode='view')"></metal:field>            
+            <div class="offerField offerCategoria">
+                  <span class="lab">Categoria: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('category', mode='view')"></metal:field>
+                  </span>
+            </div>
+            <div class="offerField offerPeriodo">
+                  <span class="lab">Periodo: </span>
+                  <span class="val">
+                        <metal:field use-macro="python:context.widget('period', mode='view')"></metal:field>
+                  </span>
+            </div>
       </div>
    </metal:body_macro>
 

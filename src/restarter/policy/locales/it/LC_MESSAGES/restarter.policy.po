@@ -90,7 +90,7 @@ msgstr "Racconto"
 
 #: ./profiles/upgrade_0009_to_0010/types/Demand.xml
 msgid "Demand"
-msgstr "Richesta"
+msgstr "Richiesta"
 
 #: ./content/demand.py:24
 msgid "Demand category"

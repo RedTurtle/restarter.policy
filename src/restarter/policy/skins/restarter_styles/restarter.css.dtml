@@ -22,8 +22,8 @@ img.image-left, img.image-right, .captioned img {
 }
 #plone-contentmenu-workflow .state-soldout {
     padding: 0 0.5em;
-    background-color: #FF7000;
-    border: 0.1em solid #FF7000;
+    background-color: &dtml-statusSoldout;;
+    border: 0.1em solid &dtml-statusSoldout;;
     color: white !important;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
@@ -34,14 +34,17 @@ img.image-left, img.image-right, .captioned img {
 }
 #plone-contentmenu-workflow .state-draft {
     padding: 0 0.5em;
-    background-color: #999;
-    border: 0.1em solid #999;
+    background-color: &dtml-statusDraft;;
+    border: 0.1em solid &dtml-statusDraft;;
     color: white !important;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
 }
 
+.state-published {
+    color: &dtml-statusPublished; !important;
+}
 
 #portal-header {
     background-color: #444C4C;
@@ -302,7 +305,8 @@ span.noMenuAction {
 p.btnLink {
     margin-top: 2em;
 }
-p.btnLink a.btn {
+p.btnLink a.btn,
+p.noOffers a.btn {
     display: inline-block;
     background-color: &dtml-linkColor;;
      -moz-border-radius: 6px;
@@ -315,7 +319,8 @@ p.btnLink a.btn {
     text-transform: uppercase;
     padding: 0.4em 1em;
 }
-p.btnLink a.btn:hover {
+p.btnLink a.btn:hover,
+p.noOffers a.btn:hover {
     background-color: #CDCDCD;
     cursor: pointer;
 }
@@ -917,11 +922,17 @@ a.noFoto span {
 #content .prodBuy p.btnLink {
     margin:0;
 }
-#content .prodBuy p.btnLink a {
+#content #product-offers p.noOffers a.btn {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+#content .prodBuy p.btnLink a,
+#content #product-offers p.noOffers a {
     background-color: #419435;
     color: #FFF;
 }
-#content .prodBuy p.btnLink a:hover {
+#content .prodBuy p.btnLink a:hover,
+#content #product-offers p.noOffers a:hover {
     background-color: #F90;
     color: #FFF !important;
 }
@@ -971,6 +982,48 @@ a.noFoto span {
     padding-left: 30px;
     padding: 5px 0 5px 30px;
     float: left;
+}
+#product-offers {
+    border: 1px solid #A4E670;
+    background-color: #F2FFE4;
+    padding: 1em;
+    margin-top: 1em;
+}
+#product-offers ul.listOffers {
+    margin-top: 1em;
+}
+#product-offers ul.listOffers li {
+    list-style-image: url(++resource++restarter.images/nav-dot.png);
+}
+#product-offers ul.listOffers li a.offerTitle {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#product-offers ul.listOffers li .offerAuthor {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: 0.3em;
+}
+#product-offers ul.listOffers li .offerStatus {
+    margin-left: 1em;
+    padding: 0 0.5em;
+    color: white !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    font-size: 0.9em;
+}
+#product-offers ul.listOffers li .offerStatus.state-new {
+    background-color: &dtml-statusNew;;
+}
+#product-offers ul.listOffers li .offerStatus.state-accepted {
+    background-color: &dtml-statusAccepted;;
+}
+#product-offers ul.listOffers li .offerStatus.state-deleted {
+    background-color: &dtml-statusDeleted;;
+}
+#product-offers ul.listOffers li .offerStatus.state-rejected {
+    background-color: &dtml-statusRejected;;
 }
 
 /** ordine **/
@@ -1374,5 +1427,17 @@ body.template-register #actionsView .actionButtons input.context:active,
     color: red;
     font-size: 0.9em;
 }
+
+/** offerte ***/
+#offerBody .offerField {
+    padding: 0.2em 0;
+    clear: left;
+    float: left;
+}
+.portaltype-offer #content .documentDescription,
+.portaltype-demand #content .documentDescription {
+    font-weight: normal;
+}
+
 
 /* </dtml-with> */
