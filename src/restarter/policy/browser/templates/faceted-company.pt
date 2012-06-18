@@ -4,7 +4,6 @@
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
-      eff_date context/effective|string:;
       toLocalizedTime nocall:context/@@plone/toLocalizedTime;
       url context/absolute_url|string:#;">
 
