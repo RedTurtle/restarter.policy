@@ -856,11 +856,13 @@ div.comMap {
     margin-right: 0.7em;
     border-right: 1px dotted #999;
 }
-#content dl#companyProductsList {
+#content dl#companyProductsList,
+#content dl#companyDemandsList {
     clear: left;
     float: none;
     padding-top: 1em;
     border-top: 3px solid #F0F0F0;
+    border-bottom:0;
 }
 /** prodotto **/
 .portaltype-product #category,

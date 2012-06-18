@@ -11,7 +11,7 @@
 
       <metal:body_macro metal:define-macro="body">
 
-        <div id="companyBody">
+        <div id="companyBody" tal:define="restarter context/@@config_restarter;">
           <div class="companyRec">
             <h2>
               <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field> 
@@ -81,6 +81,50 @@
 ###### -->
           </dl>
         <div class="visualClear"></div>
+
+<!-- ##### idem... queste sono le demands della company -->
+         <dl id="companyDemandsList" class="portlet faCollectionPortlet productsPortlet offersPortlet">
+
+            <dt class="portletHeader">
+<!-- #### il link more si deve vedere solo se le demands sono piu' di 3 -->
+                <tal:more>
+                  <a class="linkMore">
+                     Vedi Tutte
+                  </a>
+                </tal:more>
+
+                <span class="tile">
+                    Richieste dell'azienda
+                </span>
+            </dt>
+<!--              
+              <tal:events tal:repeat="obj query_results">
+              <dd class="portletItem faCollectionPortletItem"
+                  tal:define="oddrow repeat/obj/odd;
+                              item_path obj/getPath;"
+                  tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
+
+
+                <p class="itemData" 
+                   tal:condition="view/data/show_dates"
+                   tal:on-error="string:"
+                   tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
+                <h3 class="faCollectionTitle">
+                  <a href="#" 
+                      tal:content="python: restarter.safe_truncate(obj.Title, 50)"
+                     tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
+                </h3>
+                <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(obj.Description, 150)">
+                  Descrizione prodotto
+                </p>
+                <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
+
+                <div class="visualClear"></div>
+              </dd>
+              </tal:events>
+-->
+
+          </dl>
 
           <div class="comMap visualClear">
             <img src="" tal:define="address context/gmap_address"

@@ -19,6 +19,7 @@
                     class string:portlet faCollectionPortlet productsPortlet offersPortlet ${class}"
       tal:define="collection_url view/collection_url;
                   getIcon nocall:plone_view/getIcon;
+                  restarter context/@@config_restarter;
                   class view/data/css_class|nothing;">
 
     <dt class="portletHeader"
@@ -57,15 +58,14 @@
 
         <p class="itemData" 
            tal:condition="view/data/show_dates"
+           tal:on-error="string:"
            tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
-<!-- ####### troncare il titolo a 50 caratteri -->
         <h3 class="faCollectionTitle">
           <a href="#" 
-             tal:content="obj/Title"
+              tal:content="python: restarter.safe_truncate(obj.Title, 50)"
              tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
         </h3>
-        <p class="faCollectionDesc" tal:content="obj/Description">
-<!-- ####### troncarla a 150 caratteri -->
+        <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(obj.Description, 150)">
           Descrizione prodotto
         </p>
         <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
