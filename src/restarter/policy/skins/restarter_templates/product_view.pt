@@ -64,6 +64,9 @@
             </div>
             
       </div>
+      </metal:body_macro>
+
+      <metal:folderlisting_macro metal:define-macro="folderlisting">
       <div id="product-counter" tal:define="stats context/portal_stats/getStats" tal:on-error="string:">
           <div class="counterPrenot">
             <span class="labelTxt">Valore delle unità prenotate:</span>
@@ -75,32 +78,25 @@
           </div>
           <div class="visualClear"></div>
       </div>
-      <div id="product-offers">
-            <h4>Offerte in corso e concluse per questo prodotto</h4>
-<!-- ############ mettere condiione: da mostrare se non ci sono offerte -->            
-<!--            <p class="noOffers">
+
+      <div id="product-offers" tal:define="orders python: context.getFolderContents({'portal_type':'Order'}, batch=True, b_size=50)">
+        <h4>Offerte in corso e concluse per questo prodotto</h4>
+        <tal:no-orders condition="not: orders">
+           <p class="noOffers">
                   Questo prodotto non ha ancora ricevuto offerte di acquisto.
-            </p>
-            <p class="noOffers">
-                  <a class="btn" href="" tal:attributes="href string:${context/absolute_url}/createObject?type_name=Order">Fai la prima offerta!</a>
-            </p> -->
-<!-- ######## fine "non ci sono offerte" -->
-<!-- #### se invece ci sono offerte... -->
-            <ul class="listOffers">
-                  <li>
-                        <a href="#" class="offerTitle">Titolo dell'offerta</a>  <span class="offerAuthor">di Pinco Pallino</span>
-                        <span class="offerStatus state-new">New</span> <!-- ### ci vuole la classe css corrispondente allo stato -->
+           </p>
+           <p class="noOffers">
+              <a class="btn" href="" tal:attributes="href string:${context/absolute_url}/createObject?type_name=Order">Fai la prima offerta!</a>
+           </p>
+        </tal:no-orders>
+        <ul class="listOffers" tal:condition="orders">
+                  <li tal:repeat="order orders">
+                    <a href="#" tal:attributes="href order/getURL" class="offerTitle" tal:content="order/pretty_title_or_id">Titolo dell'offerta</a>
+                    <span class="offerAuthor" tal:content="string:di ${order/Creator}">di Pinco Pallino</span>
+                    <span class="" tal:attributes="class string:offerStatus state-${order/review_state}" tal:content="order/review_state">New</span>
                   </li>
-                  <li>
-                        <a href="#" class="offerTitle">Titolo dell'offerta</a>  <span class="offerAuthor">di Pinco Pallino</span>
-                        <span class="offerStatus state-accepted">Accettata</span> <!-- ### ci vuole la classe css corrispondente allo stato -->
-                  </li>
-            </ul>
+         </ul>
       </div>
-      </metal:body_macro>
-
-
-      <metal:folderlisting_macro metal:define-macro="folderlisting">
 
       </metal:folderlisting_macro>
 
