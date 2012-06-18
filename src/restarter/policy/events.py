@@ -99,7 +99,8 @@ def order_added(order, event):
     product = order.getProduct()
     quantity = order.getQuantity().decode('utf8', 'ignore')
     title = product.title_or_id().decode('utf8','ignore')
-    order.setTitle(u'%s %s di %s' % (quantity, product.getUnit(), title))
+    unit = order.getUnit().decode('utf8', 'ignore')
+    order.setTitle(u'%s %s di %s' % (quantity, unit, title))
     order.reindexObject()
     company = order.getCompany()
     if not company:
