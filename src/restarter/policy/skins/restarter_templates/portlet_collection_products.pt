@@ -64,6 +64,7 @@
         </div>
         <p class="itemData" 
            tal:condition="view/data/show_dates"
+           tal:on-error="string:"
            tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
 
         <h3 class="faCollectionTitle">
@@ -74,7 +75,7 @@
         <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(obj.Description, 100)">
           Descrizione prodotto
         </p>
-        <p class="productPrice"><span class="euro" tal:content="obj/product_price">110.00</span> euro</p>
+        <p class="productPrice"><span class="euro"  tal:on-error="string:" tal:content="obj/product_price">110.00</span> euro</p>
         <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
 
         <div class="visualClear"><!-- --></div>

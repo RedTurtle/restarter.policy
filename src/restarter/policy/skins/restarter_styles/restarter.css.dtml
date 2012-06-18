@@ -18,7 +18,7 @@ img.image-left, img.image-right, .captioned img {
     border:0;
 }
 .state-soldout {
-    color: #FF7000 !important;
+    color: &dtml-statusSoldout; !important;
 }
 #plone-contentmenu-workflow .state-soldout {
     padding: 0 0.5em;
@@ -28,9 +28,6 @@ img.image-left, img.image-right, .captioned img {
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
-}
-.state-draft {
-    color: #999 !important;
 }
 #plone-contentmenu-workflow .state-draft {
     padding: 0 0.5em;
@@ -44,6 +41,21 @@ img.image-left, img.image-right, .captioned img {
 
 .state-published {
     color: &dtml-statusPublished; !important;
+}
+.state-accepted {
+    color: &dtml-statusAccepted; !important;
+}
+.state-draft {
+    color: &dtml-statusDraft; !important;
+}
+#plone-contentmenu-workflow .state-accepted {
+    padding: 0 0.5em;
+    background-color: &dtml-statusAccepted;;
+    border: 0.1em solid &dtml-statusAccepted;;
+    color: white !important;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
 }
 
 #portal-header {
@@ -844,7 +856,12 @@ div.comMap {
     margin-right: 0.7em;
     border-right: 1px dotted #999;
 }
-
+#content dl#companyProductsList {
+    clear: left;
+    float: none;
+    padding-top: 1em;
+    border-top: 3px solid #F0F0F0;
+}
 /** prodotto **/
 .portaltype-product #category,
 .portaltype-offer #category,

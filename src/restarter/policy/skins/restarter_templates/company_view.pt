@@ -33,11 +33,59 @@
           </div>
 
         </div>
-            <div class="comMap visualClear">
-              <img src="" tal:define="address context/gmap_address"
-                   tal:attributes="src string:http://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=12&size=580x200&maptype=roadmap&markers=color:red%7C${address}&sensor=false">
-            </div>
+
+<!-- ##### mettere codice per i primi tre prodotti dell'azienda 
+            non mostrare questo blocco se l'azienda non ha prodotti pubblicati -->
+
+        <dl id="companyProductsList" class="portlet faCollectionPortlet productsPortlet">
+            <dt class="portletHeader">
+<!-- #### il link more si deve vedere solo se i prodotti sono piu' di 3 -->
+                <tal:more>
+                  <a class="linkMore">
+                     Vedi Tutti
+                  </a>
+                </tal:more>
+
+                <span class="tile">
+                    Ultimi prodotti inseriti dall'azienda
+                </span>
+            </dt>
+<!-- #########
+          <tal:events tal:repeat="obj query_results"
+            <dd class="portletItem faCollectionPortletItem">
+
+              <div class="faCollectionImg">
+                <a href="#">
+                  <img src="" alt=""               
+                       tal:attributes="src string:${obj/getURL}/leadImage_mini;
+                                       alt obj/Description;"/>
+                </a>
+              </div>
+              <p class="itemData"  tal:on-error="string:"
+                 tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
+
+              <h3 class="faCollectionTitle">
+                <a href="#" 
+                   tal:content="python: restarter.safe_truncate(obj.Title, 50)"
+                   tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
+              </h3>
+              <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(obj.Description, 100)">
+                Descrizione prodotto
+              </p>
+              <p class="productPrice"><span class="euro"  tal:on-error="string:" tal:content="obj/product_price">110.00</span> euro</p>
+              <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
+
+              <div class="visualClear"></div>
+            </dd>
+          </tal:events>
+###### -->
+          </dl>
         <div class="visualClear"></div>
+
+          <div class="comMap visualClear">
+            <img src="" tal:define="address context/gmap_address"
+                 tal:attributes="src string:http://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=12&size=580x200&maptype=roadmap&markers=color:red%7C${address}&sensor=false">
+          </div>
 
       </metal:body_macro>
 
