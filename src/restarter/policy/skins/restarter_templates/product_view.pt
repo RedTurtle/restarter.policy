@@ -22,13 +22,6 @@
                   </span>
             </div>
 
-             <div class="prodField prodAvail">
-                  <span class="lab">Disponibilità: </span>
-                  <span class="val">
-                        <metal:field use-macro="python:context.widget('availability', mode='view')"></metal:field>
-                  </span>
-            </div>
-
             <div class="prodField prodShip">
                   <span class="lab">Consegna/spedizione: </span>
                   <span class="val">
