@@ -202,11 +202,11 @@ def company_commented(company, event):
 
 def product_added(product, event):
     """Event fired when product has been added."""
-    if 'media' in product.objectIds():
+    if 'foto' in product.objectIds():
         #stupid check - plone is calling it twice, why?
         return
-    media = product[product.invokeFactory('Folder','media')]
-    media.setTitle(u'Media')
+    media = product[product.invokeFactory('Folder','foto')]
+    media.setTitle(u'Foto')
     directlyProvides(media, (ISimpleAddButtons,))
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image',])
