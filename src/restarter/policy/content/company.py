@@ -285,5 +285,10 @@ class Company(folder.ATFolder):
             value = field.get(self)
             return not not value
 
+    def setCity(self, value):
+        if value:
+            value = value.title()
+        super(Company, self).setCity(value)
+
 
 atapi.registerType(Company, PROJECTNAME)
