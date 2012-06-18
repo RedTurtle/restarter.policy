@@ -14,12 +14,12 @@
 
 <metal:listingmacro define-macro="listing">
 
-<!-- ######## la portlet dovrebbe mostrare solo prodotti che hanno la foto -->      
   <dl class=""
      tal:attributes="id view/data/div_id;
                     class string:portlet faCollectionPortlet productsPortlet ${class}"
       tal:define="collection_url view/collection_url;
                   getIcon nocall:plone_view/getIcon;
+                  restarter context/@@config_restarter;
                   class view/data/css_class|nothing;">
 
     <dt class="portletHeader"
@@ -56,33 +56,25 @@
           tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
 
         <div class="faCollectionImg">
-<!-- #### mettere la condizione -->
           <a tal:attributes="href obj/getURL">
           <img src="" alt=""               
                tal:attributes="src string:${obj/getURL}/leadImage_mini;
                                alt obj/Description;"/>
           </a>
-<!-- ######## se la foto non c'e' stampare questo 
-          <a tal:attributes="href obj/getURL" class="noFoto">
-            <span>Foto non disponibile</span>
-          </a>
--->
         </div>
         <p class="itemData" 
            tal:condition="view/data/show_dates"
            tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</p>
-<!-- ####### troncare il titolo a 50 caratteri -->
+
         <h3 class="faCollectionTitle">
           <a href="#" 
-             tal:content="obj/Title"
+             tal:content="python: restarter.safe_truncate(obj.Title, 50)"
              tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
         </h3>
-        <p class="faCollectionDesc" tal:content="obj/Description">
-<!-- ####### troncarla a 100 caratteri -->
+        <p class="faCollectionDesc" tal:content="python: restarter.safe_truncate(obj.Description, 100)">
           Descrizione prodotto
         </p>
-<!-- ######## manca price e unita' di misura ####### -->
-        <p class="productPrice"><span class="euro">110.00</span> euro / Kg</p>
+        <p class="productPrice"><span class="euro" tal:content="obj/product_price">110.00</span> euro</p>
         <p class="btnLink"><a class="btn" href="#" tal:attributes="href obj/getURL;">Dettagli</a></p>
 
         <div class="visualClear"><!-- --></div>

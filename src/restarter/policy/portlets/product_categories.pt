@@ -1,0 +1,13 @@
+<div class="faceted-widget faceted-checkboxes-widget faceted-count faceted-zero-count-hidden" style="">
+<fieldset class="widget-fieldset">
+  <legend>Categoria prodotto</legend>
+  <ul>
+      <li tal:repeat="category view/categories">
+        <a href="" tal:define="id python: category[1]"
+           tal:attributes="href string:${context/portal_url}/prodotti#c5=${id}" tal:content="python: category[0]">Abbigliamento e accessori</a>
+        <span>(<tal:count replace="python:category[2]"/>)</span>
+      </li>
+  </ul>
+  <span style="display:none">0</span>
+</fieldset>
+</div>

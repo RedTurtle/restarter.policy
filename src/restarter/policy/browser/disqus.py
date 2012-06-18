@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import urllib
 
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -7,6 +8,7 @@ from zope.component.event import objectEventNotify
 
 from collective.disqus.viewlets.content import DisqusViewlet as ViewletBase
 from restarter.policy.events import DisqusNotify
+
 
 class DisqusViewlet(ViewletBase):
     """
@@ -18,7 +20,7 @@ class DisqusViewlet(ViewletBase):
     def authenticated_email(self):
         user = self.context.portal_membership.getAuthenticatedMember()
         if user:
-            return user.getProperty('email')
+            return urllib.quote(user.getProperty('email',''))
         else:
             return ''
 

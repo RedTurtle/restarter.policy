@@ -13,4 +13,12 @@
     addview=".stats_sold.AddForm"
   />
 
+  <plone:portlet
+    name="portlets.ProductCategories"
+    interface=".product_categories.IProductCategoriesPortlet"
+    assignment=".product_categories.Assignment"
+    renderer=".product_categories.Renderer"
+    addview=".product_categories.AddForm"
+  />
+
 </configure>
