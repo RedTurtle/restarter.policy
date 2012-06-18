@@ -163,12 +163,13 @@ def company_added(company, event):
     directlyProvides(products, (ISimpleAddButtons,))
     demands.reindexObject()
 
-    if 'media' in company.objectIds():
+    if 'foto' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
 
     media = company[company.invokeFactory('Folder','foto')]
     media.setTitle(u'Foto')
+    media.setLayout('atct_album_view')
     company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image','File'])
@@ -181,6 +182,7 @@ def company_added(company, event):
 
     docs = company[company.invokeFactory('Folder','docs')]
     docs.setTitle(u'Documenti')
+    docs.setLayout('folder_tabular_view')
     company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
     docs.setConstrainTypesMode(1)
     docs.setLocallyAllowedTypes(['Document','CompanyStory','File'])
@@ -207,6 +209,7 @@ def product_added(product, event):
         return
     media = product[product.invokeFactory('Folder','foto')]
     media.setTitle(u'Foto')
+    media.setLayout('atct_album_view')
     directlyProvides(media, (ISimpleAddButtons,))
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image',])
