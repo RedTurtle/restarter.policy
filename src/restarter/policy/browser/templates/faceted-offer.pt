@@ -8,7 +8,7 @@
       toLocalizedTime nocall:context/@@plone/toLocalizedTime;
       url context/absolute_url|string:#;">
 
-  <p class="itemData" tal:condition="eff_date" tal:content="python:toLocalizedTime(eff_date)">02 Giugno 2012</p>
+      <p class="itemData" tal:on-error="string:" tal:content="python:toLocalizedTime(eff_date)">02 Giugno 2012</p>
   <h3 class="faCollectionTitle">
     <a tal:attributes="href url; title description"
        tal:content="python: restarter.safe_truncate(context.pretty_title_or_id(), 50)">Titolo dell'azienda</a>
