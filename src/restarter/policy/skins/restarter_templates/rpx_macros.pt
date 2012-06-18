@@ -14,17 +14,19 @@
 
 <metal:rpx_register_container define-macro="rpx_register_container">
 <div id="rpx-register-container">
-
-              <p class="plonelogin-txt" i18n:translate="">
-                 Login with Facebook and profit of full integration with your profile
-              </p>
-
-              <a href="" tal:attributes="href string:${context/absolute_url}/facebook-login">
-                <img src="" tal:attributes="src string:${context/absolute_url}/facebook_login.png"/>
-              </a>
-              <p class="plonelogin-txt" i18n:translate="">
-                  or use other social networks just for login
-              </p>
+              <div class="fb_login_wrapper">
+                <h2 class="fb_login_header">Accedi con Facebook </h2>
+                <p class="plonelogin-txt">
+                   e beneficia della piena integrazione con il tuo profilo
+                </p>
+                
+                <a class="fb_login" href="" tal:attributes="href string:${context/absolute_url}/facebook-login">
+                  <img src="" tal:attributes="src string:${context/absolute_url}/facebook_login.png"/>
+                </a>
+                <p class="plonelogin-txt">
+                    oppure puoi autenticarti utilizzando <br/> uno degli altri social networks 
+                </p>
+              </div>
 
       <fieldset>
       <h2 i18n:translate="rpx_login_header">Log in with online id</h2>
