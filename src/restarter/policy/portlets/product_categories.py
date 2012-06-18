@@ -35,7 +35,10 @@ class Renderer(base.Renderer):
     def update(self):
         portal = self.context.portal_url.getPortalObject()
         counter = portal.unrestrictedTraverse('prodotti/@@faceted_counter')
+        org_header = self.request.response.getHeader('content-type')
         criteria = counter(cid='c5')
+        #faceted force json content-type!!!
+        self.request.response.setHeader('content-type', org_header)
         results = json.loads(criteria).items()
         results.sort(key=operator.itemgetter(1))
         results.reverse()
