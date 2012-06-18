@@ -37,7 +37,7 @@ class CompanyShareNotify(ObjectEvent):
     def __init__(self, object, userid, add_user=True):
         self.object = object
         self.userid = userid
-        self.add_user = True
+        self.add_user = add_user
 
 
 def notify(endpoint, params):
@@ -91,6 +91,7 @@ def order_state_changed(order, event):
             notify('notify/sms', params)
     else:
         return
+
 
 def order_added(order, event):
     """Every time a order is added - change title."""
@@ -195,6 +196,7 @@ def company_added(company, event):
 
     owner = company.getOwner()
     company.manage_setLocalRoles(owner.getId(), ('Owner', 'Employee',))
+
 
 def company_commented(company, event):
     """Event fired when company has been commented."""
