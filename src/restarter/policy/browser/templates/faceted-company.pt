@@ -7,7 +7,7 @@
       toLocalizedTime nocall:context/@@plone/toLocalizedTime;
       url context/absolute_url|string:#;">
 
-  <div class="faCompanyImg">
+  <div class="faCollectionImg faCompanyImg">
     <a tal:attributes="href url; title description" tal:condition="context/hasContentLeadImage">
       <img tal:attributes="
             title desc_or_title;

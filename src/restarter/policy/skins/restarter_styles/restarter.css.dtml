@@ -742,14 +742,29 @@ dl.productsPortlet p.btnLink a.btn:hover,
     padding: 5px;
     border: 1px solid #F0F0F0;
 }
+.companyResult .faCompanyImg {
+    float: none;
+    margin: 0 0 0.5em;
+    width: auto;
+    height: auto;
+    border-bottom: 0;
+}
 .companyResult .faCompanyImg a {
     display: block;
     text-align: center;
     width: 128px;
-    height: 128px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 .companyResult .faCompanyImg a img {
     vertical-align: middle;
+}
+#content .companyResult .faCompanyImg a.noFoto {
+    height: 110px;
+}
+#content .companyResult .faCompanyImg a.noFoto span {
+    top: 33%;
 }
 /** Company **/
 .portaltype-company #content .tileImage {
@@ -769,6 +784,14 @@ div.comMap a {
     font-size: 0.9em;
     padding-left: 15px;
     background: transparent url(++resource++restarter.images/map_pin.png) no-repeat left center;
+}
+div.comMap img {
+    border: 1px solid #F0F0F0;
+    padding: 10px;
+}
+div.comMap {
+    padding: 20px 0 10px;
+    text-align: center;
 }
 #content .companyRec {
     margin: 0 0 0;
@@ -953,7 +976,7 @@ a.noFoto span {
 /** ordine **/
 .order-view {
     float: left;
-    max-width: 55%;
+    max-width: 54%;
 }
 #productExtract {
     background-color: #F0F0F0;
@@ -968,7 +991,7 @@ a.noFoto span {
 }
 #productExtract h2.headline {
     padding-bottom: 0.3em;
-    background: transparent  url(++resource++restarter.images/tag.png) no-repeat left center;
+    background: transparent  url(++resource++restarter.images/tag.png) no-repeat left 0.5em;
     padding-left: 22px;
 }
 #productExtract .prodPriceGroup {
@@ -997,6 +1020,20 @@ a.noFoto span {
 #productExtract .prodWaranty {
     display: none;
 }
+#productExtract #product-counter {
+    display: none;
+}
+#content #productExtract img.tileImage {
+    float: none;
+    display: block;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 5px;
+    margin: 0.5em auto;
+}
+#productExtract #viewlet-social-like {
+    display: none;
+}
 .order-view input#quantity ,
 .order-view textarea#description {
     display: block;
@@ -1004,6 +1041,12 @@ a.noFoto span {
     border:1px solid #555;
     background: #FFF none;
     padding: 0.3em 0.4em;
+}
+.order-view textarea#description {
+    width: 90%;
+}
+#order-view {
+    clear: left;
 }
 #order-edit-view .formControls {
     margin-left: 0;
@@ -1327,5 +1370,9 @@ body.template-register #actionsView .actionButtons input.context:active,
     background-color: #900 !important;
     color: #FF9 !important;
 }    
+.fieldErrorBox {
+    color: red;
+    font-size: 0.9em;
+}
 
 /* </dtml-with> */
