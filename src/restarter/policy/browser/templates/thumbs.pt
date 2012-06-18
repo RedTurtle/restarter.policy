@@ -18,16 +18,14 @@
                         action  string:${context/absolute_url}/you-know-you-like-it;">
         <span
             tal:attributes="class   python:'thumbs-up' + (myVote==1 and ' selected' or '')">
-            <input type="submit" name="form.lovinit" value="Like"
-                class="allowMultiSubmit like-button" title="I like this (click again to undo)"
-                i18n:attributes="value; title"
+            <input type="submit" name="form.lovinit" value="Mi piace"
+                class="allowMultiSubmit like-button" title="Mi piace già (clicca ancora per annullare)"
                 tal:attributes="id  string:${context/id}_submit_like;" />
         </span>
     </form>
     <div class="like-summary">
-        <span class="total-thumbs-up" i18n:translate="">
-            <span class="tally-total" tal:content="stats/ups"
-                  i18n:name="likes" /> likes,
+        <span class="total-thumbs-up">
+            <span class="tally-total" tal:content="stats/ups"/> Mi piace
         </span>
     </div>
 </div>

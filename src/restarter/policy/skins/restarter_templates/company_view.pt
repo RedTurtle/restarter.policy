@@ -23,10 +23,6 @@
               <strong><metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
               (<metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>)</strong>
             </div>
-            <div class="comMap">
-              <img src="" tal:define="address context/gmap_address"
-                   tal:attributes="src string:http://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=12&size=580x200&maptype=roadmap&markers=color:red%7C${address}&sensor=false">
-            </div>
             <div class="comNumbers">
               <p class="comEmail"><span class="labelTxt">E-mail:</span> <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field></p>
               <p class="comCell"><span class="labelTxt">Mobile:</span> <metal:field use-macro="python:context.widget('cellphone', mode='view')"></metal:field></p>
@@ -35,9 +31,12 @@
             <p class="comPI"><span class="labelTxt">P.Iva/C.F.:</span> <metal:field use-macro="python:context.widget('piva', mode='view')"></metal:field></p>
             <p class="companySector"><span class="labelTxt">Settore merceologico:</span> <metal:field use-macro="python:context.widget('company_sectore', mode='view')"></metal:field></p>
           </div>
-          <div class="visualClear"></div>
 
         </div>
+            <div class="comMap visualClear">
+              <img src="" tal:define="address context/gmap_address"
+                   tal:attributes="src string:http://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=12&size=580x200&maptype=roadmap&markers=color:red%7C${address}&sensor=false">
+            </div>
         <div class="visualClear"></div>
 
       </metal:body_macro>
