@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-17 12:49+0000\n"
+"POT-Creation-Date: 2012-06-18 09:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,17 +31,13 @@ msgstr "Approvazione termini d'uso"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: ./browser/facebook_login.py:19
+#: ./browser/facebook_login.py:21
 msgid "App ID/API Key"
 msgstr "App ID/API Key"
 
-#: ./browser/facebook_login.py:21
+#: ./browser/facebook_login.py:23
 msgid "App Secret"
 msgstr "App Secret"
-
-#: ./content/product.py:84
-msgid "Availability"
-msgstr "Disponibilità"
 
 #: ./content/company.py:131
 msgid "CF/P.IVA"
@@ -116,7 +112,7 @@ msgstr "Indirizzo di email"
 msgid "Employee"
 msgstr "Dipendente"
 
-#: ./browser/facebook_login.py:58
+#: ./browser/facebook_login.py:60
 msgid "Facebook authentication denied"
 msgstr "Autenticazione con Facebook negata"
 
@@ -124,7 +120,7 @@ msgstr "Autenticazione con Facebook negata"
 msgid "Facebook data incomplete. Please retry."
 msgstr "I dati di Facebook sono incompleti. Per favore, riprova."
 
-#: ./browser/facebook_login.py:43
+#: ./browser/facebook_login.py:45
 msgid "Facebook not configurated."
 msgstr "Facebook non configurato"
 
@@ -148,10 +144,6 @@ msgstr "Cartella che contiene prodotti"
 msgid "Leave your comment for this order."
 msgstr "Lascia un commmento per questa prenotazione"
 
-#: ./skins/restarter_templates/rpx_macros.pt:18
-msgid "Login with Facebook and profit of full integration with your profile"
-msgstr "Fai login con Facebook e beneficia della piena integrazione con il tuo profilo"
-
 #: ./content/company.py:176
 msgid "Notification type"
 msgstr "Tipo di notifica"
@@ -164,13 +156,9 @@ msgstr "Offerta"
 msgid "Offer category"
 msgstr "Categoria"
 
-#: ./content/offer.py:75
+#: ./content/offer.py:65
 msgid "Offer name"
 msgstr "Nome"
-
-#: ./content/offer.py:42
-msgid "Offer value"
-msgstr "Valore"
 
 #: ./profiles/upgrade_0009_to_0010/types/Offers.xml
 msgid "Offers"
@@ -234,17 +222,9 @@ msgstr "Indica il periodo della richiesta"
 msgid "Please provide offer period."
 msgstr "Indica il periodo dell'offerta"
 
-#: ./content/offer.py:43
-msgid "Please provide offer value."
-msgstr "Indica il valore dell'offerta"
-
 #: ./content/order.py:22
 msgid "Please provide order quantity."
 msgstr "Indica la quantità di prodotti"
-
-#: ./content/product.py:85
-msgid "Please provide product availability."
-msgstr "Indica la disponibilità del prodotto"
 
 #: ./content/product.py:75
 msgid "Please provide product condition state."
@@ -262,11 +242,11 @@ msgstr "Indica l'unità di misura del prodotto"
 msgid "Please provide product quantity."
 msgstr "Indica la quantità"
 
-#: ./content/product.py:97
+#: ./content/product.py:87
 msgid "Please provide product shipment conditions."
 msgstr "Indica le condizioni di spedizione del prodotto"
 
-#: ./content/product.py:108
+#: ./content/product.py:98
 msgid "Please provide product waranty conditions."
 msgstr "Indica le condizioni di garanzia del prodotto"
 
@@ -310,7 +290,7 @@ msgstr "Categoria del prodotto"
 msgid "Product condition"
 msgstr "Condizioni del prodotto"
 
-#: ./content/product.py:136
+#: ./content/product.py:126
 msgid "Product name"
 msgstr "Denominazione del prodotto"
 
@@ -331,11 +311,11 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:170
+#: ./events.py:171
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:211
+#: ./events.py:212
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -360,19 +340,19 @@ msgstr "Ritira"
 msgid "Send back"
 msgstr "Torna indietro"
 
-#: ./content/product.py:96
+#: ./content/product.py:86
 msgid "Shipment"
 msgstr "Spedizione"
 
-#: ./browser/facebook_login.py:20
+#: ./browser/facebook_login.py:22
 msgid "The App ID/API Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
-#: ./browser/facebook_login.py:22
+#: ./browser/facebook_login.py:24
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
-#: ./content/product.py:107
+#: ./content/product.py:97
 msgid "Waranty"
 msgstr "Garanzia"
 
@@ -404,7 +384,7 @@ msgid "help_ragione_sociale"
 msgstr "Indica la Ragione sociale esatta della tua azienda"
 
 #. Default: "Check this to have your user name filled in automatically when you log in later."
-#: ./skins/restarter_templates/rpx_macros.pt:142
+#: ./skins/restarter_templates/rpx_macros.pt:144
 msgid "help_remember_my_name"
 msgstr "Spunta questo riquadro per fare in modo che il tuo nome sia automaticamente riconosciuto al prossimo accesso"
 
@@ -419,17 +399,17 @@ msgid "label_cellphone"
 msgstr "Numero di cellulare"
 
 #. Default: "Log in"
-#: ./skins/restarter_templates/rpx_macros.pt:151
+#: ./skins/restarter_templates/rpx_macros.pt:153
 msgid "label_log_in"
 msgstr "Accedi"
 
 #. Default: "Login Name"
-#: ./skins/restarter_templates/rpx_macros.pt:99
+#: ./skins/restarter_templates/rpx_macros.pt:101
 msgid "label_login_name"
 msgstr "Nome utente"
 
 #. Default: "Password"
-#: ./skins/restarter_templates/rpx_macros.pt:117
+#: ./skins/restarter_templates/rpx_macros.pt:119
 msgid "label_password"
 msgstr "Password"
 
@@ -445,16 +425,12 @@ msgid "label_register"
 msgstr "Registrati"
 
 #. Default: "Remember my name."
-#: ./skins/restarter_templates/rpx_macros.pt:140
+#: ./skins/restarter_templates/rpx_macros.pt:142
 msgid "label_remember_my_name"
 msgstr "Ricorda il mio nome"
 
-#: ./skins/restarter_templates/rpx_macros.pt:25
-msgid "or use other social networks just for login"
-msgstr "oppure utilizza un altro social network per l'accesso"
-
 #. Default: "Register"
-#: ./skins/restarter_templates/rpx_macros.pt:52
+#: ./skins/restarter_templates/rpx_macros.pt:54
 msgid "register_button"
 msgstr "Registrati"
 
@@ -464,22 +440,22 @@ msgid "restartER company"
 msgstr "Azienda"
 
 #. Default: "Login"
-#: ./skins/restarter_templates/rpx_macros.pt:76
+#: ./skins/restarter_templates/rpx_macros.pt:78
 msgid "rpx_assign_legend"
 msgstr "Accedi"
 
 #. Default: "You have already registered to ${rpx_portal_title} and now want to assign your ${rpx_provider} account to your profile."
-#: ./skins/restarter_templates/rpx_macros.pt:79
+#: ./skins/restarter_templates/rpx_macros.pt:81
 msgid "rpx_login_descr"
 msgstr "Ti sei già registrato a ${rpx_portal_title} e ora vuoi assegnare il tuo profilo ${rpx_provider} a questo utente."
 
 #. Default: "Log in with online id"
-#: ./skins/restarter_templates/rpx_macros.pt:30
+#: ./skins/restarter_templates/rpx_macros.pt:32
 msgid "rpx_login_header"
 msgstr "Accedi con online id"
 
 #. Default: "RPX log in"
-#: ./skins/restarter_templates/rpx_macros.pt:74
+#: ./skins/restarter_templates/rpx_macros.pt:76
 msgid "rpx_login_legend"
 msgstr "Accesso RPX"
 
@@ -489,16 +465,17 @@ msgid "rpx_not_configured_warning"
 msgstr "RPX non è configurato. Vai a \"RPX Settings\" in \"Site Setup\" per sistemarlo."
 
 #. Default: "The prefilled data was returned by your online id provider and is just a suggestion."
-#: ./skins/restarter_templates/rpx_macros.pt:49
+#: ./skins/restarter_templates/rpx_macros.pt:51
 msgid "rpx_register_descr"
 msgstr "I dati preinseriti dal tuo profilo online sono solo un suggerimento."
 
 #. Default: "Register your ${rpx_provider} account"
-#: ./skins/restarter_templates/rpx_macros.pt:47
+#: ./skins/restarter_templates/rpx_macros.pt:49
 msgid "rpx_register_heading"
 msgstr "Registra il tuo profilo ${rpx_provider}"
 
 #. Default: "RPX register"
-#: ./skins/restarter_templates/rpx_macros.pt:46
+#: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
 msgstr "Registrati con RPX"
+

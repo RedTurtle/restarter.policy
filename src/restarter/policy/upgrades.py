@@ -106,3 +106,9 @@ def upgrade_0011_to_0012(context):
                     plugins._plugins[interface] = tuple(active)
 
         return out.getvalue()
+
+
+def upgrade_0012_to_0013(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0012_to_0013')
+
+

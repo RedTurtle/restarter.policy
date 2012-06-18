@@ -161,6 +161,11 @@ def company_sectore(object):
         return company.getCompany_sectore()
 
 
+@indexer(IProduct)
+def product_price(object):
+    return object.getPrice()
+
+
 class Product(folder.ATFolder):
     """Product that can be bought"""
     implements(IProduct, ILeadImageable)
