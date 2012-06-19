@@ -6,6 +6,7 @@
     <include package="plone.app.contentmenu" />
     <include package="plone.browserlayer" />
     <include package="z3c.jbot" file="meta.zcml" />
+    <include file="viewlets.zcml" />
 
     <browser:jbot
       directory="jbot"
@@ -67,88 +68,6 @@
       layer="..interfaces.layer.ISkin"
       permission="zope2.View"
       />
-
-    <browser:viewlet
-        name="sc.social.likes_metadata"
-        for="Products.CMFCore.interfaces.IContentish"
-        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
-        class=".fb_metadata.RestarterMetadataViewlet"
-        layer="sc.social.like.interfaces.ISocialLikeLayer"
-        permission="zope.Public"
-    />
-
-   <browser:viewlet
-       name="collective.disqus"
-       for="Products.CMFCore.interfaces.IContentish"
-       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-       view="plone.app.layout.globals.interfaces.IViewView"
-       class=".disqus.DisqusViewlet"
-       permission="zope2.View"
-       layer="..interfaces.layer.ISkin"
-     />
-   <browser:viewlet
-       name="collective.disqus"
-       for="..interfaces.IDemand"
-       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-       view="plone.app.layout.globals.interfaces.IViewView"
-       class=".disqus.DisqusDemandViewlet"
-       permission="zope2.View"
-       layer="..interfaces.layer.ISkin"
-     />
-   <browser:viewlet
-       name="collective.disqus"
-       for="..interfaces.IOffer"
-       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-       view="plone.app.layout.globals.interfaces.IViewView"
-       class=".disqus.DisqusOfferViewlet"
-       permission="zope2.View"
-       layer="..interfaces.layer.ISkin"
-     />
-
-  <!-- The logo -->
-    <browser:viewlet
-       name="plone.logo"
-       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-       class="plone.app.layout.viewlets.common.LogoViewlet"
-       permission="zope2.View"
-       layer="..interfaces.layer.ISkin"
-      />
-
-  <!-- The slider "dummy" -->
-    <browser:viewlet
-       name="restarter.slider"
-       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-       permission="zope2.View"
-       template="templates/viewlet_slider_top.pt"
-       layer="..interfaces.layer.ISkin"
-      />
-
-    <!-- The breadcrumbs -->
-    <browser:viewlet
-        name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
-        class="plone.app.layout.viewlets.common.PathBarViewlet"
-        permission="zope2.View"
-       layer="..interfaces.layer.ISkin"
-        />
-
-    <!-- social like -->
-    <browser:viewlet
-        name="sc.social.likes"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class="sc.social.like.browser.viewlets.SocialLikesViewlet"
-        layer="..interfaces.layer.ISkin"
-        permission="zope.Public"
-        />
-
-    <browser:viewlet
-        for="..interfaces.layer.ISimpleAddButtons"
-        name="restarter.simplebuttons"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
-        class=".common.ContentActionsViewlet"
-        permission="zope2.View"
-        layer="..interfaces.layer.ISkin"
-        />
 
    <browser:page
        for="..interfaces.layer.ISimpleAddButtons"
@@ -217,6 +136,14 @@
        for="Products.CMFCore.interfaces.ISiteRoot"
        class=".facebook_login.FacebookLogin"
        permission="zope2.View"
+   />
+
+   <browser:page
+       name="assoc_aprove_toggle"
+       for="..interfaces.ICompany"
+       class=".associations.AssocAproveToogle"
+       permission="restarter.ManageAssociationLikes"
+       layer="..interfaces.layer.ISkin"
    />
 
 

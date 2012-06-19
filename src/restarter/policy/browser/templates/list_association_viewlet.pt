@@ -1,0 +1,3 @@
+<div tal:repeat="association view/associations">
+  <img src="" tal:attributes="src string:${context/portal_url}/portal_memberdata/portraits/${association}" alt="" title="" class="tileImage">
+</div>

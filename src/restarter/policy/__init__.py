@@ -7,6 +7,7 @@ from restarter.policy import config
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
 
+import permissions; permissions
 from .processor import run as processor ; processor
 
 

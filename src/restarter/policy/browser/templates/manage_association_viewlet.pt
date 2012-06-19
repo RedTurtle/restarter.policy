@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="restarter.policy">
+
+<div class="assoc-rating">
+  <form action="#" method="post" tal:attributes="action string:${context/absolute_url}/@@assoc_aprove_toggle">
+      <input type="submit" class="like-button" tal:attributes="value view/username"/>
+  </form>
+</div>
+
+</html>
