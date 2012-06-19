@@ -5,7 +5,10 @@ from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentAct
 from plone.app.contentmenu.menu import FactoriesMenu, FactoriesSubMenuItem as BrowserSubMenuItem
 from plone.app.workflow.browser.sharing import SharingView as SharingBaseView
 from plone.memoize.instance import memoize
+from plone.app.content.browser.folderfactories import FolderFactoriesView as FolderFactoriesViewBase
+
 from restarter.policy import policyMessageFactory as _
+
 
 
 class ContentActionsViewlet(ContentActionsViewletBase):
@@ -68,3 +71,16 @@ class FactoriesSubMenuItem(BrowserSubMenuItem):
 
     def available(self):
         return False
+
+
+class FolderFactoriesView(FolderFactoriesViewBase):
+
+    def addable_types(self, include=None):
+        return [{ 'id' : 'add-company-wizzard',
+                  'title'        : _('Add company'),
+                  'description'  : _('Add new company wizard'),
+                  'action'       : '%s/@@add_company' % self.context.absolute_url(),
+                  'selected'     : False,
+                  'icon'         : None,
+                  'extra'        : {'id' : 'add-company-wizzard', 'separator' : None, 'class' : None},
+                  'submenu'      : None, }]

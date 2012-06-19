@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-18 09:18+0000\n"
+"POT-Creation-Date: 2012-06-19 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,14 @@ msgstr "Accetto"
 #: ./content/company.py:165
 msgid "Accept terms of use"
 msgstr "Approvazione termini d'uso"
+
+#: ./browser/common.py:80
+msgid "Add company"
+msgstr "Aggiungi Azienda"
+
+#: ./browser/common.py:81
+msgid "Add new company wizard"
+msgstr "Parti con il processo di registrazione"
 
 #: ./content/company.py:58
 msgid "Address"
@@ -108,7 +116,7 @@ msgstr "Richieste"
 msgid "Email address"
 msgstr "Indirizzo di email"
 
-#: ./browser/common.py:42
+#: ./browser/common.py:45
 msgid "Employee"
 msgstr "Dipendente"
 
@@ -143,6 +151,10 @@ msgstr "Cartella che contiene prodotti"
 #: ./content/order.py:57
 msgid "Leave your comment for this order."
 msgstr "Lascia un commmento per questa prenotazione"
+
+#: ./content/product.py:21
+msgid "New"
+msgstr "Nuovo"
 
 #: ./content/company.py:176
 msgid "Notification type"
@@ -212,7 +224,7 @@ msgstr "Indica la provincia"
 
 #: ./content/company.py:122
 msgid "Please give us your company website url."
-msgstr "Indica il sito web aziendale"
+msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 
 #: ./content/demand.py:35
 msgid "Please provide demand period."
@@ -311,11 +323,11 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:171
+#: ./events.py:344
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:212
+#: ./events.py:396
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -351,6 +363,10 @@ msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://develo
 #: ./browser/facebook_login.py:24
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
+
+#: ./content/product.py:22
+msgid "Used"
+msgstr "Usato"
 
 #: ./content/product.py:97
 msgid "Waranty"
