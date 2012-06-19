@@ -511,6 +511,10 @@ body#content.mceContentBody {
     border-top: 3px solid #F0F0F0;
     padding-top: 10px
 }
+.portaltype-product #viewlet-social-like,
+.portaltype-order #viewlet-social-like {
+    border:0;
+}
 
 /** Portlets **/
 dl.portlet dt {
@@ -1017,7 +1021,7 @@ a.noFoto span {
 }
 #product-offers ul.listOffers li a.offerTitle {
     font-weight: bold;
-    font-size: 1.1em;
+    color: #000;
 }
 #product-offers ul.listOffers li .offerAuthor {
     font-style: italic;
@@ -1109,7 +1113,7 @@ a.noFoto span {
 }
 #productExtract #viewlet-social-like,
 #productExtract #product-offers {
-    display: none;
+    display: none !important;
 }
 
 .order-view input#quantity ,
@@ -1465,6 +1469,9 @@ body.template-register #actionsView .actionButtons input.context:active,
 }
 
 /** portlet categorie ***/
+dl.faCategoriesPortlet {
+    margin-bottom: 30px;
+}
 .faCategoriesPortlet .portletItem {
     background-color: #FAFAFA;
     padding:0.5em 0.3em 0;
@@ -1490,5 +1497,44 @@ dl.faCategoriesPortlet dd.portletFooter p {
     font-size: 0.9em;
 }
 
+/** listing bar **/
+#content div.listingBar {
+    margin-top:0;
+    margin-bottom: 2em;
+}
+#content div.listingBar a {
+    border: 1px solid #F0F0F0;
+    background-color: #FAFAFA;
+     border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 0.3em 0.7em;
+    margin: 0 0.2em;
+}
+#content div.listingBar span.current {
+    display: inline-block;
+    padding: 0.3em 0.7em;
+    margin: 0 0.2em;
+    color: #000;
+    font-weight: bold;   
+}
+
+/** faceted search **/
+.section-faceted-search .facetedResult .faCollectionImg,
+.section-faceted-search .facetedResult .btnLink
+{
+   display:none;
+}
+.section-faceted-search .facetedResult{
+   clear:both;
+}
+.section-faceted-search #content .offerResult,
+.section-faceted-search #content .productResult,
+.section-faceted-search #content .companyResult {
+    min-height: 1px;
+    float: none;
+    width: auto;
+    max-width: 100%;
+}
 
 /* </dtml-with> */
