@@ -49,6 +49,7 @@
       name="user-information"
       class=".personalpreferences.UserDataConfiglet"
       permission="plone.app.controlpanel.UsersAndGroups"
+      layer="..interfaces.layer.ISkin"
       />
 
     <browser:page

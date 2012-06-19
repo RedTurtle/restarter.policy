@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-18 09:18+0000\n"
+"POT-Creation-Date: 2012-06-19 09:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,6 +145,10 @@ msgstr ""
 
 #: ./content/order.py:57
 msgid "Leave your comment for this order."
+msgstr ""
+
+#: ./content/product.py:21
+msgid "New"
 msgstr ""
 
 #: ./content/company.py:176
@@ -314,11 +318,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:171
+#: ./events.py:344
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:212
+#: ./events.py:396
 msgid "Published on product creation"
 msgstr ""
 
@@ -353,6 +357,10 @@ msgstr ""
 
 #: ./browser/facebook_login.py:24
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
+msgstr ""
+
+#: ./content/product.py:22
+msgid "Used"
 msgstr ""
 
 #: ./content/product.py:97
