@@ -12,7 +12,7 @@
  <permission>Sharing page: Delegate roles</permission>
  <permission>View</permission>
  <permission>restarter.policy: Add Order</permission>
- <state state_id="draft" title="Draft">
+ <state state_id="draft" title="Privato">
   <exit-transition transition_id="publish"/>
   <permission-map name="ATContentTypes: Add File" acquired="False">
    <permission-role>Employee</permission-role>
@@ -143,7 +143,7 @@
    <permission-role>Member</permission-role>
   </permission-map>
  </state>
- <state state_id="soldout" title="Sold out">
+ <state state_id="soldout" title="Tutto esaurito">
   <exit-transition transition_id="retract"/>
   <permission-map name="ATContentTypes: Add File" acquired="False">
    <permission-role>Employee</permission-role>
@@ -194,19 +194,19 @@
   </guard>
  </transition>
  <transition transition_id="finish_sell" title="Finish sell" new_state="soldout" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Finish sell</action>
+  <action url="" category="workflow" icon="">Fine vendita</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
   </guard>
  </transition>
  <transition transition_id="publish" title="Publish product" new_state="published" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Publish product</action>
+  <action url="" category="workflow" icon="">Pubblica il prodotto</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
   </guard>
  </transition>
  <transition transition_id="retract" title="Retract product" new_state="draft" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Retract product</action>
+  <action url="" category="workflow" icon="">Ritira il prodotto</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
   </guard>
