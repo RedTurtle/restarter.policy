@@ -4,6 +4,7 @@ import requests
 import logging
 import html2text
 
+from Products.statusmessages.interfaces import IStatusMessage
 from zope.interface import directlyProvides
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
@@ -274,6 +275,8 @@ def order_added(order, event):
               'email_subject': NEW_ORDER_SUBJECT,
               'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname','Utente')}
     company_notify(company, params)
+    status = IStatusMessage(order.REQUEST)
+    status.add(_(u'Your order has been registered!'))
 
 
 def product_published(product, event):

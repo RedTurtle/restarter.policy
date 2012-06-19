@@ -153,6 +153,13 @@
            factory=".common.FactoriesSubMenuItem"
            provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
 
+  <adapter
+        for="..interfaces.layer.ISkin"
+        provides="Products.statusmessages.interfaces.IStatusMessage"
+        factory=".common.OrderStatusMessage"
+   />
+
+
  <!-- Folder factories -->
   <browser:page
       for="..interfaces.ICompanies"

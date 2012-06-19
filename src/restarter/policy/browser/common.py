@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.ploneview import Plone as PloneBase
+from Products.statusmessages.adapter import StatusMessage, STATUSMESSAGEKEY, translate, _encodeCookieValue, IAnnotations
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentActionsViewletBase
 from plone.app.contentmenu.menu import FactoriesMenu, FactoriesSubMenuItem as BrowserSubMenuItem
@@ -84,3 +85,18 @@ class FolderFactoriesView(FolderFactoriesViewBase):
                   'icon'         : None,
                   'extra'        : {'id' : 'add-company-wizzard', 'separator' : None, 'class' : None},
                   'submenu'      : None, }]
+
+
+class OrderStatusMessage(StatusMessage):
+
+    def add(self, text, type=u'info'):
+        """Add a status message.
+        """
+        import pdb; pdb.set_trace()
+        context = self.context
+        text = translate(text, context=context)
+        annotations = IAnnotations(context)
+        value = _encodeCookieValue(text, type, old='')
+        context.response.setCookie(STATUSMESSAGEKEY, value, path='/')
+        annotations[STATUSMESSAGEKEY] = value
+
