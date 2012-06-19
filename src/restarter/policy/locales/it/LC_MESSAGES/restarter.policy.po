@@ -29,11 +29,11 @@ msgstr "Approvazione termini d'uso"
 
 #: ./browser/common.py:80
 msgid "Add company"
-msgstr ""
+msgstr "Aggiungi Azienda"
 
 #: ./browser/common.py:81
 msgid "Add new company wizard"
-msgstr ""
+msgstr "Parti con il processo di registrazione"
 
 #: ./content/company.py:58
 msgid "Address"
@@ -224,7 +224,7 @@ msgstr "Indica la provincia"
 
 #: ./content/company.py:122
 msgid "Please give us your company website url."
-msgstr "Indica il sito web aziendale"
+msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 
 #: ./content/demand.py:35
 msgid "Please provide demand period."

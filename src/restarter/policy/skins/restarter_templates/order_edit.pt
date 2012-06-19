@@ -27,7 +27,7 @@
         <metal:body define-macro="body">
 
           <div id="order-edit-view" class="order-view">
-            <h1 class="documentFirstHeading">Nuovo ordine di acquisto</h1>
+            <h1 class="documentFirstHeading">Nuova prenotazione</h1>
             
               <metal:default_body use-macro="here/edit_macros/macros/body">
                 <!-- inside the fieldset but above all the fields -->

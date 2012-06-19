@@ -5,7 +5,7 @@
  <permission>Modify portal content</permission>
  <permission>Review portal content</permission>
  <permission>View</permission>
- <state state_id="accepted" title="Order has been accepted">
+ <state state_id="accepted" title="L'ordine è stato accettato">
   <permission-map name="Access contents information" acquired="False">
    <permission-role>Anonymous</permission-role>
   </permission-map>
@@ -23,7 +23,7 @@
    <permission-role>Anonymous</permission-role>
   </permission-map>
  </state>
- <state state_id="deleted" title="Order has been deleted">
+ <state state_id="deleted" title="L'ordine è stato cancellato">
   <permission-map name="Access contents information" acquired="False">
    <permission-role>Owner</permission-role>
   </permission-map>
@@ -41,10 +41,10 @@
    <permission-role>Owner</permission-role>
   </permission-map>
  </state>
- <state state_id="draft" title="Order has been created">
+ <state state_id="draft" title="L'ordine è stato creato">
   <exit-transition transition_id="request"/>
  </state>
- <state state_id="new" title="New order">
+ <state state_id="new" title="Nuovo ordine">
   <exit-transition transition_id="accept"/>
   <exit-transition transition_id="delete"/>
   <exit-transition transition_id="reject"/>
@@ -67,7 +67,7 @@
    <permission-role>Anonymous</permission-role>
   </permission-map>
  </state>
- <state state_id="rejected" title="Order has been rejected">
+ <state state_id="rejected" title="L'ordine è stato rifiutato">
   <exit-transition transition_id="retract"/>
   <permission-map name="Access contents information" acquired="False">
    <permission-role>Anonymous</permission-role>
@@ -86,37 +86,37 @@
    <permission-role>Anonymous</permission-role>
   </permission-map>
  </state>
- <state state_id="requested" title="Order has been requested">
+ <state state_id="requested" title="L'ordine è stato richiesto">
   <exit-transition transition_id="accept"/>
   <exit-transition transition_id="reject"/>
   <exit-transition transition_id="retract"/>
  </state>
  <transition transition_id="accept" title="Company accept an order" new_state="accepted" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Company accept an order</action>
+  <action url="" category="workflow" icon="">L'azienda accetta l'ordine</action>
   <guard>
    <guard-permission>Review portal content</guard-permission>
   </guard>
  </transition>
  <transition transition_id="delete" title="Delete order" new_state="deleted" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Delete order</action>
+  <action url="" category="workflow" icon="">Cancella l'ordine</action>
   <guard>
    <guard-role>Owner</guard-role>
   </guard>
  </transition>
  <transition transition_id="reject" title="Company reject order" new_state="rejected" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Company reject order</action>
+  <action url="" category="workflow" icon="">L'azienda rifiuta l'ordine</action>
   <guard>
    <guard-permission>Review portal content</guard-permission>
   </guard>
  </transition>
  <transition transition_id="request" title="Member request an order" new_state="requested" trigger="USER" before_script="" after_script="">
-  <action url="%(content_url)s/content_status_modify?workflow_action=request" category="workflow" icon="">Request</action>
+  <action url="%(content_url)s/content_status_modify?workflow_action=request" category="workflow" icon="">Richiesta</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
  <transition transition_id="retract" title="Retract order" new_state="new" trigger="USER" before_script="" after_script="">
-  <action url="" category="workflow" icon="">Retract order</action>
+  <action url="" category="workflow" icon="">Rifiuta l'ordine</action>
   <guard>
    <guard-permission>Review portal content</guard-permission>
   </guard>
