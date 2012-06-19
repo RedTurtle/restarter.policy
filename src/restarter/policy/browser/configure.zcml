@@ -45,6 +45,13 @@
     />
 
     <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="user-information"
+      class=".personalpreferences.UserDataConfiglet"
+      permission="plone.app.controlpanel.UsersAndGroups"
+      />
+
+    <browser:page
       for="Products.CMFCore.interfaces.IContentish"
       name="disqus_notify"
       class=".disqus.Notify"
