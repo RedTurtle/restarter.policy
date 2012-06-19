@@ -1,0 +1,54 @@
+<tal:root define="lt string:&lt;;gt string:&gt;;
+                  dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;; charset=%s' % here.plone_utils.getSiteEncoding());
+                  member python:options['member'];
+                  portal_properties context/@@plone_tools/properties;
+                  view context/@@passwordreset_view;
+                  reset python:options.get('reset', None) or here.portal_password_reset.requestReset(member.getId())"
+>From: <span tal:replace="structure view/encoded_mail_sender" />
+To: <span tal:replace="python:member.getProperty('email')" />
+Subject: Conferma di registrazione
+Precedence: bulk
+
+<div tal:omit-tag=""
+  tal:define="fullname python:member.getProperty('fullname')">
+Benvenuto <span i18n:name="fullname" tal:replace="fullname" /> in Facciamo il portale a sostegno delle aziende colpite dal terremoto.
+
+il tuo nome utente è <span tal:replace="member"/>.
+
+Per favore attiva il tuo accout prima di <span tal:replace="python: context.toLocalizedTime(reset['expires'], long_format=1)" /> seguendo questo link: <span 
+  tal:replace="python:here.pwreset_constructURL(reset['randomstring'])+'?userid='+member.getUserName()" />
+
+Il regolamento è http://www.facciamoadesso.it/il-progetto/il-regolamento
+
+
+Ti ricordiamo la filosofia di Facciamo.
+
+Rivolto alle imprese coinvolte dal sisma
+Solo le imprese con sede nei comuni colpiti dal terremoto possono offrire i loro prodotti o chiedere supporto gratuito su Facciamo
+
+Solo persone vere
+Per poter operare su Facciamo (offrire, comprare, ecc.) è necessario registrarsi come persone, identificandosi in modo chiaro ed inserendo un numero di cellulare ed una email in quanto indispensabili per poter creare il contatto tra chi offre e chi compra
+
+Mettiamoci la faccia
+Questo è un luogo di incontro di persone e quindi mettiamo la nostra foto per presentarci
+
+Offerte aggiornate
+Chi offre prodotti è tenuto a mantenere aggiornata l’effettiva disponibilità degli stessi
+
+Si paga direttamente al venditore
+Sul portale non avvengono transazioni economiche: i soggetti entrano in contatto ed organizzano pagamenti e consegna in assoluta autonomia
+
+La pazienza è solidarietà
+La situazione nelle zone colpite è molto difficile: siamo on line …. ma trovare una connessione per chi è sul posto non è sempre immediato
+
+Smascheriamo i farabutti
+Chiunque ritenga di aver individuato una persona o una impresa non esistente o un comportamento non corretto è tenuto a segnalarlo
+
+Facciamo_lo conoscere
+Facciamo è una iniziativa di servizio alle imprese in difficoltà: segnaliamo l’esistenza del portale ed i prodotti offerti ai nostri conoscenti (email, social network, passaparola)
+
+
+--
+Il team di Facciamo
+</div>
+</tal:root>
