@@ -12,6 +12,8 @@ from restarter.policy import policyMessageFactory as _
 
 TIMEOUT = 2
 NOTIFY = 'http://localhost:9441'
+
+NEW_USER_SUBJECT = "Conferma di registrazione"
 NEW_USER_MAIL = """
 Benvenuto in Facciamo il portale a sostegno delle aziende colpite dal terremoto.
 
@@ -50,6 +52,7 @@ Facciamo è una iniziativa di servizio alle imprese in difficoltà: segnaliamo l
 Il team di Facciamo
 """
 
+NEW_COMPANY_SUBJECT = "Registrazione azienda completata"
 NEW_COMPANY = '''
 %s,
 
@@ -72,6 +75,8 @@ Il regolamento che hai accettato nella procedura di registrazione è visibile a 
 Il team di Facciamo
 '''
 
+
+NEW_EMPLOYEE_SUBJECT = "Delega alla gestione di un'azienda"
 NEW_EMPLOYEE = '''
 %s,
 
@@ -92,7 +97,8 @@ Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-pr
 Il team di Facciamo
 '''
 
-
+NEW_ORDER_SMS = '''%s ha effettuato una prenotazione su Facciamo. Vai alla tua email per contattarlo.'''
+NEW_ORDER_SUBJECT = "Nuova prenotazione"
 NEW_ORDER_MAIL = '''
 Buon notizie,
 
@@ -107,10 +113,7 @@ Per confermare la sua richiesta, ricordati di andare sulla prenotazione e premer
 Il team di Facciamo
 '''
 
-
-NEW_ORDER_SMS = '''%s ha effettuato una prenotazione su Facciamo. Vai alla tua email per contattarlo.'''
-
-
+ORDER_ACCEPTED_SUBJECT = "Prenotazione accettata"
 ORDER_ACCEPTED = '''
 Complimenti,
 
@@ -128,7 +131,7 @@ Una volta completata la transazione, ti invitiamo a lasciare un commento sulla p
 Il team di Facciamo
 '''
 
-
+ORDER_REJECTED_SUBJECT = "Prenotazione non confermata"
 ORDER_REJECTED = '''
 %s,
 
@@ -143,7 +146,20 @@ Guarda su http://www.facciamoadesso.it per scoprire altri prodotti interessanti.
 Il team di Facciamo
 '''
 
-NEW_COMMENT = 'You have received new comment to %s.'
+NEW_COMMENT_SUBJECT = "Nuovo commento"
+NEW_COMMENT = '''
+======
+
+%s ha scritto:
+
+%s
+
+Link al commento: %s
+
+
+-------------------
+Il team di Facciamo
+'''
 
 logger = logging.getLogger('restarter.policy')
 
@@ -342,8 +358,8 @@ def company_added(company, event):
     owner = company.getOwner()
 
     params = {'email_message': NEW_COMPANY % (owner.getProperty('fullname', 'Ciao!'),
-                                        company.title_or_id(),
-                                        company.absolute_url()),}
+                                              company.title_or_id(),
+                                              company.absolute_url()),}
     company_notify(company, params)
     company.portal_workflow.doActionFor(company, "create")
 
@@ -352,7 +368,10 @@ def company_added(company, event):
 
 def company_commented(company, event):
     """Event fired when company has been commented."""
-    params = {'email_message': NEW_COMMENT % company.absolute_url(),}
+    member = company.portal_membership.getAuthenticatedMember()
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+                                              event.comment_text,
+                                              company.absolute_url())}
     company_notify(company, params)
 
 
@@ -374,31 +393,30 @@ def product_added(product, event):
 def product_commented(product, event):
     """Event fired when product has been commented."""
     company = product.getCompany()
-    params = {'email_message': NEW_COMMENT % product.absolute_url(),}
+    member = company.portal_membership.getAuthenticatedMember()
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+                                              event.comment_text,
+                                              product.absolute_url())}
     company_notify(company, params)
 
-    member = product.portal_membership.getAuthenticatedMember()
-    email = member.getProperty('email', '')
-    if email:
-        params = {'email_message': NEW_COMMENT,
-                  'email': email}
-        notify('notify', params)
 
-
-def offer_commented(product, event):
+def offer_commented(offer, event):
     """Event fired when offer has been commented."""
-    member = product.getOwner()
-    email = member.getProperty('email', '')
-    if email:
-        params = {'email_message': NEW_COMMENT,
-                  'email': email}
-        notify('notify', params)
+    company = offer.getCompany()
+    member = company.portal_membership.getAuthenticatedMember()
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+                                              event.comment_text,
+                                              offer.absolute_url())}
+    company_notify(company, params)
 
 
 def demand_commented(product, event):
     """Event fired when demand has been commented."""
     company = product.getCompany()
-    params = {'email_message': NEW_COMMENT % product.absolute_url(),}
+    member = company.portal_membership.getAuthenticatedMember()
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+                                              event.comment_text,
+                                              product.absolute_url())}
     company_notify(company, params)
 
 

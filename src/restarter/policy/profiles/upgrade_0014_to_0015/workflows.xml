@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+ <property
+    name="title">Contains workflow definitions for your portal</property>
+ <object name="companies_workflow" meta_type="Workflow"/>
+ <object name="company_workflow" meta_type="Workflow"/>
+ <object name="demand_workflow" meta_type="Workflow"/>
+ <object name="demands_workflow" meta_type="Workflow"/>
+ <object name="offer_workflow" meta_type="Workflow"/>
+ <object name="offers_workflow" meta_type="Workflow"/>
+ <object name="order_workflow" meta_type="Workflow"/>
+ <object name="product_workflow" meta_type="Workflow"/>
+ <object name="products_workflow" meta_type="Workflow"/>
+ <bindings>
+  <type type_id="Companies">
+   <bound-workflow workflow_id="companies_workflow"/>
+  </type>
+  <type type_id="Company">
+   <bound-workflow workflow_id="company_workflow"/>
+  </type>
+  <type type_id="Demand">
+   <bound-workflow workflow_id="demand_workflow"/>
+  </type>
+  <type type_id="Demands">
+   <bound-workflow workflow_id="demands_workflow"/>
+  </type>
+  <type type_id="Offer">
+   <bound-workflow workflow_id="offer_workflow"/>
+  </type>
+  <type type_id="Offers">
+   <bound-workflow workflow_id="offers_workflow"/>
+  </type>
+  <type type_id="Order">
+   <bound-workflow workflow_id="order_workflow"/>
+  </type>
+  <type type_id="Product">
+   <bound-workflow workflow_id="product_workflow"/>
+  </type>
+  <type type_id="Products">
+   <bound-workflow workflow_id="products_workflow"/>
+  </type>
+ </bindings>
+</object>
