@@ -342,7 +342,7 @@ msgstr "Torna indietro"
 
 #: ./content/product.py:86
 msgid "Shipment"
-msgstr "Spedizione"
+msgstr "Modalità e tempi di consegna"
 
 #: ./browser/facebook_login.py:22
 msgid "The App ID/API Key you got when creating the app at https://developers.facebook.com/apps"
