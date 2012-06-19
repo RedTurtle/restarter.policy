@@ -29,11 +29,11 @@ msgstr "Approvazione termini d'uso"
 
 #: ./browser/common.py:80
 msgid "Add company"
-msgstr ""
+msgstr "Aggiungi Azienda"
 
 #: ./browser/common.py:81
 msgid "Add new company wizard"
-msgstr ""
+msgstr "Parti con il processo di registrazione"
 
 #: ./content/company.py:58
 msgid "Address"
