@@ -1,3 +1,6 @@
 <div tal:repeat="association view/associations">
-  <img src="" tal:attributes="src string:${context/portal_url}/portal_memberdata/portraits/${association}" alt="" title="" class="tileImage">
+  <img tal:define="assocname python: view.getAssocName(association)"
+       tal:attributes="src string:${context/portal_url}/portal_memberdata/portraits/${association};
+                       title assocname;
+                       alt assocname" class="tileImage">
 </div>

@@ -16,7 +16,13 @@ class ManageViewlet(ViewletBase):
 
     def update(self):
         membership = getToolByName(self.context, 'portal_membership')
-        self.username = membership.getAuthenticatedMember().getProperty('fullname')
+        member = membership.getAuthenticatedMember()
+        self.username = member.getProperty('fullname')
+        annotations = IAnnotations(self.context)
+        if not ASSOCIATION_KEY in annotations:
+            annotations[ASSOCIATION_KEY] = []
+        associations = annotations[ASSOCIATION_KEY]
+        self.accept = member.getId() not in associations
 
 
 class ListViewlet(ViewletBase):
@@ -29,6 +35,10 @@ class ListViewlet(ViewletBase):
         if not ASSOCIATION_KEY in annotations:
             annotations[ASSOCIATION_KEY] = []
         self.associations = annotations[ASSOCIATION_KEY]
+
+    def getAssocName(self, userid):
+        membership = getToolByName(self.context, 'portal_membership')
+        return membership.getMemberById(userid).getProperty('fullname')
 
 
 class AssocAproveToogle(BrowserView):

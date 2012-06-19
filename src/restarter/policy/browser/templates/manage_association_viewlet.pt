@@ -6,7 +6,8 @@
 
 <div class="assoc-rating">
   <form action="#" method="post" tal:attributes="action string:${context/absolute_url}/@@assoc_aprove_toggle">
-      <input type="submit" class="like-button" tal:attributes="value view/username"/>
+    <input tal:condition="view/accept" type="submit" class="like-button" tal:attributes="value string:${view/username} approva questa azienda"/>
+    <input tal:condition="not: view/accept" type="submit" class="like-button" tal:attributes="value string:${view/username} non approva più questa azienda"/>
   </form>
 </div>
 
