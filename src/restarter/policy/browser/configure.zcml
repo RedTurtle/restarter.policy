@@ -21,6 +21,14 @@
 
     <browser:page
       for="*"
+      name="add_company"
+      template="templates/add_company_wizard.pt"
+      layer="..interfaces.layer.ISkin"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
       name="rate-if-you-dare"
       class=".like.LikeWidgetView"
       layer="..interfaces.layer.ISkin"
@@ -218,6 +226,13 @@
            factory=".common.FactoriesSubMenuItem"
            provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
 
+ <!-- Folder factories -->
+  <browser:page
+      for="..interfaces.ICompanies"
+      name="folder_factories"
+      class=".common.FolderFactoriesView"
+      permission="cmf.AddPortalContent"
+  />
 
   <browser:resourceDirectory
       name="restarter.images"

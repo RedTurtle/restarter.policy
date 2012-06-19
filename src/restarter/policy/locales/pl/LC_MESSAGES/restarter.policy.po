@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-19 09:34+0000\n"
+"POT-Creation-Date: 2012-06-19 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,14 @@ msgstr ""
 
 #: ./content/company.py:165
 msgid "Accept terms of use"
+msgstr ""
+
+#: ./browser/common.py:80
+msgid "Add company"
+msgstr ""
+
+#: ./browser/common.py:81
+msgid "Add new company wizard"
 msgstr ""
 
 #: ./content/company.py:58
@@ -108,7 +116,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: ./browser/common.py:42
+#: ./browser/common.py:45
 msgid "Employee"
 msgstr ""
 

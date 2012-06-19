@@ -79,7 +79,7 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
     atapi.TextField('shipment',
         searchable=0,
-        required=False,
+        required=True,
         default_content_type='text/plain',
         allowable_content_types=('text/plain',),
         widget=atapi.TextAreaWidget(

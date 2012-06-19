@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+</head>
+
+<body>
+<metal:main fill-slot="main"
+     tal:define="context_state context/@@plone_context_state">
+
+    <h1 class="documentFirstHeading">Aggiungi azienda</h1>
+
+    <div class="documentDescription">
+      La creazione di pagine per offrire i propri prodotti è riservata alla aziende con sede operativa in
+      uno dei comuni colpiti dal terremoto (Decreto del Ministro dell'Economia e delle Finanze 1 giugno 2012 o successive modifiche).
+    </div>
+
+    <div id="content-core">
+      L'Assemblea Legislativa della Regione Emilia‐Romagna garantisce la trasparenza e
+      correttezza dell'iniziativa anche in quanto titolare del dominio, del portale e
+      del trattamento dei dati. I dati e le informazioni raccolti verranno utilizzati
+      esclusivamente per le finalità dichiarate dall’iniziativa. <br/>
+      La creazione di una “pagina azienda” deve essere effettuata dal legale rappresentante
+      o da un suo incaricato. I dati forniti nel corso della registrazione di una azienda su
+      Facciamoadesso.it hanno valore di autocertificazione e, di conseguenza, eventuali abusi
+      saranno perseguiti ai sensi di legge.<br/>
+      La registrazione come azienda comporta l’accettazione del regolamento di facciamo che puoi visionare qui. <br/>
+      Nella sezione Il progetto puoi trovare molte altre informazioni su Facciamo. <br/>
+      Se invece è tutto chiaro... Sei pronto per creare la pagina della tua azienda!
+      <br/>
+      <br/>
+      <div class="contentActions btnActions">  
+        <ul>
+          <li class="button green">
+            <a href="" tal:attributes="href string:${context/absolute_url}/createObject?type_name=Company" class="contenttype-company" id="company">
+              <span class="subMenuTitle">Aggiungi azienda</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+</metal:main>
+</body>
+</html>
