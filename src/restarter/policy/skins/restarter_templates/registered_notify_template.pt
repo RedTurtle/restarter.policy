@@ -11,7 +11,7 @@ Precedence: bulk
 
 <div tal:omit-tag=""
   tal:define="fullname python:member.getProperty('fullname')">
-Benvenuto <span i18n:name="fullname" tal:replace="fullname" /> in Facciamo il portale a sostegno delle aziende colpite dal terremoto.
+Benvenuto <span tal:replace="fullname" /> in Facciamo il portale a sostegno delle aziende colpite dal terremoto.
 
 il tuo nome utente è <span tal:replace="member"/>.
 
