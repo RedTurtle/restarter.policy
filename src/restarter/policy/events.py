@@ -276,7 +276,7 @@ def order_added(order, event):
               'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname','Utente')}
     company_notify(company, params)
     status = IStatusMessage(order.REQUEST)
-    status.add(_(u'Your order has been registered!'))
+    status.add(_(u'Your order has been registered!'), type=u'order')
 
 
 def product_published(product, event):

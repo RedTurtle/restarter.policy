@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-19 10:41+0000\n"
+"POT-Creation-Date: 2012-06-19 14:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,11 +27,11 @@ msgstr ""
 msgid "Accept terms of use"
 msgstr ""
 
-#: ./browser/common.py:80
+#: ./browser/common.py:81
 msgid "Add company"
 msgstr ""
 
-#: ./browser/common.py:81
+#: ./browser/common.py:82
 msgid "Add new company wizard"
 msgstr ""
 
@@ -45,6 +45,14 @@ msgstr ""
 
 #: ./browser/facebook_login.py:23
 msgid "App Secret"
+msgstr ""
+
+#: ./browser/associations.py:49
+msgid "Association added."
+msgstr ""
+
+#: ./browser/associations.py:47
+msgid "Association removed."
 msgstr ""
 
 #: ./content/company.py:131
@@ -116,7 +124,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: ./browser/common.py:45
+#: ./browser/common.py:46
 msgid "Employee"
 msgstr ""
 
@@ -323,11 +331,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:344
+#: ./events.py:347
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:396
+#: ./events.py:399
 msgid "Published on product creation"
 msgstr ""
 
@@ -378,6 +386,10 @@ msgstr ""
 
 #: ./content/company.py:163
 msgid "You must accept the Terms of Use."
+msgstr ""
+
+#: ./events.py:279
+msgid "Your order has been registered!"
 msgstr ""
 
 #: ./content/company.py:41

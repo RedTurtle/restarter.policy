@@ -92,7 +92,6 @@ class OrderStatusMessage(StatusMessage):
     def add(self, text, type=u'info'):
         """Add a status message.
         """
-        import pdb; pdb.set_trace()
         context = self.context
         text = translate(text, context=context)
         annotations = IAnnotations(context)
