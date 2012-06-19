@@ -2,6 +2,7 @@
 
 import requests
 import logging
+import html2text
 
 from zope.interface import directlyProvides
 from zope.interface import implements
@@ -171,7 +172,7 @@ class DisqusNotify(ObjectEvent):
     def __init__(self, object, comment_id, comment_text):
         self.object = object
         self.comment_id = comment_id
-        self.comment_text = comment_text
+        self.comment_text = html2text.html2text(comment_text.decode('utf8','ignore'))
 
 
 class CompanyShareNotify(ObjectEvent):
@@ -229,6 +230,7 @@ def order_state_changed(order, event):
                                                               order.absolute_url(),
                                                               company.absolute_url(),
                                                               ),
+                           'email_subject': ORDER_ACCEPTED_SUBJECT,
                            'email': email})
         notify('notify', params)
 
@@ -239,6 +241,7 @@ def order_state_changed(order, event):
                                                               order.absolute_url(),
                                                               company.absolute_url(),
                                                               ),
+                           'email_subject': ORDER_REJECTED_SUBJECT,
                            'email': email})
         notify('notify', params)
     else:
@@ -268,6 +271,7 @@ def order_added(order, event):
                                                  owner.getProperty('cellphone'),
                                                  owner.getProperty('email'),
                                                  ),
+              'email_subject': NEW_ORDER_SUBJECT,
               'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname','Utente')}
     company_notify(company, params)
 
@@ -303,6 +307,7 @@ def company_employee_modified(company, event):
             params = {'email_message': NEW_EMPLOYEE % (member.getProperty('fullname','Ciao!'),
                                                        owner.getProperty('fullname', 'UPV'),
                                                        company.title_or_id()),
+                      'email_subject': NEW_EMPLOYEE_SUBJECT,
                       'email': email}
             notify('notify', params)
     company.reindexObject(idxs=['company_employees'])
@@ -359,7 +364,8 @@ def company_added(company, event):
 
     params = {'email_message': NEW_COMPANY % (owner.getProperty('fullname', 'Ciao!'),
                                               company.title_or_id(),
-                                              company.absolute_url()),}
+                                              company.absolute_url()),
+              'email_subject': NEW_COMPANY_SUBJECT}
     company_notify(company, params)
     company.portal_workflow.doActionFor(company, "create")
 
@@ -371,7 +377,8 @@ def company_commented(company, event):
     member = company.portal_membership.getAuthenticatedMember()
     params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
                                               event.comment_text,
-                                              company.absolute_url())}
+                                              company.absolute_url()),
+              'email_subject': NEW_COMMENT_SUBJECT}
     company_notify(company, params)
 
 
@@ -396,7 +403,8 @@ def product_commented(product, event):
     member = company.portal_membership.getAuthenticatedMember()
     params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
                                               event.comment_text,
-                                              product.absolute_url())}
+                                              product.absolute_url()),
+              'email_subject': NEW_COMMENT_SUBJECT}
     company_notify(company, params)
 
 
@@ -406,7 +414,8 @@ def offer_commented(offer, event):
     member = company.portal_membership.getAuthenticatedMember()
     params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
                                               event.comment_text,
-                                              offer.absolute_url())}
+                                              offer.absolute_url()),
+              'email_subject': NEW_COMMENT_SUBJECT}
     company_notify(company, params)
 
 
@@ -416,7 +425,8 @@ def demand_commented(product, event):
     member = company.portal_membership.getAuthenticatedMember()
     params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
                                               event.comment_text,
-                                              product.absolute_url())}
+                                              product.absolute_url()),
+              'email_subject': NEW_COMMENT_SUBJECT}
     company_notify(company, params)
 
 
@@ -434,6 +444,7 @@ def user_created(member, event):
     email = member.getProperty('email', '')
     if email:
         params = {'email_message': NEW_USER_MAIL,
+                  'email_subject': NEW_USER_SUBJECT,
                   'email': email}
         notify('notify', params)
 
