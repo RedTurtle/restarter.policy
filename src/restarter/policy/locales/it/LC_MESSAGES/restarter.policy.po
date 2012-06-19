@@ -146,7 +146,7 @@ msgstr "Lascia un commmento per questa prenotazione"
 
 #: ./content/product.py:21
 msgid "New"
-msgstr ""
+msgstr "Nuovo"
 
 #: ./content/company.py:176
 msgid "Notification type"
@@ -358,7 +358,7 @@ msgstr "La parola segreta che ottieni quando crei l'app in https://developers.fa
 
 #: ./content/product.py:22
 msgid "Used"
-msgstr ""
+msgstr "Usato"
 
 #: ./content/product.py:97
 msgid "Waranty"
