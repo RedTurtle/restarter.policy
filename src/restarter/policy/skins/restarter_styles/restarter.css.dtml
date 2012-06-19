@@ -1537,4 +1537,24 @@ dl.faCategoriesPortlet dd.portletFooter p {
     max-width: 100%;
 }
 
+/** portlet storie **/
+.storiePortlet .dataAuthor {
+    font-style: italic;
+}
+.storiePortlet .dataAuthor .authorPost {
+    font-weight: bold;
+}
+.storiePortlet h3.faCollectionTitle {
+    font-family: <dtml-var headingFontFamily>;
+    font-size: 1.5em;
+}
+.storiePortlet .portletItem {
+    background-color: transparent;
+    border-left: 0;
+}
+.storiePortlet .faCollectionImg {
+    width: 180px;
+    height: 120px;
+}
+
 /* </dtml-with> */

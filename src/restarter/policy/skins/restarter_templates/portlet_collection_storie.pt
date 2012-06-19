@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+
+<metal:listingmacro define-macro="listing">
+
+  <dl class=""
+     tal:attributes="id view/data/div_id;
+                    class string:portlet faCollectionPortlet newsPortlet storiePortlet ${class}"
+      tal:define="collection_url view/collection_url;
+                  getIcon nocall:plone_view/getIcon;
+                  class view/data/css_class|nothing;">
+
+    <dt class="portletHeader"
+        tal:define="show_more view/data/show_more">
+          <a class="rss_feed"
+          tal:condition="view/data/check_rss"
+          tal:attributes="href view/rss_url">
+               <img tal:attributes="src string:${context/portal_url}/rss.gif" alt="RSS icon"/>
+         RSS feed
+               </a>
+          <tal:more condition="show_more">
+            <a class="linkMore" 
+               tal:condition="not:view/data/link_text"
+                tal:attributes="href collection_url" i18n:translate="more_url">
+               Vedi Tutte
+            </a>
+            <a tal:condition="view/data/link_text"
+               tal:attributes="href collection_url"
+              tal:content="view/data/link_text"
+              class="linkMore" >
+                     Custom text
+            </a>
+          </tal:more>
+
+          <a class="tile" tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
+              <span tal:content="view/data/header" />
+          </a>
+      </dt>
+      
+      <tal:events tal:repeat="obj query_results">
+      <dd class="portletItem faCollectionPortletItem"
+          tal:define="oddrow repeat/obj/odd;
+                      item_path obj/getPath;"
+          tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
+
+        <div class="faCollectionImg">
+          <img src="" alt=""
+               tal:condition="exists:python:path('here'+item_path.replace('/'+portal.getId(), '')+'/image_mini')"
+               tal:attributes="src string:${obj/getURL}/image_mini;
+                         alt obj/Description;"/>
+        </div>
+        <div class="dataAuthor">
+          <span class="itemData" 
+           tal:condition="view/data/show_dates"
+           tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span> di 
+           <a href="#" class="authorPost">Pinco Pallino</a>
+        </div>
+        <h3 class="faCollectionTitle">
+          <a href="#" 
+             tal:content="obj/Title"
+             tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
+        </h3>
+        <p class="faCollectionDesc" tal:content="obj/Description">
+          Fonte: Resto del Carlino
+        </p>
+        <div class="visualClear"><!-- --></div>
+      </dd>
+      </tal:events>
+
+      <dd class="portletItem faCollectionPortletItem"
+        tal:define="no_elements_text view/data/no_elements_text"
+      tal:condition="python:no_elements_text and len(query_results)==0">
+          <p i18n:translate="" tal:content="no_elements_text" />
+      </dd>
+
+  </dl>
+</metal:listingmacro>
+</metal:main-macro>
+</div>
+
+</body>
+</html>
