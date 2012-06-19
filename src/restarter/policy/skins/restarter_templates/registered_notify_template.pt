@@ -6,7 +6,7 @@
                   reset python:options.get('reset', None) or here.portal_password_reset.requestReset(member.getId())"
 >From: <span tal:replace="structure view/encoded_mail_sender" />
 To: <span tal:replace="python:member.getProperty('email')" />
-Subject: Conferma di registrazione
+Subject:[FacciamoAdesso] Imposta password
 Precedence: bulk
 
 <div tal:omit-tag=""
