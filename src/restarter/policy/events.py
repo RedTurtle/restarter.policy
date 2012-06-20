@@ -333,7 +333,7 @@ def company_added(company, event):
         return
 
     demands = company[company.invokeFactory('Demands','richieste')]
-    demands.setTitle(u'Richieste')
+    demands.setTitle(u'Cerchiamo')
     directlyProvides(products, (ISimpleAddButtons,))
     demands.reindexObject()
 
@@ -346,7 +346,7 @@ def company_added(company, event):
     media.setLayout('atct_album_view')
     company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
     media.setConstrainTypesMode(1)
-    media.setLocallyAllowedTypes(['Image','File'])
+    media.setLocallyAllowedTypes(['Image'])
     directlyProvides(media, (ISimpleAddButtons,))
     media.reindexObject()
 

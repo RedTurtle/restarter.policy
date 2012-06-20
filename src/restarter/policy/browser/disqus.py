@@ -14,7 +14,7 @@ class DisqusViewlet(ViewletBase):
     """
     Viewlet that for DISQUS comment system.
     """
-    index = ViewPageTemplateFile("disqus_panel.pt")
+    index = ViewPageTemplateFile("templates/disqus_panel.pt")
 
     @property
     def authenticated_email(self):

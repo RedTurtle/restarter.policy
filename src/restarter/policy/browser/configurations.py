@@ -4,6 +4,7 @@ from Products.Five import BrowserView
 from zope.interface import implements
 from zope.component import getMultiAdapter
 from Products.CMFCore.interfaces import ISiteRoot
+from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 
 from restarter.policy.interfaces import IRestarterConfiguration
 
@@ -11,6 +12,10 @@ from restarter.policy.interfaces import IRestarterConfiguration
 class RestarterConfig(BrowserView):
 
     implements(IRestarterConfiguration)
+
+    def showBigLogo(self):
+        if IHidePloneLeftColumn.providedBy(self.context): #always show home page logos on faceted
+            return True
 
     def isHomePage(self):
         context_state = getMultiAdapter((self.context, self.request), name='plone_context_state')
