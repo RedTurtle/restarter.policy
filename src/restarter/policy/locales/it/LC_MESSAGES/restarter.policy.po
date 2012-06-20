@@ -49,11 +49,11 @@ msgstr "App Secret"
 
 #: ./browser/associations.py:49
 msgid "Association added."
-msgstr ""
+msgstr "Azienda accreditata"
 
 #: ./browser/associations.py:47
 msgid "Association removed."
-msgstr ""
+msgstr "Rimosso l'accreditamento"
 
 #: ./content/company.py:131
 msgid "CF/P.IVA"
@@ -390,7 +390,7 @@ msgstr "Devi accettare i termini d'uso"
 
 #: ./events.py:279
 msgid "Your order has been registered!"
-msgstr ""
+msgstr "La tua prenotazione è stata registrata. Grazie!"
 
 #: ./content/company.py:41
 msgid "both"
