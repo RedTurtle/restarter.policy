@@ -37,7 +37,7 @@
 
         <dl id="companyProductsList" class="portlet faCollectionPortlet productsPortlet"
             tal:condition="products"
-            tal:define="products python: context.getFolderContents({'portal_type':'Product', 'path': company_path}, b_size=3)">
+            tal:define="products python: context.getFolderContents({'portal_type':'Product', 'path': company_path}, b_size=3)[:3]">
             <dt class="portletHeader">
                 <tal:more>
                 <a class="linkMore" tal:attributes="href string:${context/absolute_url}/prodotti">
@@ -81,7 +81,7 @@
 
          <dl id="companyDemandsList" class="portlet faCollectionPortlet productsPortlet offersPortlet"
             tal:condition="richieste"
-            tal:define="richieste python: context.getFolderContents({'portal_type':'Demand', 'path': company_path}, b_size=3)">
+            tal:define="richieste python: context.getFolderContents({'portal_type':'Demand', 'path': company_path}, b_size=3)[:3]">
 
             <dt class="portletHeader">
                 <tal:more>
