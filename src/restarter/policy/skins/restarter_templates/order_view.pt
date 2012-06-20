@@ -30,6 +30,12 @@
                 <metal:use_field use-macro="field_macro" />
               </tal:if_visible>
             </tal:fields>
+
+            <div id="order-alert">
+                <p>Ricorda che la <strong>risposta</strong> alla tua prenotazione potrebbe anche arrivare con alcuni giorni di ritardo.</p>
+                <p>Comprenderai che la pazienza in questi casi è necessaria.</p>
+                <p>Nel caso in cui avessi prenotato questo prodotto per errore puoi <strong>cancellarlo</strong> cliccando sul menu a tendina in alto a destra dove è evidenziato lo stato <em>"nuovo ordine"</em>.</p>
+            </div>
           </div>
         </metal:body_macro>
         <metal:folderlisting_macro metal:define-macro="folderlisting"/>

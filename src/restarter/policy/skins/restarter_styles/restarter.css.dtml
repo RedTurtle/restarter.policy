@@ -1158,6 +1158,18 @@ a.noFoto span {
     background: transparent  url(++resource++restarter.images/bag.png) no-repeat right center;
     padding: 0.3em 40px 0.3em 0;
 }
+#order-view #order-alert {
+    color: #4D7916;
+    padding: 1em;
+    margin: 1em 2em;
+    background-color: #F7FFE4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#order-view #order-alert p {
+    margin: 0 0 0.2em;
+}
 
 /**/
 
