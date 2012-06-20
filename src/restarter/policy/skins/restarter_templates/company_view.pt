@@ -53,7 +53,7 @@
             <dd class="portletItem faCollectionPortletItem">
 
               <div class="faCollectionImg">
-                <a href="#">
+                <a href="#" tal:attributes="href obj/getURL;">
                   <img src="" alt=""
                        tal:attributes="src string:${obj/getURL}/leadImage_mini;
                                        alt obj/Description;"/>
