@@ -58,13 +58,16 @@
           <img src="" alt=""
                tal:condition="exists:python:path('here'+item_path.replace('/'+portal.getId(), '')+'/image_mini')"
                tal:attributes="src string:${obj/getURL}/image_mini;
-                         alt obj/Description;"/>
+                               alt obj/Description;"/>
+          <img src="" alt=""
+               tal:condition="obj/hasContentLeadImage"
+               tal:attributes="src string:${obj/getURL}/leadImage_mini;
+                               alt obj/Description;"/>
         </div>
         <div class="dataAuthor">
           <span class="itemData" 
            tal:condition="view/data/show_dates"
            tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span> di 
-           <a href="#" class="authorPost">Pinco Pallino</a>
         </div>
         <h3 class="faCollectionTitle">
           <a href="#" 
