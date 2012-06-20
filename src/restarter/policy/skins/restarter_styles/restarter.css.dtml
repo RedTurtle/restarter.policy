@@ -244,6 +244,9 @@ span.noMenuAction {
 #logo-nav-wrapper {
     padding: 40px 0;
 }
+.template-facetednavigation_view #logo-nav-wrapper {
+    padding-bottom: 0;
+}
 #navRedBtn.bigBtn ul#navRed li {
     display: block;
     float: left;
