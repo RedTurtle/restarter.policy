@@ -1557,4 +1557,9 @@ dl.faCategoriesPortlet dd.portletFooter p {
     height: 120px;
 }
 
+/** associations list and vote **/
+form input.like-button {
+
+}
+
 /* </dtml-with> */

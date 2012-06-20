@@ -88,7 +88,7 @@
     <browser:viewlet
         for="..interfaces.ICompany"
         name="restarter.associations_list"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
         class=".associations.ListViewlet"
         permission="zope2.View"
         layer="..interfaces.layer.ISkin"
@@ -103,10 +103,20 @@
         for="..interfaces.ICompany"
         name="restarter.associations_manage"
         class=".associations.ManageViewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
         permission="restarter.ManageAssociationLikes"
         layer="..interfaces.layer.ISkin"
         />
 
+
+   <!-- cioppino -->
+    <browser:viewlet
+       name="cioppino.twothumbs"
+       for="cioppino.twothumbs.interfaces.ILoveThumbsDontYou"
+       manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+       class="cioppino.twothumbs.viewlets.thumbs.ThumbsViewlet"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+      />
 
 </configure>
