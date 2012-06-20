@@ -67,7 +67,7 @@
         <div class="dataAuthor">
           <span class="itemData" 
            tal:condition="view/data/show_dates"
-           tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span> di 
+           tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span>
         </div>
         <h3 class="faCollectionTitle">
           <a href="#" 
