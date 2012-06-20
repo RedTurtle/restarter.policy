@@ -1652,5 +1652,25 @@ dl.faCategoriesPortlet dd.portletFooter p {
     margin: 0 auto 0.8em;
     border: 3px solid #FAFAFA;
 }
+/** portal message **/
+dl.portalMessage {
+    border-color: #BCE8F1;
+    background-color: #D9EDF7;
+    color: #3A87AD;
+}
+dl.portalMessage dt {
+    background-color: #3A87AD;
+}
+dl.order {
+    border-color: #D6E9C6;
+    background-color: #DFF0D8;
+    color: #468847;
+}
+dl.order dt {
+    background-color: #468847;
+}
+dl.order dd {
+    background: transparent url(++resource++restarter.images/ico_ok.png) no-repeat 99% center;
+}
 
 /* </dtml-with> */
