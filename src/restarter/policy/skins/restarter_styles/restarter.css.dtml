@@ -791,7 +791,8 @@ dl.productsPortlet p.btnLink a.btn:hover,
 /** Company **/
 .portaltype-company #content .tileImage {
     float: left;
-    padding: 0.3em 1.5em 0.2em 0;
+    margin-left: 0;
+    padding: 0.3em 0.5em 0.2em 0;
 }
 .portaltype-company #content .documentDescription {
     font-weight: normal;
@@ -800,6 +801,7 @@ dl.productsPortlet p.btnLink a.btn:hover,
 #companyBody {
     float: left; 
     padding-top: 0;
+    max-width: 305px;
 }
 div.comMap a {
     margin: 0.3em 0 0;
@@ -852,6 +854,7 @@ div.comMap {
 #content .comNumbers .comWeb {
     margin-top: 0.4em;
 }
+/*
 #content .comNumbers .comEmail,
 #content .comNumbers .comCell {
     display: inline;
@@ -861,6 +864,7 @@ div.comMap {
     margin-right: 0.7em;
     border-right: 1px dotted #999;
 }
+*/
 #content dl#companyProductsList,
 #content dl#companyDemandsList {
     clear: left;
@@ -1558,8 +1562,59 @@ dl.faCategoriesPortlet dd.portletFooter p {
 }
 
 /** associations list and vote **/
-form input.like-button {
-
+.assoc-rating {
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+.assoc-rating form input.like-button {
+    background: #ECFFD8 url(++resource++restarter.images/ico_approve.png) no-repeat 4px center;
+    color: #000;
+    border: 1px solid #A4E670;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    padding:  0.6em 1em 0.6em 36px;
+    cursor: pointer;
+}
+.assoc-rating form input.like-button:hover {
+    background-color: &dtml-contentViewBackgroundColor;;
+    border-color: &dtml-contentViewBackgroundColor;;
+    color: #FFF;
+}
+.assoc-rating form input.unlike-action {
+    background-color: &dtml-contentViewBackgroundColor;;
+    background-image: url(++resource++restarter.images/ico_approve_light.png);
+    border-color: &dtml-contentViewBackgroundColor;;
+    color: #FFF;
+}
+.assoc-rating form input.unlike-action:hover {
+    background-color: #EFEFEF;
+    background-image: url(++resource++restarter.images/ico_approve.png);
+    border-color: #CCC;
+    color: #666;
+}
+#list-associations {
+    float: right;
+    text-align: center;
+    padding: 10px;
+    background-color: #F0F0F0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    max-width: 120px;
+}
+#list-associations h4 {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: <dtml-var headingFontFamily>;
+    color: #666;
+    padding-bottom: 1em;
+}
+#list-associations img.associationLogo {
+    display: block;
+    margin: 0 auto 0.8em;
+    border: 3px solid #FAFAFA;
 }
 
 /* </dtml-with> */
