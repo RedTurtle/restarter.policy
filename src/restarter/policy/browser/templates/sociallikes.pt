@@ -1,0 +1,36 @@
+<div id="viewlet-social-like"
+     tal:attributes="class view/typebutton"
+     style="display:none" i18n:domain="sc.social.like" tal:condition="view/enabled">
+    <tal:gp tal:condition="view/gp_enabled">
+        <tal:block tal:define="button python:{'vertical':'tall','horizontal':'medium'}; vbutton view/typebutton">
+          <div id="plusonebt"></div> 
+          <script type="text/javascript" tal:content="python:'''\n gapi.plusone.render('plusonebt',{'size': '%s','annotation': 'bubble'}); ''' %(button[str(vbutton)])" >
+          </script>
+        </tal:block>
+    </tal:gp>
+    <tal:twitter tal:condition="view/twitter_enabled">
+        <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+        <a href="http://twitter.com/share" class="twitter-share-button" tal:attributes="data-count view/typebutton;
+                                                                                        data-via view/twittvia;
+                                                                                        data-url here/absolute_url;
+                                                                                        data-text here/Title;">Tweet</a>
+    </tal:twitter>
+    <tal:fb
+        tal:condition="view/fb_enabled"
+        tal:define="button python:{'vertical':'box_count','horizontal':'button_count'};
+        vbutton view/typebutton">
+        <div class="fb-send" data-href="" tal:attributes="data-href context/absolute_url" style="border: 0; width: 60px; font-size: 1px;"></div>
+        <iframe tal:attributes="src python:'//www.facebook.com/plugins/like.php?href=%s&amp;send=false&amp;layout=%s&amp;show_faces=true&amp;action=%s' %(here.absolute_url(),button[str(vbutton)],view.fbaction)"
+          scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+
+    </tal:fb>
+</div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("div#viewlet-social-like").each(function(){
+            jQuery(this).fadeIn(3000);
+            jQuery(this).removeAttr("style");
+        });
+    });
+</script>

@@ -71,7 +71,7 @@
     <browser:viewlet
         name="sc.social.likes"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class="sc.social.like.browser.viewlets.SocialLikesViewlet"
+        class=".fb_metadata.SocialLikesViewlet"
         layer="..interfaces.layer.ISkin"
         permission="zope.Public"
         />

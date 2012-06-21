@@ -35,6 +35,7 @@
               tal:define="member context/@@plone_portal_state/member;
                           author context/Creator"
               tal:condition="python: member.getId() == author">
+
                 <p>Ricorda che la <strong>risposta</strong> alla tua prenotazione potrebbe anche arrivare con alcuni giorni di ritardo.</p>
                 <p>Comprenderai che la pazienza in questi casi è necessaria.</p>
                 <p>Nel caso in cui avessi prenotato questo prodotto per errore puoi <strong>cancellarlo</strong> cliccando sul menu a tendina in alto a destra dove è evidenziato lo stato <em>"nuovo ordine"</em>.</p>

@@ -2,8 +2,8 @@ from plone.app.users.browser.register import RegistrationForm as BaseForm
 from zope.formlib import form
 
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone import PloneMessageFactory as _
 from Products.statusmessages.interfaces import IStatusMessage
+from restarter.policy import policyMessageFactory as _
 
 
 def get_email(self):
@@ -32,6 +32,12 @@ class RegistrationForm(BaseForm):
     @property
     def form_fields(self):
         defaultFields = super(RegistrationForm, self).form_fields
+        session = self.context.session_data_manager.getSessionData()
+        profile = session.get('facebook_profile')
+        if not profile:
+            IStatusMessage(self.request).addStatusMessage(_(u'Facebook data incomplete. Please retry.'), type="error")
+            return defaultFields
+
         if not defaultFields:
             return defaultFields
         defaultFields.get('email').get_rendered = get_email

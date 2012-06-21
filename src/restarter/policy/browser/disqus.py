@@ -52,9 +52,9 @@ class DisqusDemandViewlet(DisqusViewlet):
 class Notify(BrowserView):
     def __call__(self):
         if not self.request.method == 'POST':
-            raise NotFound
+            raise NotFound(self, 'disqus-not-found')
         elif not self.request.URL.startswith(self.request.get('HTTP_REFERER')):
-            raise NotFound
+            raise NotFound(self, 'disqus-not-found')
         comment_text = self.request.form.get('comment[text]')
         comment_id = self.request.form.get('comment[id]')
         objectEventNotify(DisqusNotify(self.context, comment_id, comment_text))

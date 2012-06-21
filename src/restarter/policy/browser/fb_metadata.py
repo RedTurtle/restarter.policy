@@ -1,8 +1,13 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from sc.social.like.browser.viewlets import SocialMetadataViewlet
+from sc.social.like.browser.viewlets import SocialMetadataViewlet, SocialLikesViewlet as BaseLikeViewlet
 from collective.contentleadimage.config import IMAGE_FIELD_NAME
 from restarter.policy.interfaces import IProduct, ICompany
 from collective.contentleadimage.interfaces import ILeadImageable
+
+
+class SocialLikesViewlet(BaseLikeViewlet):
+    render = ViewPageTemplateFile("templates/sociallikes.pt")
+
 
 class RestarterMetadataViewlet(SocialMetadataViewlet):
 
