@@ -6,6 +6,7 @@ from zope.annotation.interfaces import IAnnotations, IAnnotatable
 from Products.Archetypes import atapi
 from Products.validation.validators.ExpressionValidator import ExpressionValidator
 from Products.validation.validators.RegexValidator import RegexValidator
+from Products.validation.validators.BaseValidators import protocols
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
@@ -116,7 +117,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField('website',
         searchable=0,
         required=False,
-        validators=('isURL',),
+        validators = (RegexValidator('isWebsite', r'(?i)(%s)s?://[^\s\r\n]+' % '|'.join(protocols), title='',description='', errormsg=_('It is not a proper website URL.')),),
         widget=atapi.StringWidget(
             label=_("Company website"),
             description=_("Please give us your company website url."),
@@ -285,10 +286,15 @@ class Company(folder.ATFolder):
             value = field.get(self)
             return not not value
 
-#    def setCity(self, value):
-#        if value:
-#            value = value.title()
-#        super(Company, self).setCity(value)
+    def setCity(self, value):
+        if value:
+            value = value.title()
+        super(Company, self).setCity(value)
+
+    def setWebsite(self, value):
+        if value:
+            value = value.lower()
+        super(Company, self).setWebsite(value)
 
 
 atapi.registerType(Company, PROJECTNAME)
