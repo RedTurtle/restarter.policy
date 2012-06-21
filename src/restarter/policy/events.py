@@ -99,7 +99,7 @@ Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-pr
 Il team di Facciamo
 '''
 
-NEW_ORDER_SMS = '''%s ha effettuato una prenotazione su Facciamo. Vai alla tua email per contattarlo.'''
+NEW_ORDER_SMS = '''%s ha prenotato un tuo prodotto su Facciamoadesso. Guarda la tua email per contattarlo.'''
 NEW_ORDER_SUBJECT = "Nuova prenotazione"
 NEW_ORDER_MAIL = '''
 Buon notizie,
