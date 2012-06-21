@@ -19,7 +19,9 @@ from restarter.policy import policyMessageFactory as _
 PRODUCT_CONDITION = atapi.DisplayList((
              ("",_("-- not selected --")),
              ("new", _("New")),
+             ("new_demaged", _("New demaged")),
              ("used", _("Used")),
+             ("used_demaged", _("Used dameged")),
              ("other", _(u"Other"))))
 
 

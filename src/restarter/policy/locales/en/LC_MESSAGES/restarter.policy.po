@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-19 14:03+0000\n"
+"POT-Creation-Date: 2012-06-21 17:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./content/company.py:25
+#: ./content/company.py:26
 #: ./content/product.py:20
 msgid "-- not selected --"
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: ./content/company.py:165
+#: ./content/company.py:166
 msgid "Accept terms of use"
 msgstr ""
 
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Add new company wizard"
 msgstr ""
 
-#: ./content/company.py:58
+#: ./content/company.py:59
 msgid "Address"
 msgstr ""
 
@@ -47,27 +47,27 @@ msgstr ""
 msgid "App Secret"
 msgstr ""
 
-#: ./browser/associations.py:49
+#: ./browser/associations.py:59
 msgid "Association added."
 msgstr ""
 
-#: ./browser/associations.py:47
+#: ./browser/associations.py:57
 msgid "Association removed."
 msgstr ""
 
-#: ./content/company.py:131
+#: ./content/company.py:132
 msgid "CF/P.IVA"
 msgstr ""
 
-#: ./content/company.py:110
+#: ./content/company.py:111
 msgid "Cell phone"
 msgstr ""
 
-#: ./content/company.py:108
+#: ./content/company.py:109
 msgid "Cell phone has a wrong format. The proper is +391234567890"
 msgstr ""
 
-#: ./content/company.py:77
+#: ./content/company.py:78
 msgid "City"
 msgstr ""
 
@@ -80,19 +80,19 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: ./content/company.py:214
+#: ./content/company.py:215
 msgid "Company name"
 msgstr ""
 
-#: ./content/company.py:153
+#: ./content/company.py:154
 msgid "Company sectore"
 msgstr ""
 
-#: ./content/company.py:142
+#: ./content/company.py:143
 msgid "Company type"
 msgstr ""
 
-#: ./content/company.py:121
+#: ./content/company.py:122
 msgid "Company website"
 msgstr ""
 
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Demands"
 msgstr ""
 
-#: ./content/company.py:99
+#: ./content/company.py:100
 msgid "Email address"
 msgstr ""
 
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Facebook authentication denied"
 msgstr ""
 
-#: ./browser/facebook_register.py:57
+#: ./browser/facebook_register.py:38
 msgid "Facebook data incomplete. Please retry."
 msgstr ""
 
@@ -156,6 +156,10 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
+#: ./content/company.py:120
+msgid "It is not a proper website URL."
+msgstr ""
+
 #: ./content/order.py:57
 msgid "Leave your comment for this order."
 msgstr ""
@@ -164,7 +168,11 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: ./content/company.py:176
+#: ./content/product.py:22
+msgid "New demaged"
+msgstr ""
+
+#: ./content/company.py:177
 msgid "Notification type"
 msgstr ""
 
@@ -193,7 +201,7 @@ msgstr ""
 msgid "Order comment"
 msgstr ""
 
-#: ./content/product.py:23
+#: ./content/product.py:25
 msgid "Other"
 msgstr ""
 
@@ -202,35 +210,35 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
-#: ./content/company.py:166
+#: ./content/company.py:167
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/company.py:132
+#: ./content/company.py:133
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
 
-#: ./content/company.py:59
+#: ./content/company.py:60
 msgid "Please give us your company address"
 msgstr ""
 
-#: ./content/company.py:111
+#: ./content/company.py:112
 msgid "Please give us your company cell phone."
 msgstr ""
 
-#: ./content/company.py:78
+#: ./content/company.py:79
 msgid "Please give us your company city location."
 msgstr ""
 
-#: ./content/company.py:100
+#: ./content/company.py:101
 msgid "Please give us your company email address."
 msgstr ""
 
-#: ./content/company.py:89
+#: ./content/company.py:90
 msgid "Please give us your company province location."
 msgstr ""
 
-#: ./content/company.py:122
+#: ./content/company.py:123
 msgid "Please give us your company website url."
 msgstr ""
 
@@ -246,39 +254,39 @@ msgstr ""
 msgid "Please provide order quantity."
 msgstr ""
 
-#: ./content/product.py:75
+#: ./content/product.py:77
 msgid "Please provide product condition state."
 msgstr ""
 
-#: ./content/product.py:64
+#: ./content/product.py:66
 msgid "Please provide product price."
 msgstr ""
 
-#: ./content/product.py:54
+#: ./content/product.py:56
 msgid "Please provide product quantity unit."
 msgstr ""
 
-#: ./content/product.py:44
+#: ./content/product.py:46
 msgid "Please provide product quantity."
 msgstr ""
 
-#: ./content/product.py:87
+#: ./content/product.py:89
 msgid "Please provide product shipment conditions."
 msgstr ""
 
-#: ./content/product.py:98
+#: ./content/product.py:100
 msgid "Please provide product waranty conditions."
 msgstr ""
 
-#: ./content/company.py:177
+#: ./content/company.py:178
 msgid "Please select how we should notify your company."
 msgstr ""
 
-#: ./content/company.py:154
+#: ./content/company.py:155
 msgid "Please select your company sectore."
 msgstr ""
 
-#: ./content/company.py:143
+#: ./content/company.py:144
 msgid "Please select your company type."
 msgstr ""
 
@@ -290,11 +298,11 @@ msgstr ""
 msgid "Please select your offer category."
 msgstr ""
 
-#: ./content/product.py:34
+#: ./content/product.py:36
 msgid "Please select your product category."
 msgstr ""
 
-#: ./content/product.py:63
+#: ./content/product.py:65
 msgid "Price"
 msgstr ""
 
@@ -302,15 +310,15 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: ./content/product.py:33
+#: ./content/product.py:35
 msgid "Product category"
 msgstr ""
 
-#: ./content/product.py:74
+#: ./content/product.py:76
 msgid "Product condition"
 msgstr ""
 
-#: ./content/product.py:126
+#: ./content/product.py:128
 msgid "Product name"
 msgstr ""
 
@@ -327,7 +335,7 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ./content/company.py:88
+#: ./content/company.py:89
 msgid "Province"
 msgstr ""
 
@@ -340,11 +348,11 @@ msgid "Published on product creation"
 msgstr ""
 
 #: ./content/order.py:21
-#: ./content/product.py:43
+#: ./content/product.py:45
 msgid "Quantity"
 msgstr ""
 
-#: ./content/product.py:53
+#: ./content/product.py:55
 msgid "Quantity unit"
 msgstr ""
 
@@ -360,7 +368,7 @@ msgstr ""
 msgid "Send back"
 msgstr ""
 
-#: ./content/product.py:86
+#: ./content/product.py:88
 msgid "Shipment"
 msgstr ""
 
@@ -372,11 +380,15 @@ msgstr ""
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr ""
 
-#: ./content/product.py:22
+#: ./content/product.py:23
 msgid "Used"
 msgstr ""
 
-#: ./content/product.py:97
+#: ./content/product.py:24
+msgid "Used dameged"
+msgstr ""
+
+#: ./content/product.py:99
 msgid "Waranty"
 msgstr ""
 
@@ -384,7 +396,7 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
-#: ./content/company.py:163
+#: ./content/company.py:164
 msgid "You must accept the Terms of Use."
 msgstr ""
 
@@ -392,7 +404,7 @@ msgstr ""
 msgid "Your order has been registered!"
 msgstr ""
 
-#: ./content/company.py:41
+#: ./content/company.py:42
 msgid "both"
 msgstr ""
 
@@ -407,7 +419,7 @@ msgid "help_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:50
+#: ./content/company.py:51
 msgid "help_ragione_sociale"
 msgstr ""
 
@@ -442,12 +454,12 @@ msgid "label_password"
 msgstr ""
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:49
+#: ./content/company.py:50
 msgid "label_ragione_sociale"
 msgstr ""
 
 #. Default: "Register"
-#: ./browser/facebook_register.py:45
+#: ./browser/facebook_register.py:51
 #: ./browser/register.py:49
 msgid "label_register"
 msgstr ""
