@@ -1164,7 +1164,8 @@ a.noFoto span {
 #order-view #order-alert {
     color: #4D7916;
     padding: 1em;
-    margin: 1em 2em;
+    margin: 1em auto;
+    width: 80%;
     background-color: #F7FFE4;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
