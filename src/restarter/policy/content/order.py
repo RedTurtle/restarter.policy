@@ -18,7 +18,7 @@ OrderSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
         searchable=0,
         required=True,
         widget=atapi.DecimalWidget(
-            label=_("Quantity"),
+            label=_("Order quantity"),
             description=_("Please provide order quantity."),
             size=10
             ),

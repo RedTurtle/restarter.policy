@@ -42,7 +42,7 @@ ProductSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         searchable=0,
         required=True,
         widget=atapi.DecimalWidget(
-            label=_("Quantity"),
+            label=_("Product quantity"),
             description=_("Please provide product quantity."),
             size=5
             ),
