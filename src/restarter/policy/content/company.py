@@ -287,15 +287,15 @@ class Company(folder.ATFolder):
             value = field.get(self)
             return not not value
 
-    def setCity(self, value):
+    def setCity(self, value, **kwargs):
         if value:
             value = value.title()
-        super(Company, self).setCity(value)
+        self.getField('city').set(self, value, **kwargs)
 
-    def setWebsite(self, value):
+    def setWebsite(self, value, **kwargs):
         if value:
             value = value.lower()
-        super(Company, self).setWebsite(value)
+        self.getField('website').set(self, value, **kwargs)
 
     def CreatorFullname(self):
         creator = self.Creator()
