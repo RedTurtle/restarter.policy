@@ -319,23 +319,17 @@ def company_employee_modified(company, event):
 def company_added(company, event):
     """Every time a company is added - create substructure."""
 
-    if 'prodotti' in company.objectIds():
+    if 'storie-dell-azienda' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
 
-    products = company[company.invokeFactory('Products','prodotti')]
-    products.setTitle(u'Prodotti')
-    directlyProvides(products, (ISimpleAddButtons,))
-    products.reindexObject()
-
-    if 'richieste' in company.objectIds():
-        #stupid check - plone is calling it twice, why?
-        return
-
-    demands = company[company.invokeFactory('Demands','richieste')]
-    demands.setTitle(u'Cerchiamo')
-    directlyProvides(products, (ISimpleAddButtons,))
-    demands.reindexObject()
+    story = company[company.invokeFactory('Folder','storie-dell-azienda')]
+    story.setTitle(u'Storie dell\'azienda')
+    story.setLayout('folder_summary_view')
+    story.setConstrainTypesMode(1)
+    story.setLocallyAllowedTypes(['CompanyStory',])
+    directlyProvides(story, (ISimpleAddButtons,))
+    company.portal_workflow.doActionFor(story, "publish",comment=_("Published on company creation"))
 
     if 'foto' in company.objectIds():
         #stupid check - plone is calling it twice, why?
@@ -344,11 +338,10 @@ def company_added(company, event):
     media = company[company.invokeFactory('Folder','foto')]
     media.setTitle(u'Foto')
     media.setLayout('atct_album_view')
-    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image'])
     directlyProvides(media, (ISimpleAddButtons,))
-    media.reindexObject()
+    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
 
     if 'docs' in company.objectIds():
         #stupid check - plone is calling it twice, why?
@@ -356,15 +349,33 @@ def company_added(company, event):
 
     docs = company[company.invokeFactory('Folder','docs')]
     docs.setTitle(u'Documenti')
-    docs.setLayout('folder_tabular_view')
-    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+    docs.setLayout('folder_summary_view')
     docs.setConstrainTypesMode(1)
-    docs.setLocallyAllowedTypes(['Document','CompanyStory','File'])
+    docs.setLocallyAllowedTypes(['Document','File'])
     directlyProvides(docs, (ISimpleAddButtons,))
-    docs.reindexObject()
+    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+
+    if 'prodotti' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
+
+    products = company[company.invokeFactory('Products','prodotti')]
+    products.setTitle(u'Prodotti')
+    products.setLayout('folder_leadimage_view')
+    products.reindexObject()
+    directlyProvides(products, (ISimpleAddButtons,))
+
+    if 'richieste' in company.objectIds():
+        #stupid check - plone is calling it twice, why?
+        return
+
+    demands = company[company.invokeFactory('Demands','richieste')]
+    demands.setTitle(u'Cerchiamo')
+    demands.setLayout('folder_summary_view')
+    demands.reindexObject()
+    directlyProvides(products, (ISimpleAddButtons,))
 
     owner = company.getOwner()
-
     params = {'email_message': NEW_COMPANY % (owner.getProperty('fullname', 'Ciao!'),
                                               company.title_or_id(),
                                               company.absolute_url()),

@@ -126,7 +126,7 @@ msgstr "Indirizzo di email"
 
 #: ./browser/common.py:46
 msgid "Employee"
-msgstr "Dipendente"
+msgstr "Autorizzato"
 
 #: ./browser/facebook_login.py:60
 msgid "Facebook authentication denied"
@@ -158,7 +158,7 @@ msgstr "Cartella che contiene prodotti"
 
 #: ./content/company.py:121
 msgid "It is not a proper website URL."
-msgstr ""
+msgstr "L'indirizzo indicato non è un URL corretto"
 
 #: ./content/order.py:57
 msgid "Leave your comment for this order."
@@ -170,7 +170,7 @@ msgstr "Nuovo"
 
 #: ./content/product.py:22
 msgid "New demaged"
-msgstr ""
+msgstr "Nuovo, ma danneggiato"
 
 #: ./content/company.py:178
 msgid "Notification type"
@@ -386,7 +386,7 @@ msgstr "Usato"
 
 #: ./content/product.py:24
 msgid "Used dameged"
-msgstr ""
+msgstr "Usato, ma danneggiato"
 
 #: ./content/product.py:99
 msgid "Waranty"
