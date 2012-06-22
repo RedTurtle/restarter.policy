@@ -1689,9 +1689,5 @@ dl.order dd {
     background: transparent url(++resource++restarter.images/ico_ok.png) no-repeat 99% center;
 }
 
-/** storia **/
-.portaltype-companystory.template-base_view  div.ArchetypesField-BooleanField {
-    display: none;
-}
 
 /* </dtml-with> */
