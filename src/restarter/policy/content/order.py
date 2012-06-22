@@ -89,4 +89,17 @@ def order_value(object):
                 except ValueError:
                     return 0
 
+
+@indexer(IOrder)
+def order_items(object):
+    product = object.getProduct()
+    if product:
+        quantity = object.getQuantity()
+        if quantity:
+            try:
+                return float(quantity)
+            except ValueError:
+                return 0
+
+
 atapi.registerType(Order, PROJECTNAME)

@@ -67,14 +67,20 @@
       </metal:body_macro>
 
       <metal:folderlisting_macro metal:define-macro="folderlisting">
-      <div id="product-counter" tal:define="stats context/portal_stats/getStats" tal:on-error="string:">
+      <div id="product-counter" tal:define="stats context/portal_stats/getStats;
+                                            product_stats python: stats['products'][context.UID()]" tal:on-error="string:">
           <div class="counterPrenot">
-            <span class="labelTxt">Quantità prenotata non ancora assegnata:</span>
-            <span class="val"><tal:stats replace="python: stats['products'][context.UID()].get('new',0)"/> &euro;</span>
+            <span class="labelTxt">Prenotati
+                <span class="val" tal:content="python: product_stats['order_items'].get('new',0)" />
+                <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field> per un valore di
+                <span class="val"><span tal:replace="python: product_stats['order_value'].get('new',0)"/>
+                &euro;</span></span>
           </div>
           <div class="counterSell">
-            <span class="labelTxt">Quantità prenotata già assegnata:</span>
-            <span class="val"><tal:stats replace="python: stats['products'][context.UID()].get('accepted',0)"/> &euro;</span>
+            <span class="labelTxt">Venduti <span class="val" tal:content="python: product_stats['order_items'].get('accepted',0)" />
+                <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field> per un valore di
+                <span class="val"><span tal:replace="python: product_stats['order_value'].get('accepted',0)"/>
+                &euro;</span></span>
           </div>
           <div class="visualClear"></div>
       </div>

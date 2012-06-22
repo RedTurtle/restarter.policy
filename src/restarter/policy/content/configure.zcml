@@ -80,6 +80,7 @@
  <adapter factory=".product.product_price" name="product_price" />
 
  <adapter factory=".order.order_value" name="order_value" />
+ <adapter factory=".order.order_items" name="order_items" />
 
  <adapter factory=".demand.product_category" name="product_category" />
  <adapter factory=".demand.company_sectore" name="company_sectore" />
