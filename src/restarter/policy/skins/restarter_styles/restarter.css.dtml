@@ -1073,7 +1073,7 @@ a.noFoto span {
 /** ordine **/
 .order-view {
     float: left;
-    max-width: 54%;
+    max-width: 50%;
 }
 #productExtract {
     background-color: #F0F0F0;

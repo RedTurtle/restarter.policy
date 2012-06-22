@@ -161,7 +161,7 @@
                        tal:attributes="href string:${context/portal_url}"
                        i18n:domain="plone">
                         <img src="" alt="Facciamo Adesso, sostegno alle imprese colpite dal terremoto"
-                             tal:attributes="src string:${context/portal_url}/logo_facciamo_column.png" width="250" height="96" /></a>
+                             tal:attributes="src string:${context/portal_url}/logo_facciamo_column.png" width="230" height="88" /></a>
                 </div>
             </tal:restarter>
 
