@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-22 09:12+0000\n"
+"POT-Creation-Date: 2012-06-22 16:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -204,6 +204,10 @@ msgstr ""
 msgid "Order comment"
 msgstr ""
 
+#: ./content/order.py:21
+msgid "Order quantity"
+msgstr ""
+
 #: ./content/product.py:25
 msgid "Other"
 msgstr ""
@@ -325,6 +329,10 @@ msgstr ""
 msgid "Product name"
 msgstr ""
 
+#: ./content/product.py:45
+msgid "Product quantity"
+msgstr ""
+
 #: ./profiles/default/types/Product.xml
 msgid "Product that can be bought"
 msgstr ""
@@ -342,17 +350,12 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:347
+#: ./events.py:332
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:399
+#: ./events.py:410
 msgid "Published on product creation"
-msgstr ""
-
-#: ./content/order.py:21
-#: ./content/product.py:45
-msgid "Quantity"
 msgstr ""
 
 #: ./content/product.py:55
@@ -520,23 +523,5 @@ msgstr ""
 #. Default: "RPX register"
 #: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
-msgstr ""
-
-msgid "accepted"
-msgstr ""
-
-msgid "deleted"
-msgstr ""
-
-msgid "draft"
-msgstr ""
-
-msgid "new"
-msgstr ""
-
-msgid "rejected"
-msgstr ""
-
-msgid "requested"
 msgstr ""
 

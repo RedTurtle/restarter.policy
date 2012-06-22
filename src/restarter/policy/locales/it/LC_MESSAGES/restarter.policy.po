@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-22 09:12+0000\n"
+"POT-Creation-Date: 2012-06-22 16:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,6 +201,10 @@ msgstr "Prenotazione"
 msgid "Order comment"
 msgstr "Commento alla prenotazione"
 
+#: ./content/order.py:21
+msgid "Order quantity"
+msgstr ""
+
 #: ./content/product.py:25
 msgid "Other"
 msgstr "Altro"
@@ -322,6 +326,10 @@ msgstr "Condizioni del prodotto"
 msgid "Product name"
 msgstr "Denominazione del prodotto"
 
+#: ./content/product.py:45
+msgid "Product quantity"
+msgstr ""
+
 #: ./profiles/default/types/Product.xml
 msgid "Product that can be bought"
 msgstr "Prodotto che può essere acquistato"
@@ -339,18 +347,13 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:347
+#: ./events.py:332
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:399
+#: ./events.py:410
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
-
-#: ./content/order.py:21
-#: ./content/product.py:45
-msgid "Quantity"
-msgstr "quantità inizialmente offerta"
 
 #: ./content/product.py:55
 msgid "Quantity unit"
@@ -404,18 +407,9 @@ msgstr "Devi accettare i termini d'uso"
 msgid "Your order has been registered!"
 msgstr "La tua prenotazione è stata registrata. Grazie!"
 
-msgid "accepted"
-msgstr "L'ordine è stato accettato"
-
 #: ./content/company.py:43
 msgid "both"
 msgstr "entrambi"
-
-msgid "deleted"
-msgstr "L'ordine è stato cancellato"
-
-msgid "draft"
-msgstr "L'ordine è stato creato"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./userdataschema.py:45
@@ -478,19 +472,10 @@ msgstr "Registrati"
 msgid "label_remember_my_name"
 msgstr "Ricorda il mio nome"
 
-msgid "new"
-msgstr "Nuovo ordine"
-
 #. Default: "Register"
 #: ./skins/restarter_templates/rpx_macros.pt:54
 msgid "register_button"
 msgstr "Registrati"
-
-msgid "rejected"
-msgstr "L'ordine è stato rifiutato"
-
-msgid "requested"
-msgstr "L'ordine è stato richiesto"
 
 #: ./profiles/default/types/Company.xml
 #: ./profiles/upgrade_0009_to_0010/types/Company.xml
