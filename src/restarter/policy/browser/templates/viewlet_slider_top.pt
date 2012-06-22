@@ -3,9 +3,8 @@
     <div id="slider">
         <div id="sliderContent">
             <div id="sliderTxt">
-                <h2>NON VORRAI SOLO GUARDARE??</h2>
-                <p>Sei un'azienda e vuoi vendere i tuoi prodotti?<br />Sei interessato a fare acquisti solidali?<br />
-                Vuoi aiutarci a segnalare le opportunità presenti sul portale?</p>
+                <h2>FACCIAMO ADESSO</h2>
+                <p>Sei un'azienda e vuoi <strong>vendere</strong> i tuoi prodotti?<br/>Vuoi essere solidale con le <strong>aziende</strong> colpite dal terremoto?<br/>Vuoi segnalare ai tuoi contatti le <strong>opportunità</strong> presenti sul portale?</p>
                 <p class="btnLink">
                     <a class="btn" href="" tal:attributes="href string:${context/portal_url}/il-progetto/partecipa">Partecipa</a>
                 </p>

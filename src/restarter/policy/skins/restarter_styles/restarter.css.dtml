@@ -1073,7 +1073,7 @@ a.noFoto span {
 /** ordine **/
 .order-view {
     float: left;
-    max-width: 54%;
+    max-width: 50%;
 }
 #productExtract {
     background-color: #F0F0F0;
@@ -1164,7 +1164,8 @@ a.noFoto span {
 #order-view #order-alert {
     color: #4D7916;
     padding: 1em;
-    margin: 1em 2em;
+    margin: 1em auto;
+    width: 80%;
     background-color: #F7FFE4;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1686,6 +1687,11 @@ dl.order dt {
 }
 dl.order dd {
     background: transparent url(++resource++restarter.images/ico_ok.png) no-repeat 99% center;
+}
+
+/** storia **/
+.portaltype-companystory.template-base_view  div.ArchetypesField-BooleanField {
+    display: none;
 }
 
 /* </dtml-with> */
