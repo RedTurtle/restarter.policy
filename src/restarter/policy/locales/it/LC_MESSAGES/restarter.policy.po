@@ -126,7 +126,7 @@ msgstr "Indirizzo di email"
 
 #: ./browser/common.py:46
 msgid "Employee"
-msgstr "Dipendente"
+msgstr "Autorizzato"
 
 #: ./browser/facebook_login.py:60
 msgid "Facebook authentication denied"
