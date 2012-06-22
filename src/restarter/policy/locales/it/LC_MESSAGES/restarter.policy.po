@@ -203,7 +203,7 @@ msgstr "Commento alla prenotazione"
 
 #: ./content/order.py:21
 msgid "Order quantity"
-msgstr ""
+msgstr "Quantità"
 
 #: ./content/product.py:25
 msgid "Other"
@@ -328,7 +328,7 @@ msgstr "Denominazione del prodotto"
 
 #: ./content/product.py:45
 msgid "Product quantity"
-msgstr ""
+msgstr "Quantità inizialmente offerta"
 
 #: ./profiles/default/types/Product.xml
 msgid "Product that can be bought"
