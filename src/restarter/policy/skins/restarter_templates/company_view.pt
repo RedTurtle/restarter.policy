@@ -17,11 +17,11 @@
             <h2>
               <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field> 
             </h2>
-            <div>
+            <div class="createdBy">
               Creato da: <span tal:replace="context/CreatorFullname"/>
             </div>
             <div class="comAddressWrapper">
-              <metal:field use-macro="python:context.widget('address', mode='view')"></metal:field> - 
+              <div class="compAddressStreet"><metal:field use-macro="python:context.widget('address', mode='view')"></metal:field></div>
               <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>
               <strong><metal:field use-macro="python:context.widget('city', mode='view')"></metal:field>
               (<metal:field use-macro="python:context.widget('province', mode='view')"></metal:field>)</strong>

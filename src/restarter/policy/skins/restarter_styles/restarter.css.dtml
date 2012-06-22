@@ -846,6 +846,9 @@ div.comMap {
 .comAddressWrapper {
     font-size: 1.1em;
 }
+.comAddressWrapper .compAddressStreet {
+    display: block;
+}
 .companySector {
     font-size: 0.9em;
     font-weight: bold;   
@@ -1699,6 +1702,13 @@ dl.order dt {
 dl.order dd {
     background: transparent url(++resource++restarter.images/ico_ok.png) no-repeat 99% center;
 }
-
-
+.createdBy {
+    color: #666;
+    font-size: 0.95em;
+    font-style: italic;
+}
+.portaltype-company .createdBy {
+    margin-top: -0.4em;
+    padding-bottom: 0.5em;
+}
 /* </dtml-with> */
