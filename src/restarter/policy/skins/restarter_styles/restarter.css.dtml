@@ -663,7 +663,8 @@ p.faCollectionDesc {
     font-style: italic;
     margin-bottom:0;
 }
-.newsPortlet .portletItem {
+.newsPortlet .portletItem,
+#portletPageColumns dl.newsPortlet dd.portletItem {
     background-color: #FAFAFA;
     padding: 0.8em;
     margin: 10px 0;
