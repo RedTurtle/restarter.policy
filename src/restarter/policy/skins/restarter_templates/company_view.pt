@@ -17,7 +17,9 @@
             <h2>
               <metal:field use-macro="python:context.widget('ragione_sociale', mode='view')"></metal:field> 
             </h2>
-
+            <div>
+              Creato da: <span tal:replace="context/CreatorFullname"/>
+            </div>
             <div class="comAddressWrapper">
               <metal:field use-macro="python:context.widget('address', mode='view')"></metal:field> - 
               <metal:field use-macro="python:context.widget('cap', mode='view')"></metal:field>

@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone"
+      lang="en">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+
+  <metal:body_macro metal:define-macro="body">
+       <metal:field use-macro="python:context.widget('period', mode='text')"></metal:field>
+   </metal:body_macro>
+
+      <metal:folderlisting_macro metal:define-macro="folderlisting">
+
+      </metal:folderlisting_macro>
+
+
+</metal:content-core>
+
+</body>
+</html>

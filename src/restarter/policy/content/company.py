@@ -4,6 +4,7 @@
 from zope.interface import implements
 from zope.annotation.interfaces import IAnnotations, IAnnotatable
 from Products.Archetypes import atapi
+from Products.CMFCore.utils import getToolByName
 from Products.validation.validators.ExpressionValidator import ExpressionValidator
 from Products.validation.validators.RegexValidator import RegexValidator
 from Products.validation.validators.BaseValidators import protocols
@@ -295,6 +296,12 @@ class Company(folder.ATFolder):
         if value:
             value = value.lower()
         super(Company, self).setWebsite(value)
+
+    def CreatorFullname(self):
+        creator = self.Creator()
+        membership = getToolByName(self, 'portal_membership')
+        author = membership.getMemberInfo(creator)
+        return author and author['fullname'] or creator
 
 
 atapi.registerType(Company, PROJECTNAME)
