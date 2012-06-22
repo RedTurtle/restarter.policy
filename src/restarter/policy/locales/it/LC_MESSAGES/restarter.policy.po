@@ -212,7 +212,7 @@ msgstr "Periodo"
 
 #: ./content/company.py:168
 msgid "Please accept terms of use."
-msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo</a>."
+msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo e di privacy</a>."
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
