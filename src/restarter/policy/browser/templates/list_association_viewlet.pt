@@ -1,8 +1,11 @@
-<div tal:repeat="association view/associations" id="list-associations">
+<div id="list-associations" tal:condition="view/associations">
     <div class="icoCheck"></div>
     <h4>Questa azienda è stata approvata da:</h4>
-  <img tal:define="assocname python: view.getAssocName(association)"
-       tal:attributes="src string:${context/portal_url}/portal_memberdata/portraits/${association};
-                       title assocname;
-                       alt assocname" class="associationLogo">
+    <tal:list repeat="association view/associations">
+      <img 
+           tal:define="assocname python: view.getAssocName(association)"
+           tal:attributes="src string:${context/portal_url}/portal_memberdata/portraits/${association};
+                           title assocname;
+                           alt assocname" class="associationLogo">
+    </tal:list>
 </div>
