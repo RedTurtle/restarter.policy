@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-21 17:07+0000\n"
+"POT-Creation-Date: 2012-06-22 09:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./content/company.py:26
+#: ./content/company.py:27
 #: ./content/product.py:20
 msgid "-- not selected --"
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: ./content/company.py:166
+#: ./content/company.py:167
 msgid "Accept terms of use"
 msgstr ""
 
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Add new company wizard"
 msgstr ""
 
-#: ./content/company.py:59
+#: ./content/company.py:60
 msgid "Address"
 msgstr ""
 
@@ -55,19 +55,19 @@ msgstr ""
 msgid "Association removed."
 msgstr ""
 
-#: ./content/company.py:132
+#: ./content/company.py:133
 msgid "CF/P.IVA"
 msgstr ""
 
-#: ./content/company.py:111
+#: ./content/company.py:112
 msgid "Cell phone"
 msgstr ""
 
-#: ./content/company.py:109
+#: ./content/company.py:110
 msgid "Cell phone has a wrong format. The proper is +391234567890"
 msgstr ""
 
-#: ./content/company.py:78
+#: ./content/company.py:79
 msgid "City"
 msgstr ""
 
@@ -80,19 +80,19 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: ./content/company.py:215
+#: ./content/company.py:216
 msgid "Company name"
 msgstr ""
 
-#: ./content/company.py:154
+#: ./content/company.py:155
 msgid "Company sectore"
 msgstr ""
 
-#: ./content/company.py:143
+#: ./content/company.py:144
 msgid "Company type"
 msgstr ""
 
-#: ./content/company.py:122
+#: ./content/company.py:123
 msgid "Company website"
 msgstr ""
 
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Demands"
 msgstr ""
 
-#: ./content/company.py:100
+#: ./content/company.py:101
 msgid "Email address"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
-#: ./content/company.py:120
+#: ./content/company.py:121
 msgid "It is not a proper website URL."
 msgstr ""
 
@@ -172,7 +172,7 @@ msgstr ""
 msgid "New demaged"
 msgstr ""
 
-#: ./content/company.py:177
+#: ./content/company.py:178
 msgid "Notification type"
 msgstr ""
 
@@ -210,35 +210,35 @@ msgstr ""
 msgid "Period"
 msgstr ""
 
-#: ./content/company.py:167
+#: ./content/company.py:168
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/company.py:133
+#: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
 
-#: ./content/company.py:60
+#: ./content/company.py:61
 msgid "Please give us your company address"
 msgstr ""
 
-#: ./content/company.py:112
+#: ./content/company.py:113
 msgid "Please give us your company cell phone."
 msgstr ""
 
-#: ./content/company.py:79
+#: ./content/company.py:80
 msgid "Please give us your company city location."
 msgstr ""
 
-#: ./content/company.py:101
+#: ./content/company.py:102
 msgid "Please give us your company email address."
 msgstr ""
 
-#: ./content/company.py:90
+#: ./content/company.py:91
 msgid "Please give us your company province location."
 msgstr ""
 
-#: ./content/company.py:123
+#: ./content/company.py:124
 msgid "Please give us your company website url."
 msgstr ""
 
@@ -278,15 +278,15 @@ msgstr ""
 msgid "Please provide product waranty conditions."
 msgstr ""
 
-#: ./content/company.py:178
+#: ./content/company.py:179
 msgid "Please select how we should notify your company."
 msgstr ""
 
-#: ./content/company.py:155
+#: ./content/company.py:156
 msgid "Please select your company sectore."
 msgstr ""
 
-#: ./content/company.py:144
+#: ./content/company.py:145
 msgid "Please select your company type."
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ./content/company.py:89
+#: ./content/company.py:90
 msgid "Province"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
-#: ./content/company.py:164
+#: ./content/company.py:165
 msgid "You must accept the Terms of Use."
 msgstr ""
 
@@ -404,8 +404,17 @@ msgstr ""
 msgid "Your order has been registered!"
 msgstr ""
 
-#: ./content/company.py:42
+msgid "accepted"
+msgstr ""
+
+#: ./content/company.py:43
 msgid "both"
+msgstr ""
+
+msgid "deleted"
+msgstr ""
+
+msgid "draft"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
@@ -419,7 +428,7 @@ msgid "help_cellphone"
 msgstr ""
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:51
+#: ./content/company.py:52
 msgid "help_ragione_sociale"
 msgstr ""
 
@@ -454,7 +463,7 @@ msgid "label_password"
 msgstr ""
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:50
+#: ./content/company.py:51
 msgid "label_ragione_sociale"
 msgstr ""
 
@@ -469,9 +478,18 @@ msgstr ""
 msgid "label_remember_my_name"
 msgstr ""
 
+msgid "new"
+msgstr ""
+
 #. Default: "Register"
 #: ./skins/restarter_templates/rpx_macros.pt:54
 msgid "register_button"
+msgstr ""
+
+msgid "rejected"
+msgstr ""
+
+msgid "requested"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml
