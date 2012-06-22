@@ -1525,13 +1525,24 @@ dl.faCategoriesPortlet {
 dl.faCategoriesPortlet dd.portletFooter {
     margin-top: 2px;
     border-top: 3px solid #F0F0F0;
-    background: transparent url(++resource++restarter.images/arrow_down.png) no-repeat left 0.6em;
-    padding: 0.5em  0 0 43px;
+    padding:0;
 }
 dl.faCategoriesPortlet dd.portletFooter p {
     margin:0;
     font-style: italic;
     font-size: 0.9em;
+}
+dl.faCategoriesPortlet dd.portletFooter p a {
+    background: transparent url(++resource++restarter.images/arrow_down.png) no-repeat left 0.6em;
+    padding: 0.5em  0 0 43px;
+    display: block;
+    color: &dtml-fontColor;;
+}
+dl.faCategoriesPortlet dd.portletFooter p a span {
+    color: &dtml-colorRed;;
+}
+dl.faCategoriesPortlet dd.portletFooter p a:hover span {
+    color: &dtml-linkHoverColor;;
 }
 .faCategoriesPortlet .portletItem ul li a {
     text-transform: uppercase;

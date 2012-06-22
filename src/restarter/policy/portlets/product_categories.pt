@@ -18,7 +18,7 @@
     </dd>
 
     <dd class="portletFooter">
-        <p>Queste sono alcune delle categorie disponibili.
-        <a href="#" tal:attributes="href string:${context/portal_url}/prodotti">Scopri tutte le categorie</a></p>
+        <p><a href="#" tal:attributes="href string:${context/portal_url}/prodotti">Queste sono alcune delle categorie disponibili.
+        <span>Scopri tutte le categorie</span></a></p>
     </dd>
   </dl>
