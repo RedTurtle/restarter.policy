@@ -9,4 +9,15 @@
       factory=".userdataschema.EnhancedUserDataPanelAdapter"
    />
 
+   <utility
+     component=".vocabularies.WorkflowStatesVocabularyFactory"
+     name="plone.app.vocabularies.WorkflowStates"
+     />
+
+
+
+
+
+
+
 </configure>

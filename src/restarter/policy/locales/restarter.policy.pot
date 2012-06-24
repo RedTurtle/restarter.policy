@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-22 16:08+0000\n"
+"POT-Creation-Date: 2012-06-24 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,11 +183,11 @@ msgstr ""
 msgid "Offer"
 msgstr ""
 
-#: ./content/offer.py:22
+#: ./content/offer.py:23
 msgid "Offer category"
 msgstr ""
 
-#: ./content/offer.py:65
+#: ./content/offer.py:77
 msgid "Offer name"
 msgstr ""
 
@@ -213,12 +213,16 @@ msgid "Other"
 msgstr ""
 
 #: ./content/demand.py:34
-#: ./content/offer.py:32
+#: ./content/offer.py:33
 msgid "Period"
 msgstr ""
 
 #: ./content/company.py:168
 msgid "Please accept terms of use."
+msgstr ""
+
+#: ./content/offer.py:45
+msgid "Please accept that this offer is free of charge."
 msgstr ""
 
 #: ./content/company.py:134
@@ -253,7 +257,7 @@ msgstr ""
 msgid "Please provide demand period."
 msgstr ""
 
-#: ./content/offer.py:33
+#: ./content/offer.py:34
 msgid "Please provide offer period."
 msgstr ""
 
@@ -301,7 +305,7 @@ msgstr ""
 msgid "Please select your demand category."
 msgstr ""
 
-#: ./content/offer.py:23
+#: ./content/offer.py:24
 msgid "Please select your offer category."
 msgstr ""
 
@@ -386,6 +390,10 @@ msgstr ""
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr ""
 
+#: ./content/offer.py:44
+msgid "This offer is free of charge."
+msgstr ""
+
 #: ./content/product.py:23
 msgid "Used"
 msgstr ""
@@ -404,6 +412,10 @@ msgstr ""
 
 #: ./content/company.py:165
 msgid "You must accept the Terms of Use."
+msgstr ""
+
+#: ./content/offer.py:42
+msgid "You must accept the gratis terms."
 msgstr ""
 
 #: ./events.py:279
@@ -523,5 +535,10 @@ msgstr ""
 #. Default: "RPX register"
 #: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
+msgstr ""
+
+#. Default: "ignore"
+#: ./vocabularies.py:34
+msgid "utf8"
 msgstr ""
 

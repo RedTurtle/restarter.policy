@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-22 16:08+0000\n"
+"POT-Creation-Date: 2012-06-24 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -180,11 +180,11 @@ msgstr "Tipo di notifica"
 msgid "Offer"
 msgstr "Offerta"
 
-#: ./content/offer.py:22
+#: ./content/offer.py:23
 msgid "Offer category"
 msgstr "Categoria"
 
-#: ./content/offer.py:65
+#: ./content/offer.py:77
 msgid "Offer name"
 msgstr "Nome"
 
@@ -210,13 +210,17 @@ msgid "Other"
 msgstr "Altro"
 
 #: ./content/demand.py:34
-#: ./content/offer.py:32
+#: ./content/offer.py:33
 msgid "Period"
 msgstr "Periodo"
 
 #: ./content/company.py:168
 msgid "Please accept terms of use."
 msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo e di privacy</a>."
+
+#: ./content/offer.py:45
+msgid "Please accept that this offer is free of charge."
+msgstr ""
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
@@ -250,7 +254,7 @@ msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 msgid "Please provide demand period."
 msgstr "Indica il periodo della richiesta"
 
-#: ./content/offer.py:33
+#: ./content/offer.py:34
 msgid "Please provide offer period."
 msgstr "Indica il periodo dell'offerta"
 
@@ -298,7 +302,7 @@ msgstr "Indica il tipo di azienda"
 msgid "Please select your demand category."
 msgstr "Seleziona la categoria della richiesta"
 
-#: ./content/offer.py:23
+#: ./content/offer.py:24
 msgid "Please select your offer category."
 msgstr "Seleziona la categoria dell'offerta"
 
@@ -383,6 +387,10 @@ msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://develo
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
+#: ./content/offer.py:44
+msgid "This offer is free of charge."
+msgstr ""
+
 #: ./content/product.py:23
 msgid "Used"
 msgstr "Usato"
@@ -402,6 +410,10 @@ msgstr "Attenzione"
 #: ./content/company.py:165
 msgid "You must accept the Terms of Use."
 msgstr "Devi accettare i termini d'uso"
+
+#: ./content/offer.py:42
+msgid "You must accept the gratis terms."
+msgstr ""
 
 #: ./events.py:279
 msgid "Your order has been registered!"
@@ -521,4 +533,9 @@ msgstr "Registra il tuo profilo ${rpx_provider}"
 #: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
 msgstr "Registrati con RPX"
+
+#. Default: "ignore"
+#: ./vocabularies.py:34
+msgid "utf8"
+msgstr ""
 
