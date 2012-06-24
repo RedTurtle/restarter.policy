@@ -220,7 +220,7 @@ msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-faccia
 
 #: ./content/offer.py:45
 msgid "Please accept that this offer is free of charge."
-msgstr ""
+msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
@@ -389,7 +389,7 @@ msgstr "La parola segreta che ottieni quando crei l'app in https://developers.fa
 
 #: ./content/offer.py:44
 msgid "This offer is free of charge."
-msgstr ""
+msgstr "L'offerta è gratuita."
 
 #: ./content/product.py:23
 msgid "Used"
@@ -413,7 +413,7 @@ msgstr "Devi accettare i termini d'uso"
 
 #: ./content/offer.py:42
 msgid "You must accept the gratis terms."
-msgstr ""
+msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./events.py:279
 msgid "Your order has been registered!"
