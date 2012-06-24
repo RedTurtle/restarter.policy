@@ -5,6 +5,7 @@ from zope.interface import implements
 
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import base
+from Products.validation.validators.ExpressionValidator import ExpressionValidator
 from Products.ATContentTypes.content import schemata
 from Products.ATVocabularyManager import NamedVocabulary
 
@@ -32,6 +33,17 @@ OfferSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
             label=_("Period"),
             description=_("Please provide offer period."),
             size=20
+            ),
+        ),
+
+    atapi.BooleanField('gratis',
+        searchable=0,
+        required=True,
+        validators = (ExpressionValidator('python: bool(value)', errormsg=_('You must accept the gratis terms.')),),
+        widget=atapi.BooleanWidget(
+            label=_("This offer is free of charge."),
+            description=_("Please accept that this offer is free of charge."),
+            size=30
             ),
         ),
 
