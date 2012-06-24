@@ -21,7 +21,7 @@
     </div>
     <div class="visualClear"></div>
 </div>
-<!-- manca classe current -->
+
 <div id="nav-wrapper" tal:condition="not: biglogo">
   <div id="navRedBtn" class="barBtn">
       <ul id="navRed">

@@ -1,0 +1,258 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/*************** MOBILE ***************/
+/* For devices with narrow screens, phones, tablets, etc. */
+
+#portal-column-one, 
+#portal-column-two,
+#portal-column-content { 
+    clear: both; 
+    float: none;
+    display: block; 
+    margin:0; 
+    width: auto;
+}
+#portal-columns {
+    padding-top: 0;
+}
+#logo-nav-wrapper {
+    padding: 40px;
+}
+#portal-logo {
+    margin-top: 0;
+    float: none;
+}
+#portal-column-one #portal-logo {
+    margin: 1em 0;
+    padding: 1em 0;
+    display: block;
+    text-align: center;
+    border-top: 3px solid &dtml-colorRed;;
+    border-bottom: 3px solid &dtml-colorRed;;
+}
+#portal-top {
+    font-size: 180%;
+}
+#portal-personaltools {
+    margin: 1em 0;
+}
+#portal-personaltools, #anon-portal-personaltools {
+    float: none;
+    text-align: center;
+    background-color: &dtml-colorRed;;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    min-height: 1px;
+    padding: 0.5em 0;
+}
+#anon-portal-personaltools a {
+    color: #FFF;
+}
+#portal-searchbox {
+    float: none !important;
+    text-align: center;
+    float: none;
+    margin:0;
+    padding: 0.5em 0.2em;
+}
+#portal-searchbox input {
+    font-size: 100% !important;
+}
+#portal-searchbox #searchGadget, #portal-searchbox #nolivesearchGadget {
+    width: 13em;
+}
+#content-views a {
+    font-size: 150%;
+    line-height: 2em !important;
+    padding: 0.5em;
+}
+#content li.formTab a {
+    font-size: 140%;
+    line-height: 2em !important;
+    padding: 0.25em;
+}
+#edit-bar {
+    min-height: 5em;
+}
+
+#contentActionMenus a {
+    width: 100%;
+    line-height: 2em !important;
+    font-size: 150%;
+}
+
+
+input, textarea {
+    font-size: 140% !important;
+}
+div.managePortletsLink,
+a.managePortletsFallback {
+    font-size: 140%;
+}
+div.overlay {
+    font-size: 120%;
+}
+div.overlay-iframe,
+div.overlay-ajax {
+    width: 90%;
+}
+
+#portal-globalnav {
+    position: relative;
+    top:0;
+    padding: 0.5em 0;
+}
+#portal-globalnav li {
+    display: block;
+    border:0;
+    height: auto;
+}
+#portal-globalnav li a {
+    border:0;
+    padding: 0.1em 1em;
+}
+#portal-globalnav li#portaltab-index_html.selected {
+    border: 0 !important;
+}
+#navRedBtn.bigBtn {
+    margin-top: 1em;
+    float: none;
+}
+#navRedBtn.bigBtn ul#navRed li a {
+    display: block;
+    height: 75px;
+    background-position: 90% center;
+}
+#navRedBtn.bigBtn ul#navRed li {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 5px 2px;
+}
+#navRedBtn.bigBtn ul#navRed li#navBtnCerco a {
+    font-size: 2.1em;
+    background-image: none;
+}
+#nav-wrapper {
+    margin-bottom: 1em;
+}
+#navRedBtn.barBtn ul li {
+    margin:0.2em 0;
+    padding: 0.2em 0;
+    text-align: center;
+    display: block;
+}
+#navRedBtn.barBtn ul li a {
+    border:0;
+    display: block;
+    font-size: 1.8em;
+}
+#slider-wrapper {
+    display: none;
+}
+div.cell {
+    left: auto;
+}
+#content dl.productsPortlet dd.portletItem,
+.companyResult, #content .companyResult,
+.productResult, #content .productResult,
+#content .facetedResult {
+    float: none;
+    max-width: 100%;
+    width: auto;
+    margin: 1em 0;
+    padding: 1em;
+    border-bottom: 2px solid #F0F0F0;
+}
+div.portlet-static-twitter,
+dl.portlet-static-twitter,
+div.portlet-static-facebook,
+dl.portlet-static-facebook {
+    display:none;
+}
+.productsPortlet .faCollectionImg,
+.productResult .faCollectionImg {
+    width: 100%;
+    border:0;
+    text-align:center;
+    background-color: #EFEFEF;
+    overflow: auto;
+    height: auto;
+}
+.productsPortlet .faCollectionImg a,
+.productResult .faCollectionImg a {
+    display: block;
+}
+#portal-columns {
+    margin: 0.5em 1em;
+}
+.footerColumn {
+    width: auto;
+    margin: 0;
+    float: none;
+    text-align: center;
+    border-bottom: 1px dashed #666;
+    padding: 1em 0;
+}
+#portal-footer .footerColumn{
+    border-color: #999;
+}
+#footer-column-3,
+#colophon-column-3 {
+    border:0;
+}
+#colophon-column-3 a {
+    background-image: none;
+    padding-left:0;
+}
+/** faceted **/
+#left-area,
+#right-area,
+#center-area {
+    width: 100%;
+    float: none;
+    overflow: visible;
+    margin:0.5em 0;
+}
+.left-area-js {
+    margin-left: 0;
+}
+.right-area-js {
+    margin-right: 0;
+}
+.companyResult, #content .companyResult {
+    min-hieght: 1px;
+    border:0;
+    background-color: #FAFAFA;
+}
+.companyResult .faCompanyImg a {
+    width: auto;
+    height: auto;
+    margin: 0 auto 1em;
+}
+
+/* company */
+div.comMap {
+    display: none;
+}
+
+/* product */
+.prodBuy {
+    margin-left: 0;
+    display: block;
+    float: none;
+    clear: both;
+    text-align: center;
+    padding-top: 1em;
+}
+#productExtract {
+    display: none;
+}
+.order-view {
+    float: none;
+    max-width: 100%;
+}
+
+/* </dtml-with> */
