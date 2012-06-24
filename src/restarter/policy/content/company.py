@@ -24,20 +24,20 @@ from restarter.policy.events import CompanyShareNotify
 
 
 PROVINCE = atapi.DisplayList((
-             ("",_("-- not selected --")),
-             ("Bologna","Bologna"),
-             ("Ferrara","Ferrara"),
-             ("Forli-Cesena","Forli-Cesena"),
-             ("Modena","Modena"),
-             ("Parma","Parma"),
-             ("Piacenza","Piacenza"),
-             ("Ravenna","Ravenna"),
-             ("Reggio Emilia","Reggio Emilia"),
-             ("Rimini","Rimini")))
+             ("", _("-- not selected --")),
+             ("Bologna", "Bologna"),
+             ("Ferrara", "Ferrara"),
+             ("Forli-Cesena", "Forli-Cesena"),
+             ("Modena", "Modena"),
+             ("Parma", "Parma"),
+             ("Piacenza", "Piacenza"),
+             ("Ravenna", "Ravenna"),
+             ("Reggio Emilia", "Reggio Emilia"),
+             ("Rimini", "Rimini")))
 
 
 NOTIFICATION = atapi.DisplayList((
-             ("",_("-- not selected --")),
+             ("", _("-- not selected --")),
              ("phone", "SMS"),
              ("email", "email"),
              ("both", _(u"both"))))
@@ -47,9 +47,9 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
     atapi.TextField('ragione_sociale',
         required=True,
-        widget = atapi.StringWidget(
-                    label = _(u'label_ragione_sociale', default=u'Ragione sociale'),
-                    description = _(u'help_ragione_sociale',
+        widget=atapi.StringWidget(
+                    label=_(u'label_ragione_sociale', default=u'Ragione sociale'),
+                    description=_(u'help_ragione_sociale',
                                     default=u"Ragione sociale help.")),
         ),
 
@@ -71,7 +71,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
             size=10
             ),
         ),
-    
+
     atapi.StringField('city',
         searchable=0,
         required=True,
@@ -107,7 +107,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField('cellphone',
         searchable=0,
         required=True,
-        validators = (RegexValidator('isItalianCellPhone', r'^\+39\d*$',title='',description='', errormsg=_('Cell phone has a wrong format. The proper is +391234567890')),),
+        validators=(RegexValidator('isItalianCellPhone', r'^\+39\d*$', title='', description='', errormsg=_('Cell phone has a wrong format. The proper is +391234567890')),),
         widget=atapi.StringWidget(
             label=_("Cell phone"),
             description=_("Please give us your company cell phone."),
@@ -118,7 +118,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.StringField('website',
         searchable=0,
         required=False,
-        validators = (RegexValidator('isWebsite', r'(?i)(%s)s?://[^\s\r\n]+' % '|'.join(protocols), title='',description='', errormsg=_('It is not a proper website URL.')),),
+        validators=(RegexValidator('isWebsite', r'(?i)(%s)s?://[^\s\r\n]+' % '|'.join(protocols), title='', description='', errormsg=_('It is not a proper website URL.')),),
         widget=atapi.StringWidget(
             label=_("Company website"),
             description=_("Please give us your company website url."),
@@ -162,7 +162,7 @@ CompanySchema = folder.ATFolderSchema.copy() + atapi.Schema((
     atapi.BooleanField('terms_of_use',
         searchable=0,
         required=True,
-        validators = (ExpressionValidator('python: bool(value)', errormsg=_('You must accept the Terms of Use.')),),
+        validators=(ExpressionValidator('python: bool(value)', errormsg=_('You must accept the Terms of Use.')),),
         widget=atapi.BooleanWidget(
             label=_("Accept terms of use"),
             description=_("Please accept terms of use."),
@@ -218,7 +218,6 @@ CompanySchema['description'].widget.maxlength = 200
 
 
 EMPLOYEES_KEY = 'company_employees'
-
 
 
 @indexer(ICompany)

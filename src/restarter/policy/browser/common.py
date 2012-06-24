@@ -11,7 +11,6 @@ from plone.app.content.browser.folderfactories import FolderFactoriesView as Fol
 from restarter.policy import policyMessageFactory as _
 
 
-
 class ContentActionsViewlet(ContentActionsViewletBase):
 
     index = ViewPageTemplateFile('templates/contentactions.pt')
@@ -48,7 +47,7 @@ class CompanySharingView(SharingBaseView):
     @memoize
     def existing_role_settings(self):
         old = super(CompanySharingView, self).existing_role_settings()
-        return [a for a in old if a['id']!='AuthenticatedUsers']
+        return [a for a in old if a['id'] != 'AuthenticatedUsers']
 
     def group_search_results(self):
         """Return search results for a query to add new groups.
@@ -77,14 +76,14 @@ class FactoriesSubMenuItem(BrowserSubMenuItem):
 class FolderFactoriesView(FolderFactoriesViewBase):
 
     def addable_types(self, include=None):
-        return [{ 'id' : 'add-company-wizzard',
-                  'title'        : _('Add company'),
-                  'description'  : _('Add new company wizard'),
-                  'action'       : '%s/@@add_company' % self.context.absolute_url(),
-                  'selected'     : False,
-                  'icon'         : None,
-                  'extra'        : {'id' : 'add-company-wizzard', 'separator' : None, 'class' : None},
-                  'submenu'      : None, }]
+        return [{'id'           : 'add-company-wizzard',
+                 'title'        : _('Add company'),
+                 'description'  : _('Add new company wizard'),
+                 'action'       : '%s/@@add_company' % self.context.absolute_url(),
+                 'selected'     : False,
+                 'icon'         : None,
+                 'extra'        : {'id' : 'add-company-wizzard', 'separator' : None, 'class' : None},
+                 'submenu'      : None, }]
 
 
 class OrderStatusMessage(StatusMessage):
@@ -98,4 +97,3 @@ class OrderStatusMessage(StatusMessage):
         value = _encodeCookieValue(text, type, old='')
         context.response.setCookie(STATUSMESSAGEKEY, value, path='/')
         annotations[STATUSMESSAGEKEY] = value
-

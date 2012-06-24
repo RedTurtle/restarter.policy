@@ -15,6 +15,7 @@ def validateCellphone(value):
         return True
     return False
 
+
 def validateAccept(value):
     if not value == True:
         return False
@@ -66,31 +67,35 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """ """
     def get_cellphone(self):
         return self.context.getProperty('cellphone', '')
+
     def set_cellphone(self, value):
         return self.context.setMemberProperties({'cellphone': value})
     cellphone = property(get_cellphone, set_cellphone)
 
     def get_accept(self):
         return self.context.getProperty('accept', '')
+
     def set_accept(self, value):
         return self.context.setMemberProperties({'accept': value})
     accept = property(get_accept, set_accept)
 
     def get_rpx(self):
         return self.context.getProperty('rpx_identifier', '')
+
     def set_rpx(self, value):
         return self.context.setMemberProperties({'rpx_identifier': value})
     rpx_identifier = property(get_rpx, set_rpx)
 
     def get_facebook_id(self):
         return self.context.getProperty('facebook_id', '')
+
     def set_facebook_id(self, value):
         return self.context.setMemberProperties({'facebook_id': value})
     facebook_id = property(get_facebook_id, set_facebook_id)
 
     def get_facebook_token(self):
         return self.context.getProperty('facebook_token', '')
+
     def set_facebook_token(self, value):
         return self.context.setMemberProperties({'facebook_token': value})
     facebook_token = property(get_facebook_token, set_facebook_token)
-

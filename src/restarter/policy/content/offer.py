@@ -13,6 +13,7 @@ from restarter.policy import policyMessageFactory as _
 from restarter.policy.interfaces import IOffer
 from restarter.policy.config import PROJECTNAME
 
+
 OfferSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
     atapi.StringField('category',
@@ -39,7 +40,7 @@ OfferSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
     atapi.BooleanField('gratis',
         searchable=0,
         required=True,
-        validators = (ExpressionValidator('python: bool(value)', errormsg=_('You must accept the gratis terms.')),),
+        validators=(ExpressionValidator('python: bool(value)', errormsg=_('You must accept the gratis terms.')),),
         widget=atapi.BooleanWidget(
             label=_("This offer is free of charge."),
             description=_("Please accept that this offer is free of charge."),

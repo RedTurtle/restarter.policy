@@ -24,28 +24,28 @@ logger = logging.getLogger('restarter.policy')
 class AddForm(BrowserView):
     """Add form the PAS plugin
     """
-    
+
     def __call__(self):
-        
+
         if 'form.button.Add' in self.request.form:
             name = self.request.form.get('id')
             title = self.request.form.get('title')
-            
+
             plugin = FacebookUsers(name, title)
             self.context.context[name] = plugin
-            
+
             self.request.response.redirect(self.context.absolute_url() +
                     '/manage_workspace?manage_tabs_message=Plugin+added.')
 
 
 class FacebookUsers(BasePlugin):
     """PAS plugin for authentication against facebook.
-    
+
     Here, we implement a number of PAS interfaces, using a session managed
     by Beaker (via collective.beaker) to temporarily store the values we
     have captured.
     """
-    
+
     # List PAS interfaces we implement here
     implements(
             IExtractionPlugin,
@@ -93,7 +93,6 @@ class FacebookUsers(BasePlugin):
             return {'facebook_id': profile.get('id')}
         return {}
 
-
     def authenticateCredentials(self, credentials):
         facebook_id = credentials.get('facebook_id')
         if facebook_id is not None:
@@ -110,4 +109,3 @@ class FacebookUsers(BasePlugin):
             else:
                 return None
         return None
-

@@ -62,4 +62,3 @@ class RegistrationForm(BaseForm):
             data['rpx_identifier'] = (credentials,)
             data['password'] = registration.generatePassword()
         return super(RegistrationForm, self).handle_join_success(data)
-

@@ -20,7 +20,7 @@ class DisqusViewlet(ViewletBase):
     def authenticated_email(self):
         user = self.context.portal_membership.getAuthenticatedMember()
         if user:
-            return urllib.quote(user.getProperty('email',''))
+            return urllib.quote(user.getProperty('email', ''))
         else:
             return ''
 
@@ -58,4 +58,3 @@ class Notify(BrowserView):
         comment_text = self.request.form.get('comment[text]')
         comment_id = self.request.form.get('comment[id]')
         objectEventNotify(DisqusNotify(self.context, comment_id, comment_text))
-

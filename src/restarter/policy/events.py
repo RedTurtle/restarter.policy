@@ -65,7 +65,7 @@ All'interno dell'area della tua azienda puoi:
  * creare lo scaffale dei prodotti
  * richiedere supporto gratuito ad altre aziende in base alle tue necessità
 
-Non dimenticare che per coinvolgere i tuoi potenziali clienti è molto importante come racconti la tua azienda e i problemi che state vivendo in questa difficile fase. 
+Non dimenticare che per coinvolgere i tuoi potenziali clienti è molto importante come racconti la tua azienda e i problemi che state vivendo in questa difficile fase.
 Accresci la tua reputazione invitando tuoi conoscenti e collaboratori a lasciare commenti sul tuo profilo aziendale e la visibilità dei prodotti che stai offrendo condividendoli nei loro social network.
 
 Ti ricordiamo che con la registrazione ti sei impegnato a visitare ed aggiornare le pagine del tuo profilo almeno settimanalmente.
@@ -89,7 +89,7 @@ All'interno dell'area della tua azienda puoi anche:
   * creare lo scaffale dei prodotti
   * richiedere supporto gratuito ad altre aziende in base alle tue necessità
 
-Non dimenticare che per coinvolgere i tuoi potenziali clienti è molto importante come racconti la tua azienda e i problemi che state vivendo in questa difficile fase. 
+Non dimenticare che per coinvolgere i tuoi potenziali clienti è molto importante come racconti la tua azienda e i problemi che state vivendo in questa difficile fase.
 Accresci la tua reputazione invitando tuoi conoscenti e collaboratori a lasciare commenti sul tuo profilo aziendale e la visibilità dei prodotti che stai offrendo condividendoli nei loro social network.
 
 Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-progetto/il-regolamento
@@ -166,14 +166,13 @@ Il team di Facciamo
 logger = logging.getLogger('restarter.policy')
 
 
-
 class DisqusNotify(ObjectEvent):
     implements(IDisqusNotify)
 
     def __init__(self, object, comment_id, comment_text):
         self.object = object
         self.comment_id = comment_id
-        self.comment_text = html2text.html2text(comment_text.decode('utf8','ignore'))
+        self.comment_text = html2text.html2text(comment_text.decode('utf8', 'ignore'))
 
 
 class CompanyShareNotify(ObjectEvent):
@@ -215,7 +214,7 @@ def order_state_changed(order, event):
     email = owner.getProperty('email', '')
     company = order.getCompany()
     product = order.getProduct()
-    unit = product.getUnit().decode('utf8','ignore')
+    unit = product.getUnit().decode('utf8', 'ignore')
     quantity = order.getQuantity()
     price = product.getPrice()
     total_price = float(quantity) * float(price)
@@ -223,10 +222,10 @@ def order_state_changed(order, event):
 
     if event.action == 'accept':
         if email:
-            params.update({'email_message': ORDER_ACCEPTED % (company.title_or_id().decode('utf8','ignore'),
+            params.update({'email_message': ORDER_ACCEPTED % (company.title_or_id().decode('utf8', 'ignore'),
                                                               quantity,
                                                               unit,
-                                                              product.title_or_id().decode('utf8','ignore'),
+                                                              product.title_or_id().decode('utf8', 'ignore'),
                                                               total_price,
                                                               order.absolute_url(),
                                                               company.absolute_url(),
@@ -237,8 +236,8 @@ def order_state_changed(order, event):
 
     elif event.action == 'reject':
         if email:
-            params.update({'email_message': ORDER_REJECTED % (owner.getProperty('fullname','Ciao!'),
-                                                              company.title_or_id().decode('utf8','ignore'),
+            params.update({'email_message': ORDER_REJECTED % (owner.getProperty('fullname', 'Ciao!'),
+                                                              company.title_or_id().decode('utf8', 'ignore'),
                                                               order.absolute_url(),
                                                               company.absolute_url(),
                                                               ),
@@ -255,7 +254,7 @@ def order_added(order, event):
         return
     product = order.getProduct()
     quantity = order.getQuantity().decode('utf8', 'ignore')
-    title = product.title_or_id().decode('utf8','ignore')
+    title = product.title_or_id().decode('utf8', 'ignore')
     unit = order.getUnit().decode('utf8', 'ignore')
     order.setTitle(u'%s %s di %s' % (quantity, unit, title))
     order.reindexObject()
@@ -264,16 +263,16 @@ def order_added(order, event):
         return
 
     owner = order.getOwner()
-    params = {'email_message': NEW_ORDER_MAIL % (owner.getProperty('fullname','Utente'),
+    params = {'email_message': NEW_ORDER_MAIL % (owner.getProperty('fullname', 'Utente'),
                                                  quantity,
                                                  title,
                                                  order.absolute_url(),
-                                                 owner.getProperty('fullname','Utente'),
+                                                 owner.getProperty('fullname', 'Utente'),
                                                  owner.getProperty('cellphone'),
                                                  owner.getProperty('email'),
                                                  ),
               'email_subject': NEW_ORDER_SUBJECT,
-              'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname','Utente')}
+              'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname', 'Utente')}
     company_notify(company, params)
     status = IStatusMessage(order.REQUEST)
     status.add(_(u'Your order has been registered!'), type=u'order')
@@ -307,7 +306,7 @@ def company_employee_modified(company, event):
         member = company.portal_membership.getMemberById(event.userid)
         email = member.getProperty('email', '')
         if email:
-            params = {'email_message': NEW_EMPLOYEE % (member.getProperty('fullname','Ciao!'),
+            params = {'email_message': NEW_EMPLOYEE % (member.getProperty('fullname', 'Ciao!'),
                                                        owner.getProperty('fullname', 'UPV'),
                                                        company.title_or_id()),
                       'email_subject': NEW_EMPLOYEE_SUBJECT,
@@ -323,43 +322,43 @@ def company_added(company, event):
         #stupid check - plone is calling it twice, why?
         return
 
-    story = company[company.invokeFactory('Folder','storie-dell-azienda')]
+    story = company[company.invokeFactory('Folder', 'storie-dell-azienda')]
     story.setTitle(u'Storie dell\'azienda')
     story.setLayout('folder_summary_view')
     story.setConstrainTypesMode(1)
-    story.setLocallyAllowedTypes(['CompanyStory',])
+    story.setLocallyAllowedTypes(['CompanyStory'])
     directlyProvides(story, (ISimpleAddButtons,))
-    company.portal_workflow.doActionFor(story, "publish",comment=_("Published on company creation"))
+    company.portal_workflow.doActionFor(story, "publish", comment=_("Published on company creation"))
 
     if 'foto' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
 
-    media = company[company.invokeFactory('Folder','foto')]
+    media = company[company.invokeFactory('Folder', 'foto')]
     media.setTitle(u'Foto')
     media.setLayout('atct_album_view')
     media.setConstrainTypesMode(1)
     media.setLocallyAllowedTypes(['Image'])
     directlyProvides(media, (ISimpleAddButtons,))
-    company.portal_workflow.doActionFor(media, "publish",comment=_("Published on company creation"))
+    company.portal_workflow.doActionFor(media, "publish", comment=_("Published on company creation"))
 
     if 'docs' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
 
-    docs = company[company.invokeFactory('Folder','docs')]
+    docs = company[company.invokeFactory('Folder', 'docs')]
     docs.setTitle(u'Documenti')
     docs.setLayout('folder_summary_view')
     docs.setConstrainTypesMode(1)
-    docs.setLocallyAllowedTypes(['Document','File'])
+    docs.setLocallyAllowedTypes(['Document', 'File'])
     directlyProvides(docs, (ISimpleAddButtons,))
-    company.portal_workflow.doActionFor(docs, "publish",comment=_("Published on company creation"))
+    company.portal_workflow.doActionFor(docs, "publish", comment=_("Published on company creation"))
 
     if 'prodotti' in company.objectIds():
         #stupid check - plone is calling it twice, why?
         return
 
-    products = company[company.invokeFactory('Products','prodotti')]
+    products = company[company.invokeFactory('Products', 'prodotti')]
     products.setTitle(u'Prodotti')
     products.setLayout('folder_leadimage_view')
     products.reindexObject()
@@ -369,7 +368,7 @@ def company_added(company, event):
         #stupid check - plone is calling it twice, why?
         return
 
-    demands = company[company.invokeFactory('Demands','richieste')]
+    demands = company[company.invokeFactory('Demands', 'richieste')]
     demands.setTitle(u'Cerchiamo')
     demands.setLayout('folder_summary_view')
     demands.reindexObject()
@@ -389,7 +388,7 @@ def company_added(company, event):
 def company_commented(company, event):
     """Event fired when company has been commented."""
     member = company.portal_membership.getAuthenticatedMember()
-    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
                                               event.comment_text,
                                               company.absolute_url()),
               'email_subject': NEW_COMMENT_SUBJECT}
@@ -401,13 +400,13 @@ def product_added(product, event):
     if 'foto' in product.objectIds():
         #stupid check - plone is calling it twice, why?
         return
-    media = product[product.invokeFactory('Folder','foto')]
+    media = product[product.invokeFactory('Folder', 'foto')]
     media.setTitle(u'Foto')
     media.setLayout('atct_album_view')
     directlyProvides(media, (ISimpleAddButtons,))
     media.setConstrainTypesMode(1)
-    media.setLocallyAllowedTypes(['Image',])
-    product.portal_workflow.doActionFor(media, "publish",comment=_("Published on product creation"))
+    media.setLocallyAllowedTypes(['Image'])
+    product.portal_workflow.doActionFor(media, "publish", comment=_("Published on product creation"))
     product.portal_workflow.doActionFor(product, "create")
 
 
@@ -415,7 +414,7 @@ def product_commented(product, event):
     """Event fired when product has been commented."""
     company = product.getCompany()
     member = company.portal_membership.getAuthenticatedMember()
-    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
                                               event.comment_text,
                                               product.absolute_url()),
               'email_subject': NEW_COMMENT_SUBJECT}
@@ -426,7 +425,7 @@ def offer_commented(offer, event):
     """Event fired when offer has been commented."""
     company = offer.getCompany()
     member = company.portal_membership.getAuthenticatedMember()
-    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
                                               event.comment_text,
                                               offer.absolute_url()),
               'email_subject': NEW_COMMENT_SUBJECT}
@@ -437,7 +436,7 @@ def demand_commented(product, event):
     """Event fired when demand has been commented."""
     company = product.getCompany()
     member = company.portal_membership.getAuthenticatedMember()
-    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname','User'),
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
                                               event.comment_text,
                                               product.absolute_url()),
               'email_subject': NEW_COMMENT_SUBJECT}
