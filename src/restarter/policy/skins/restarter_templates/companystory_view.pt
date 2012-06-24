@@ -1,22 +1,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      metal:use-macro="here/main_template/macros/master"
-      i18n:domain="plone"
-      lang="en">
-
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
 <body>
 
 <metal:content-core fill-slot="content-core">
-
-  <metal:body_macro metal:define-macro="body">
-       <metal:field use-macro="python:context.widget('period', mode='text')"></metal:field>
-   </metal:body_macro>
-
-      <metal:folderlisting_macro metal:define-macro="folderlisting">
-
-      </metal:folderlisting_macro>
-
-
+    <metal:content-core define-macro="content-core">
+        <metal:field use-macro="python:context.widget('text', mode='view')">
+            Body text
+        </metal:field>
+    </metal:content-core>
 </metal:content-core>
 
 </body>
 </html>
+
