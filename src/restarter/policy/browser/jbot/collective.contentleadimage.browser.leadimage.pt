@@ -1,0 +1,9 @@
+<div i18n:domain="collective.contentleadimage" class="leadCaption">
+
+    <img tal:replace="structure python:view.descTag(css_class='tileImage')" />
+    <p class="caption" tal:condition="view/hasCaption">
+        <metal:field use-macro="view/caption">
+        Image Caption
+        </metal:field>
+    </p>
+</div>

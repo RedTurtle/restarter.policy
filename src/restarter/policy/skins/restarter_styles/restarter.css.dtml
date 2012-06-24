@@ -102,6 +102,14 @@ img.image-left, img.image-right, .captioned img {
     padding: 6px 10px;
     width: 9em;
     color: #444C4C;
+    -moz-appearance: textfield;
+}
+@-moz-document url-prefix() {
+    #portal-searchbox #searchGadget,
+    #portal-searchbox #nolivesearchGadget,
+    #faceted-form div.faceted-text-widget input[type="text"] {
+        padding: 7px 10px;
+    }
 }
  #portal-searchbox .LSBox input.searchButton,
  #faceted-form div.faceted-text-widget input[type="submit"] {
@@ -420,10 +428,11 @@ li#linkTW {
     padding-top: 1em;
 }
 a.faq {
-    display: block;
+    display: inline-block;
     background: transparent url(++resource++restarter.images/ico_question.png) no-repeat left center;
-    padding: 0.3em 0 0.3em 40px;
+    padding: 0.8em 0 0.7em 40px;
     line-height: 1.4em;
+    margin-right: 1em;
 }
 #portal-siteactions {
     margin-left: -4em;
@@ -799,11 +808,17 @@ dl.productsPortlet p.btnLink a.btn:hover,
     top: 33%;
 }
 /** Company **/
-
-.portaltype-company #content .tileImage {
+.portaltype-company #content .leadCaption {
     float: left;
     margin-left: 0;
     padding: 0.3em 0.5em 0.2em 0;
+}
+.portaltype-company #content .tileImage {
+    float: none;
+    margin:0;
+}
+.portaltype-company #content .leadCaption .caption {
+    display: none;
 }
 .portaltype-company #content .documentDescription {
     font-weight: normal;
@@ -943,11 +958,28 @@ a.noFoto span {
     top: 40%;
     left:0;
 }
-.portaltype-product #content img.tileImage {
+.portaltype-product #content .leadCaption {
+    float: right;
+    margin-left: 20px;
+    max-width: 210px;
+    text-align: right;
+}
+.leadCaption p.caption,
+#content .leadCaption p.caption {
+    display: block;
+    font-size: 0.9em;
+    color: #999;
+    text-align: right;
+    font-style: italic;
+    margin: 0.3em 0 0;
+}
+.portaltype-product #content img.tileImage,
+#content #productExtract img.tileImage {
     padding: 5px;
+    float: none;
     border: 1px solid #F0f0f0;
     background-color: #FFF;
-    margin-left: 20px;
+    margin:0;
 }
 .lab {
     font-weight: bold;
@@ -1127,8 +1159,13 @@ a.noFoto span {
 #productExtract #product-counter {
     display: none;
 }
-#content #productExtract img.tileImage {
+#content #productExtract .leadCaption {
     float: none;
+}
+#content #productExtract .leadCaption .caption {
+    display:none;
+}
+#content #productExtract img.tileImage {
     display: block;
     border: 1px solid #CCC;
     background-color: #FFF;
