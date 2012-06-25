@@ -1,9 +1,0 @@
-#portal-globalnav li {
-    display: inline;
-}
-
-.btnActions li.button,
-#content .btnActions li, 
-dl.portlet .btnActions li {
-    display: inline;
-}

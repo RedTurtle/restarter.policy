@@ -1,0 +1,21 @@
+#portal-globalnav li {
+    display: inline;
+}
+
+.btnActions li.button,
+#content .btnActions li, 
+dl.portlet .btnActions li {
+    display: inline;
+}
+#portal-header #portal-globalnav li,
+.btnActions li.button, #content .btnActions li, dl.portlet .btnActions li {
+  display: inline;
+}
+#portal-header,
+#sliderTxt,
+dl.portlet dd.portletItem {
+  zoom: 1;
+}
+.footerColumn {
+  width: 31%;
+}
