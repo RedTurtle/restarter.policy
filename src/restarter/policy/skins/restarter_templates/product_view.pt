@@ -86,8 +86,8 @@
       </div>
 
       <div id="product-offers" tal:define="orders python: context.getFolderContents({'portal_type':'Order'}, batch=True, b_size=50)">
-        <h4>Offerte in corso e concluse per questo prodotto</h4>
-        <tal:no-orders condition="not: orders">
+        <h4>Prenotazioni effettuate e accettate per questo prodotto</h4>
+        <tal:no-orders condition="not: orders">            
            <p class="noOffers">
                   Questo prodotto non ha ancora ricevuto prenotazioni.
            </p>
