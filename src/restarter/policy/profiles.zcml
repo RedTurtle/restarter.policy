@@ -182,6 +182,22 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
   />
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0018 to 0019"
+      description=""
+      source="0018"
+      destination="0019"
+      handler="restarter.policy.upgrades.upgrade_0018_to_0019"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0018_to_0019"
+      title="Upgrade restarter.policy 0018 to 0019"
+      directory="profiles/upgrade_0018_to_0019"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
+
 
 
 

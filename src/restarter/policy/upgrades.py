@@ -130,3 +130,8 @@ def upgrade_0016_to_0017(context):
 
 def upgrade_0017_to_0018(context):
     context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0017_to_0018')
+
+
+def upgrade_0018_to_0019(context):
+    context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0018_to_0019')
+
