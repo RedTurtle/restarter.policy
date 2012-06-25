@@ -1,0 +1,4 @@
+<dl class="portalMessage info" tal:condition="view/info">
+  <dt>Info</dt>
+  <dd tal:content="structure view/info"></dd>
+</dl>

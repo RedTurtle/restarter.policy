@@ -2,7 +2,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.ploneview import Plone as PloneBase
 from Products.statusmessages.adapter import StatusMessage, STATUSMESSAGEKEY, translate, _encodeCookieValue, IAnnotations
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentActionsViewletBase
+from plone.app.layout.viewlets.common import ContentActionsViewlet as ContentActionsViewletBase, ViewletBase
 from plone.app.contentmenu.menu import FactoriesMenu, FactoriesSubMenuItem as BrowserSubMenuItem
 from plone.app.workflow.browser.sharing import SharingView as SharingBaseView
 from plone.memoize.instance import memoize
@@ -97,3 +97,22 @@ class OrderStatusMessage(StatusMessage):
         value = _encodeCookieValue(text, type, old='')
         context.response.setCookie(STATUSMESSAGEKEY, value, path='/')
         annotations[STATUSMESSAGEKEY] = value
+
+
+class CompanyStateInfo(ViewletBase):
+
+    index = ViewPageTemplateFile('templates/company_state_info.pt')
+
+    def update(self):
+        workflowTool = getToolByName(self.context, "portal_workflow")
+        review_state = workflowTool.getInfoFor(self.context, 'review_state')
+        if review_state == 'draft':
+            self.info = _(u'You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself.')
+        elif review_state == 'published':
+            self.info = _(u'Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company.')
+        else:
+            self.info = ''
+
+    def render(self):
+        return self.index()
+

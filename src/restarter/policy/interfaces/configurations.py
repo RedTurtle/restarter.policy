@@ -11,3 +11,6 @@ class IRestarterConfiguration(Interface):
 
     def safe_truncate(text,size):
         """Return truncated text"""
+
+    def getMemberInfo(member_id=None):
+        """Return restarter memberinfo """

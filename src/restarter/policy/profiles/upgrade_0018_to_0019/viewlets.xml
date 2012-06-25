@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object>
+ <order manager="plone.abovecontenttitle" skinname="restarter_theme">
+  <viewlet name="restarter.company_state_info"/>
+  <viewlet name="cioppino.twothumbs"/>
+ </order>
+</object>

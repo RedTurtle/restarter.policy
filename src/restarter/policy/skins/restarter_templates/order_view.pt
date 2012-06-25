@@ -41,13 +41,17 @@
                 <p>Nel caso in cui avessi prenotato questo prodotto per errore puoi <strong>cancellarlo</strong> cliccando sul menu a tendina in alto a destra dove è evidenziato lo stato <em>"nuovo ordine"</em>.</p>
             </div>
 
-            <div id="order-creator">
-                <p id="orderOwner">Questa prenotazione è stata fatta da <br /> <span class="orderOwner">Pinco Pallino</span> (<em>Nickname</em>)</p>
-                <div id="orderOwnerReferences">
+            <div id="order-creator" tal:define="author_id context/Creator;
+                                                restarter context/@@config_restarter;
+                                                membership context/portal_membership;
+                                                checkPermission nocall: membership/checkPermission;
+                                                author python: restarter.getMemberInfo(author_id)">
+                <p id="orderOwner">Questa prenotazione è stata fatta da <br /> <span class="orderOwner" tal:content="author/fullname"></span> (<em tal:content="author_id"></em>)</p>
+                <div id="orderOwnerReferences" tal:condition="python: checkPermission('Review portal content', context)">
                   <h5>Per contatti:</h5>
                   <ul>
-                    <li class="orderOwnerEmail">e-mail: <a href="mailto:email@email.com">email@email.com</a></li>
-                    <li class="orderOwnerCell">Telefono: <span>+39 000 0000000</span></li>
+                    <li class="orderOwnerEmail">e-mail: <a href="" tal:attributes="href string:mailto:${email}" tal:content="email" tal:define="email author/email">email@email.com</a></li>
+                    <li class="orderOwnerCell">Telefono: <span tal:content="author/cellphone"></span></li>
                   </ul>
                 </div>
             </div>

@@ -30,3 +30,22 @@ class RestarterConfig(BrowserView):
         else:
             elips = ''
         return '%s%s' % (text[:size], elips)
+
+    def getMemberInfo(self, memberId=None):
+        # Return 'harmless' Memberinfo of any member, such as Full name,
+        # Location, etc
+        pm = self.context.portal_membership
+        if not memberId:
+            member = pm.getAuthenticatedMember()
+        else:
+            member = pm.getMemberById(memberId)
+
+        if member is None:
+            return None
+
+        memberinfo = { 'fullname'    : member.getProperty('fullname'),
+                       'email'       : member.getProperty('email'),
+                       'cellphone'   : member.getProperty('cellphone'),
+                     }
+
+        return memberinfo

@@ -108,6 +108,17 @@
         layer="..interfaces.layer.ISkin"
         />
 
+    <browser:viewlet
+        for="..interfaces.ICompany"
+        name="restarter.company_state_info"
+        class=".common.CompanyStateInfo"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        permission="cmf.ModifyPortalContent"
+        layer="..interfaces.layer.ISkin"
+      />
+
+
+
 
    <!-- cioppino -->
     <browser:viewlet
