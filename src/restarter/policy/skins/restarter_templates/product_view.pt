@@ -77,7 +77,7 @@
                 &euro;</span></span>
           </div>
           <div class="counterSell">
-            <span class="labelTxt">Venduti <span class="val" tal:content="python: product_stats['order_items'].get('accepted',0)" />
+            <span class="labelTxt">Prenotati e accettati <span class="val" tal:content="python: product_stats['order_items'].get('accepted',0)" />
                 <metal:field use-macro="python:context.widget('unit', mode='view')"></metal:field> per un valore di
                 <span class="val"><span tal:replace="python: product_stats['order_value'].get('accepted',0)"/>
                 &euro;</span></span>
