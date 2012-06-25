@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-24 11:50+0000\n"
+"POT-Creation-Date: 2012-06-25 15:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,11 +27,11 @@ msgstr "Accetto"
 msgid "Accept terms of use"
 msgstr "Approvazione termini d'uso"
 
-#: ./browser/common.py:81
+#: ./browser/common.py:80
 msgid "Add company"
 msgstr "Aggiungi Azienda"
 
-#: ./browser/common.py:82
+#: ./browser/common.py:81
 msgid "Add new company wizard"
 msgstr "Parti con il processo di registrazione"
 
@@ -124,7 +124,7 @@ msgstr "Richieste"
 msgid "Email address"
 msgstr "Indirizzo di email"
 
-#: ./browser/common.py:46
+#: ./browser/common.py:45
 msgid "Employee"
 msgstr "Autorizzato"
 
@@ -180,11 +180,11 @@ msgstr "Tipo di notifica"
 msgid "Offer"
 msgstr "Offerta"
 
-#: ./content/offer.py:23
+#: ./content/offer.py:24
 msgid "Offer category"
 msgstr "Categoria"
 
-#: ./content/offer.py:77
+#: ./content/offer.py:78
 msgid "Offer name"
 msgstr "Nome"
 
@@ -210,7 +210,7 @@ msgid "Other"
 msgstr "Altro"
 
 #: ./content/demand.py:34
-#: ./content/offer.py:33
+#: ./content/offer.py:34
 msgid "Period"
 msgstr "Periodo"
 
@@ -218,9 +218,13 @@ msgstr "Periodo"
 msgid "Please accept terms of use."
 msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo e di privacy</a>."
 
-#: ./content/offer.py:45
+#: ./content/offer.py:46
 msgid "Please accept that this offer is free of charge."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
+
+#: ./browser/common.py:112
+msgid "Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company."
+msgstr ""
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
@@ -254,7 +258,7 @@ msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 msgid "Please provide demand period."
 msgstr "Indica il periodo della richiesta"
 
-#: ./content/offer.py:34
+#: ./content/offer.py:35
 msgid "Please provide offer period."
 msgstr "Indica il periodo dell'offerta"
 
@@ -302,7 +306,7 @@ msgstr "Indica il tipo di azienda"
 msgid "Please select your demand category."
 msgstr "Seleziona la categoria della richiesta"
 
-#: ./content/offer.py:24
+#: ./content/offer.py:25
 msgid "Please select your offer category."
 msgstr "Seleziona la categoria dell'offerta"
 
@@ -351,11 +355,11 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:332
+#: ./events.py:331
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:410
+#: ./events.py:409
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -387,7 +391,7 @@ msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://develo
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
-#: ./content/offer.py:44
+#: ./content/offer.py:45
 msgid "This offer is free of charge."
 msgstr "L'offerta è gratuita."
 
@@ -411,11 +415,15 @@ msgstr "Attenzione"
 msgid "You must accept the Terms of Use."
 msgstr "Devi accettare i termini d'uso"
 
-#: ./content/offer.py:42
+#: ./content/offer.py:43
 msgid "You must accept the gratis terms."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
-#: ./events.py:279
+#: ./browser/common.py:110
+msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
+msgstr ""
+
+#: ./events.py:278
 msgid "Your order has been registered!"
 msgstr "La tua prenotazione è stata registrata. Grazie!"
 
@@ -424,12 +432,12 @@ msgid "both"
 msgstr "entrambi"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./userdataschema.py:45
+#: ./userdataschema.py:46
 msgid "help_accept"
 msgstr "Spunta questo riquadro per indicare che hai trovato, letto e accettato i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-gli-iscritti'>termini di utilizzo</a> di questo servizio. "
 
 #. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
-#: ./userdataschema.py:38
+#: ./userdataschema.py:39
 msgid "help_cellphone"
 msgstr "Lasciaci il tuo numero di cellulare così che ti si possa raggiungere. Il formato giusto è +391234567890"
 
@@ -444,12 +452,12 @@ msgid "help_remember_my_name"
 msgstr "Spunta questo riquadro per fare in modo che il tuo nome sia automaticamente riconosciuto al prossimo accesso"
 
 #. Default: "Accept terms of use"
-#: ./userdataschema.py:44
+#: ./userdataschema.py:45
 msgid "label_accept"
 msgstr "Accetta i termini d'utilizzo"
 
 #. Default: "Cellphone number"
-#: ./userdataschema.py:37
+#: ./userdataschema.py:38
 msgid "label_cellphone"
 msgstr "Numero di cellulare"
 

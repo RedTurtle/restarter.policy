@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-24 11:50+0000\n"
+"POT-Creation-Date: 2012-06-25 15:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,11 +27,11 @@ msgstr ""
 msgid "Accept terms of use"
 msgstr ""
 
-#: ./browser/common.py:81
+#: ./browser/common.py:80
 msgid "Add company"
 msgstr ""
 
-#: ./browser/common.py:82
+#: ./browser/common.py:81
 msgid "Add new company wizard"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: ./browser/common.py:46
+#: ./browser/common.py:45
 msgid "Employee"
 msgstr ""
 
@@ -180,11 +180,11 @@ msgstr ""
 msgid "Offer"
 msgstr ""
 
-#: ./content/offer.py:23
+#: ./content/offer.py:24
 msgid "Offer category"
 msgstr ""
 
-#: ./content/offer.py:77
+#: ./content/offer.py:78
 msgid "Offer name"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgid "Other"
 msgstr ""
 
 #: ./content/demand.py:34
-#: ./content/offer.py:33
+#: ./content/offer.py:34
 msgid "Period"
 msgstr ""
 
@@ -218,8 +218,12 @@ msgstr ""
 msgid "Please accept terms of use."
 msgstr ""
 
-#: ./content/offer.py:45
+#: ./content/offer.py:46
 msgid "Please accept that this offer is free of charge."
+msgstr ""
+
+#: ./browser/common.py:112
+msgid "Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company."
 msgstr ""
 
 #: ./content/company.py:134
@@ -254,7 +258,7 @@ msgstr ""
 msgid "Please provide demand period."
 msgstr ""
 
-#: ./content/offer.py:34
+#: ./content/offer.py:35
 msgid "Please provide offer period."
 msgstr ""
 
@@ -302,7 +306,7 @@ msgstr ""
 msgid "Please select your demand category."
 msgstr ""
 
-#: ./content/offer.py:24
+#: ./content/offer.py:25
 msgid "Please select your offer category."
 msgstr ""
 
@@ -351,11 +355,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:332
+#: ./events.py:331
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:410
+#: ./events.py:409
 msgid "Published on product creation"
 msgstr ""
 
@@ -387,7 +391,7 @@ msgstr ""
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr ""
 
-#: ./content/offer.py:44
+#: ./content/offer.py:45
 msgid "This offer is free of charge."
 msgstr ""
 
@@ -411,11 +415,15 @@ msgstr ""
 msgid "You must accept the Terms of Use."
 msgstr ""
 
-#: ./content/offer.py:42
+#: ./content/offer.py:43
 msgid "You must accept the gratis terms."
 msgstr ""
 
-#: ./events.py:279
+#: ./browser/common.py:110
+msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
+msgstr ""
+
+#: ./events.py:278
 msgid "Your order has been registered!"
 msgstr ""
 
@@ -424,12 +432,12 @@ msgid "both"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
-#: ./userdataschema.py:45
+#: ./userdataschema.py:46
 msgid "help_accept"
 msgstr ""
 
 #. Default: "Leave your cell phone number so we can reach you. The correct format is: +391234567890"
-#: ./userdataschema.py:38
+#: ./userdataschema.py:39
 msgid "help_cellphone"
 msgstr ""
 
@@ -444,12 +452,12 @@ msgid "help_remember_my_name"
 msgstr ""
 
 #. Default: "Accept terms of use"
-#: ./userdataschema.py:44
+#: ./userdataschema.py:45
 msgid "label_accept"
 msgstr ""
 
 #. Default: "Cellphone number"
-#: ./userdataschema.py:37
+#: ./userdataschema.py:38
 msgid "label_cellphone"
 msgstr ""
 
