@@ -224,7 +224,7 @@ msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./browser/common.py:112
 msgid "Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company."
-msgstr ""
+msgstr "Per rimuovere l'azienda, per favore contatta il <a href="/contatti/supporto-tecnico">supporto</a> che provvederà rapidamente."
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
@@ -421,7 +421,7 @@ msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./browser/common.py:110
 msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
-msgstr ""
+msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ricorda, una volta pubblicata, di contattare il supporto per rimuoverla."
 
 #: ./events.py:278
 msgid "Your order has been registered!"
