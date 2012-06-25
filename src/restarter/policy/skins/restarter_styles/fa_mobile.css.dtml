@@ -255,4 +255,13 @@ div.comMap {
     max-width: 100%;
 }
 
+/* login */
+#plonelogin-wrapper {
+    float: none;
+    max-width: 100%%;
+}
+#rpx-register-container {
+    float: none;
+}
+
 /* </dtml-with> */
