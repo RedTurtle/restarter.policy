@@ -118,6 +118,16 @@
        permission="zope2.View"
        layer="..interfaces.layer.ISkin"
       />
+
+
+    <browser:viewlet  
+        name="plone.resourceregistries" 
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        template="templates/resourceregistries.pt"
+        permission="zope2.View" 
+        layer="..interfaces.layer.ISkin"
+     />
+
 <!--
   <browser:viewletManager
        name="plone.resourceregistries.scripts"
@@ -127,4 +137,5 @@
        layer="..interfaces.layer.ISkin"
    />
 -->
+
 </configure>

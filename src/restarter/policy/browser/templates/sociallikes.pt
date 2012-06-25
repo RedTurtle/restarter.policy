@@ -25,7 +25,7 @@
 
     </tal:fb>
 </div>
-
+<!--
 <script type="text/javascript">
     jQuery(function () {
         jQuery("div#viewlet-social-like").each(function(){
@@ -33,4 +33,5 @@
             jQuery(this).removeAttr("style");
         });
     });
-</script>
+  </script>
+  -->
