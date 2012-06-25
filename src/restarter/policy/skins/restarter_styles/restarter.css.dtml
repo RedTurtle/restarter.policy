@@ -811,6 +811,7 @@ dl.productsPortlet p.btnLink a.btn:hover,
 .portaltype-company #content .leadCaption {
     float: left;
     margin-left: 0;
+    margin-right: 1em;
     padding: 0.3em 0.5em 0.2em 0;
 }
 .portaltype-company #content .tileImage {
@@ -1202,7 +1203,8 @@ a.noFoto span {
     background: transparent  url(++resource++restarter.images/bag.png) no-repeat right center;
     padding: 0.3em 40px 0.3em 0;
 }
-#order-view #order-alert {
+#order-view #order-alert,
+#order-view #orderOwnerReferences {
     color: #4D7916;
     padding: 1em;
     margin: 1em auto;
@@ -1212,8 +1214,27 @@ a.noFoto span {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-#order-view #order-alert p {
+#order-view #orderOwnerReferences {
+    background-color: #FFEAE1;
+    color: #000;
+}
+#order-view #orderOwnerReferences h5 {
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+}
+#order-view #order-creator {
+    border-top: 1px dotted #CCC;
+    padding-top: 1.5em;
+    }
+#order-view #order-alert p,
+#order-view #order-creator p {
     margin: 0 0 0.2em;
+}
+#orderOwner {
+    color: #000;
+}
+.orderOwner {
+    font-weight: bold;
 }
 
 /**/

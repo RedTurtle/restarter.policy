@@ -40,6 +40,17 @@
                 <p>Comprenderai che la pazienza in questi casi è necessaria.</p>
                 <p>Nel caso in cui avessi prenotato questo prodotto per errore puoi <strong>cancellarlo</strong> cliccando sul menu a tendina in alto a destra dove è evidenziato lo stato <em>"nuovo ordine"</em>.</p>
             </div>
+
+            <div id="order-creator">
+                <p id="orderOwner">Questa prenotazione è stata fatta da <br /> <span class="orderOwner">Pinco Pallino</span> (<em>Nickname</em>)</p>
+                <div id="orderOwnerReferences">
+                  <h5>Per contatti:</h5>
+                  <ul>
+                    <li class="orderOwnerEmail">e-mail: <a href="mailto:email@email.com">email@email.com</a></li>
+                    <li class="orderOwnerCell">Telefono: <span>+39 000 0000000</span></li>
+                  </ul>
+                </div>
+            </div>
           </div>
         </metal:body_macro>
         <metal:folderlisting_macro metal:define-macro="folderlisting"/>
