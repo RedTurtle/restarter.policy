@@ -119,4 +119,12 @@
        layer="..interfaces.layer.ISkin"
       />
 
+  <browser:viewletManager
+       name="plone.resourceregistries.scripts"
+       provides="Products.ResourceRegistries.interfaces.IHtmlHeadScripts"
+       template="templates/scripts.pt"
+       permission="zope2.View"
+       layer="..interfaces.layer.ISkin"
+   />
+
 </configure>
