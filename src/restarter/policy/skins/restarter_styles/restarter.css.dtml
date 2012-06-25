@@ -1110,13 +1110,13 @@ a.noFoto span {
 /** ordine **/
 .order-view {
     float: left;
-    max-width: 50%;
+    max-width: 54%;
 }
 #productExtract {
     background-color: #F0F0F0;
     border: 1px solid #CCC;
     padding: 10px 20px;    
-    max-width: 40%;
+    max-width: 36%;
     float: right;
 }
 #productExtract .description {
@@ -1197,7 +1197,7 @@ a.noFoto span {
 }
 .portaltype-order #parent-fieldname-description.documentDescription {
     float: left;
-    max-width: 50%;
+    max-width: 54%;
 }
 .portaltype-order h1#parent-fieldname-title {
     background: transparent  url(++resource++restarter.images/bag.png) no-repeat right center;
@@ -1208,7 +1208,7 @@ a.noFoto span {
     color: #4D7916;
     padding: 1em;
     margin: 1em auto;
-    width: 80%;
+    width: 88%;
     background-color: #F7FFE4;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
