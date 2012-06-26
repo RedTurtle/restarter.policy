@@ -1052,16 +1052,16 @@ a.noFoto span {
     font-weight: bold;
 }
 #product-counter .counterPrenot {
-    background: transparent  url(++resource++restarter.images/euro_grey.png) no-repeat left center;
-    padding: 5px 20px 5px 30px;
+    /*background: transparent  url(++resource++restarter.images/euro_grey.png) no-repeat left center;*/
+    padding: 5px 20px 5px 0;
     float: left;
     margin-right: 20px;
     border-right: 1px dotted #999;
 }
 #product-counter .counterSell {
-    background: transparent  url(++resource++restarter.images/euro_green.png) no-repeat left center;
-    padding-left: 30px;
-    padding: 5px 0 5px 30px;
+    /*background: transparent  url(++resource++restarter.images/euro_green.png) no-repeat left center;
+    padding-left: 30px;*/
+    padding: 5px 0 5px 0;
     float: left;
 }
 #product-offers {
