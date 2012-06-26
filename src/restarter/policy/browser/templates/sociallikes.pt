@@ -1,6 +1,6 @@
 <div id="viewlet-social-like"
      tal:attributes="class view/typebutton"
-     style="display:none" i18n:domain="sc.social.like" tal:condition="view/enabled">
+     i18n:domain="sc.social.like" tal:condition="view/enabled">
     <tal:gp tal:condition="view/gp_enabled">
         <tal:block tal:define="button python:{'vertical':'tall','horizontal':'medium'}; vbutton view/typebutton">
           <div id="plusonebt"></div> 

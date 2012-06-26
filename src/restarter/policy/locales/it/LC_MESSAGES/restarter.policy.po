@@ -223,8 +223,8 @@ msgid "Please accept that this offer is free of charge."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./browser/common.py:112
-msgid "Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company."
-msgstr "Per rimuovere l'azienda, per favore contatta il <a href="/contatti/supporto-tecnico">supporto</a> che provvederà rapidamente."
+msgid "Please contact <a href=\"/contatti/supporto-tecnico\">support</a> to remove your company."
+msgstr "Per rimuovere l'azienda, per favore contatta il <a href=\"/contatti/supporto-tecnico\">supporto</a> che provvederà rapidamente."
 
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
