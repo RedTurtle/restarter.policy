@@ -196,7 +196,6 @@
 
 <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
 <metal:javascriptslot define-slot="javascript_head_slot" />
-<script type="text/javascript" async src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
 </body>
 </html>
 
