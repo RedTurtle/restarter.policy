@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-25 15:23+0000\n"
+"POT-Creation-Date: 2012-06-26 08:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,10 +222,6 @@ msgstr ""
 msgid "Please accept that this offer is free of charge."
 msgstr ""
 
-#: ./browser/common.py:112
-msgid "Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company."
-msgstr ""
-
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
 msgstr ""
@@ -427,8 +423,17 @@ msgstr ""
 msgid "Your order has been registered!"
 msgstr ""
 
+msgid "accepted"
+msgstr ""
+
 #: ./content/company.py:43
 msgid "both"
+msgstr ""
+
+msgid "deleted"
+msgstr ""
+
+msgid "draft"
 msgstr ""
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
@@ -459,6 +464,11 @@ msgstr ""
 #. Default: "Cellphone number"
 #: ./userdataschema.py:38
 msgid "label_cellphone"
+msgstr ""
+
+#. Default: "Please contact <a href=\"/contatti/supporto-tecnico\">support</a> to remove your company."
+#: ./browser/common.py:112
+msgid "label_company_private_info"
 msgstr ""
 
 #. Default: "Log in"
@@ -492,9 +502,18 @@ msgstr ""
 msgid "label_remember_my_name"
 msgstr ""
 
+msgid "new"
+msgstr ""
+
 #. Default: "Register"
 #: ./skins/restarter_templates/rpx_macros.pt:54
 msgid "register_button"
+msgstr ""
+
+msgid "rejected"
+msgstr ""
+
+msgid "requested"
 msgstr ""
 
 #: ./profiles/default/types/Company.xml

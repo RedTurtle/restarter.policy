@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-25 15:23+0000\n"
+"POT-Creation-Date: 2012-06-26 08:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,10 +222,6 @@ msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-faccia
 msgid "Please accept that this offer is free of charge."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
-#: ./browser/common.py:112
-msgid "Please contact <a href=\"/contatti/supporto-tecnico\">support</a> to remove your company."
-msgstr "Per rimuovere l'azienda, per favore contatta il <a href=\"/contatti/supporto-tecnico\">supporto</a> che provvederà rapidamente."
-
 #: ./content/company.py:134
 msgid "Please give us your company CF or P.IVA."
 msgstr "Indica il codice fiscale o partita iva dell'azienda"
@@ -427,9 +423,18 @@ msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ric
 msgid "Your order has been registered!"
 msgstr "La tua prenotazione è stata registrata. Grazie!"
 
+msgid "accepted"
+msgstr "L'ordine è stato accettato"
+
 #: ./content/company.py:43
 msgid "both"
 msgstr "entrambi"
+
+msgid "deleted"
+msgstr "L'ordine è stato cancellato"
+
+msgid "draft"
+msgstr "L'ordine è stato creato"
 
 #. Default: "Tick this box to indicate that you have found, read and accepted the terms of use for this site. "
 #: ./userdataschema.py:46
@@ -460,6 +465,11 @@ msgstr "Accetta i termini d'utilizzo"
 #: ./userdataschema.py:38
 msgid "label_cellphone"
 msgstr "Numero di cellulare"
+
+#. Default: "Please contact <a href=\"/contatti/supporto-tecnico\">support</a> to remove your company."
+#: ./browser/common.py:112
+msgid "label_company_private_info"
+msgstr "Per rimuovere l'azienda, per favore contatta il <a href=\"/contatti/supporto-tecnico\">supporto</a> che provvederà rapidamente."
 
 #. Default: "Log in"
 #: ./skins/restarter_templates/rpx_macros.pt:153
@@ -492,10 +502,19 @@ msgstr "Registrati"
 msgid "label_remember_my_name"
 msgstr "Ricorda il mio nome"
 
+msgid "new"
+msgstr "Nuovo ordine"
+
 #. Default: "Register"
 #: ./skins/restarter_templates/rpx_macros.pt:54
 msgid "register_button"
 msgstr "Registrati"
+
+msgid "rejected"
+msgstr "L'ordine è stato rifiutato"
+
+msgid "requested"
+msgstr "L'ordine è stato richiesto"
 
 #: ./profiles/default/types/Company.xml
 #: ./profiles/upgrade_0009_to_0010/types/Company.xml

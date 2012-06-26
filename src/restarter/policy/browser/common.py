@@ -107,9 +107,9 @@ class CompanyStateInfo(ViewletBase):
         workflowTool = getToolByName(self.context, "portal_workflow")
         review_state = workflowTool.getInfoFor(self.context, 'review_state')
         if review_state == 'draft':
-            self.info = _(u'You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself.')
+            self.info = _(u"You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself.")
         elif review_state == 'published':
-            self.info = _(u'Please contact <a href="/contatti/supporto-tecnico">support</a> to remove your company.')
+            self.info = _('label_company_private_info',default=u"Please contact <a href=\"/contatti/supporto-tecnico\">support</a> to remove your company.")
         else:
             self.info = ''
 
