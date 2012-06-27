@@ -283,10 +283,14 @@ def product_published(product, event):
         return
     member = product.portal_membership.getAuthenticatedMember()
     facebook_id = get_facebook_from_member(member)
+    params = {'product_url': product.absolute_url()}
     if facebook_id:
-        params = {'facebook_id': facebook_id,
-                  'product_url': product.absolute_url()}
+        params['facebook_id'] = facebook_id
         notify('notify/fb/sell', params)
+
+    params['product_title'] = product.title_or_id()
+    params['product_description'] = product.Description()
+    notify('notify/page/product', params)
 
 
 def company_published(company, event):
@@ -294,10 +298,14 @@ def company_published(company, event):
         return
     member = company.portal_membership.getAuthenticatedMember()
     facebook_id = get_facebook_from_member(member)
+    params = {'company_url': company.absolute_url()}
     if facebook_id:
-        params = {'facebook_id': facebook_id,
-                  'company_url': company.absolute_url()}
+        params['facebook_id'] = facebook_id
         notify('notify/fb/newcompany', params)
+
+    params['company_title'] = company.title_or_id()
+    params['company_description'] = company.Description()
+    notify('notify/page/company', params)
 
 
 def company_employee_modified(company, event):
