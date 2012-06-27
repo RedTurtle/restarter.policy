@@ -1,8 +1,10 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.component import getMultiAdapter
 from sc.social.like.browser.viewlets import SocialMetadataViewlet, SocialLikesViewlet as BaseLikeViewlet
 from collective.contentleadimage.config import IMAGE_FIELD_NAME
-from restarter.policy.interfaces import IProduct, ICompany
 from collective.contentleadimage.interfaces import ILeadImageable
+
+from restarter.policy.interfaces import IProduct, ICompany
 
 
 class SocialLikesViewlet(BaseLikeViewlet):
@@ -44,6 +46,11 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
             return [{'property':'facciamoadesso:address',
                      'content':'%s, %s' % (self.context.getAddress(), self.context.getCity())}]
         return []
+
+    @property
+    def canonical_url(self):
+        context_state = getMultiAdapter((self.context, self.request), name='plone_context_state')
+        return context_state.canonical_object_url()
 
     @property
     def title(self):

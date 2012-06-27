@@ -2,7 +2,7 @@
   <tal:fb tal:condition="view/fb_enabled">
 
     <meta property="fb:app_id" content="243138589129142" />
-    <meta property="og:url" tal:attributes="content context/absolute_url" />
+    <meta property="og:url" tal:attributes="content view/canonical_url" />
     <meta property="og:type" tal:attributes="content view/fb_type" />
     <meta property="og:title" tal:attributes="content view/title" />
     <meta property="og:description" tal:attributes="content view/description" />
