@@ -52,6 +52,8 @@ class RestarterMetadataViewlet(SocialMetadataViewlet):
     @property
     def description(self):
         descr = getattr(self.context, 'Description', None)
+        if descr and callable(descr):
+            descr = descr()
         if not descr:
             descr = u'Facciamo e un portale di comunicazione e scambio per facilitare l\'incontro tra le imprese che hanno bisogno e chi e disposto a contribuire.'
         return descr
