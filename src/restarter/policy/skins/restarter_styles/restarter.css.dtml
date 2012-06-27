@@ -480,7 +480,10 @@ body#content.mceContentBody {
     display: block;
 }
 #viewlet-social-like iframe {
-   width: 100px !important;
+   /*width: 100px !important;*/
+}
+.horizontal .fb_iframe_widget iframe {
+    height: 100% !important;
 }
 #content .documentDescription, #content #description {
     font-family: <dtml-var fontFamily>;
