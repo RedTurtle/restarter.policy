@@ -1,6 +1,6 @@
 <div i18n:domain="collective.contentleadimage" class="leadCaption">
 
-    <img tal:replace="structure python:view.descTag(css_class='tileImage')" />
+    <a href="#" tal:attributes="href string:${context/absolute_url}/leadImage_large" class="prettyPhoto" rel="prettyPhoto"><img tal:replace="structure python:view.descTag(css_class='tileImage')" /></a>
     <p class="caption" tal:condition="view/hasCaption">
         <metal:field use-macro="view/caption">
         Image Caption

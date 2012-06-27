@@ -1771,5 +1771,9 @@ dl.order dd {
     padding-bottom: 0.5em;
 }
 
+body.portaltype-portlet-page.section-homepage h1.documentFirstHeading {
+    display: none;
+}
+
 
 /* </dtml-with> */
