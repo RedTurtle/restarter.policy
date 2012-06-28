@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-26 08:37+0000\n"
+"POT-Creation-Date: 2012-06-28 10:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,11 +351,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:331
+#: ./events.py:339
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:409
+#: ./events.py:417
 msgid "Published on product creation"
 msgstr ""
 
@@ -484,6 +484,11 @@ msgstr ""
 #. Default: "Password"
 #: ./skins/restarter_templates/rpx_macros.pt:119
 msgid "label_password"
+msgstr ""
+
+#. Default: "You need to have <a href='${company_url}'>your company</a> published before publishing your products."
+#: ./browser/common.py:124
+msgid "label_product_private_info"
 msgstr ""
 
 #. Default: "Ragione sociale"
