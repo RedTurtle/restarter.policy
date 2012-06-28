@@ -489,7 +489,7 @@ msgstr "Password"
 #. Default: "You need to have <a href='${company_url}'>your company</a> published before publishing your products."
 #: ./browser/common.py:124
 msgid "label_product_private_info"
-msgstr ""
+msgstr "La <a href='${company_url}'>tua azienda</a> deve essere pubblica prima di pubblicare i tuoi prodotti."
 
 #. Default: "Ragione sociale"
 #: ./content/company.py:51
