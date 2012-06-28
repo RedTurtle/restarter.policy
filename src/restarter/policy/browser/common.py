@@ -101,7 +101,7 @@ class OrderStatusMessage(StatusMessage):
 
 class CompanyStateInfo(ViewletBase):
 
-    index = ViewPageTemplateFile('templates/company_state_info.pt')
+    index = ViewPageTemplateFile('templates/additional_state_info.pt')
 
     def update(self):
         workflowTool = getToolByName(self.context, "portal_workflow")
@@ -115,4 +115,15 @@ class CompanyStateInfo(ViewletBase):
 
     def render(self):
         return self.index()
+
+
+class ProductStateInfo(CompanyStateInfo):
+
+    def update(self):
+        if not self.context.canPublish():
+            self.info = _('label_product_private_info',
+                          default=u"You need to have <a href='${company_url}'>your company</a> published before publishing your products.",
+                          mapping={u"company_url" : self.context.getCompany().absolute_url()})
+        else:
+            self.info = ''
 

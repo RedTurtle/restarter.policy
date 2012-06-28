@@ -190,5 +190,10 @@ class Product(folder.ATFolder):
             value = field.get(self)
             return not not value
 
+    def canPublish(self):
+        company = self.getCompany()
+        wtool = self.portal_workflow
+        return wtool.getInfoFor(company, 'review_state', '') == 'published'
+
 
 atapi.registerType(Product, PROJECTNAME)

@@ -117,7 +117,14 @@
         layer="..interfaces.layer.ISkin"
       />
 
-
+    <browser:viewlet
+        for="..interfaces.IProduct"
+        name="restarter.product_state_info"
+        class=".common.ProductStateInfo"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        permission="cmf.ModifyPortalContent"
+        layer="..interfaces.layer.ISkin"
+      />
 
 
    <!-- cioppino -->
