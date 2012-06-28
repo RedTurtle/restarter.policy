@@ -54,9 +54,8 @@
                       item_path obj/getPath;"
           tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
 
-        <div class="faCollectionImg">
+        <div class="faCollectionImg" tal:condition="exists:python:path('here'+item_path.replace('/'+portal.getId(), '')+'/image_thumb')">
           <img src="" alt=""
-               tal:condition="exists:python:path('here'+item_path.replace('/'+portal.getId(), '')+'/image_thumb')"
                tal:attributes="src string:${obj/getURL}/image_thumb;
                          alt obj/Description;"/>
         </div>
