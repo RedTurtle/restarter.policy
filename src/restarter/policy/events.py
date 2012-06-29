@@ -308,6 +308,15 @@ def company_published(company, event):
     notify('notify/page/company', params)
 
 
+def demand_published(demand, event):
+    if event.action != 'publish':
+        return
+    params = {'demand_url': demand.absolute_url()}
+    params['demand_title'] = demand.title_or_id()
+    params['demand_description'] = demand.Description()
+    notify('notify/page/demand', params)
+
+
 def company_employee_modified(company, event):
     if event.add_user:
         owner = company.getOwner()

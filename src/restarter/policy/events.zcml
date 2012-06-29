@@ -34,6 +34,12 @@
    />
 
   <subscriber
+      for=".interfaces.IDemand
+           Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.demand_published"
+   />
+
+  <subscriber
       for=".interfaces.ICompany
            Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.company_added"
