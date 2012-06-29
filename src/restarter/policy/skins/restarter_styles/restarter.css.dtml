@@ -782,7 +782,7 @@ dl.productsPortlet p.btnLink a.btn:hover,
     width: 20%;
     margin: 0 1.5% 20px;
     max-width: 150px;
-    min-height: 165px;
+    min-height: 180px;
     padding: 5px;
     border: 1px solid #F0F0F0;
 }
