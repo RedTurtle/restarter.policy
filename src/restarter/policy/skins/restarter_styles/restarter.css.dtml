@@ -1777,6 +1777,8 @@ dl.order dd {
 body.portaltype-portlet-page.section-homepage h1.documentFirstHeading {
     display: none;
 }
-
+.section-homepage #viewlet-social-like {
+    display:none;
+}
 
 /* </dtml-with> */
