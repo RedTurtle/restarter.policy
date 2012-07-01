@@ -288,9 +288,9 @@ def product_published(product, event):
         params['facebook_id'] = facebook_id
         notify('notify/fb/sell', params)
 
-    params['product_title'] = product.title_or_id()
-    params['product_description'] = product.Description()
-    notify('notify/page/product', params)
+#    params['product_title'] = product.title_or_id()
+#    params['product_description'] = product.Description()
+#    notify('notify/page/product', params)
 
 
 def company_published(company, event):
