@@ -417,7 +417,7 @@ msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
 #: ./browser/common.py:110
 msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
-msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ricorda, una volta pubblicata, di contattare il supporto per rimuoverla."
+msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ricorda, una volta pubblicata, di contattare il supporto se volessi rimuoverla."
 
 #: ./events.py:278
 msgid "Your order has been registered!"
