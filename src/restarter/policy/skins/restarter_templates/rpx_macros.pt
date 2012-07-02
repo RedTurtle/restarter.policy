@@ -20,7 +20,7 @@
                    e beneficia della piena integrazione con il tuo profilo
                 </p>
                 
-                <a class="fb_login" href="" tal:attributes="href string:${context/absolute_url}/facebook-login">
+                <a class="fb_login" href="" tal:attributes="href string:${context/absolute_url}/facebook-login?came_from=${came_from}">
                   <img src="" tal:attributes="src string:${context/absolute_url}/facebook_login.png"/>
                 </a>
                 <p class="plonelogin-txt">
