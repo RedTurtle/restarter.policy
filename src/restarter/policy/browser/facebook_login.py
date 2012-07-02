@@ -46,14 +46,14 @@ class FacebookLogin(BrowserView):
             self.request.response.redirect(self.context.absolute_url())
             return u""
 
-        verificationCode = self.request.form.get("code", None)
-        errorReason      = self.request.form.get("error_reason", None)
+        verificationCode = self.request.get("code", None)
+        errorReason      = self.request.get("error_reason", None)
 
         args = {
                 'client_id': FB_APP_ID,
                 'scope': 'publish_actions,email',
-                #'redirect_uri': "%s/%s?came_from=%s" % (self.context.absolute_url(), self.__name__, self.request.get('came_from')),
-                'redirect_uri': "%s/%s" % (self.context.absolute_url(), self.__name__,),
+                'redirect_uri': "%s/%s?came_from=%s" % (self.context.absolute_url(), self.__name__, self.request.get('came_from')),
+                #'redirect_uri': "%s/%s" % (self.context.absolute_url(), self.__name__,),
             }
 
         # Did we get an error back after a Facebook redirect?
