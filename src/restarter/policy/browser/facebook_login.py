@@ -48,13 +48,12 @@ class FacebookLogin(BrowserView):
 
         verificationCode = self.request.get("code", None)
         errorReason      = self.request.get("error_reason", None)
-        came_from        = self.request.get("came_from", self.context.absolute_url())
 
         args = {
                 'client_id': FB_APP_ID,
                 'scope': 'publish_actions,email',
-                'redirect_uri': "%s/%s?came_from=%s" % (self.context.absolute_url(), self.__name__, came_from),
-                #'redirect_uri': "%s/%s" % (self.context.absolute_url(), self.__name__,),
+                #'redirect_uri': "%s/%s?came_from=%s" % (self.context.absolute_url(), self.__name__, came_from),
+                'redirect_uri': "%s/%s" % (self.context.absolute_url(), self.__name__,),
             }
 
         # Did we get an error back after a Facebook redirect?
@@ -65,6 +64,9 @@ class FacebookLogin(BrowserView):
 
         # If there is no code, this is probably the first request, so redirect
         # to Facebook
+        came_from        = self.request.get("came_from", self.context.absolute_url())
+        session = self.context.session_data_manager.getSessionData()
+        session['came_from'] = came_from
 
         if verificationCode is None:
             self.request.response.redirect(
@@ -75,9 +77,9 @@ class FacebookLogin(BrowserView):
         if self.portal_membership.isAnonymousUser():
             self.request.RESPONSE.redirect('%s/@@facebook_register' % self.portal.absolute_url())
         else:
-            url = self.request.get('came_from')
+            url = session.get('came_from')
             if url is not None:
-                self.request.RESPONSE.redirect(url[0])
+                self.request.RESPONSE.redirect(url)
             else:
                 self.request.RESPONSE.redirect('%s?ts=%s' % (self.portal.absolute_url(),time.time()))
 
