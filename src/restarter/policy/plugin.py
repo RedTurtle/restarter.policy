@@ -77,7 +77,7 @@ class FacebookUsers(BasePlugin):
         return accessToken
 
     def extractCredentials(self, request):
-        verificationCode = request.form.get("code", None)
+        verificationCode = request.get("code", None)
 
         if verificationCode:
             session = self.session_data_manager.getSessionData()
