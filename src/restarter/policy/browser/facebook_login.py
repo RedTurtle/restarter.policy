@@ -65,8 +65,8 @@ class FacebookLogin(BrowserView):
         # If there is no code, this is probably the first request, so redirect
         # to Facebook
         came_from        = self.request.get("came_from", self.context.absolute_url())
-        session = self.context.session_data_manager.getSessionData()
-        session['came_from'] = came_from
+        #session = self.context.session_data_manager.getSessionData()
+        #session['came_from'] = came_from
 
         if verificationCode is None:
             self.request.response.redirect(
@@ -77,7 +77,7 @@ class FacebookLogin(BrowserView):
         if self.portal_membership.isAnonymousUser():
             self.request.RESPONSE.redirect('%s/@@facebook_register' % self.portal.absolute_url())
         else:
-            url = session.get('came_from')
+            url = came_from# session.get('came_from')
             if url is not None:
                 self.request.RESPONSE.redirect(url)
             else:
