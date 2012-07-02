@@ -52,6 +52,7 @@ class FacebookLogin(BrowserView):
         args = {
                 'client_id': FB_APP_ID,
                 'scope': 'publish_actions,email',
+                'came_form': self.request.get('came_from'),
                 'redirect_uri': "%s/%s" % (self.context.absolute_url(), self.__name__,),
             }
 
