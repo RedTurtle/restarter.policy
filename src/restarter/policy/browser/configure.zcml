@@ -86,6 +86,13 @@
         permission="plone.DelegateRoles"
       />
 
+   <browser:page
+       name="company_owner"
+       for="..interfaces.IOrder"
+       class=".order.OrderView"
+       permission="cmf.ReviewPortalContent"
+   />
+
   <browser:page
       name="faceted-preview-item"
       for="..interfaces.IProduct"

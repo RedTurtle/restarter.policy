@@ -106,7 +106,7 @@ Buon notizie,
 
 %s ha prenotato %s %s su Facciamo.
 
-Vedi la prenotazione %s.
+Vedi la prenotazione %s
 Puoi contattare %s al suo cellulare (%s) o via email (%s) per accordarvi.
 Per confermare la sua richiesta, ricordati di andare sulla prenotazione e premere su "accetta"
 
@@ -266,7 +266,7 @@ def order_added(order, event):
     params = {'email_message': NEW_ORDER_MAIL % (owner.getProperty('fullname', 'Utente'),
                                                  quantity,
                                                  title,
-                                                 order.absolute_url(),
+                                                 '%s/@@company_owner' % order.absolute_url(),
                                                  owner.getProperty('fullname', 'Utente'),
                                                  owner.getProperty('cellphone'),
                                                  owner.getProperty('email'),
