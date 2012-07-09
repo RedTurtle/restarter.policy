@@ -290,7 +290,7 @@ class Company(folder.ATFolder):
 
     def setCity(self, value, **kwargs):
         if value:
-            value = value.title()
+            value = value.title().strip()
         self.getField('city').set(self, value, **kwargs)
 
     def setWebsite(self, value, **kwargs):
