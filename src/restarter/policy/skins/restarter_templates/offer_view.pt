@@ -9,6 +9,9 @@
 
   <metal:body_macro metal:define-macro="body">
       <div id="offerBody">
+            <div class="createdBy">
+              Creato da: <span tal:replace="context/CreatorFullname"/>
+            </div>
             <div class="offerField offerCategoria">
                   <span class="lab">Categoria: </span>
                   <span class="val">

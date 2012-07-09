@@ -4,6 +4,7 @@
 from zope.interface import implements
 
 from Products.Archetypes import atapi
+from Products.CMFCore.utils import getToolByName
 from Products.ATContentTypes.content import base
 from Products.validation.validators.ExpressionValidator import ExpressionValidator
 from Products.ATContentTypes.content import schemata
@@ -84,6 +85,12 @@ class Offer(base.ATCTContent):
 
     meta_type = "Offer"
     schema = OfferSchema
+
+    def CreatorFullname(self):
+        creator = self.Creator()
+        membership = getToolByName(self, 'portal_membership')
+        author = membership.getMemberInfo(creator)
+        return author and author['fullname'] or creator
 
 
 atapi.registerType(Offer, PROJECTNAME)
