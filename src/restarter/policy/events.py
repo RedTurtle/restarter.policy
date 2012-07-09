@@ -99,7 +99,7 @@ Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-pr
 Il team di Facciamo
 '''
 
-NEW_ORDER_SMS = '''%s ha prenotato un tuo prodotto su Facciamoadesso. Guarda la tua email per contattarlo.'''
+NEW_ORDER_SMS = '''%s - %s ha prenotato un tuo prodotto su Facciamoadesso. Guarda la tua email per contattarlo.'''
 NEW_ORDER_SUBJECT = "Nuova prenotazione"
 NEW_ORDER_MAIL = '''
 Buon notizie,
@@ -272,7 +272,7 @@ def order_added(order, event):
                                                  owner.getProperty('email'),
                                                  ),
               'email_subject': NEW_ORDER_SUBJECT,
-              'phone_message': NEW_ORDER_SMS % owner.getProperty('fullname', 'Utente')}
+              'phone_message': NEW_ORDER_SMS % (owner.getProperty('fullname', 'Utente'), owner.getPropert('cellphone', ''))}
     company_notify(company, params)
     status = IStatusMessage(order.REQUEST)
     status.add(_(u'Your order has been registered!'), type=u'order')
