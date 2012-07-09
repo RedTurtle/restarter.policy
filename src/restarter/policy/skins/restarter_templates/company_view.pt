@@ -29,7 +29,9 @@
             <div class="comNumbers">
               <p class="comEmail"><span class="labelTxt">E-mail:</span> <metal:field use-macro="python:context.widget('email', mode='view')"></metal:field></p>
               <p class="comCell"><span class="labelTxt">Mobile:</span> <metal:field use-macro="python:context.widget('cellphone', mode='view')"></metal:field></p>
-              <p class="comWeb"><span class="labelTxt">Web:</span> <metal:field use-macro="python:context.widget('website', mode='view')"></metal:field></p>
+              <p class="comWeb" tal:define="web context/getWebsite" tal:condition="web"><span class="labelTxt">Web:</span>
+                <a href="" tal:attributes="href web" tal:content="web"></a>
+              </p>
             </div>
             <p class="comPI"><span class="labelTxt">P.Iva/C.F.:</span> <metal:field use-macro="python:context.widget('piva', mode='view')"></metal:field></p>
             <p class="companySector"><span class="labelTxt">Settore merceologico:</span> <metal:field use-macro="python:context.widget('company_sectore', mode='view')"></metal:field></p>
