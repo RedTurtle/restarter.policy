@@ -15,5 +15,6 @@
     <type portal_type="Companies" />
     <type portal_type="Products" />
     <type portal_type="Company" />
+    <type portal_type="CompanyStory" />
   </factorytypes>
 </object>
