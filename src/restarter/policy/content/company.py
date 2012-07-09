@@ -29,10 +29,12 @@ PROVINCE = atapi.DisplayList((
              ("Ferrara", "Ferrara"),
              ("Forli-Cesena", "Forli-Cesena"),
              ("Modena", "Modena"),
+             ("Mantova", "Mantova"),
              ("Parma", "Parma"),
              ("Piacenza", "Piacenza"),
              ("Ravenna", "Ravenna"),
              ("Reggio Emilia", "Reggio Emilia"),
+             ("Rovigo", "Rovigo"),
              ("Rimini", "Rimini")))
 
 
