@@ -317,6 +317,15 @@ def demand_published(demand, event):
     notify('notify/page/demand', params)
 
 
+def newsitem_published(newsitem, event):
+    if event.action != 'publish':
+        return
+    params = {'newsitem_url': newsitem.absolute_url()}
+    params['newsitem_title'] = newsitem.title_or_id()
+    params['newsitem_description'] = newsitem.Description()
+    notify('notify/page/newsitem', params)
+
+
 def company_employee_modified(company, event):
     if event.add_user:
         owner = company.getOwner()

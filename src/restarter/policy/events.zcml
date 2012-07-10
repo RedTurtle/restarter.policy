@@ -40,6 +40,12 @@
    />
 
   <subscriber
+      for="Products.ATContentTypes.interfaces.IATNewsItem
+           Products.CMFCore.interfaces.IActionSucceededEvent"
+      handler=".events.newsitem_published"
+   />
+
+  <subscriber
       for=".interfaces.ICompany
            Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.company_added"
