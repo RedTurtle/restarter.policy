@@ -272,7 +272,7 @@ def order_added(order, event):
                                                  owner.getProperty('email'),
                                                  ),
               'email_subject': NEW_ORDER_SUBJECT,
-              'phone_message': NEW_ORDER_SMS % (owner.getProperty('fullname', 'Utente'), owner.getPropert('cellphone', ''))}
+              'phone_message': NEW_ORDER_SMS % (owner.getProperty('fullname', 'Utente'), owner.getProperty('cellphone', ''))}
     company_notify(company, params)
     status = IStatusMessage(order.REQUEST)
     status.add(_(u'Your order has been registered!'), type=u'order')
