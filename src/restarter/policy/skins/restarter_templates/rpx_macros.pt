@@ -13,7 +13,7 @@
 </metal:rpx_warning>
 
 <metal:rpx_register_container define-macro="rpx_register_container">
-<div id="rpx-register-container">
+<div id="rpx-register-container" tal:define="came_from came_from | string:http://www.facciamoadesso.it">
               <div class="fb_login_wrapper">
                 <h2 class="fb_login_header">Accedi con Facebook </h2>
                 <p class="plonelogin-txt">
