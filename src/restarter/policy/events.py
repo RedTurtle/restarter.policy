@@ -20,7 +20,7 @@ NEW_USER_MAIL = """
 Benvenuto in Facciamo il portale a sostegno delle aziende colpite dal terremoto.
 
 Facciamo lo ritrovi all'indirizzo: http://www.facciamoadesso.it
-Il regolamento è http://www.facciamoadesso.it/il-progetto/il-regolamento
+Il regolamento è http://www.facciamoadesso.it/il-progetto/il-regolamento-di-facciamo
 
 
 Ti ricordiamo la filosofia di Facciamo.
@@ -70,7 +70,7 @@ Accresci la tua reputazione invitando tuoi conoscenti e collaboratori a lasciare
 
 Ti ricordiamo che con la registrazione ti sei impegnato a visitare ed aggiornare le pagine del tuo profilo almeno settimanalmente.
 
-Il regolamento che hai accettato nella procedura di registrazione è visibile a questo indirizzo http://www.facciamoadesso.it/il-progetto/il-regolamento
+Il regolamento che hai accettato nella procedura di registrazione è visibile a questo indirizzo http://www.facciamoadesso.it/il-progetto/il-regolamento-di-facciamo
 
 
 -------------------
@@ -92,7 +92,7 @@ All'interno dell'area della tua azienda puoi anche:
 Non dimenticare che per coinvolgere i tuoi potenziali clienti è molto importante come racconti la tua azienda e i problemi che state vivendo in questa difficile fase.
 Accresci la tua reputazione invitando tuoi conoscenti e collaboratori a lasciare commenti sul tuo profilo aziendale e la visibilità dei prodotti che stai offrendo condividendoli nei loro social network.
 
-Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-progetto/il-regolamento
+Il regolamento è visibile a questo indirizzo http://www.facciamoadesso.it/il-progetto/il-regolamento-di-facciamo
 
 
 -------------------
