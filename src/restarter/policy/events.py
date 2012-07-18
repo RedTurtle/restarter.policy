@@ -494,3 +494,21 @@ def user_created(member, event):
 #        notify('notify/sms', params)
 
 
+def ploneboard_email_notification(comment, event):
+    emails = []
+    conversation = comment.getConversation()
+    for reply in conversation.objectValues():
+        email = reply.getOwner().getProperty('email', None)
+        if email:
+            emails.append(email)
+
+    member = comment.portal_membership.getAuthenticatedMember()
+    for email in set(emails):
+        if email:
+            params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
+                                                      html2text.html2text(comment.getText().decode('utf8', 'ignore')),
+                                                      conversation.absolute_url()),
+                      'email_subject': NEW_COMMENT_SUBJECT,
+                      'email': email}
+            notify('notify', params)
+
