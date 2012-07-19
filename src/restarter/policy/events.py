@@ -3,6 +3,7 @@
 import requests
 import logging
 import html2text
+import json
 
 from Products.statusmessages.interfaces import IStatusMessage
 from zope.interface import directlyProvides
@@ -497,18 +498,21 @@ def user_created(member, event):
 def ploneboard_email_notification(comment, event):
     emails = []
     conversation = comment.getConversation()
-    for reply in conversation.objectValues():
-        email = reply.getOwner().getProperty('email', None)
-        if email:
-            emails.append(email)
+    # Right now we are not using this approach - instead
+    # we are notifying whole volontari group members
+    #
+    #for reply in conversation.objectValues():
+    #    email = reply.getOwner().getProperty('email', None)
+    #    if email:
+    #        emails.append(email)
+    emails = [a.getProperty('email') for a in comment.portal_groups.getGroupById('volontari').getAllGroupMembers()]
+    emails = json.dumps(emails)
 
     member = comment.portal_membership.getAuthenticatedMember()
-    for email in set(emails):
-        if email:
-            params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
-                                                      html2text.html2text(comment.getText().decode('utf8', 'ignore')),
-                                                      conversation.absolute_url()),
-                      'email_subject': NEW_COMMENT_SUBJECT,
-                      'email': email}
-            notify('notify', params)
+    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
+                                              html2text.html2text(comment.getText().decode('utf8', 'ignore')),
+                                              conversation.absolute_url()),
+              'email_subject': NEW_COMMENT_SUBJECT,
+              'emails': emails}
+    notify('notify', params)
 
