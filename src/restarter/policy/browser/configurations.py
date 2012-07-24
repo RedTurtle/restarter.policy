@@ -7,11 +7,23 @@ from Products.CMFCore.interfaces import ISiteRoot
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 
 from restarter.policy.interfaces import IRestarterConfiguration
-
+from restarter.policy.interfaces import ICompany
 
 class RestarterConfig(BrowserView):
 
     implements(IRestarterConfiguration)
+
+    def path_from_uid(self):
+        uid = self.request.get('uid')
+        sender = self.request.get('sender')
+        if uid and sender:
+            company = self.context.reference_catalog.lookupObject(uid)
+            if ICompany.providedBy(company):
+                owner = company.getOwner()
+                email = owner.getProperty('email', '')
+                if email == sender:
+                    return company.absolute_url_path()
+        return ''
 
     def showBigLogo(self):
         if IHidePloneLeftColumn.providedBy(self.context): #always show home page logos on faceted

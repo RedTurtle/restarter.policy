@@ -407,8 +407,10 @@ def company_added(company, event):
                                               company.absolute_url()),
               'email_subject': NEW_COMPANY_SUBJECT}
     company_notify(company, params)
-    company.portal_workflow.doActionFor(company, "create")
+    # we have handled that by regex in mailgun
+    #notify('mailgun/newcompany', {'uid': company.UID()})
 
+    company.portal_workflow.doActionFor(company, "create")
     company.manage_setLocalRoles(owner.getId(), ('Owner', 'Employee',))
 
 

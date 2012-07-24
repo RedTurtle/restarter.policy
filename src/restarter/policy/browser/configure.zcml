@@ -47,6 +47,16 @@
     />
 
     <browser:page
+      for="*"
+      name="path_from_uid"
+      class=".configurations.RestarterConfig"
+      layer="..interfaces.layer.ISkin"
+      allowed_interface="..interfaces.IRestarterConfiguration"
+      attribute="path_from_uid"
+      permission="zope2.View"
+    />
+
+    <browser:page
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
       name="personal-information"
       class=".personalpreferences.UserDataPanel"

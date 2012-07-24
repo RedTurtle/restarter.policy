@@ -14,3 +14,6 @@ class IRestarterConfiguration(Interface):
 
     def getMemberInfo(member_id=None):
         """Return restarter memberinfo """
+
+    def path_from_uid():
+        """Return path for request uid params"""
