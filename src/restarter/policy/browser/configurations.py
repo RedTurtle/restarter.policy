@@ -19,8 +19,9 @@ class RestarterConfig(BrowserView):
         if uid and sender:
             company = self.context.reference_catalog.lookupObject(uid)
             if ICompany.providedBy(company):
-                owner = company.getOwner()
-                email = owner.getProperty('email', '')
+                #owner = company.getOwner()
+                #email = owner.getProperty('email', '')
+                email = company.getEmail()
                 if email == sender:
                     return company.absolute_url_path()
         return ''
