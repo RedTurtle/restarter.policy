@@ -247,6 +247,15 @@ def company_sectore(object):
     return object.getCompany_sectore()
 
 
+@indexer(ICompany)
+def product_category(object):
+    products = object.prodotti.objectValues()
+    categories = set()
+    for product in products:
+        categories.add(product.getCategory())
+    return categories
+
+
 class Company(folder.ATFolder):
     """restartER company"""
     implements(ICompany, ILoveThumbsDontYou, IAnnotatable, ILeadImageable)
