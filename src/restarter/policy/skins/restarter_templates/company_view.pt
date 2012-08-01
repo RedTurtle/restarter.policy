@@ -39,6 +39,55 @@
 
         </div>
 
+        <!-- storie dell'azienda -->
+<!-- ########## AGGIUNGERE CONDIZIONE SUL <DL> -->
+        <dl id="companyStoriesList" class="portlet faCollectionPortlet newsPortlet storiePortlet">
+
+          <dt class="portletHeader">
+                <tal:more> 
+<!-- ########## INSERIRE URL PER TUTTE LE STORIE (condizione: solo se sono più di 3) -->
+                <a class="linkMore" tal:attributes="href string:${context/absolute_url}/#">
+                     Vedi Tutte
+                  </a>
+                </tal:more>
+                <span class="tile">
+                    Le storie dell'azienda
+                </span>
+            </dt>
+            
+<!-- ######## LIMITARE A 3 LE STORIE VISUALIZZATE -->      
+<!-- ###### definire "stories" -->      
+            <tal:events tal:repeat="obj stories">
+            <dd class="portletItem faCollectionPortletItem">
+
+              <div class="faCollectionImg" tal:condition="obj/hasContentLeadImage">
+                <a href="#" tal:attributes="href obj/getURL;">
+                  <img src="" alt=""
+                       tal:attributes="src string:${obj/getURL}/leadImage_mini;
+                                       alt obj/Description;"/>
+                </a>
+<!-- ############# SE LA STORIA NON HA IMMAGINE VISUALIZZARE QUESTO SEGNAPOSTO -->                
+                <a tal:attributes="href url" class="noFoto" tal:condition="not: context/hasContentLeadImage">
+                  <span>Foto non disponibile</span>
+                </a>
+              </div>
+              <div class="dataAuthor">
+                <span class="itemData" 
+                 tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span>
+              </div>
+              <h3 class="faCollectionTitle">
+                <a href="#" 
+                   tal:content="obj/Title"
+                   tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
+              </h3>
+              <p class="faCollectionDesc" tal:content="obj/Description">
+                Fonte: Resto del Carlino
+              </p>
+              <div class="visualClear"><!-- --></div>
+            </dd>
+            </tal:events>
+        </dl>
+
         <dl id="companyProductsList" class="portlet faCollectionPortlet productsPortlet"
             tal:condition="products"
             tal:define="products python: context.getFolderContents({'portal_type':'Product', 'path': company_path}, b_size=3)[:3]">

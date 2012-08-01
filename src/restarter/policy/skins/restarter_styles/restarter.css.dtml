@@ -759,10 +759,11 @@ dl.productsPortlet p.btnLink a.btn:hover,
     margin-bottom: 0.7em;
 }
 #content dl.productsPortlet dd.portletItem {
-    margin-bottom: 10px;
+    margin: 0 0 10px 3.5%;
 }
 #content dl.offersPortlet dd.portletItem {
     min-height: 150px;
+    margin: 0 0 10px 3.5%;
 }
 #content #portletPageColumns dl.offersPortlet dd.portletItem {
     min-height: 1px;   
@@ -898,19 +899,49 @@ div.comMap {
     background-image: none;
 }
 #companyProductsList dt.portletHeader .tile,
-#companyDemandsList dt.portletHeader .tile {
+#companyDemandsList dt.portletHeader .tile,
+#companyStoriesList dt.portletHeader .tile {
     font-size: 0.85em;
 }
 #content dl#companyProductsList dd.portletItem,
-#content dl#companyDemandsList dd.portletItem {
+#content dl#companyDemandsList dd.portletItem,
+#content dl#companyStoriesList dd.portletItem {
     min-height: 1px;
 }
 #content dl#companyProductsList,
-#content dl#companyDemandsList {
+#content dl#companyDemandsList,
+#content dl#companyStoriesList {
     clear: both;
     float: none;
     padding-top: 1em;
     border-bottom:0;
+}
+#companyStoriesList dt.portletHeader {
+    background-color: #EB1B24;
+    padding: 0.3em 1em;
+    margin-left:0;
+    background-image: none;
+}
+#companyStoriesList dt.portletHeader .tile {
+    color: #FFF;
+}
+#companyStoriesList dt.portletHeader a {
+    color: #FF9;
+}
+#companyStoriesList dt.portletHeader a:hover {
+    color: #FFF !important;
+}
+#companyStoriesList .faCollectionImg {
+    float: none;
+    margin: 0 auto 0.5em;
+    width: 100%;
+}
+#companyStoriesList dd.portletItem {
+    float: left;
+    width: 30%;
+    margin: 0 0 10px 3.5%;
+    padding: 0;
+    max-width: 200px;
 }
 /** prodotto **/
 .portaltype-product #category,
