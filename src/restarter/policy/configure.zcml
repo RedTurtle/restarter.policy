@@ -11,6 +11,7 @@
   <include package="eea.facetednavigation"/>
 
   <!-- Include the sub-packages that use their own configure.zcml files. -->
+  <include file="permissions.zcml" />
   <include package=".browser" />
   <include package=".content" />
   <include package=".portlets" />

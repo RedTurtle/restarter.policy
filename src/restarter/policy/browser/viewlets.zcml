@@ -94,11 +94,6 @@
         layer="..interfaces.layer.ISkin"
         />
 
-    <permission
-       id="restarter.ManageAssociationLikes"
-       title="restarter.policy: ManageAssociationLikes"
-    />
-
     <browser:viewlet
         for="..interfaces.ICompany"
         name="restarter.associations_manage"

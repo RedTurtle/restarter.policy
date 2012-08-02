@@ -56,6 +56,14 @@
       permission="zope2.View"
     />
 
+  <browser:page
+     name="homestories_subtyper"
+     for="*"
+     class=".subtyper.HomeStoriesSubtyper"
+     permission="restarter.ManageStories"
+     allowed_interface="..interfaces.IHomeStoriesSubtyper"
+   />
+
     <browser:page
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
       name="personal-information"

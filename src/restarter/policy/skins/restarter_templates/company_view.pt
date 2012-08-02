@@ -10,6 +10,7 @@
 <metal:content-core fill-slot="content-core">
 
 <metal:body_macro metal:define-macro="body" tal:define="restarter context/@@config_restarter;
+                                                        stories python: [];
                                                         company_path python: '/'.join(context.getPhysicalPath())">
 
         <div id="companyBody">

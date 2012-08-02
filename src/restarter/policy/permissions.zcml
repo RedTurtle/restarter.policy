@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea">
+
+    <permission
+       id="restarter.ManageAssociationLikes"
+       title="restarter.policy: ManageAssociationLikes"
+    />
+    <permission
+       id="restarter.ManageStories"
+       title="restarter.policy: ManageStories"
+    />
+
+
+</configure>
