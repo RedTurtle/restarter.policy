@@ -10,7 +10,7 @@
 <metal:content-core fill-slot="content-core">
 
 <metal:body_macro metal:define-macro="body" tal:define="restarter context/@@config_restarter;
-                                                        stories python: [];
+                                                        toLocalizedTime  nocall:context/@@plone/toLocalizedTime;
                                                         company_path python: '/'.join(context.getPhysicalPath())">
 
         <div id="companyBody">
@@ -41,13 +41,13 @@
         </div>
 
         <!-- storie dell'azienda -->
-<!-- ########## AGGIUNGERE CONDIZIONE SUL <DL> -->
-        <dl id="companyStoriesList" class="portlet faCollectionPortlet newsPortlet storiePortlet">
+        <dl id="companyStoriesList" class="portlet faCollectionPortlet newsPortlet storiePortlet"
+            tal:condition="stories"
+            tal:define="stories python: context.getFolderContents({'portal_type':'CompanyStory', 'path': company_path}, b_size=3)[:3]">
 
           <dt class="portletHeader">
                 <tal:more> 
-<!-- ########## INSERIRE URL PER TUTTE LE STORIE (condizione: solo se sono più di 3) -->
-                <a class="linkMore" tal:attributes="href string:${context/absolute_url}/#">
+                <a class="linkMore" tal:attributes="href string:${context/absolute_url}/racconti" tal:condition="python: len(stories)>2">
                      Vedi Tutte
                   </a>
                 </tal:more>
@@ -55,9 +55,7 @@
                     Le storie dell'azienda
                 </span>
             </dt>
-            
-<!-- ######## LIMITARE A 3 LE STORIE VISUALIZZATE -->      
-<!-- ###### definire "stories" -->      
+
             <tal:events tal:repeat="obj stories">
             <dd class="portletItem faCollectionPortletItem">
 
@@ -67,14 +65,16 @@
                        tal:attributes="src string:${obj/getURL}/leadImage_mini;
                                        alt obj/Description;"/>
                 </a>
-<!-- ############# SE LA STORIA NON HA IMMAGINE VISUALIZZARE QUESTO SEGNAPOSTO -->                
-                <a tal:attributes="href url" class="noFoto" tal:condition="not: context/hasContentLeadImage">
+              </div>
+              <div class="faCollectionImg" tal:condition="not: obj/hasContentLeadImage">
+                <a href="#" tal:attributes="href obj/getURL;" class="noFoto">
                   <span>Foto non disponibile</span>
                 </a>
               </div>
+
               <div class="dataAuthor">
                 <span class="itemData" 
-                 tal:content="python:toLocalizedTime(obj.Date)">02 Giugno 2012</span>
+                 tal:content="python: toLocalizedTime(obj.Date)">02 Giugno 2012</span>
               </div>
               <h3 class="faCollectionTitle">
                 <a href="#" 
@@ -143,7 +143,6 @@
                      Vedi Tutte
                   </a>
                 </tal:more>
-
                 <span class="tile">
                     Richieste dell'azienda
                 </span>

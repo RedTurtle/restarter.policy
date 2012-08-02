@@ -4,7 +4,9 @@ from zope.interface import implements
 from zope.interface import alsoProvides, noLongerProvides
 
 from Products.statusmessages.interfaces import IStatusMessage
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
+from plone.app.layout.viewlets.common import ViewletBase
 
 from restarter.policy.interfaces import IHomeStoriesSubtyper, IHomeStory, ICompanyStory
 from restarter.policy import policyMessageFactory as _
@@ -62,3 +64,12 @@ class HomeStoriesSubtyper(BrowserView):
         self.context.reindexObject(['object_provides', ])
         self._redirect(_('This is no longer a homepage story'))
 
+
+class InfoViewlet(ViewletBase):
+    """ View that just tells wheter the company story is marked
+     as homepage """
+
+    index = ViewPageTemplateFile('templates/homestory_info_viewlet.pt')
+
+    def update(self):
+        self.is_homepage_story = IHomeStory.providedBy(self.context)

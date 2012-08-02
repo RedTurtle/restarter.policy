@@ -1,0 +1,4 @@
+<dl class="portalMessage info" tal:condition="view/is_homepage_story">
+  <dt>Info</dt>
+  <dd i18n:translate="">This is a homepage story</dd>
+</dl>

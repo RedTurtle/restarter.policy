@@ -95,6 +95,15 @@
         />
 
     <browser:viewlet
+        for="..interfaces.ICompanyStory"
+        name="restarter.homepage_story"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        class=".subtyper.InfoViewlet"
+        permission="restarter.ManageStories"
+        layer="..interfaces.layer.ISkin"
+        />
+
+    <browser:viewlet
         for="..interfaces.ICompany"
         name="restarter.associations_manage"
         class=".associations.ManageViewlet"
