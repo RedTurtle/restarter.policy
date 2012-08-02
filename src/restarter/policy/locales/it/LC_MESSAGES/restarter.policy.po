@@ -586,8 +586,3 @@ msgstr "Registra il tuo profilo ${rpx_provider}"
 msgid "rpx_register_legend"
 msgstr "Registrati con RPX"
 
-#. Default: "ignore"
-#: ./vocabularies.py:34
-msgid "utf8"
-msgstr ""
-

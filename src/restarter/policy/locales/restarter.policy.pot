@@ -589,8 +589,3 @@ msgstr ""
 msgid "rpx_register_legend"
 msgstr ""
 
-#. Default: "ignore"
-#: ./vocabularies.py:34
-msgid "utf8"
-msgstr ""
-
