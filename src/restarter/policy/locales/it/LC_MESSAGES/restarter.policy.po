@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-28 10:23+0000\n"
+"POT-Creation-Date: 2012-08-02 09:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr "-- non selezionato --"
 msgid "Accept"
 msgstr "Accetto"
 
-#: ./content/company.py:167
+#: ./content/company.py:169
 msgid "Accept terms of use"
 msgstr "Approvazione termini d'uso"
 
@@ -35,7 +35,7 @@ msgstr "Aggiungi Azienda"
 msgid "Add new company wizard"
 msgstr "Parti con il processo di registrazione"
 
-#: ./content/company.py:60
+#: ./content/company.py:62
 msgid "Address"
 msgstr "Indirizzo"
 
@@ -55,19 +55,19 @@ msgstr "Azienda accreditata"
 msgid "Association removed."
 msgstr "Rimosso l'accreditamento"
 
-#: ./content/company.py:133
+#: ./content/company.py:135
 msgid "CF/P.IVA"
 msgstr "CF/P.IVA"
 
-#: ./content/company.py:112
+#: ./content/company.py:114
 msgid "Cell phone"
 msgstr "Telefono cellulare"
 
-#: ./content/company.py:110
+#: ./content/company.py:112
 msgid "Cell phone has a wrong format. The proper is +391234567890"
 msgstr "Il numero di cellulare ha un formato errato. Quello giusto è +391234567890"
 
-#: ./content/company.py:79
+#: ./content/company.py:81
 msgid "City"
 msgstr "Città"
 
@@ -80,19 +80,19 @@ msgstr "Aziende"
 msgid "Company"
 msgstr "Azienda"
 
-#: ./content/company.py:216
+#: ./content/company.py:218
 msgid "Company name"
 msgstr "Nome dell'azienda"
 
-#: ./content/company.py:155
+#: ./content/company.py:157
 msgid "Company sectore"
 msgstr "Settore merceologico"
 
-#: ./content/company.py:144
+#: ./content/company.py:146
 msgid "Company type"
 msgstr "Tipo di azienda"
 
-#: ./content/company.py:123
+#: ./content/company.py:125
 msgid "Company website"
 msgstr "Sito web aziendale"
 
@@ -120,7 +120,11 @@ msgstr "Nome"
 msgid "Demands"
 msgstr "Richieste"
 
-#: ./content/company.py:101
+#: ./profiles/upgrade_0020_to_0021/actions.xml
+msgid "Disable homepage story"
+msgstr ""
+
+#: ./content/company.py:103
 msgid "Email address"
 msgstr "Indirizzo di email"
 
@@ -128,7 +132,11 @@ msgstr "Indirizzo di email"
 msgid "Employee"
 msgstr "Autorizzato"
 
-#: ./browser/facebook_login.py:60
+#: ./profiles/upgrade_0020_to_0021/actions.xml
+msgid "Enable homepage story"
+msgstr ""
+
+#: ./browser/facebook_login.py:61
 msgid "Facebook authentication denied"
 msgstr "Autenticazione con Facebook negata"
 
@@ -156,7 +164,11 @@ msgstr "Il contenitore di offerte"
 msgid "Folder that contains products"
 msgstr "Cartella che contiene prodotti"
 
-#: ./content/company.py:121
+#: ./browser/subtyper.py:51
+msgid "Homestory not supported"
+msgstr ""
+
+#: ./content/company.py:123
 msgid "It is not a proper website URL."
 msgstr "L'indirizzo indicato non è un URL corretto"
 
@@ -172,7 +184,7 @@ msgstr "Nuovo"
 msgid "New demaged"
 msgstr "Nuovo, ma danneggiato"
 
-#: ./content/company.py:178
+#: ./content/company.py:180
 msgid "Notification type"
 msgstr "Tipo di notifica"
 
@@ -180,11 +192,11 @@ msgstr "Tipo di notifica"
 msgid "Offer"
 msgstr "Offerta"
 
-#: ./content/offer.py:24
+#: ./content/offer.py:25
 msgid "Offer category"
 msgstr "Categoria"
 
-#: ./content/offer.py:78
+#: ./content/offer.py:79
 msgid "Offer name"
 msgstr "Nome"
 
@@ -210,43 +222,43 @@ msgid "Other"
 msgstr "Altro"
 
 #: ./content/demand.py:34
-#: ./content/offer.py:34
+#: ./content/offer.py:35
 msgid "Period"
 msgstr "Periodo"
 
-#: ./content/company.py:168
+#: ./content/company.py:170
 msgid "Please accept terms of use."
 msgstr "Accetta i <a target='_blank' href='/il-progetto/il-regolamento-di-facciamo/il-regolamento-per-le-aziende'>termini di utilizzo e di privacy</a>."
 
-#: ./content/offer.py:46
+#: ./content/offer.py:47
 msgid "Please accept that this offer is free of charge."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
-#: ./content/company.py:134
+#: ./content/company.py:136
 msgid "Please give us your company CF or P.IVA."
 msgstr "Indica il codice fiscale o partita iva dell'azienda"
 
-#: ./content/company.py:61
+#: ./content/company.py:63
 msgid "Please give us your company address"
 msgstr "Indica l'indirizzo aziendale"
 
-#: ./content/company.py:113
+#: ./content/company.py:115
 msgid "Please give us your company cell phone."
 msgstr "Indica un numero cellulare aziendale di riferimento. Il formato giusto è +391234567890."
 
-#: ./content/company.py:80
+#: ./content/company.py:82
 msgid "Please give us your company city location."
 msgstr "Indica la località dell'azienda"
 
-#: ./content/company.py:102
+#: ./content/company.py:104
 msgid "Please give us your company email address."
 msgstr "Indica l'email aziendale di riferimento"
 
-#: ./content/company.py:91
+#: ./content/company.py:93
 msgid "Please give us your company province location."
 msgstr "Indica la provincia"
 
-#: ./content/company.py:124
+#: ./content/company.py:126
 msgid "Please give us your company website url."
 msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 
@@ -254,7 +266,7 @@ msgstr "Indica il sito web aziendale. Ad esempio: http://www.miosito.it"
 msgid "Please provide demand period."
 msgstr "Indica il periodo della richiesta"
 
-#: ./content/offer.py:35
+#: ./content/offer.py:36
 msgid "Please provide offer period."
 msgstr "Indica il periodo dell'offerta"
 
@@ -286,15 +298,15 @@ msgstr "Indica le condizioni di spedizione del prodotto"
 msgid "Please provide product waranty conditions."
 msgstr "Indica le condizioni di garanzia del prodotto"
 
-#: ./content/company.py:179
+#: ./content/company.py:181
 msgid "Please select how we should notify your company."
 msgstr "Indica come vuoi che sia avvertita la tua azienda"
 
-#: ./content/company.py:156
+#: ./content/company.py:158
 msgid "Please select your company sectore."
 msgstr "Indica il settore di attività dell'azienda"
 
-#: ./content/company.py:145
+#: ./content/company.py:147
 msgid "Please select your company type."
 msgstr "Indica il tipo di azienda"
 
@@ -302,7 +314,7 @@ msgstr "Indica il tipo di azienda"
 msgid "Please select your demand category."
 msgstr "Seleziona la categoria della richiesta"
 
-#: ./content/offer.py:25
+#: ./content/offer.py:26
 msgid "Please select your offer category."
 msgstr "Seleziona la categoria dell'offerta"
 
@@ -347,15 +359,15 @@ msgstr "Prenotazione del prodotto"
 msgid "Products"
 msgstr "Prodotti"
 
-#: ./content/company.py:90
+#: ./content/company.py:92
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:339
+#: ./events.py:358
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:417
+#: ./events.py:438
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -387,7 +399,15 @@ msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://develo
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
-#: ./content/offer.py:45
+#: ./browser/subtyper.py:65
+msgid "This is no longer a homepage story"
+msgstr ""
+
+#: ./browser/subtyper.py:55
+msgid "This is now a homepage story"
+msgstr ""
+
+#: ./content/offer.py:46
 msgid "This offer is free of charge."
 msgstr "L'offerta è gratuita."
 
@@ -407,11 +427,11 @@ msgstr "Garanzia"
 msgid "Warning"
 msgstr "Attenzione"
 
-#: ./content/company.py:165
+#: ./content/company.py:167
 msgid "You must accept the Terms of Use."
 msgstr "Devi accettare i termini d'uso"
 
-#: ./content/offer.py:43
+#: ./content/offer.py:44
 msgid "You must accept the gratis terms."
 msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 
@@ -419,14 +439,14 @@ msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
 msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ricorda, una volta pubblicata, di contattare il supporto se volessi rimuoverla."
 
-#: ./events.py:278
+#: ./events.py:279
 msgid "Your order has been registered!"
 msgstr "La tua prenotazione è stata registrata. Grazie!"
 
 msgid "accepted"
 msgstr "L'ordine è stato accettato"
 
-#: ./content/company.py:43
+#: ./content/company.py:45
 msgid "both"
 msgstr "entrambi"
 
@@ -447,7 +467,7 @@ msgid "help_cellphone"
 msgstr "Lasciaci il tuo numero di cellulare così che ti si possa raggiungere. Il formato giusto è +391234567890"
 
 #. Default: "Ragione sociale help."
-#: ./content/company.py:52
+#: ./content/company.py:54
 msgid "help_ragione_sociale"
 msgstr "Indica la Ragione sociale esatta della tua azienda"
 
@@ -492,7 +512,7 @@ msgid "label_product_private_info"
 msgstr "La <a href='${company_url}'>tua azienda</a> deve essere pubblica prima di pubblicare i tuoi prodotti."
 
 #. Default: "Ragione sociale"
-#: ./content/company.py:51
+#: ./content/company.py:53
 msgid "label_ragione_sociale"
 msgstr "Ragione sociale"
 
