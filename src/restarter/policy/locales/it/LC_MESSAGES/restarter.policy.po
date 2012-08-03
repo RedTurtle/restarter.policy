@@ -121,7 +121,7 @@ msgid "Demands"
 msgstr "Richieste"
 
 #: ./profiles/upgrade_0020_to_0021/actions.xml
-msgid "Disable homepage story"
+msgid "Togli la storia da homepage"
 msgstr ""
 
 #: ./content/company.py:103
@@ -133,7 +133,7 @@ msgid "Employee"
 msgstr "Autorizzato"
 
 #: ./profiles/upgrade_0020_to_0021/actions.xml
-msgid "Enable homepage story"
+msgid "Visualizza la storia in homepage"
 msgstr ""
 
 #: ./browser/facebook_login.py:61
@@ -166,7 +166,7 @@ msgstr "Cartella che contiene prodotti"
 
 #: ./browser/subtyper.py:51
 msgid "Homestory not supported"
-msgstr ""
+msgstr "Visualizzazione per homepage non supportata"
 
 #: ./content/company.py:123
 msgid "It is not a proper website URL."
@@ -401,11 +401,11 @@ msgstr "La parola segreta che ottieni quando crei l'app in https://developers.fa
 
 #: ./browser/subtyper.py:65
 msgid "This is no longer a homepage story"
-msgstr ""
+msgstr "La storia è stata tolta dalla visualizzazione in homepage"
 
 #: ./browser/subtyper.py:55
 msgid "This is now a homepage story"
-msgstr ""
+msgstr "La storia è ora disponibile per la visualizzazione in homepage"
 
 #: ./content/offer.py:46
 msgid "This offer is free of charge."
