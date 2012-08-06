@@ -47,7 +47,7 @@
 
           <dt class="portletHeader">
                 <tal:more> 
-                <a class="linkMore" tal:attributes="href string:${context/absolute_url}/docs" tal:condition="python: len(stories)>2">
+                <a class="linkMore" tal:attributes="href string:${context/absolute_url}/storie-dell-azienda" tal:condition="python: len(stories)>2">
                      Vedi Tutte
                   </a>
                 </tal:more>
