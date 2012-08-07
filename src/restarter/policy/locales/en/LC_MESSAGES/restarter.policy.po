@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-02 09:08+0000\n"
+"POT-Creation-Date: 2012-08-07 12:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,7 +133,7 @@ msgid "Employee"
 msgstr ""
 
 #: ./profiles/upgrade_0020_to_0021/actions.xml
-msgid "Enable homepage story"
+msgid "Enable homepage story and publish on facebook"
 msgstr ""
 
 #: ./browser/facebook_login.py:61
