@@ -82,6 +82,11 @@
            .interfaces.ICompanyShareNotify"
       handler=".events.company_employee_modified"
    />
+  <subscriber
+      for=".interfaces.ICompanyStory
+           .interfaces.IHomepageStoryNotify"
+      handler=".events.companystory_on_homepage"
+   />
 
 
   <subscriber

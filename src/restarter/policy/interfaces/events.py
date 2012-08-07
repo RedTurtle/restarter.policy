@@ -7,3 +7,7 @@ class IDisqusNotify(IObjectEvent):
 
 class ICompanyShareNotify(IObjectEvent):
     """A user has been added to company employees"""
+
+
+class IHomepageStoryNotify(IObjectEvent):
+    """A company story has been marked for homepage"""

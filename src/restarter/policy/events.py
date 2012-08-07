@@ -9,7 +9,7 @@ from Products.statusmessages.interfaces import IStatusMessage
 from zope.interface import directlyProvides
 from zope.interface import implements
 from zope.component.interfaces import ObjectEvent
-from restarter.policy.interfaces import IDisqusNotify, ISimpleAddButtons, ICompanyShareNotify
+from restarter.policy.interfaces import IDisqusNotify, ISimpleAddButtons, ICompanyShareNotify, IHomepageStoryNotify
 from restarter.policy import policyMessageFactory as _
 
 
@@ -185,6 +185,13 @@ class CompanyShareNotify(ObjectEvent):
         self.add_user = add_user
 
 
+class HomepageStoryNotify(ObjectEvent):
+    implements(IHomepageStoryNotify)
+
+    def __init__(self, object):
+        self.object = object
+
+
 def notify(endpoint, params):
     """Notify restarter.notify."""
     try:
@@ -325,6 +332,13 @@ def newsitem_published(newsitem, event):
     params['newsitem_title'] = newsitem.title_or_id()
     params['newsitem_description'] = newsitem.Description()
     notify('notify/page/newsitem', params)
+
+
+def companystory_on_homepage(story, event):
+    params = {'item_url': story.absolute_url()}
+    params['item_title'] = story.title_or_id()
+    params['item_description'] = story.Description()
+    notify('notify/page/companystory', params)
 
 
 def company_employee_modified(company, event):

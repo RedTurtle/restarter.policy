@@ -2,6 +2,7 @@
 """
 from zope.interface import implements
 from zope.interface import alsoProvides, noLongerProvides
+from zope.component.event import objectEventNotify
 
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -10,6 +11,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 
 from restarter.policy.interfaces import IHomeStoriesSubtyper, IHomeStory, ICompanyStory
 from restarter.policy import policyMessageFactory as _
+from restarter.events import HomepageStoryNotify
 
 
 class HomeStoriesSubtyper(BrowserView):
@@ -52,6 +54,7 @@ class HomeStoriesSubtyper(BrowserView):
 
         alsoProvides(self.context, IHomeStory)
         self.context.reindexObject(['object_provides', ])
+        objectEventNotify(HomepageStoryNotify(self,))
         self._redirect(_('This is now a homepage story'))
 
     def disable(self):

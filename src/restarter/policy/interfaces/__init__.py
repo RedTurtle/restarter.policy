@@ -10,7 +10,7 @@ from companies import ICompanies
 from companystory import ICompanyStory
 from company import ICompany
 from layer import ISkin, ISimpleAddButtons
-from events import IDisqusNotify, ICompanyShareNotify
+from events import IDisqusNotify, ICompanyShareNotify, IHomepageStoryNotify
 from configurations import IRestarterConfiguration
 from stats import IStatsSettings, IStatsTool
 from subtypes import IHomeStoriesSubtyper, IHomeStory
