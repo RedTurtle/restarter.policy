@@ -54,7 +54,7 @@ class HomeStoriesSubtyper(BrowserView):
 
         alsoProvides(self.context, IHomeStory)
         self.context.reindexObject(['object_provides', ])
-        objectEventNotify(HomepageStoryNotify(self,))
+        objectEventNotify(HomepageStoryNotify(self.context,))
         self._redirect(_('This is now a homepage story'))
 
     def disable(self):
