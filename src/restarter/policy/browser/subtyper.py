@@ -11,7 +11,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 
 from restarter.policy.interfaces import IHomeStoriesSubtyper, IHomeStory, ICompanyStory
 from restarter.policy import policyMessageFactory as _
-from restarter.events import HomepageStoryNotify
+from restarter.policy.events import HomepageStoryNotify
 
 
 class HomeStoriesSubtyper(BrowserView):
