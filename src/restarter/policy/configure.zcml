@@ -17,7 +17,8 @@
   <include package=".portlets" />
   <include file="profiles.zcml" />
   <include file="events.zcml" />
-
+  <utility factory=".mailhost.CeleryMailHost" 
+           provides="Products.MailHost.interfaces.IMailHost" />
   <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
 </configure>

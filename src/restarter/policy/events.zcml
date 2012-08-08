@@ -51,12 +51,13 @@
       handler=".events.company_added"
    />
 
+<!--
   <subscriber
       for="Products.Ploneboard.interfaces.IComment
            Products.Archetypes.interfaces.IObjectInitializedEvent"
       handler=".events.ploneboard_email_notification"
    />
-
+-->
   <subscriber
       for=".interfaces.ICompany
            .interfaces.IDisqusNotify"

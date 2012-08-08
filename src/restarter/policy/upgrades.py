@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.Extensions.Install import activatePluginInterfaces
+from Products.MailHost.interfaces import IMailHost
 from StringIO import StringIO
 from plugin import FacebookUsers
 
@@ -145,5 +146,8 @@ def upgrade_0020_to_0021(context):
 
 
 def upgrade_0021_to_0022(context):
+    portal = getToolByName(context, 'portal_url').getPortalObject()
+    sm = portal.getSiteManager()
+    sm.unregisterUtility(provided=IMailHost)
     context.runAllImportStepsFromProfile('profile-restarter.policy:upgrade_0021_to_0022')
 

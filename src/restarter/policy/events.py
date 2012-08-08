@@ -511,21 +511,21 @@ def user_created(member, event):
 #        notify('notify/sms', params)
 
 
-def ploneboard_email_notification(comment, event):
-    emails = set()
-    conversation = comment.getConversation()
-    for reply in conversation.objectValues():
-        email = reply.getOwner().getProperty('email', None)
-        if email:
-            emails.add(email)
-    #emails = [a.getProperty('email') for a in comment.portal_groups.getGroupById('volontari').getAllGroupMembers()]
-    emails = json.dumps(tuple(emails))
-
-    member = comment.portal_membership.getAuthenticatedMember()
-    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
-                                              html2text.html2text(comment.getText().decode('utf8', 'ignore')),
-                                              conversation.absolute_url()),
-              'email_subject': NEW_COMMENT_SUBJECT,
-              'emails': emails}
-    notify('notify', params)
+#def ploneboard_email_notification(comment, event):
+#    emails = set()
+#    conversation = comment.getConversation()
+#    for reply in conversation.objectValues():
+#        email = reply.getOwner().getProperty('email', None)
+#        if email:
+#            emails.add(email)
+#    #emails = [a.getProperty('email') for a in comment.portal_groups.getGroupById('volontari').getAllGroupMembers()]
+#    emails = json.dumps(tuple(emails))
+#
+#    member = comment.portal_membership.getAuthenticatedMember()
+#    params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
+#                                              html2text.html2text(comment.getText().decode('utf8', 'ignore')),
+#                                              conversation.absolute_url()),
+#              'email_subject': NEW_COMMENT_SUBJECT,
+#              'emails': emails}
+#    notify('notify', params)
 
