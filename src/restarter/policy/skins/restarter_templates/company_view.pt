@@ -85,7 +85,8 @@
                 Fonte: Resto del Carlino
               </p>
               <div class="visualClear"><!-- --></div>
-            </dd>
+              </dd>
+
             </tal:events>
         </dl>
 
@@ -178,6 +179,7 @@
             <img src="" tal:define="address context/gmap_address"
                  tal:attributes="src string:http://maps.googleapis.com/maps/api/staticmap?center=${address}&zoom=12&size=580x200&maptype=roadmap&markers=color:red%7C${address}&sensor=false">
           </div>
+
 
       </metal:body_macro>
 

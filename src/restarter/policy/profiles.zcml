@@ -232,6 +232,23 @@
   />
 
 
+  <genericsetup:upgradeStep
+      title="Upgrade restarter.policy 0021 to 0022"
+      description=""
+      source="0021"
+      destination="0022"
+      handler="restarter.policy.upgrades.upgrade_0021_to_0022"
+      sortkey="1"
+      profile="restarter.policy:default"/>
+  <genericsetup:registerProfile
+      name="upgrade_0021_to_0022"
+      title="Upgrade restarter.policy 0021 to 0022"
+      directory="profiles/upgrade_0021_to_0022"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+  />
+
+
 
 
 </configure>
