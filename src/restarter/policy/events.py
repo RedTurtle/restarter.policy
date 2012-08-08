@@ -512,17 +512,14 @@ def user_created(member, event):
 
 
 def ploneboard_email_notification(comment, event):
-    emails = []
+    emails = set()
     conversation = comment.getConversation()
-    # Right now we are not using this approach - instead
-    # we are notifying whole volontari group members
-    #
-    #for reply in conversation.objectValues():
-    #    email = reply.getOwner().getProperty('email', None)
-    #    if email:
-    #        emails.append(email)
-    emails = [a.getProperty('email') for a in comment.portal_groups.getGroupById('volontari').getAllGroupMembers()]
-    emails = json.dumps(emails)
+    for reply in conversation.objectValues():
+        email = reply.getOwner().getProperty('email', None)
+        if email:
+            emails.add(email)
+    #emails = [a.getProperty('email') for a in comment.portal_groups.getGroupById('volontari').getAllGroupMembers()]
+    emails = json.dumps(tuple(emails))
 
     member = comment.portal_membership.getAuthenticatedMember()
     params = {'email_message': NEW_COMMENT % (member.getProperty('fullname', 'User'),
