@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 12:06+0000\n"
+"POT-Creation-Date: 2012-08-09 07:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Folder that contains products"
 msgstr ""
 
-#: ./browser/subtyper.py:51
+#: ./browser/subtyper.py:53
 msgid "Homestory not supported"
 msgstr ""
 
@@ -366,11 +366,11 @@ msgstr ""
 msgid "Province"
 msgstr ""
 
-#: ./events.py:358
+#: ./events.py:372
 msgid "Published on company creation"
 msgstr ""
 
-#: ./events.py:438
+#: ./events.py:452
 msgid "Published on product creation"
 msgstr ""
 
@@ -402,11 +402,11 @@ msgstr ""
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr ""
 
-#: ./browser/subtyper.py:65
+#: ./browser/subtyper.py:68
 msgid "This is no longer a homepage story"
 msgstr ""
 
-#: ./browser/subtyper.py:55
+#: ./browser/subtyper.py:58
 msgid "This is now a homepage story"
 msgstr ""
 
@@ -442,7 +442,7 @@ msgstr ""
 msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
 msgstr ""
 
-#: ./events.py:279
+#: ./events.py:286
 msgid "Your order has been registered!"
 msgstr ""
 
@@ -587,5 +587,10 @@ msgstr ""
 #. Default: "RPX register"
 #: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
+msgstr ""
+
+#. Default: "ignore"
+#: ./vocabularies.py:34
+msgid "utf8"
 msgstr ""
 

@@ -1,0 +1,21 @@
+<dl id="other-products-portlet" class="portlet faOtherProductsPortlet" style="display:none">
+
+    <dt class="portletHeader">
+        <span class="tile">
+          <span tal:omit-tag="" i18n:translate="">Other products from</span> <span tal:replace="view/company_title"/>
+        </span>
+    </dt>
+      
+    <dd class="portletItem">
+      <ul>
+          <li tal:repeat="product view/products">
+            <a href="" tal:attributes="href product/getURL" tal:content="product/Title">Orange</a>
+            <span tal:content="product/Description"></span>
+          </li>
+      </ul>
+    </dd>
+
+    <dd class="portletFooter">
+        <p><a i18n:translate="" href="#" tal:attributes="href view/products_url">All company's products</a></p>
+    </dd>
+  </dl>

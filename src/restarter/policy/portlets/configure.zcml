@@ -21,4 +21,12 @@
     addview=".product_categories.AddForm"
   />
 
+  <plone:portlet
+    name="portlets.OtherProducts"
+    interface=".other_products.IOtherProducts"
+    assignment=".other_products.Assignment"
+    renderer=".other_products.Renderer"
+    addview=".other_products.AddForm"
+  />
+
 </configure>

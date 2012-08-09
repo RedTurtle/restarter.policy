@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 12:06+0000\n"
+"POT-Creation-Date: 2012-08-09 07:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,7 +164,7 @@ msgstr "Il contenitore di offerte"
 msgid "Folder that contains products"
 msgstr "Cartella che contiene prodotti"
 
-#: ./browser/subtyper.py:51
+#: ./browser/subtyper.py:53
 msgid "Homestory not supported"
 msgstr "Visualizzazione per homepage non supportata"
 
@@ -363,11 +363,11 @@ msgstr "Prodotti"
 msgid "Province"
 msgstr "Provincia"
 
-#: ./events.py:358
+#: ./events.py:372
 msgid "Published on company creation"
 msgstr "Pubblicato alla creazione dell'azienda"
 
-#: ./events.py:438
+#: ./events.py:452
 msgid "Published on product creation"
 msgstr "Pubblicato alla creazione del prodotto"
 
@@ -399,11 +399,11 @@ msgstr "La chiave API o l'APP ID che ottieni quando crei l'app in https://develo
 msgid "The App Secret Key you got when creating the app at https://developers.facebook.com/apps"
 msgstr "La parola segreta che ottieni quando crei l'app in https://developers.facebook.com/apps"
 
-#: ./browser/subtyper.py:65
+#: ./browser/subtyper.py:68
 msgid "This is no longer a homepage story"
 msgstr "La storia è stata tolta dalla visualizzazione in homepage"
 
-#: ./browser/subtyper.py:55
+#: ./browser/subtyper.py:58
 msgid "This is now a homepage story"
 msgstr "La storia è ora disponibile per la visualizzazione in homepage"
 
@@ -439,7 +439,7 @@ msgstr "Confermo che l'offerta in oggetto è a titolo gratuito."
 msgid "You need to publish your company to allow other users to see it. After publishing you cannot retract it by yourself."
 msgstr "Pubblica la tua azienda per permettere agli altri utenti di vederla. Ricorda, una volta pubblicata, di contattare il supporto se volessi rimuoverla."
 
-#: ./events.py:279
+#: ./events.py:286
 msgid "Your order has been registered!"
 msgstr "La tua prenotazione è stata registrata. Grazie!"
 
@@ -585,4 +585,9 @@ msgstr "Registra il tuo profilo ${rpx_provider}"
 #: ./skins/restarter_templates/rpx_macros.pt:48
 msgid "rpx_register_legend"
 msgstr "Registrati con RPX"
+
+#. Default: "ignore"
+#: ./vocabularies.py:34
+msgid "utf8"
+msgstr ""
 
