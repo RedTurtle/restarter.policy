@@ -33,6 +33,6 @@
     </dd>
 
     <dd class="portletFooter">
-        <p><a i18n:translate="" href="#" tal:attributes="href view/products_url" class="linkMore">All company's products</a></p>
+        <p><a i18n:translate="" href="#" tal:attributes="href view/products_url" class="linkMore">Tutti i prodotti dell'azienda &raquo;</a></p>
     </dd>
   </dl>
