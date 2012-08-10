@@ -198,7 +198,8 @@ span.noMenuAction {
     font-family: <dtml-var headingFontFamily>;
 }
 #portal-globalnav li {
-    display: inline-block;
+    display: block;
+    float: left;
     height: 39px;
 }
 #portal-globalnav li a {
@@ -309,13 +310,52 @@ span.noMenuAction {
     border-bottom: 3px solid &dtml-colorRed;;
 }
 #sliderContent {
-    background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
-    padding: 0 0 0 77%;
+    /*background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
+    padding: 0 0 0 77%;*/
     min-height: 300px;
 }
+.sliderRow {
+    clear: left;
+}
+#faFacce {
+    float: left;
+    max-width: 740px;
+    width: 76%;
+    overflow: hidden;
+}
+.unaFaccia {
+    /*width: 185px;
+    height: 150px;*/
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
+    float: left;
+}
+.unaFaccia a {
+    display: block;
+}
+.unaFaccia a:hover {
+    outline: 1px dashed white;
+    outline-offset: -4px;
+}
+.facciaPreview {
+    display: none;
+}
+.popoverFacciaDetail .dataAuthor {
+    font-style: italic;
+}
+.popoverFacciaDetail .faCollectionTitle {
+    font-weight: bold;
+    margin-top: 0.2em;
+}
+.popoverFacciaDetail .faCollectionDesc {
+    font-size: 1em;
+    font-style: normal;
+}
 #sliderTxt {
-    background-color: #F0F0F0;
     padding: 10px;
+    float: right;
+    width: 22%;
 }
 #sliderTxt h2 {
     font-size: 2em;
@@ -1856,24 +1896,29 @@ dl#other-products-portlet .productMiniPreview a {
     position:relative;
     overflow: hidden;
 }
-div.popoverProductDetail {
+div.popoverProductDetail,
+div.popoverFacciaDetail {
     max-height: 400px;
     width: 400px;
     background-color: #FAFAFA;
 }
-div.popoverProductDetail .content {
+div.popoverProductDetail .content,
+div.popoverFacciaDetail .content {
     max-height: 250px;
 }
-.popoverProductDetail .faCollectionImg {
+.popoverProductDetail .faCollectionImg,
+.popoverFacciaDetail .faCollectionImg {
     margin: 0 1em 0.2em 0;
     width: auto;
     height: auto;
 }
-div.popoverProductDetail .wrap {
+div.popoverProductDetail .wrap,
+div.popoverFacciaDetail .wrap {
     background: #FAFAF6;
     border: 1px solid black;
 }
-div.popoverProductDetail .productDetailDescription {
+div.popoverProductDetail .productDetailDescription,
+div.popoverFacciaDetail .faCollectionDesc {
     color: #000;
 }
 
