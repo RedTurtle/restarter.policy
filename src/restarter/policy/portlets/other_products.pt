@@ -2,20 +2,37 @@
 
     <dt class="portletHeader">
         <span class="tile">
-          <span tal:omit-tag="" i18n:translate="">Other products from</span> <span tal:replace="view/company_title"/>
+          <span class="prefOther" i18n:translate="">Gli altri prodotti di</span> <a class="companyUrl" href="#"><span tal:replace="view/company_title"/></a>
         </span>
     </dt>
       
     <dd class="portletItem">
       <ul>
-          <li tal:repeat="product view/products">
-            <a href="" tal:attributes="href product/getURL" tal:content="product/Title">Orange</a>
-            <span tal:content="product/Description"></span>
+          <li class="productThumb" tal:repeat="product view/products">
+            <div class="productMiniPreview">
+                <a tal:attributes="href product/getURL">
+                  <img src="" alt=""               
+                     tal:attributes="src string:${product/getURL}/leadImage_thumb;
+                                     alt product/Description;"/>
+                </a>
+            </div>
+            <div class="productDetailPreview">
+              <div class="faCollectionImg">
+                <a tal:attributes="href product/getURL">
+                  <img src="" alt=""               
+                     tal:attributes="src string:${product/getURL}/leadImage_mini;
+                                     alt product/Description;"/>
+                </a>
+              </div>
+              <h3 class="ProductDetailTitle"><a href="" tal:attributes="href product/getURL" tal:content="product/Title">Orange</a></h3>
+              <p class="productDetailDescription" tal:content="product/Description"></p>
+            </div>
           </li>
       </ul>
+      <div class="visualClear"></div>
     </dd>
 
     <dd class="portletFooter">
-        <p><a i18n:translate="" href="#" tal:attributes="href view/products_url">All company's products</a></p>
+        <p><a i18n:translate="" href="#" tal:attributes="href view/products_url" class="linkMore">Tutti i prodotti dell'azienda &raquo;</a></p>
     </dd>
   </dl>

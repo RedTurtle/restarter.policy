@@ -198,7 +198,8 @@ span.noMenuAction {
     font-family: <dtml-var headingFontFamily>;
 }
 #portal-globalnav li {
-    display: inline-block;
+    display: block;
+    float: left;
     height: 39px;
 }
 #portal-globalnav li a {
@@ -309,13 +310,52 @@ span.noMenuAction {
     border-bottom: 3px solid &dtml-colorRed;;
 }
 #sliderContent {
-    background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
-    padding: 0 0 0 77%;
+    /*background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
+    padding: 0 0 0 77%;*/
     min-height: 300px;
 }
+.sliderRow {
+    clear: left;
+}
+#faFacce {
+    float: left;
+    max-width: 740px;
+    width: 76%;
+    overflow: hidden;
+}
+.unaFaccia {
+    /*width: 185px;
+    height: 150px;*/
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
+    float: left;
+}
+.unaFaccia a {
+    display: block;
+}
+.unaFaccia a:hover {
+    outline: 1px dashed white;
+    outline-offset: -4px;
+}
+.facciaPreview {
+    display: none;
+}
+.popoverFacciaDetail .dataAuthor {
+    font-style: italic;
+}
+.popoverFacciaDetail .faCollectionTitle {
+    font-weight: bold;
+    margin-top: 0.2em;
+}
+.popoverFacciaDetail .faCollectionDesc {
+    font-size: 1em;
+    font-style: normal;
+}
 #sliderTxt {
-    background-color: #F0F0F0;
     padding: 10px;
+    float: right;
+    width: 22%;
 }
 #sliderTxt h2 {
     font-size: 2em;
@@ -1810,6 +1850,76 @@ body.portaltype-portlet-page.section-homepage h1.documentFirstHeading {
 }
 .section-homepage #viewlet-social-like {
     display:none;
+}
+
+/** portlet altri prodotti **/
+.productDetailPreview {
+    display:none;
+}
+#other-products-portlet .portletHeader a.companyUrl {
+    display: block;
+}
+#other-products-portlet .portletHeader .tile .prefOther {
+    font-size: 0.8em;
+}
+#other-products-portlet {
+    border-bottom: 3px solid #F0F0F0;
+}
+dl#other-products-portlet dd.portletFooter {
+    padding:0.6em 0.5em;
+    text-align: right;
+    clear: left;
+}
+dl#other-products-portlet dd.portletFooter a.linkMore {
+    border-left: 1px dotted #EB1B24;
+    padding: 0 0 0 0.5em;
+    font-weight: normal;
+    font-style: italic;
+}
+dl#other-products-portlet .productMiniPreview {
+    float: left;
+    margin: 0.3em;
+    padding: 2px;
+    border: 1px solid #F0F0F0;
+    background-color: #FFF;
+}
+dl#other-products-portlet .productMiniPreview a img {
+    display: block;
+    position: absolute;
+    left: -20%;
+    top: -20%;
+}
+dl#other-products-portlet .productMiniPreview a {
+    display: block;
+    height:64px;
+    width: 64px;
+    position:relative;
+    overflow: hidden;
+}
+div.popoverProductDetail,
+div.popoverFacciaDetail {
+    max-height: 400px;
+    width: 400px;
+    background-color: #FAFAFA;
+}
+div.popoverProductDetail .content,
+div.popoverFacciaDetail .content {
+    max-height: 250px;
+}
+.popoverProductDetail .faCollectionImg,
+.popoverFacciaDetail .faCollectionImg {
+    margin: 0 1em 0.2em 0;
+    width: auto;
+    height: auto;
+}
+div.popoverProductDetail .wrap,
+div.popoverFacciaDetail .wrap {
+    background: #FAFAF6;
+    border: 1px solid black;
+}
+div.popoverProductDetail .productDetailDescription,
+div.popoverFacciaDetail .faCollectionDesc {
+    color: #000;
 }
 
 /* </dtml-with> */
