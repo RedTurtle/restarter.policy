@@ -21,4 +21,6 @@
            provides="Products.MailHost.interfaces.IMailHost" />
   <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
+  <interface interface=".interfaces.subtypes.IHomeStory" />
+
 </configure>
