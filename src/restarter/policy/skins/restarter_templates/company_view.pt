@@ -57,13 +57,13 @@
             </dt>
 
             <tal:events tal:repeat="obj stories">
-            <dd class="portletItem faCollectionPortletItem">
+            <dd class="portletItem faCollectionPortletItem" tal:define="description obj/Description">
 
               <div class="faCollectionImg" tal:condition="obj/hasContentLeadImage">
                 <a href="#" tal:attributes="href obj/getURL;">
                   <img src="" alt=""
                        tal:attributes="src string:${obj/getURL}/leadImage_mini;
-                                       alt obj/Description;"/>
+                                       alt description;"/>
                 </a>
               </div>
               <div class="faCollectionImg" tal:condition="not: obj/hasContentLeadImage">
@@ -81,8 +81,13 @@
                    tal:content="obj/Title"
                    tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
               </h3>
-              <p class="faCollectionDesc" tal:content="obj/Description">
-                Fonte: Resto del Carlino
+              <p class="faCollectionDesc">
+                <tal:asis condition="python:len(description)<=300" content="python:description">
+                  Fonte: Resto del Carlino
+                </tal:asis>
+                <tal:shorter condition="python:len(description)>300" content="python:description[:300]+'...'">
+                  Fonte: Resto del Carlino
+                </tal:shorter>
               </p>
               <div class="visualClear"><!-- --></div>
               </dd>
