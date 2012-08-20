@@ -346,7 +346,6 @@ span.noMenuAction {
 }
 .popoverFacciaDetail .faCollectionTitle {
     font-weight: bold;
-    margin-top: 0.2em;
 }
 .popoverFacciaDetail .faCollectionDesc {
     font-size: 1em;
