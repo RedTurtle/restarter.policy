@@ -51,13 +51,14 @@
       <tal:events tal:repeat="obj query_results">
       <dd class="portletItem faCollectionPortletItem"
           tal:define="oddrow repeat/obj/odd;
-                      item_path obj/getPath;"
+                      item_path obj/getPath;
+                      description obj/Description;"
           tal:attributes="class python:oddrow and 'portletItem even faCollectionPortletItem' or 'portletItem odd faCollectionPortletItem'">
 
         <div class="faCollectionImg" tal:condition="obj/hasContentLeadImage">
           <img src="" alt=""
                tal:attributes="src string:${obj/getURL}/leadImage_mini;
-                               alt obj/Description;"/>
+                               alt description;"/>
         </div>
         <div class="dataAuthor">
           <span class="itemData" 
@@ -69,8 +70,14 @@
              tal:content="obj/Title"
              tal:attributes="href obj/getURL;">Cum sociis natoque penatibus et magnis dis parturient</a>
         </h3>
-        <p class="faCollectionDesc" tal:content="obj/Description">
-          Fonte: Resto del Carlino
+        <hr>
+        <p class="faCollectionDesc">
+          <tal:asis condition="python:len(description)<=300" content="python:description">
+            Fonte: Resto del Carlino
+          </tal:asis>
+          <tal:shorter condition="python:len(description)>300" content="python:description[:300]+'...'">
+            Fonte: Resto del Carlino
+          </tal:shorter>
         </p>
         <div class="visualClear"><!-- --></div>
       </dd>
