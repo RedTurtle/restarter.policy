@@ -38,7 +38,7 @@ class DisqusOfferViewlet(DisqusViewlet):
     def update(self):
         super(DisqusOfferViewlet, self).update()
         wtool = self.context.portal_workflow
-        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') == 'published'
+        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') != 'draft'
 
 
 class DisqusDemandViewlet(DisqusViewlet):
@@ -46,7 +46,7 @@ class DisqusDemandViewlet(DisqusViewlet):
     def update(self):
         super(DisqusDemandViewlet, self).update()
         wtool = self.context.portal_workflow
-        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') == 'published'
+        self.is_discussion_allowed = wtool.getInfoFor(self.context, 'review_state', '') != 'draft'
 
 
 class Notify(BrowserView):

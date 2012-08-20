@@ -134,7 +134,7 @@ msgstr "Autorizzato"
 
 #: ./profiles/upgrade_0020_to_0021/actions.xml
 msgid "Enable homepage story and publish on facebook"
-msgstr ""
+msgstr "Mostra questa storia in homepage e pubblicala su Facebook"
 
 #: ./browser/facebook_login.py:61
 msgid "Facebook authentication denied"
