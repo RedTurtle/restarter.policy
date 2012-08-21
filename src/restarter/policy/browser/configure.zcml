@@ -99,7 +99,7 @@
 
     <browser:page
         name="faces_popover"
-        for="..interfaces.ICompanyStory"
+        for="redturtle.smartlink.interfaces.ISmartLink"
         template="templates/faces_popover.pt"
         permission="zope2.View"
       />

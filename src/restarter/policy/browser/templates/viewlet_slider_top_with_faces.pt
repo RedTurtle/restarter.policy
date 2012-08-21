@@ -6,7 +6,7 @@
             <tal:faces_rows repeat="row view/faces">
                 <div class="sliderRow">
                   <tal:faces repeat="face row">
-                      <div class="unaFaccia" tal:attributes="popover_url string:${face/getRemoteUrl}/faces_popover">
+                      <div class="unaFaccia" tal:attributes="popover_url string:${face/getURL}/faces_popover">
                           <a href="#"><img src="" tal:attributes="src string:${face/getURL}/image" width="185" height="150" /></a>
                       </div>
                   </tal:faces>
