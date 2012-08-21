@@ -1,0 +1,10 @@
+    <div class="faCollectionImg">
+      <a href="#"><img alt="" src="" tal:attributes="src string:${context/absolute_url}/leadImage_mini" alt=""/></a>
+    </div>
+    <div class="dataAuthor">
+      di <span class="author" tal:content="context/Creator"></span>
+    </div>
+    <h3 class="faCollectionTitle">
+      <a href="#" tal:attributes="href context/absolute_url" tal:content="context/title_or_id"></a>
+    </h3>
+    <p class="faCollectionDesc" tal:content="context/Description"></p>

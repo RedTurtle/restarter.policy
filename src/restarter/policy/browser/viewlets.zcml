@@ -53,16 +53,16 @@
     <browser:viewlet
        name="restarter.slider"
        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-       permission="zope2.View"
        template="templates/viewlet_slider_top.pt"
        layer="..interfaces.layer.ISkin"
+       permission="zope2.View"
       />
     <browser:viewlet
        name="restarter.slider_with_faces"
        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-       permission="zope2.View"
-       template="templates/viewlet_slider_top_with_faces.pt"
+       class=".subtyper.FacesViewlet"
        layer="..interfaces.layer.ISkin"
+       permission="zope2.View"
       />
 
     <!-- The breadcrumbs -->

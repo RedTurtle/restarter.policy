@@ -3,7 +3,9 @@ jQuery(document).ready(function() {
 
     /**** facce in home ***/
     jq("#faFacce div.unaFaccia").hover(function(event) {
-        jq(this).popover({trigger:'hover', title: false, position: 'right', classes: 'popoverFacciaDetail', content: $(this).children('.facciaPreview') });
+        //jq(this).popover({trigger:'hover', title: false, position: 'right', classes: 'popoverFacciaDetail', content: $(this).children('.facciaPreview') });
+        //jq(this).popover({trigger:'hover', title: false, position: 'right', classes: 'popoverFacciaDetail', content: 'loading...', url: $(this).attr('popover_url') });
+        jq(this).popover({trigger:'hover', title: false, position: 'right', classes: 'popoverFacciaDetail', url: 'http://localhost:8081/restarter/aziende/pizzeria-alice/racconti/to-jest-moja-historia/faces_popover' });
     });
 
     /*** other products ****/

@@ -98,6 +98,13 @@
     />
 
     <browser:page
+        name="faces_popover"
+        for="..interfaces.ICompanyStory"
+        template="templates/faces_popover.pt"
+        permission="zope2.View"
+      />
+
+    <browser:page
         name="sharing"
         for="..interfaces.ICompany"
         class=".common.CompanySharingView"

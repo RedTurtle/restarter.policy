@@ -4,6 +4,7 @@ from zope.interface import implements
 from zope.interface import alsoProvides, noLongerProvides
 from zope.component.event import objectEventNotify
 
+from Products.CMFCore.utils import getToolByName
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
@@ -76,3 +77,24 @@ class InfoViewlet(ViewletBase):
 
     def update(self):
         self.is_homepage_story = IHomeStory.providedBy(self.context)
+
+
+class FacesViewlet(ViewletBase):
+    """ Viewlet that displays faces in homepage """
+
+    index = ViewPageTemplateFile('templates/viewlet_slider_top_with_faces.pt')
+
+    def update(self):
+        self.faces = self.get_faces()
+
+    def get_faces(self):
+        """Return equal 4 elements chunks"""
+
+        pc = getToolByName(self.context, 'portal_catalog')
+        faces = pc(path='/restarter/storie/facce',
+                   portal_type='Link',
+                   review_state='published',
+                   limit=8)
+        for i in xrange(0, len(faces), 4):
+            yield faces[i:i+4]
+
