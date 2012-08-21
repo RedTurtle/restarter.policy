@@ -309,6 +309,11 @@ span.noMenuAction {
 #slider {
     border-bottom: 3px solid &dtml-colorRed;;
 }
+#sliderContentSimple {
+    background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
+    padding: 0 0 0 77%;
+    min-height: 300px;
+}
 #sliderContent {
     /*background: transparent url(&dtml-portal_url;/slider_img_collage.jpg) no-repeat left top;
     padding: 0 0 0 77%;*/
@@ -350,6 +355,10 @@ span.noMenuAction {
 .popoverFacciaDetail .faCollectionDesc {
     font-size: 1em;
     font-style: normal;
+}
+#sliderTxtSimple {
+    background-color: #F0F0F0;
+    padding: 10px;
 }
 #sliderTxt {
     padding: 10px;

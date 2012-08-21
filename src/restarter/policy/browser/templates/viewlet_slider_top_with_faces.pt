@@ -1,0 +1,51 @@
+<tal:restarter define="restarter context/@@config_restarter">
+<div id="slider-wrapper" tal:condition="restarter/isHomePage">
+    <div id="slider">
+        <div id="sliderContent">
+            <div id="faFacce">
+                <div class="sliderRow">
+
+                    <!-- ### una storia -->
+                    <div class="unaFaccia">
+                        <a href="#"><img src="http://www.independent-practitioner-today.co.uk/thumbnails/Dr_Samina_Showghi_portrait.jpg" width="185" height="150" /></a>
+
+                        <div class="facciaPreview">
+                            <div class="faCollectionImg">
+                                <a href="#"><img alt=""
+                         src="http://www.facciamoadesso.it/storie/storie-dalla-redazione/dalle-stalle-ai-campi-la-forza-di-ricominciare/leadImage_mini" alt=""/></a>
+                            </div>
+                            <div class="dataAuthor">
+                              di <span class="author">Pinco Pallino</span>
+                            </div>
+                            <h3 class="faCollectionTitle">
+                              <a href="#">Cum sociis natoque penatibus et magnis dis parturient</a>
+                            </h3>
+                            <p class="faCollectionDesc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. <br/>Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. 
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="unaFaccia"><a href="#"><img src="http://www.houstonstudioglass.com/pictures/Silk_Noga_portrait.jpg" width="185" height="150" /></a></div>
+                    <div class="unaFaccia"><a href="#"><img src="http://2.bp.blogspot.com/_xoBIPoObedw/SZJdmR0Q8PI/AAAAAAAADSc/fDa7PYgpVx4/s320/Troy.jpg" width="185" height="150" /></a></div>
+                    <div class="unaFaccia"><a href="#"><img src="http://peghouse.com/peg.jpg" width="185" height="150" /></a></div>
+                </div>
+                <div class="sliderRow">
+                    <div class="unaFaccia"><a href="#"><img src="http://www.schwarzmedia.ch/uploads/pics/portrait_01.jpg" width="185" height="150" /></a></div>
+                    <div class="unaFaccia"><a href="#"><img src="http://www.sportatelier-novak.at/images/portrait_novak.jpg" width="185" height="150" /></a></div>
+                    <div class="unaFaccia"><a href="#"><img src="http://www.officiante.net/ssit/enciclopedia/personaggi/ikki_01.jpg" width="185" height="150" /></a></div>
+                    <div class="unaFaccia"><a href="#"><img src="http://www.rosi-falter.de/bilder/portrait_rosi_falter2_gst.jpg" width="185" height="150" /></a></div>
+                </div>
+            </div>
+
+            <div id="sliderTxt">
+                <h2>FACCIAMO ADESSO</h2>
+                <p>Sei un'azienda e vuoi <strong>vendere</strong> i tuoi prodotti?<br/>Vuoi essere solidale con le <strong>aziende</strong> colpite dal terremoto?<br/>Vuoi segnalare ai tuoi contatti le <strong>opportunità</strong> presenti sul portale?</p>
+                <p class="btnLink">
+                    <a class="btn" href="" tal:attributes="href string:${context/portal_url}/il-progetto/partecipa">Partecipa</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</tal:restarter>

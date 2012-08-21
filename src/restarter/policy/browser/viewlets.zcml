@@ -57,6 +57,13 @@
        template="templates/viewlet_slider_top.pt"
        layer="..interfaces.layer.ISkin"
       />
+    <browser:viewlet
+       name="restarter.slider_with_faces"
+       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+       permission="zope2.View"
+       template="templates/viewlet_slider_top_with_faces.pt"
+       layer="..interfaces.layer.ISkin"
+      />
 
     <!-- The breadcrumbs -->
     <browser:viewlet
