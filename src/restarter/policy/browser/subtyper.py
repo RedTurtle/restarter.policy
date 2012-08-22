@@ -94,6 +94,7 @@ class FacesViewlet(ViewletBase):
         faces = pc(path='/restarter/storie/facce',
                    portal_type='Link',
                    review_state='published',
+                   sort_on='getObjPositionInParent',
                    limit=8)
         for i in xrange(0, len(faces), 4):
             yield faces[i:i+4]
