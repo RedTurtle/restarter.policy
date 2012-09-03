@@ -174,7 +174,7 @@ msgstr "L'indirizzo indicato non è un URL corretto"
 
 #: ./content/order.py:57
 msgid "Leave your comment for this order."
-msgstr "Lascia un commmento per questa prenotazione"
+msgstr "Lascia un commento per questa prenotazione"
 
 #: ./content/product.py:21
 msgid "New"
