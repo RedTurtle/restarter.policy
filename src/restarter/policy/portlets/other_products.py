@@ -34,8 +34,8 @@ class Renderer(base.Renderer):
         company = self.context.aq_inner.getCompany()
         company_path = company.absolute_url_path()
         self.products = self.context.getFolderContents({'portal_type':'Product',
-                                                        'path': company_path},
-                                                       b_size=10)
+                                                        'path': '%s/prodotti' % company_path},
+                                                         b_size=10)
         self.company_title = company.title_or_id()
         self.products_url = '%s/prodotti' % company.absolute_url()
 
